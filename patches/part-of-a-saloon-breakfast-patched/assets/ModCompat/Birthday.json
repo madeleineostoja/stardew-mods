@@ -1,0 +1,213 @@
+{
+	"Changes":[
+	
+	//Bachelorettes
+	
+		//Abigail
+		{
+			"LogName": "Abigail Schedule Strings - Breakfast Time, Robin Birthday Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Abigail",
+			"Entries":{
+				"MarriageMines": "{{i18n:SB.Abigail.Mines.NoSamSeb}}",
+				"breakfastSun": "{{i18n:SB.Abigail.Breakfast.Sunday.NoSamSeb}}",
+				"breakfastMarriageSun": "{{i18n:SB.Abigail.Breakfast.Sunday.NoSamSeb}}",
+				"band": "{{i18n:SB.Abigail.Mines.NoSamSeb}}",
+				"mines": "{{i18n:SB.Abigail.Mines.NoSamSeb}}",
+				"MarriageMines2": "{{i18n:SB.Abigail.Mines.NoSamSeb}}",
+			},
+			"When": {
+				"Season": "fall",
+				"Day": "21",
+			},
+		},
+		
+		{
+			"LogName": "Abigail Schedule Strings - Breakfast Time, Married, Robin Birthday Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Abigail",
+			"Entries":{
+				"breakfastSun": "{{i18n:SB.Abigail.Breakfast.Sunday.Marriage.NoSamSeb}}",
+				"breakfastMarriageSun": "{{i18n:SB.Abigail.Breakfast.Sunday.Marriage.NoSamSeb}}",
+				"band": "{{i18n:SB.Abigail.BandPractice.Marriage}}",
+				"mines": "{{i18n:SB.Abigail.Marriage.Mines.Thursday}}",
+				"MarriageMines2": "{{i18n:SB.Abigail.Marriage.Mines.Thursday}}",
+			},
+			"When": {
+				"Season": "fall",
+				"Day": "21",
+				"relationship:Abigail": "married",
+			},
+		},
+		
+		//Penny
+		{
+			"LogName": "Penny Schedule Strings - Breakfast Time, Harvey Birthday Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Penny",
+			"Entries":{
+				"breakfastSun": "{{i18n:SB.Penny.Breakfast.Sunday.NoMaru}}",
+				"breakfastMarriageSun": "{{i18n:SB.Penny.Breakfast.Sunday.NoMaru}}",
+				"marupenny": "{{i18n:SB.Penny.NoMaru.1}}",
+				"marupenny2": "{{i18n:SB.Penny.NoMaru.2}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "14",
+			},
+		},
+		
+		{
+			"LogName": "Penny Schedule Strings - Breakfast Time, Married, Harvey Birthday Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Penny",
+			"Entries":{
+				"breakfastSun": "{{i18n:SB.Penny.Breakfast.Sunday.Marriage.NoMaru}}",
+				"breakfastMarriageSun": "{{i18n:SB.Penny.Breakfast.Sunday.Marriage.NoMaru}}",
+				"marupenny": "{{i18n:SB.Penny.NoMaru.Marriage.1}}",
+				"marupenny2": "{{i18n:SB.Penny.NoMaru.Marriage.2}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "14",
+				"relationship:Penny": "married",
+			},
+		},
+		
+		//Emily
+		{
+			"LogName": "Emily Schedule Strings - Breakfast Time, Alex Birthday Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Emily",
+			"Entries":{
+				"breakfastSat": "{{i18n:SB.Emily.Breakfast.Saturday.NoHaley}}",
+				"breakfastMarriage": "{{i18n:SB.Emily.Breakfast.Saturday.NoHaley}}",
+			},
+			"When": {
+				"Season": "summer",
+				"Day": "13",
+			},
+		},
+		
+		{
+			"LogName": "Emily Schedule Strings - Breakfast Time, Married, Alex Birthday Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Emily",
+			"Entries":{
+				"breakfastSat": "{{i18n:SB.Emily.Breakfast.Saturday.Marriage.NoHaley}}",
+				"breakfastMarriage": "{{i18n:SB.Emily.Breakfast.Saturday.Marriage.NoHaley}}",
+			},
+			"When": {
+				"Season": "summer",
+				"Day": "13",
+				"relationship:Emily": "married",
+			},
+		},
+
+	//Bachelors
+		
+		//Sebastian
+		{
+			"LogName": "Sebastian Schedule Strings - Breakfast Time, Caroline Birthday Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sebastian",
+			"Entries":{
+				"breakfastSun": "{{i18n:SB.Sebastian.Breakfast.Sunday.NoAbSam}}",
+				"breakfastMarriageSun": "{{i18n:SB.Sebastian.Breakfast.Sunday.NoAbSam}}",
+				"bandpractice": "{{i18n:SB.Sebastian.Band.NoAbSam}}",
+				"mines": "{{i18n:SB.Sebastian.Mines}}",
+				"MarriageMines": "{{i18n:SB.Sebastian.Mines}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "7",
+			},
+		},
+		
+		{
+			"LogName": "Sebastian Schedule Strings - Breakfast Time, Married, Caroline Birthday Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sebastian",
+			"Entries":{
+				"breakfastSun": "{{i18n:SB.Sebastian.Sunday.Marriage.NoAbSam}}",
+				"breakfastMarriageSun": "{{i18n:SB.Sebastian.Sunday.Marriage.NoAbSam}}",
+				"bandpractice": "{{i18n:SB.Sebastian.Band.NoAbSam}}",
+				"mines": "{{i18n:SB.Sebastian.Marriage.Mines}}",
+				"MarriageMines": "{{i18n:SB.Sebastian.Marriage.Mines}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "7",
+				"relationship:Sebastian": "married",
+			},
+		},
+		
+		//Sam
+		{
+			"LogName": "Sam Schedule Strings - Breakfast Time, Robin Birthday Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sam",
+			"Entries":{
+				"breakfastSun": "{{i18n:SB.Sam.Breakfast.Sunday.NoSebAb}}",
+				"breakfastMarriageSun": "{{i18n:SB.Sam.Breakfast.Sunday.NoSebAb}}",
+				"bandpractice": "{{i18n:SB.Sam.Band.NoSebAb}}",
+				"mines": "{{i18n:SB.Sam.Mines}}",
+				"MarriageMines": "{{i18n:SB.Sam.Mines}}",
+			},
+			"When": {
+				"Season": "fall",
+				"Day": "21",
+			},
+		},
+		{
+			"LogName": "Sam Schedule Strings - Breakfast Time, Married, Robin Birthday Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sam",
+			"Entries":{
+				"breakfastSun": "{{i18n:SB.Sam.Breakfast.Sunday.Marriage.NoSebAb}}",
+				"breakfastMarriageSun": "{{i18n:SB.Sam.Breakfast.Sunday.Marriage.NoSebAb}}",
+				"bandpractice": "{{i18n:SB.Sam.Band.NoSebAb}}",
+				"mines": "{{i18n:SB.Sam.Marriage.Mines}}",
+				"MarriageMines": "{{i18n:SB.Sam.Marriage.Mines}}",
+			},
+			"When": {
+				"Season": "fall",
+				"Day": "21",
+				"relationship:Sam": "married",
+			},
+		},
+		{
+			"LogName": "Sam Schedule Strings - Breakfast Time, Caroline Birthday Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sam",
+			"Entries":{
+				"breakfastSun": "{{i18n:SB.Sam.Breakfast.Sunday.NoSebAb}}",
+				"breakfastMarriageSun": "{{i18n:SB.Sam.Breakfast.Sunday.NoSebAb}}",
+				"bandpractice": "{{i18n:SB.Sam.Band.NoSebAb}}",
+				"mines": "{{i18n:SB.Sam.Mines}}",
+				"MarriageMines": "{{i18n:SB.Sam.Mines}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "7",
+			},
+		},
+		{
+			"LogName": "Sam Schedule Strings - Breakfast Time, Married, Caroline Birthday Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sam",
+			"Entries":{
+				"breakfastSun": "{{i18n:SB.Sam.Breakfast.Sunday.Marriage.NoSebAb}}",
+				"breakfastMarriageSun": "{{i18n:SB.Sam.Breakfast.Sunday.Marriage.NoSebAb}}",
+				"bandpractice": "{{i18n:SB.Sam.Band.NoSebAb}}",
+				"mines": "{{i18n:SB.Sam.Marriage.Mines}}",
+				"MarriageMines": "{{i18n:SB.Sam.Marriage.Mines}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "7",
+				"relationship:Sam": "married",
+			},
+		},
+	],
+}

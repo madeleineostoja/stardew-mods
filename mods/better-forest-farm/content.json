@@ -1,0 +1,120 @@
+{
+  "Format": "2.0.0",
+  "ConfigSchema": {
+    "Lake": {
+      "AllowValues": "true, false",
+      "Default": "true"
+    },
+    "WoodsShortcut": {
+      "AllowValues": "true, false",
+      "Default": "true"
+    },
+    "ForestFish": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+    "RemoveShippingBinPath": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    }
+  },
+  "Changes": [
+    {
+      "Action": "Load",
+      "Target": "Maps/Farm_Foraging",
+      "FromFile": "assets/maps/Farm_Ponds.tmx",
+      "When": {
+        "Lake": "false"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Farm_Foraging",
+      "FromFile": "assets/maps/Farm_Lake.tmx",
+      "When": {
+        "Lake": "true"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_Foraging",
+      "FromFile": "assets/maps/No_Shipping_Bin_Path.tmx",
+      "PatchMode": "Overlay",
+      "ToArea": { "X": 71, "Y": 15, "Width": 9, "Height": 3 },
+      "When": {
+        "RemoveShippingBinPath": "true"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_Foraging",
+      "AddWarps": ["6 59 Woods 46 4"],
+      "When": {
+        "WoodsShortcut": "true"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Woods",
+      "AddWarps": ["46 3 Farm 6 58"],
+      "When": {
+        "WoodsShortcut": "true",
+        "FarmType": "Forest"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": ["Farm_Forest", "Fish"],
+      "Entries": {
+        "forestfish_on_forest_farm": {
+          "Id": "forestfish_on_forest_farm",
+          "ItemId": "LOCATION_FISH Forest BOBBER_X BOBBER_Y WATER_DEPTH",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": -1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": 0,
+          "QualityModifiers": null,
+          "QualityModifierMode": 0,
+          "ModData": null,
+          "PerItemCondition": null,
+          "Condition": null,
+          "Chance": 1,
+          "Season": null,
+          "FishAreaId": null,
+          "BobberPosition": null,
+          "PlayerPosition": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "MaxDistanceFromShore": -1,
+          "ApplyDailyLuck": false,
+          "CuriosityLureBuff": -1,
+          "SpecificBaitBuff": 0,
+          "SpecificBaitMultiplier": 1.659999966621399,
+          "CatchLimit": -1,
+          "CanUseTrainingRod": null,
+          "IsBossFish": false,
+          "SetFlagOnCatch": null,
+          "RequireMagicBait": false,
+          "Precedence": -50,
+          "IgnoreFishDataRequirements": true,
+          "CanBeInherited": true,
+          "ChanceModifiers": null,
+          "ChanceModifierMode": 0,
+          "ChanceBoostPerLuckLevel": 0,
+          "UseFishCaughtSeededRandom": false
+        }
+      },
+      "When": {
+        "ForestFish": "true"
+      }
+    }
+  ]
+}

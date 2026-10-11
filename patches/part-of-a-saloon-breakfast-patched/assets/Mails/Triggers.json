@@ -1,0 +1,188 @@
+{
+	"Changes":[
+			
+		{
+			"LogName": "Saloon Breakfast Trigger Actions", 
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",			
+			"Entries": {
+				/* //Example Trigger Template
+				"AgentLyoko.StardropBreakfast_ExampleTrigger": {
+					"Id": "AgentLyoko.StardropBreakfast_ExampleTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current MailFlag",
+					"HostOnly": false,
+					"Action": "AddMail Current MailFlag", //Use "Action" if only setting one action. *If setting multiple, use the example in "Actions" instead of this!!* Do not use both Action and Actions.
+					"Actions": [
+						"AddMail Current Abigail_LeoMoved", //From example on wiki. Always use the "now" argument for heart events or it's likely people will think the event is bugged.
+						"AddConversationTopic LeoMoved 5"
+					],
+				},*/
+				
+				//Backup Mails/Triggers
+				
+				"AgentLyoko.StardropBreakfast_BackupInitialSpecial": {
+					"Id": "AgentLyoko.StardropBreakfast_BackupInitialSpecial",
+					"Trigger": "DayEnding",
+					"Condition": "!PLAYER_HAS_MAIL Any IngredientsReceived, !PLAYER_HAS_CONVERSATION_TOPIC Current breakfastpause, !PLAYER_SPECIAL_ORDER_ACTIVE Any Gus_BreakfastPrep, PLAYER_HAS_SEEN_EVENT Current 177751, {{AutoOrder |contains=enabled,repeatable}}",
+					"HostOnly": false,
+					"Action": "AddMail Current BackupInitialSpecial",
+				},
+				
+				"AgentLyoko.StardropBreakfast_BackupInitialSpecialRepeat": {
+					"Id": "AgentLyoko.StardropBreakfast_BackupInitialSpecialRepeat",
+					"Trigger": "DayEnding",
+					"Condition": "!PLAYER_HAS_MAIL Any IngredientsReceived, PLAYER_HAS_MAIL Current BackupInitialSpecial, !PLAYER_HAS_CONVERSATION_TOPIC Current breakfastpause, !PLAYER_SPECIAL_ORDER_ACTIVE Any Gus_BreakfastPrep, PLAYER_HAS_SEEN_EVENT Current 177751, {{AutoOrder |contains=repeatable}}",
+					"HostOnly": false,
+					"Action": "AddMail Current BackupInitialSpecialRepeat",
+					"MarkActionApplied": "{{AutoOrder |contains=disabled,enabled}}",
+				},
+				
+				"AgentLyoko.StardropBreakfast_BackupInitialSpecialReset": {
+					"Id": "AgentLyoko.StardropBreakfast_BackupInitialSpecialReset",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Any BackupInitialSpecialRepeat, PLAYER_SPECIAL_ORDER_ACTIVE Any Gus_BreakfastPrep, {{AutoOrder |contains=repeatable}}",
+					"HostOnly": false,
+					"Action": "RemoveMail Current BackupInitialSpecialRepeat",
+					"MarkActionApplied": "{{AutoOrder |contains=disabled,enabled}}",
+				},
+				
+				"AgentLyoko.StardropBreakfast_BackupDoubleSpecial": {
+					"Id": "AgentLyoko.StardropBreakfast_BackupDoubleSpecial",
+					"Trigger": "DayEnding",
+					"Condition": "!PLAYER_HAS_MAIL Any OmeletReady, !PLAYER_HAS_CONVERSATION_TOPIC Current breakfastpauseagain, !PLAYER_SPECIAL_ORDER_ACTIVE Any Gus_BreakfastSpecial, PLAYER_HAS_SEEN_EVENT Current 177753, {{AutoOrder |contains=enabled,repeatable}}",
+					"HostOnly": false,
+					"Action": "AddMail Current BackupDoubleSpecial",
+				},
+				
+				"AgentLyoko.StardropBreakfast_BackupDoubleSpecialRepeat": {
+					"Id": "AgentLyoko.StardropBreakfast_BackupDoubleSpecialRepeat",
+					"Trigger": "DayEnding",
+					"Condition": "!PLAYER_HAS_MAIL Any OmeletReady, PLAYER_HAS_MAIL Current BackupDoubleSpecial, !PLAYER_HAS_CONVERSATION_TOPIC Current breakfastpauseagain, !PLAYER_SPECIAL_ORDER_ACTIVE Any Gus_BreakfastSpecial, PLAYER_HAS_SEEN_EVENT Current 177753, {{AutoOrder |contains=repeatable}}",
+					"HostOnly": false,
+					"Action": "AddMail Current BackupDoubleSpecialRepeat",
+					"MarkActionApplied": "{{AutoOrder |contains=disabled,enabled}}",
+				},
+				
+				"AgentLyoko.StardropBreakfast_BackupDoubleSpecialReset": {
+					"Id": "AgentLyoko.StardropBreakfast_BackupDoubleSpecialReset",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Any BackupDoubleSpecial, PLAYER_SPECIAL_ORDER_ACTIVE Any Gus_BreakfastSpecial, {{AutoOrder |contains=repeatable}}",
+					"HostOnly": false,
+					"Action": "RemoveMail Current BackupDoubleSpecialRepeat",
+					"MarkActionApplied": "{{AutoOrder |contains=disabled,enabled}}",
+				},
+				
+				"AgentLyoko.StardropBreakfast_WizardBreakfast": {
+					"Id": "AgentLyoko.StardropBreakfast_WizardBreakfast",
+					"Trigger": "DayEnding",
+					"Condition": "!PLAYER_HAS_MAIL Any breakfastBundle, !PLAYER_HAS_CONVERSATION_TOPIC Current breakfastpausewizard, !PLAYER_SPECIAL_ORDER_ACTIVE Any Wizard_BreakfastBundle, PLAYER_HAS_SEEN_EVENT Current 1777510, {{AutoOrder |contains=enabled,repeatable}}",
+					"HostOnly": false,
+					"Action": "AddMail Current breakfaststart",
+				},
+				
+				"AgentLyoko.StardropBreakfast_WizardBreakfastRepeat": {
+					"Id": "AgentLyoko.StardropBreakfast_WizardBreakfastRepeat",
+					"Trigger": "DayEnding",
+					"Condition": "!PLAYER_HAS_MAIL Any breakfastBundle, PLAYER_HAS_MAIL Current breakfaststart, !PLAYER_HAS_CONVERSATION_TOPIC Current breakfastpauseagain, !PLAYER_SPECIAL_ORDER_ACTIVE Any Wizard_BreakfastBundle, PLAYER_HAS_SEEN_EVENT Current 1777510, {{AutoOrder |contains=repeatable}}",
+					"HostOnly": false,
+					"Action": "AddMail Current breakfaststartRepeat",
+					"MarkActionApplied": "{{AutoOrder |contains=disabled,enabled}}",
+				},
+				
+				"AgentLyoko.StardropBreakfast_WizardBreakfastReset": {
+					"Id": "AgentLyoko.StardropBreakfast_WizardBreakfastReset",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Any breakfaststartRepeat, PLAYER_SPECIAL_ORDER_ACTIVE Any Wizard_BreakfastBundle, {{AutoOrder |contains=repeatable}}",
+					"HostOnly": false,
+					"Action": "RemoveMail Current breakfaststartRepeat",
+					"MarkActionApplied": "{{AutoOrder |contains=disabled,enabled}}",
+				},
+				
+				"AgentLyoko.StardropBreakfast_ConfigChange": {
+					"Id": "AgentLyoko.StardropBreakfast_ConfigChange",
+					"Trigger": "DayStarted",
+					"Condition": "{{AutoOrder |contains=repeatable}}, ANY \"PLAYER_HAS_RUN_TRIGGER_ACTION Current AgentLyoko.StardropBreakfast_BackupInitialSpecialRepeat\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current AgentLyoko.StardropBreakfast_BackupInitialSpecialReset\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current AgentLyoko.StardropBreakfast_BackupDoubleSpecialRepeat\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current AgentLyoko.StardropBreakfast_BackupDoubleSpecialReset\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current AgentLyoko.StardropBreakfast_WizardBreakfast\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current AgentLyoko.StardropBreakfast_WizardBreakfastReset\"",
+					"HostOnly": false,
+					"Actions": [
+						"MarkActionApplied Current AgentLyoko.StardropBreakfast_BackupInitialSpecialRepeat false",
+						"MarkActionApplied Current AgentLyoko.StardropBreakfast_BackupInitialSpecialReset false",
+						"MarkActionApplied Current AgentLyoko.StardropBreakfast_BackupDoubleSpecialRepeat false",
+						"MarkActionApplied Current AgentLyoko.StardropBreakfast_BackupDoubleSpecialReset false",
+						"MarkActionApplied Current AgentLyoko.StardropBreakfast_WizardBreakfast false",
+						"MarkActionApplied Current AgentLyoko.StardropBreakfast_WizardBreakfastReset false",
+					],
+				},
+				
+				"AgentLyoko.StardropBreakfast_SpecialOrderRandomizer": {
+					"Id": "AgentLyoko.StardropBreakfast_SpecialOrderRandomizer",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 177755, !PLAYER_HAS_MAIL Current SpecialOrderChosen", //Event got skipped before choosing
+					"HostOnly": false,
+					"Action": "AddMail Current {{Random:marniePartner, partnerShare, stardropPartner}} Received",
+				},
+				
+				"AgentLyoko.StardropBreakfast_FreeFoodRandomizer": {
+					"Id": "AgentLyoko.StardropBreakfast_FreeFoodRandomizer",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 177755, !PLAYER_HAS_MAIL Current FoodChosen", //Event got skipped before choosing
+					"HostOnly": false,
+					"Action": "AddMail Current {{Random:FreeLuckyLunch, FreeSpicyEel, FreeCrabCakes, FreeDishOfSea, FreeCrispyBass, FreePizza, FreeBurger, FreePinkCake, RandomFreeFood}} Received",
+				},
+				
+				//Normal Mails
+				
+				"AgentLyoko.StardropBreakfast_GusIngredientList": {
+					"Id": "AgentLyoko.StardropBreakfast_GusIngredientList",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 177753, !PLAYER_HAS_CONVERSATION_TOPIC Current gusThinking",
+					"HostOnly": false,
+					"Action": "AddMail Current breakfastIngredients",
+				},
+				
+				"AgentLyoko.StardropBreakfast_GusSecretReward": {
+					"Id": "AgentLyoko.StardropBreakfast_GusSecretReward",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 177755, !PLAYER_HAS_CONVERSATION_TOPIC Current completebreakfast",
+					"HostOnly": false,
+					"Action": "AddMail Current breakfastSecretReward",
+				},
+				
+				"AgentLyoko.StardropBreakfast_PierreMail": {
+					"Id": "AgentLyoko.StardropBreakfast_PierreMail",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 177755, DAY_OF_WEEK Tuesday, {{Pierreoline |contains=enabled}}",
+					"HostOnly": false,
+					"Action": "AddMail Current PierreThursdayHours",
+				},
+				
+				"AgentLyoko.StardropBreakfast_RobinMail": {
+					"Id": "AgentLyoko.StardropBreakfast_RobinMail",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 177755, DAY_OF_WEEK Monday, {{Robmetrius |contains=enabled}}",
+					"HostOnly": false,
+					"Action": "AddMail Current RobinWednesdayHours",
+				},
+				
+				"AgentLyoko.StardropBreakfast_OrangeJuiceRecipe": {
+					"Id": "AgentLyoko.StardropBreakfast_OrangeJuiceRecipe",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current OJRecipe",
+					"HostOnly": false,
+					"Action": "AddMail Current OrangeJuiceRecipe",
+				},
+				
+				//Reset the Free Breakfast - no, you don't get infinite free food.
+				
+				"AgentLyoko.StardropBreakfast_FreeFoodMarriage": {
+					"Id": "AgentLyoko.StardropBreakfast_FreeFoodMarriage",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.GusBreakfastFree",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.GusBreakfastFree",
+				},
+				
+			},
+		},	
+	]
+}

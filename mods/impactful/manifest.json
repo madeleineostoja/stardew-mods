@@ -1,0 +1,11 @@
+{
+  "Name": "Impactful",
+  "Author": "heyitsmads",
+  "Version": "%ProjectVersion%",
+  "License": "MIT",
+  "Description": "Restrained camera feedback for impactful Stardew Valley actions.",
+  "UniqueID": "heyitsmads.Impactful",
+  "EntryDll": "Impactful.dll",
+  "MinimumApiVersion": "4.4.0",
+  "UpdateKeys": ["Nexus:53679"]
+}

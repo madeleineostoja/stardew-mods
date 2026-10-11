@@ -1,0 +1,115 @@
+{
+  "$schema": "https://smapi.io/schemas/content-patcher.json",
+  "Format": "2.9.0",
+  "ConfigSchema": {
+    "BoxSize": {
+      "AllowValues": "Compact, Normal",
+      "Default": "Compact"
+    },
+    "PortraitSize": {
+      "AllowValues": "Small, Medium, Large",
+      "Default": "Medium"
+    }
+  },
+  "DynamicTokens": [
+    {
+      "Name": "BoxWidth",
+      "Value": "1088"
+    },
+    {
+      "Name": "BoxWidth",
+      "Value": "1200",
+      "When": {
+        "BoxSize": "Normal"
+      }
+    },
+    {
+      "Name": "BoxHeight",
+      "Value": "320"
+    },
+    {
+      "Name": "BoxHeight",
+      "Value": "384",
+      "When": {
+        "BoxSize": "Normal"
+      }
+    },
+    {
+      "Name": "ResolvedPortraitScale",
+      "Value": "5"
+    },
+    {
+      "Name": "ResolvedPortraitScale",
+      "Value": "4",
+      "When": {
+        "PortraitSize": "Small"
+      }
+    },
+    {
+      "Name": "ResolvedPortraitScale",
+      "Value": "6",
+      "When": {
+        "PortraitSize": "Large"
+      }
+    }
+  ],
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "aedenthorn.DialogueDisplayFramework/dictionary",
+      "Entries": {
+        "default": {
+          "packName": "heyitsmads.ImmersiveDialogueUI",
+          "xOffset": "{{Round: {{Query: (1200 - {{BoxWidth}}) / 2 }} }}",
+          "yOffset": "{{Round: {{Query: 384 - {{BoxHeight}} }} }}",
+          "width": "{{BoxWidth}}",
+          "height": "{{BoxHeight}}",
+          "dialogue": {
+            "xOffset": 32,
+            "yOffset": 40,
+            "width": "{{Round: {{Query: {{BoxWidth}} - 64 }} }}",
+            "alignment": 0,
+            "layerDepth": 0.88
+          },
+          "portrait": {
+            "xOffset": 24,
+            "yOffset": "{{Round: {{Query: 0 - 16 - (64 * {{ResolvedPortraitScale}}) }} }}",
+            "right": false,
+            "w": 64,
+            "h": 64,
+            "scale": "{{ResolvedPortraitScale}}",
+            "layerDepth": 0.89
+          },
+          "name": {
+            "xOffset": 48,
+            "yOffset": -48,
+            "right": false,
+            "scrollType": 0,
+            "alignment": 0,
+            "layerDepth": 0.9
+          },
+          "button": {
+            "xOffset": -52,
+            "yOffset": -56,
+            "right": true,
+            "bottom": true,
+            "layerDepth": 0.9
+          },
+          "jewel": {
+            "disabled": true
+          },
+          "gifts": {
+            "disabled": true
+          },
+          "hearts": {
+            "disabled": true
+          },
+          "images": [],
+          "texts": [],
+          "dividers": [],
+          "disabled": false
+        }
+      }
+    }
+  ]
+}

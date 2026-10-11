@@ -1,0 +1,11 @@
+{
+  "config.BoxSize.name": "Box size",
+  "config.BoxSize.description": "Choose a compact dialogue box or Stardew Valley's normal dimensions.",
+  "config.BoxSize.values.Compact": "Compact",
+  "config.BoxSize.values.Normal": "Normal",
+  "config.PortraitSize.name": "Portrait size",
+  "config.PortraitSize.description": "Choose how large NPC portraits appear.",
+  "config.PortraitSize.values.Small": "Small",
+  "config.PortraitSize.values.Medium": "Medium",
+  "config.PortraitSize.values.Large": "Large"
+}

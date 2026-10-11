@@ -1,0 +1,23 @@
+{
+  "$schema": "https://smapi.io/schemas/manifest.json",
+  "Name": "Immersive Dialogue UI",
+  "Author": "heyitsmads",
+  "Version": "1.0.0",
+  "Description": "Immersive dialogue UI with large frameless portraits and compact dialogue boxes",
+  "UniqueID": "heyitsmads.ImmersiveDialogueUI",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [
+    "Nexus:53678"
+  ],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+    "MinimumVersion": "2.9.0"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "Mangupix.DialogueDisplayFrameworkContinued",
+      "MinimumVersion": "0.7.5",
+      "IsRequired": true
+    }
+  ]
+}

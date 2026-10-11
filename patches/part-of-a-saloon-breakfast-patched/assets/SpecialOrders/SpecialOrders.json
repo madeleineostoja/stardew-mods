@@ -1,0 +1,912 @@
+{
+    "Changes": [ 
+		{ 
+			"LogName": "Stardrop Breakfast Special Orders",
+            "Action": "EditData",
+            "Target": "Data/SpecialOrders",
+            "Entries": 
+			{
+                "Gus_BreakfastPrep":
+				{
+                    "Name": "[Gus_BreakfastPrep_Name]",
+                    "Requester": "Gus", 
+                    "Duration": "TwoWeeks", 
+                    "Repeatable": "False", 
+					"RequiredTags": "mail_breakfastBegins", 
+                    "OrderType": "",
+                    "SpecialRule": "", 
+                    "Text": "[Gus_BreakfastPrep_Body]",
+                    "ItemToRemoveOnEnd": null,
+                    "MailToRemoveOnEnd": null,
+                    
+                    "Objectives": 
+					[
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastPrep_Objective0]",
+							"RequiredCount": "30",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "category_egg"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastPrep_Objective1]",
+							"RequiredCount": "30",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "category_milk"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastPrep_Objective2]",
+							"RequiredCount": "30",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_wheat_flour"
+							}
+						},
+                    ],
+                    "Rewards": 
+					[
+                        {
+                            "Type": "Money",
+                            "Data": 
+							{
+                                "Amount": "35000"
+                            }
+                        },
+                        {
+                            "Type": "Mail",
+                            "Data": 
+							{
+                                "MailReceived": "IngredientsReceived",
+								"NoLetter": "true"
+                            }
+                        },
+						{
+							"Type": "Friendship",
+							"Data": { "Amount": "125" }
+						}
+                    ]
+                },
+				"Gus_BreakfastSpecial":
+				{
+                    "Name": "[Gus_BreakfastSpecial_Name]",
+                    "Requester": "Gus", 
+                    "Duration": "Month", 
+                    "Repeatable": "False", 
+					"RequiredTags": "mail_breakfastIngredients", 
+                    "OrderType": "",
+                    "SpecialRule": "", 
+                    "Text": "[Gus_BreakfastSpecial_Body]",
+                    "ItemToRemoveOnEnd": null,
+                    "MailToRemoveOnEnd": null,
+                    
+                    "Objectives": 
+					[
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastSpecial_Objective0]",
+							"RequiredCount": "{{DuckEggs}}",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_duck_egg"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastSpecial_Objective1]",
+							"RequiredCount": "10",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "category_milk"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastSpecial_Objective2]",
+							"RequiredCount": "10",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_goat_cheese"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastSpecial_Objective3]",
+							"RequiredCount": "10",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_tomato"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastSpecial_Objective4]",
+							"RequiredCount": "10",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_purple_mushroom"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastSpecial_Objective5]",
+							"RequiredCount": "10",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_hot_pepper"
+							}
+						},
+                    ],
+                    "Rewards": 
+					[
+                        {
+                            "Type": "Money",
+                            "Data": 
+							{
+                                "Amount": "{{BreakfastMoney}}"
+                            }
+                        },
+                        {
+                            "Type": "Mail",
+                            "Data": 
+							{
+                                "MailReceived": "OmeletReady",
+								"NoLetter": "true"
+                            }
+                        },
+						{
+							"Type": "Friendship",
+							"Data": { "Amount": "125" }
+						},
+                    ]
+                },
+            },
+        },       
+
+		{ 
+			"LogName": "Stardrop Breakfast Bonus Special Orders",
+            "Action": "EditData",
+            "Target": "Data/SpecialOrders",
+            "Entries": 
+			{
+                "Marnie_EggHelp":
+				{
+                    "Name": "[Marnie_EggHelp_Name]",
+                    "Requester": "Marnie", 
+                    "Duration": "TwoWeeks", 
+                    "Repeatable": "True", 
+					"RequiredTags": "mail_marniePartner", 
+                    "OrderType": "",
+                    "SpecialRule": "", 
+                    "Text": "[Marnie_EggHelp_Body]",
+                    "ItemToRemoveOnEnd": null,
+                    "MailToRemoveOnEnd": null,
+                    
+                    "Objectives": 
+					[
+						{
+							"Type": "Donate",
+							"Text": "[Marnie_EggHelp_Objective0]",
+							"RequiredCount": "15",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_egg/item_large_egg"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Marnie_EggHelp_Objective1]",
+							"RequiredCount": "15",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_duck_egg"
+							}
+						},
+                    ],
+                    "Rewards": 
+					[
+                        {
+                            "Type": "Money",
+                            "Data": 
+							{
+                                "Amount": "15000"
+                            }
+                        },
+						{
+                            "Type": "Mail",
+                            "Data": 
+							{
+                                "MailReceived": "OJRecipe",
+								"NoLetter": "true"
+                            },
+                        },
+                        {
+                            "Type": "Mail",
+                            "Data": 
+							{
+                                "MailReceived": "MarniePartnerThanks",
+								"NoLetter": "false"
+                            }
+                        },
+						{
+							"Type": "Friendship",
+							"Data": { "Amount": "125" }
+						}
+                    ]
+                },
+				"Gus_BreakfastSplit":
+				{
+                    "Name": "[Gus_BreakfastSplit_Name]",
+                    "Requester": "Gus", 
+                    "Duration": "TwoWeeks", 
+                    "Repeatable": "True", 
+					"RequiredTags": "mail_partnerShare", 
+                    "OrderType": "",
+                    "SpecialRule": "", 
+                    "Text": "[Gus_BreakfastSplit_Body]",
+                    "ItemToRemoveOnEnd": null,
+                    "MailToRemoveOnEnd": null,
+                    
+                    "Objectives": 
+					[
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastSplit_Objective0]",
+							"RequiredCount": "30",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "category_egg"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastSplit_Objective1]",
+							"RequiredCount": "15",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "category_milk"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastSplit_Objective2]",
+							"RequiredCount": "15",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_wheat_flour"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastSplit_Objective3]",
+							"RequiredCount": "5",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_potato"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastSplit_Objective4]",
+							"RequiredCount": "5",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_oil"
+							}
+						},
+                    ],
+                    "Rewards": 
+					[
+                        {
+                            "Type": "Money",
+                            "Data": 
+							{
+                                "Amount": "40000"
+                            }
+                        },
+						{
+                            "Type": "Mail",
+                            "Data": 
+							{
+                                "MailReceived": "OJRecipe",
+								"NoLetter": "true"
+                            },
+                        },
+                        {
+                            "Type": "Mail",
+                            "Data": 
+							{
+                                "MailReceived": "gusSplitMail",
+								"NoLetter": "false"
+                            },
+                        },
+						{
+							"Type": "Friendship",
+							"Data": { "Amount": "125" }
+						}
+                    ]
+                },
+				"Gus_BreakfastPartner":
+				{
+                    "Name": "[Gus_BreakfastPartner_Name]",
+                    "Requester": "Gus", 
+                    "Duration": "TwoWeeks", 
+                    "Repeatable": "True", 
+					"RequiredTags": "mail_stardropPartner", 
+                    "OrderType": "",
+                    "SpecialRule": "", 
+                    "Text": "[Gus_BreakfastPartner_Body]",
+                    "ItemToRemoveOnEnd": null,
+                    "MailToRemoveOnEnd": null,
+                    
+                    "Objectives": 
+					[
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastPartner_Objective0]",
+							"RequiredCount": "30",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "category_egg"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastPartner_Objective1]",
+							"RequiredCount": "30",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "category_milk"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastPartner_Objective2]",
+							"RequiredCount": "50",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_wheat_flour"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastPartner_Objective3]",
+							"RequiredCount": "10",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_potato"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastPartner_Objective4]",
+							"RequiredCount": "5",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_orange"
+							}
+						},
+						{
+							"Type": "Donate",
+							"Text": "[Gus_BreakfastPartner_Objective5]",
+							"RequiredCount": "5",
+							"Data": 
+							{
+								"DropBox": "GusFridge",
+								"DropBoxGameLocation": "Saloon",
+								"DropBoxIndicatorLocation": "18 15",
+								"MinimumCapacity": "36",
+								"AcceptedContextTags": "item_cheese/item_goat_cheese/cheese_item"
+							}
+						},
+                    ],
+                    "Rewards": 
+					[
+                        {
+                            "Type": "Money",
+                            "Data": 
+							{
+                                "Amount": "75000"
+                            }
+                        },
+						{
+                            "Type": "Mail",
+                            "Data": 
+							{
+                                "MailReceived": "OJRecipe",
+								"NoLetter": "true"
+                            },
+                        },
+                        {
+                            "Type": "Mail",
+                            "Data": 
+							{
+                                "MailReceived": "gusPartnerMail",
+								"NoLetter": "false"
+                            },
+                        },
+						{
+							"Type": "Friendship",
+							"Data": { "Amount": "125" }
+						}
+                    ]
+                },
+            },
+        },
+		
+		{ 
+			"LogName": "Wizard Special Orders",
+            "Action": "EditData",
+            "Target": "Data/SpecialOrders",
+            "Entries": 
+			{
+				"Wizard_BreakfastBundle":
+				{
+                    "Name": "[Wizard_BreakfastBundle_Name]",
+                    "Requester": "Wizard", 
+                    "Duration": "Month", 
+                    "Repeatable": "false", 
+					"RequiredTags": "mail_wizardBreakfastBundle", 
+                    "OrderType": "",
+                    "SpecialRule": "", 
+                    "Text": "[Wizard_BreakfastBundle_Body]",
+                    "ItemToRemoveOnEnd": null,
+                    "MailToRemoveOnEnd": null,
+					"When":
+					[ "n wizardBreakfastBundle" ],
+                    
+                    "Objectives": 
+					[
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BreakfastBundle_Objective0]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "wine_item, quality_gold/quality_iridium",
+							  "TargetName": "Wizard"
+							}
+						  },
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BreakfastBundle_Objective1]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "{{Pumpkin}}, preserve_sheet_index_276",
+							  "TargetName": "Wizard"
+							}
+						  },
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BreakfastBundle_Objective2]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "pickle_item, preserve_sheet_index_266",
+							  "TargetName": "Wizard"
+							}
+						  },
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BreakfastBundle_Objective3]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "jelly_item, preserve_sheet_index_454",
+							  "TargetName": "Wizard"
+							}
+						  },
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BreakfastBundle_Objective4]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "large_milk_item, quality_gold/quality_iridium",
+							  "TargetName": "Wizard"
+							}
+						  },
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BreakfastBundle_Objective5]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "item_cheese/item_goat_cheese/cheese_item, quality_gold/quality_iridium",
+							  "TargetName": "Wizard"
+							}
+						  },
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BreakfastBundle_Objective6]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "item_sweet_gem_berry, quality_silver/quality_gold/quality_iridium",
+							  "TargetName": "Wizard"
+							}
+						  },
+                    ],
+                    "Rewards": 
+					[
+                        {
+                            "Type": "Money",
+                            "Data": 
+							{
+                                "Amount": "50000"
+                            }
+                        },
+                        {
+                            "Type": "Mail",
+                            "Data": 
+							{
+                                "MailReceived": "breakfastBundle",
+								"NoLetter": "true"
+                            }
+                        },
+						{
+							"Type": "Friendship",
+							"Data": { "Amount": "125" }
+						}
+                    ]
+                },
+				"Wizard_BonusBundle1":
+				{
+                    "Name": "[Wizard_BonusBundle_Name]",
+                    "Requester": "Wizard", 
+                    "Duration": "TwoWeeks", 
+                    "Repeatable": "True", 
+					"RequiredTags": "event_1777511", 
+                    "OrderType": "",
+                    "SpecialRule": "", 
+                    "Text": "[Wizard_BonusBundle_Body]",
+                    "ItemToRemoveOnEnd": null,
+                    "MailToRemoveOnEnd": null,
+                    
+                    "Objectives": 
+					[
+						{
+							"Type": "Deliver",
+							"Text": "[Wizard_BonusBundle_Objective0]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "wine_item, quality_gold/quality_iridium",
+							  "TargetName": "Wizard"
+							}
+						  },
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BonusBundle_Objective1]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "juice_item, preserve_sheet_index_276/preserve_sheet_index_266",
+							  "TargetName": "Wizard"
+							}
+						  },
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BonusBundle_Objective2]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "pickle_item, preserve_sheet_index_276/preserve_sheet_index_266",
+							  "TargetName": "Wizard"
+							}
+						  },
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BonusBundle_Objective3]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "jelly_item, preserve_sheet_index_268/preserve_sheet_index_454",
+							  "TargetName": "Wizard"
+							}
+						  },
+                    ],
+                    "Rewards": 
+					[
+                        {
+                            "Type": "Money",
+                            "Data": 
+							{
+                                "Amount": "40000"
+                            }
+                        },
+                        {
+                            "Type": "Mail",
+                            "Data": 
+							{
+                                "MailReceived": "WizardBonusThanks",
+								"NoLetter": "false"
+                            }
+                        },
+						{
+							"Type": "Friendship",
+							"Data": { "Amount": "125" }
+						}
+                    ]
+                },
+				"Wizard_BonusBundle2":
+				{
+                    "Name": "[Wizard_BonusBundle2_Name]",
+                    "Requester": "Wizard", 
+                    "Duration": "TwoWeeks", 
+                    "Repeatable": "True", 
+					"RequiredTags": "event_1777511", 
+                    "OrderType": "",
+                    "SpecialRule": "", 
+                    "Text": "[Wizard_BonusBundle2_Body]",
+                    "ItemToRemoveOnEnd": null,
+                    "MailToRemoveOnEnd": null,
+                    
+                    "Objectives": 
+					[
+						{
+							"Type": "Deliver",
+							"Text": "[Wizard_BonusBundle2_Objective0]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "category_fruits, quality_gold/quality_iridium",
+							  "TargetName": "Wizard"
+							}
+						  },
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BonusBundle2_Objective1]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "category_vegetable, quality_gold/quality_iridium",
+							  "TargetName": "Wizard"
+							}
+						  },
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BonusBundle2_Objective2]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "category_flowers, quality_gold/quality_iridium",
+							  "TargetName": "Wizard"
+							}
+						  },
+						  {
+							"Type": "Deliver",
+							"Text": "[Wizard_BonusBundle2_Objective3]",
+							"RequiredCount": "1",
+							"Data": {
+							  "AcceptedContextTags": "category_artisan_goods, quality_gold/quality_iridium",
+							  "TargetName": "Wizard"
+							}
+						  },
+                    ],
+                    "Rewards": 
+					[
+                        {
+                            "Type": "Money",
+                            "Data": 
+							{
+                                "Amount": "50000"
+                            }
+                        },
+                        {
+                            "Type": "Mail",
+                            "Data": 
+							{
+                                "MailReceived": "WizardBonusThanks",
+								"NoLetter": "false"
+                            }
+                        },
+						{
+							"Type": "Friendship",
+							"Data": { "Amount": "125" }
+						}
+                    ]
+                },
+            },
+        },
+		
+				{
+			"LogName": "Stardrop Breakfast Special Order Strings",
+			"Action": "EditData",
+            "Target": "Strings/SpecialOrderStrings",			
+			"Entries": 
+			{
+				// Breakfast Prep
+				"Gus_BreakfastPrep_Name": "{{i18n:SpecialOrder.Gus_BreakfastPrep_Name}}",
+				"Gus_BreakfastPrep_Body": "{{i18n:SpecialOrder.Gus_BreakfastPrep_Body}}",
+				"Gus_BreakfastPrep_Objective0": "{{i18n:SpecialOrder.Gus_BreakfastPrep_Objective0}}",
+				"Gus_BreakfastPrep_Objective1": "{{i18n:SpecialOrder.Gus_BreakfastPrep_Objective1}}",
+				"Gus_BreakfastPrep_Objective2": "{{i18n:SpecialOrder.Gus_BreakfastPrep_Objective2}}",
+				
+				// Breakfast Special
+				"Gus_BreakfastSpecial_Name": "{{i18n:SpecialOrder.Gus_BreakfastSpecial_Name}}",
+				"Gus_BreakfastSpecial_Body": "{{i18n:SpecialOrder.Gus_BreakfastSpecial_Body}}",
+				"Gus_BreakfastSpecial_Objective0": "{{i18n:SpecialOrder.Gus_BreakfastSpecial_Objective0 | DuckEggs={{DuckEggs}}}}",
+				"Gus_BreakfastSpecial_Objective1": "{{i18n:SpecialOrder.Gus_BreakfastSpecial_Objective1}}",
+				"Gus_BreakfastSpecial_Objective2": "{{i18n:SpecialOrder.Gus_BreakfastSpecial_Objective2}}",
+				"Gus_BreakfastSpecial_Objective3": "{{i18n:SpecialOrder.Gus_BreakfastSpecial_Objective3}}",
+				"Gus_BreakfastSpecial_Objective4": "{{i18n:SpecialOrder.Gus_BreakfastSpecial_Objective4}}",
+				"Gus_BreakfastSpecial_Objective5": "{{i18n:SpecialOrder.Gus_BreakfastSpecial_Objective5}}",
+				
+			},
+		},
+		
+		{
+			"LogName": "Stardrop Breakfast Special Order Strings - Post-Plot Orders",
+			"Action": "EditData",
+            "Target": "Strings/SpecialOrderStrings",			
+			"Entries": 
+			{
+				// Marnie Repeatable
+				"Marnie_EggHelp_Name": "{{i18n:SpecialOrder.Marnie_EggHelp_Name}}",
+				"Marnie_EggHelp_Body": "{{i18n:SpecialOrder.Marnie_EggHelp_Body}}",
+				"Marnie_EggHelp_Objective0": "{{i18n:SpecialOrder.Marnie_EggHelp_Objective0}}",
+				"Marnie_EggHelp_Objective1": "{{i18n:SpecialOrder.Marnie_EggHelp_Objective1}}",
+				
+				// Shared Repeatable
+				"Gus_BreakfastSplit_Name": "{{i18n:SpecialOrder.Gus_BreakfastSplit_Name}}",
+				"Gus_BreakfastSplit_Body": "{{i18n:SpecialOrder.Gus_BreakfastSplit_Body}}",
+				"Gus_BreakfastSplit_Objective0": "{{i18n:SpecialOrder.Gus_BreakfastSplit_Objective0}}",
+				"Gus_BreakfastSplit_Objective1": "{{i18n:SpecialOrder.Gus_BreakfastSplit_Objective1}}",
+				"Gus_BreakfastSplit_Objective2": "{{i18n:SpecialOrder.Gus_BreakfastSplit_Objective2}}",
+				"Gus_BreakfastSplit_Objective3": "{{i18n:SpecialOrder.Gus_BreakfastSplit_Objective3}}",
+				"Gus_BreakfastSplit_Objective4": "{{i18n:SpecialOrder.Gus_BreakfastSplit_Objective4}}",
+				
+				// Breakfast Partner Repeatable
+				"Gus_BreakfastPartner_Name": "{{i18n:SpecialOrder.Gus_BreakfastPartner_Name}}",
+				"Gus_BreakfastPartner_Body": "{{i18n:SpecialOrder.Gus_BreakfastPartner_Body}}",
+				"Gus_BreakfastPartner_Objective0": "{{i18n:SpecialOrder.Gus_BreakfastPartner_Objective0}}",
+				"Gus_BreakfastPartner_Objective1": "{{i18n:SpecialOrder.Gus_BreakfastPartner_Objective1}}",
+				"Gus_BreakfastPartner_Objective2": "{{i18n:SpecialOrder.Gus_BreakfastPartner_Objective2}}",
+				"Gus_BreakfastPartner_Objective3": "{{i18n:SpecialOrder.Gus_BreakfastPartner_Objective3}}",
+				"Gus_BreakfastPartner_Objective4": "{{i18n:SpecialOrder.Gus_BreakfastPartner_Objective4}}",
+				"Gus_BreakfastPartner_Objective5": "{{i18n:SpecialOrder.Gus_BreakfastPartner_Objective5}}",
+				
+			},
+		},
+		
+		{
+			"LogName": "Wizard Special Orders",
+			"Action": "EditData",
+            "Target": "Strings/SpecialOrderStrings",			
+			"Entries": 
+			{
+				
+				// Wizard Repeatable 1
+				"Wizard_BonusBundle_Name": "{{i18n:SpecialOrder.Wizard_BonusBundle_Name}}",
+				"Wizard_BonusBundle_Body": "{{i18n:SpecialOrder.Wizard_BonusBundle_Body |WizName={{WizName}} }}",
+				"Wizard_BonusBundle_Objective0": "{{i18n:SpecialOrder.Wizard_BonusBundle_Objective0 |Wizard={{Wizard}} }}",
+				"Wizard_BonusBundle_Objective1": "{{i18n:SpecialOrder.Wizard_BonusBundle_Objective1 |Wizard={{Wizard}} }}",
+				"Wizard_BonusBundle_Objective2": "{{i18n:SpecialOrder.Wizard_BonusBundle_Objective2 |Wizard={{Wizard}} }}",
+				"Wizard_BonusBundle_Objective3": "{{i18n:SpecialOrder.Wizard_BonusBundle_Objective3 |Wizard={{Wizard}} }}",
+				
+				// Wizard Repeatable
+				"Wizard_BonusBundle2_Name": "{{i18n:SpecialOrder.Wizard_BonusBundle2_Name}}",
+				"Wizard_BonusBundle2_Body": "{{i18n:SpecialOrder.Wizard_BonusBundle2_Body |WizName={{WizName}} }}",
+				"Wizard_BonusBundle2_Objective0": "{{i18n:SpecialOrder.Wizard_BonusBundle2_Objective0 |Wizard={{Wizard}} }}",
+				"Wizard_BonusBundle2_Objective1": "{{i18n:SpecialOrder.Wizard_BonusBundle2_Objective1 |Wizard={{Wizard}} }}",
+				"Wizard_BonusBundle2_Objective2": "{{i18n:SpecialOrder.Wizard_BonusBundle2_Objective2 |Wizard={{Wizard}} }}",
+				"Wizard_BonusBundle2_Objective3": "{{i18n:SpecialOrder.Wizard_BonusBundle2_Objective3 |Wizard={{Wizard}} }}",
+				
+				// Wizard Plot
+				"Wizard_BreakfastBundle_Name": "{{i18n:SpecialOrder.Wizard_BreakfastBundle_Name}}",
+				"Wizard_BreakfastBundle_Body": "{{i18n:SpecialOrder.Wizard_BreakfastBundle_Body |WizName={{WizName}} }}",
+				"Wizard_BreakfastBundle_Objective0": "{{i18n:SpecialOrder.Wizard_BreakfastBundle_Objective0 |Wizard={{Wizard}} }}",
+				"Wizard_BreakfastBundle_Objective1": "{{i18n:SpecialOrder.Wizard_BreakfastBundle_Objective1 |Wizard={{Wizard}} }}",
+				"Wizard_BreakfastBundle_Objective2": "{{i18n:SpecialOrder.Wizard_BreakfastBundle_Objective2 |Wizard={{Wizard}} }}",
+				"Wizard_BreakfastBundle_Objective3": "{{i18n:SpecialOrder.Wizard_BreakfastBundle_Objective3 |Wizard={{Wizard}} }}",
+				"Wizard_BreakfastBundle_Objective4": "{{i18n:SpecialOrder.Wizard_BreakfastBundle_Objective4 |Wizard={{Wizard}} }}",
+				"Wizard_BreakfastBundle_Objective5": "{{i18n:SpecialOrder.Wizard_BreakfastBundle_Objective5 |Wizard={{Wizard}} }}",
+				"Wizard_BreakfastBundle_Objective6": "{{i18n:SpecialOrder.Wizard_BreakfastBundle_Objective6 |Wizard={{Wizard}} }}",
+				
+			},
+		},
+		
+		{
+			"LogName": "Wizard Special Orders - Pumpkin Wine",
+			"Action": "EditData",
+            "Target": "Strings/SpecialOrderStrings",			
+			"Entries": 
+			{
+				"Wizard_BreakfastBundle_Objective1": "{{i18n:SpecialOrder.Wizard_BreakfastBundle_Objective1Wine |Wizard={{Wizard}} }}",	
+			},
+			"When": {
+				"HasMod |contains=o0MrPro.CP.BalancedValley": true,
+			},
+		},
+		
+		{
+			"LogName": "Wizard Special Orders - Cornucopia",
+			"Action": "EditData",
+            "Target": "Strings/SpecialOrderStrings",			
+			"Entries": 
+			{
+				"Wizard_BreakfastBundle_Objective2": "{{i18n:SpecialOrder.Wizard_BreakfastBundle_Objective2Cornucopia |Wizard={{Wizard}} }}",	
+			},
+			"When": {
+				"Cabbage": "false",
+			},
+		},
+	]
+}

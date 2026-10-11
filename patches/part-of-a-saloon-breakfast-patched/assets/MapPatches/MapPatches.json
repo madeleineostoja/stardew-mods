@@ -1,0 +1,329 @@
+{	
+    "Changes": [
+	
+		//Register
+		{
+			"LogName": "Breakfast Register",
+			"Action": "EditMap",
+			"PatchMode": "Overlay",
+			"Target": "Maps/Saloon",
+			"FromFile": "assets/MapPatches/BreakfastRegister.tmx",
+			"FromArea": {
+					"X": 0,
+					"Y": 0,
+					"Width": 1,
+					"Height": 1
+			},
+			"ToArea": {
+					"X": 17,
+					"Y": 18,
+					"Width": 1,
+					"Height": 1
+			},
+			"When": {
+				"WeekendToken": "true",
+			},
+        },
+		
+		//Shop Tile Patches
+		
+		{
+            "LogName": "Breakfast Counter Tile Patches - Vanilla",
+            "Action": "EditMap",
+            "Target": "Maps/Saloon",
+			"Update": "OnTimeChange",
+            "MapTiles": [
+                {
+                    "Position": { "X": 16, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none {{BreakfastShop}}",
+                    },
+                },
+				{
+                    "Position": { "X": 17, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none {{BreakfastShop}}",
+                    },
+                },
+				{
+                    "Position": { "X": 18, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none {{BreakfastShop}}",
+                    },
+                },
+            ],
+			"When": {
+				"Time": "{{Range: 0600, 1550}}",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false",
+				"WeekendToken": "true",
+			},
+        },
+		
+		
+		{
+            "LogName": "Breakfast Counter Tile Patches for SVE",
+            "Action": "EditMap",
+            "Target": "Maps/Saloon",
+			"Update": "OnTimeChange",
+            "MapTiles": [
+                {
+                    "Position": { "X": 16, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none {{BreakfastShop}}",
+                    },
+                },
+				{
+                    "Position": { "X": 17, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none {{BreakfastShop}}",
+                    },
+                },
+				{
+                    "Position": { "X": 18, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none {{BreakfastShop}}",
+                    },
+                },
+            ],
+			"When": {
+				"Time": "{{Range: 0600, 1550}}",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"WeekendToken": "true",
+			},
+        },
+		
+		{
+            "LogName": "Breakfast Counter Tile Patches - Vanilla, All Day Breakfast",
+            "Action": "EditMap",
+            "Target": "Maps/Saloon",
+			"Update": "OnTimeChange",
+            "MapTiles": [
+                {
+                    "Position": { "X": 16, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none {{BreakfastShop}}",
+                    },
+                },
+				{
+                    "Position": { "X": 17, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none {{BreakfastShop}}",
+                    },
+                },
+				{
+                    "Position": { "X": 18, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none {{BreakfastShop}}",
+                    },
+                },
+            ],
+			"When": {
+				"Time": "{{Range: 1600, 2400}}",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false",
+				"HasMod |contains=Airyn.EmilytheMixologist.CP": "false",
+				"WeekendToken": "true",
+				"ShopHours": "allday",
+			},
+        },
+		
+		
+		{
+            "LogName": "Breakfast Counter Tile Patches for SVE, All Day Breakfast",
+            "Action": "EditMap",
+            "Target": "Maps/Saloon",
+			"Update": "OnTimeChange",
+            "MapTiles": [
+                {
+                    "Position": { "X": 16, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none {{BreakfastShop}}",
+                    },
+                },
+				{
+                    "Position": { "X": 17, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none {{BreakfastShop}}",
+                    },
+                },
+				{
+                    "Position": { "X": 18, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none {{BreakfastShop}}",
+                    },
+                },
+            ],
+			"When": {
+				"Time": "{{Range: 1600, 2400}}",
+				"HasMod |contains=Airyn.EmilytheMixologist.CP": "false",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"WeekendToken": "true",
+				"ShopHours": "allday",
+			},
+        },
+
+		{
+            "LogName": "Breakfast Counter Tile Patches for Mixologist, All Day Breakfast Only",
+            "Action": "EditMap",
+            "Target": "Maps/Saloon",
+			"Update": "OnTimeChange",
+            "MapTiles": [
+				{
+                    "Position": { "X": 18, "Y": 19 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "OpenShop AgentLyoko.SaloonBreakfast_StardropBreakfast none 1600 2400",
+                    },
+                },
+            ],
+			"When": {
+				"Time": "{{Range: 0600, 2400}}",
+				"HasMod": "Airyn.EmilytheMixologist.CP",
+				"WeekendToken": "true",
+				"ShopHours": "allday",
+			},
+        },
+		
+		//Opening the Saloon Earlier
+		{
+            "LogName": "Breakfast Hours - Initial Opening",
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "MapTiles": [
+                {
+                    "Position": { "X": 45, "Y": 70 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "LockedDoorWarp 14 24 Saloon 0800 2400",
+                    },
+                },
+            ],
+			"When": {
+				"DayOfWeek": "Friday, Saturday",
+				"WeekendToken": "true", //The second event has been seen.
+			},
+        },
+		{
+            "LogName": "Breakfast Hours - Post-Town Breakfast Opening",
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "MapTiles": [
+                {
+                    "Position": { "X": 45, "Y": 70 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "LockedDoorWarp 14 24 Saloon 0800 2400",
+                    },
+                },
+            ],
+			"When": {
+				"DayOfWeek": "Wednesday, Sunday",
+				"WeekToken": "true", //The final event has been seen.
+			},
+        },
+		{
+            "LogName": "Breakfast Hours - Post-Kent Arrival",
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "MapTiles": [
+                {
+                    "Position": { "X": 45, "Y": 70 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "LockedDoorWarp 14 24 Saloon 0800 2400",
+                    },
+                },
+            ],
+			"When": {
+				"DayOfWeek": "Monday",
+				"MondayToken": "true",
+			},
+        },
+		{
+            "LogName": "Breakfast Hours - Shane or Sam CC Job",
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "MapTiles": [
+                {
+                    "Position": { "X": 45, "Y": 70 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "LockedDoorWarp 14 24 Saloon 0800 2400",
+                    },
+                },
+            ],
+			"When": {
+				"DayOfWeek": "Tuesday",
+				"WeekToken": "true", //The final event has been seen.
+				"TuesdayToken": "true",
+			},
+        },
+		
+		{
+            "LogName": "Breakfast Hours - Post-Town Breakfast Opening",
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "MapTiles": [
+                {
+                    "Position": { "X": 45, "Y": 70 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "LockedDoorWarp 14 24 Saloon 0800 2400",
+                    },
+                },
+            ],
+			"When": {
+				"DayOfWeek": "Thursday",
+				"WeekToken": "true", //The final event has been seen.
+				"ThursdayToken": "true",
+			},
+        },
+		
+		//Opening the Blacksmith Later
+		
+		{
+            "LogName": "Clint Hours - Breakfast Tuesdays",
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "MapTiles": [
+                {
+                    "Position": { "X": 94, "Y": 81 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": null,
+                        "Action": "LockedDoorWarp 5 19 Blacksmith 900 1900",
+                    },
+                },
+            ],
+			"When": {
+				"Clint": "enabled",
+				"DayOfWeek": "Tuesday",
+				"WeekToken": "true", //The final event has been seen.
+				"TuesdayToken": "true", //CC not done
+			},
+        },
+    ]
+}

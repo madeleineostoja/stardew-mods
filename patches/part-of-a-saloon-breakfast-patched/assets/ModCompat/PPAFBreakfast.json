@@ -1,0 +1,2031 @@
+{
+	"Changes":[
+
+//SCHEDULE STRINGS
+
+	//Bachelorettes
+	
+		//Abigail
+		{
+			"LogName": "Abigail Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Abigail",
+			"Entries":{
+				"bandmarriage": "{{i18n:SB.Abigail.BandPractice.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"breakfastMarriageAlt": "{{i18n:SB.Abigail.Breakfast.Thursday.Marriage.NoFam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Abigail": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Leah
+		{
+			"LogName": "Leah Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Leah",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Leah.Breakfast.Tuesday.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"drawafterbreakfastmarriage": "{{i18n:SB.Leah.Tuesday.Marriage.Draw.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Leah.Breakfast.Tuesday.Marriage.NoElliott.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				
+				//Thursday Lines (CCR compat)
+				"breakfastCashierMarriage": "{{i18n:SB.Leah.Breakfast.Thursday.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"drawafterbreakfastmarriageThu": "{{i18n:SB.Leah.Thursday.Marriage.Draw.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"drawfallafterbreakfastmarriageThu": "{{i18n:SB.Leah.Thursday.Marriage.Draw.Fall.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Leah": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Penny
+		{
+			"LogName": "Penny Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Penny",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Penny.Breakfast.Thursday.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Penny.Breakfast.Thursday.Marriage.NoPam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"breakfastMarriageSunAlt": "{{i18n:SB.Penny.Breakfast.Sunday.Marriage.NoMaru.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"nomarumarriage":"{{i18n:SB.Penny.NoMaru.Marriage.1.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"nomarumarriage2": "{{i18n:SB.Penny.NoMaru.Marriage.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Maru
+		{
+			"LogName": "Maru Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Maru",
+			"Entries":{
+				"breakfastMarriageSun": "{{i18n:SB.Maru.Breakfast.Sunday.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"breakfastMarriageAlt": "{{i18n:SB.Maru.Breakfast.Wednesday.Marriage.NoFam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"breakfastMarriageSunAlt": "{{i18n:SB.Maru.Breakfast.Sunday.Marriage.NoPenny.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"nopennymarriage": "{{i18n:SB.Maru.NoPenny.Marriage.1.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"nopennymarriage2": "{{i18n:SB.Maru.NoPenny.Marriage.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Maru": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:MaruRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Haley
+		{
+			"LogName": "Haley Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Haley",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Haley.Breakfast.Saturday.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"breakfastvisitmarriage": "{{i18n:SB.Haley.Marriage.Visit.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Haley.Breakfast.Saturday.Marriage.NoEmily.PPAF}}",
+			},
+			"When": {
+				"relationship:Haley": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Emily
+		{
+			"LogName": "Emily Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Emily",
+			"Entries":{
+				"breakfastvisitmarriage": "{{i18n:SB.Emily.Marriage.Visit.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"breakfastbreakmarriage": "{{i18n:SB.Emily.Breakfast.Break.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Emily.Breakfast.Saturday.Marriage.NoHaley.PPAF}}",
+			},
+			"When": {
+				"relationship:Emily": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:EmilyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+	//Bachelors
+		
+		//Harvey
+		{
+			"LogName": "Harvey Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Harvey",
+			"Entries":{
+				"breakfastMarriageAlt": "{{i18n:SB.Harvey.Breakfast.Wednesday.Marriage.NoMaru.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Abigail": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HarveyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Elliott
+		{
+			"LogName": "Elliott Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Elliott",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Elliott.Breakfast.Tuesday.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"libraryreadmarriage": "{{i18n:SB.Elliott.Library.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Elliott.Breakfast.Tuesday.Marriage.NoLeah.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Elliott": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Alex
+		{
+			"LogName": "Alex Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Alex",
+			"Entries":{
+				"breakfastMarriageAlt": "{{i18n:SB.Alex.Breakfast.Friday.Marriage.NoFam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Alex": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Sebastian
+		{
+			"LogName": "Sebastian Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sebastian",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Sebastian.Breakfast.Wednesday.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"MarriageMines": "{{i18n:SB.Sebastian.Marriage.Mines.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Sam
+		{
+			"LogName": "Sam Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sam",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Sam.Breakfast.Monday.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"MarriageMines": "{{i18n:SB.Sam.Marriage.Mines.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Sam.Breakfast.Monday.Marriage.NoSamFam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				
+				//Sam CC Job
+				"communitycentermarriage": "{{i18n:SB.Sam.CCJob.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		{
+			"LogName": "Sam String Patch - Gus replacement Tuesdays, Marriage",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sam",
+			"Entries":{
+				"CommunityCenter_Tue": "{{i18n:SB.Sam.CCJob.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Sam": "enabled",
+				"relationship:Sam": "married",
+				"CCJob": "Sam",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Shane
+		{
+			"LogName": "Shane Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Shane",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Shane.Breakfast.Monday.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"breakfastMarriageThu": "{{i18n:SB.Shane.Breakfast.Thursday.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				
+				//Shane CC Job
+				"communitycentermarriage": "{{i18n:SB.Shane.CCJob.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		{
+			"LogName": "Shane String Patch - Gus replacement Tuesdays",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"CommunityCenter_Tue": "{{i18n:SB.Shane.CCJob.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Shane": "enabled",
+				"relationship:Shane": "married",
+				"CCJob": "Shane",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},	
+	
+//CONVERSATION TOPICS
+
+	//Bachelorettes
+	
+		//Abigail
+		{
+			"LogName": "Abigail Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Abigail",
+			"Entries":{
+				"completebreakfast": "{{i18n:Abigail.CT.completebreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Abigail": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Leah
+		
+		{
+			"LogName": "Leah Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Leah",
+			"Entries":{
+				"resourcerot": "{{i18n:Leah.CT.resourcerot.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"townbreakfast": "{{i18n:Leah.CT.townbreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"completebreakfast": "{{i18n:Leah.CT.completebreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"healthybreakfast": "{{i18n:Leah.CT.healthybreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Leah": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Penny
+		
+		{
+			"LogName": "Penny Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Penny",
+			"Entries":{
+				"completebreakfast": "{{i18n:Penny.CT.completebreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Maru's does not need alteration for PPAF.
+		
+		
+		//Haley
+
+		{
+			"LogName": "Haley Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"breakfastopen": "{{i18n:Haley.CT.breakfastopen.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"completebreakfast": "{{i18n:Haley.CT.completebreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Haley": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Emily
+		
+		{
+			"LogName": "Emily Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Emily",
+			"Entries":{
+				"completebreakfast": "{{i18n:Emily.CT.completebreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Emily": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:EmilyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+	//Bachelors
+		
+		//Harvey
+		
+		{
+			"LogName": "Harvey Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Harvey",
+			"Entries":{
+				"completebreakfast": "{{i18n:Harvey.CT.completebreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Harvey": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HarveyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Elliott
+		
+		{
+			"LogName": "Elliott Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Elliott",
+			"Entries":{
+				"townbreakfast": "{{i18n:Elliott.CT.townbreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"completebreakfast": "{{i18n:Elliott.CT.completebreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Elliott": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Alex
+		
+		{
+			"LogName": "Alex Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex",
+			"Entries":{
+				"breakfastopen": "{{i18n:Alex.CT.breakfastopen.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Alex": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Sebastian
+		
+		{
+			"LogName": "Sebastian Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sebastian",
+			"Entries":{
+				"completebreakfast": "{{i18n:Sebastian.CT.completebreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Sam needs no compat lines for CTs.
+		
+		//Shane
+		
+		{
+			"LogName": "Shane Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"townbreakfast": "{{i18n:Shane.CT.townbreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"completebreakfast": "{{i18n:Shane.CT.completebreakfast.Marriage.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+//EVENT LINE CHANGES
+		
+		{
+			"LogName": "Event 1: Shane Replacer - PPAF Replacer",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177751/SawEvent 96/DaysPlayed 84": {
+					83: "speak Gus \"{{i18n:Crisis.177751.26-PPAF{{DSVMuslimGusCompat}} |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				}
+			},
+			"When": {
+				"relationship:Shane": "married",
+				"HasMod |contains=tenthousandcats.ImmersiveCShane": "false", //IC-S is not allowed this line
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+        },
+		
+		{
+			"LogName": "Event 1: Clint Replacer - PPAF Replacer",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177751/SawEvent 96/DaysPlayed 84": {
+					87: "speak Gus \"{{i18n:Crisis.177751.27-E |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				}
+			},
+			"When": {
+				"relationship:Emily": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:EmilyRelationshipType": "RomanceAndSex, RomanceWithoutSex", 
+			},
+        },
+		
+		{
+			"LogName": "Event 1: Clint Replacer - PPAF Replacer",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177751/SawEvent 96/DaysPlayed 84": {
+					87: "speak Gus \"{{i18n:Crisis.177751.27-CR |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				}
+			},
+			"When": {
+				"HasMod": "agentlyoko.rewrittenclint", //Force override if Clint Rewritten is installed, since PPAF originally would override it without Clint Rewritten
+			},
+        },
+
+//BREAKFAST DATE CHANGES
+
+	//Intro Dates
+		
+		{
+			"LogName": "Intro Replacers - Abigail",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Fields": {
+				"1777513{{SpouseID}}/SawEvent 177755/!FestivalDay/!ActiveDialogueEvent completebreakfast/Spouse {{CurrentSpouse}}/NpcVisibleHere {{CurrentSpouse}}/!DayOfWeek {{DaysBlocked}}/Random .25": {
+					14: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					24: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					28: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.5.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					30: "emote farmer 32",
+					31: "emote {{CurrentSpouse}} 32",
+				}
+			},
+			"When": {
+				"Roommate": "Abigail",
+				"relationship:Abigail": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Intro Replacers - Leah",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Fields": {
+				"1777513{{SpouseID}}/SawEvent 177755/!FestivalDay/!ActiveDialogueEvent completebreakfast/Spouse {{CurrentSpouse}}/NpcVisibleHere {{CurrentSpouse}}/!DayOfWeek {{DaysBlocked}}/Random .25": {
+					14: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					24: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					28: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.5.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					30: "emote farmer 32",
+					31: "emote {{CurrentSpouse}} 32",
+				}
+			},
+			"When": {
+				"Roommate": "Leah",
+				"relationship:Leah": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Intro Replacers - Penny",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Fields": {
+				"1777513{{SpouseID}}/SawEvent 177755/!FestivalDay/!ActiveDialogueEvent completebreakfast/Spouse {{CurrentSpouse}}/NpcVisibleHere {{CurrentSpouse}}/!DayOfWeek {{DaysBlocked}}/Random .25": {
+					14: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					24: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					30: "emote farmer 32",
+					31: "emote {{CurrentSpouse}} 32",
+				}
+			},
+			"When": {
+				"Roommate": "Penny",
+				"relationship:Penny": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Intro Replacers - Maru",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Fields": {
+				"1777513{{SpouseID}}/SawEvent 177755/!FestivalDay/!ActiveDialogueEvent completebreakfast/Spouse {{CurrentSpouse}}/NpcVisibleHere {{CurrentSpouse}}/!DayOfWeek {{DaysBlocked}}/Random .25": {
+					14: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					24: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					30: "emote farmer 32",
+					31: "emote {{CurrentSpouse}} 32",
+				}
+			},
+			"When": {
+				"Roommate": "Maru",
+				"relationship:Maru": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:MaruRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Intro Replacers - Haley",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Fields": {
+				"1777513{{SpouseID}}/SawEvent 177755/!FestivalDay/!ActiveDialogueEvent completebreakfast/Spouse {{CurrentSpouse}}/NpcVisibleHere {{CurrentSpouse}}/!DayOfWeek {{DaysBlocked}}/Random .25": {
+					14: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					24: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					28: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.5.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					30: "emote farmer 32",
+					31: "emote {{CurrentSpouse}} 32",
+				}
+			},
+			"When": {
+				"Roommate": "Haley",
+				"relationship:Haley": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Intro Replacers - Emily",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Fields": {
+				"1777513{{SpouseID}}/SawEvent 177755/!FestivalDay/!ActiveDialogueEvent completebreakfast/Spouse {{CurrentSpouse}}/NpcVisibleHere {{CurrentSpouse}}/!DayOfWeek {{DaysBlocked}}/Random .25": {
+					14: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					24: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					30: "emote farmer 32",
+					31: "emote {{CurrentSpouse}} 32",
+				}
+			},
+			"When": {
+				"Roommate": "Emily",
+				"relationship:Emily": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:EmilyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Intro Replacers - Harvey",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Fields": {
+				"1777513{{SpouseID}}/SawEvent 177755/!FestivalDay/!ActiveDialogueEvent completebreakfast/Spouse {{CurrentSpouse}}/NpcVisibleHere {{CurrentSpouse}}/!DayOfWeek {{DaysBlocked}}/Random .25": {
+					14: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					24: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					30: "emote farmer 32",
+					31: "emote {{CurrentSpouse}} 32",
+				}
+			},
+			"When": {
+				"Roommate": "Harvey",
+				"relationship:Harvey": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HarveyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Intro Replacers - Elliott",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Fields": {
+				"1777513{{SpouseID}}/SawEvent 177755/!FestivalDay/!ActiveDialogueEvent completebreakfast/Spouse {{CurrentSpouse}}/NpcVisibleHere {{CurrentSpouse}}/!DayOfWeek {{DaysBlocked}}/Random .25": {
+					14: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					24: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					30: "emote farmer 32",
+					31: "emote {{CurrentSpouse}} 32",
+				}
+			},
+			"When": {
+				"Roommate": "Elliott",
+				"relationship:Elliott": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Intro Replacers - Alex",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Fields": {
+				"1777513{{SpouseID}}/SawEvent 177755/!FestivalDay/!ActiveDialogueEvent completebreakfast/Spouse {{CurrentSpouse}}/NpcVisibleHere {{CurrentSpouse}}/!DayOfWeek {{DaysBlocked}}/Random .25": {
+					14: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					24: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					30: "emote farmer 32",
+					31: "emote {{CurrentSpouse}} 32",
+				}
+			},
+			"When": {
+				"Roommate": "Alex",
+				"relationship:Alex": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Intro Replacers - Sebastian",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Fields": {
+				"1777513{{SpouseID}}/SawEvent 177755/!FestivalDay/!ActiveDialogueEvent completebreakfast/Spouse {{CurrentSpouse}}/NpcVisibleHere {{CurrentSpouse}}/!DayOfWeek {{DaysBlocked}}/Random .25": {
+					14: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					24: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					28: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.5.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					35: "end dialogue {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.End.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					30: "emote farmer 32",
+					31: "emote {{CurrentSpouse}} 32",
+				}
+			},
+			"When": {
+				"Roommate": "Sebastian",
+				"relationship:Sebastian": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Intro Replacers - Sam",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Fields": {
+				"1777513{{SpouseID}}/SawEvent 177755/!FestivalDay/!ActiveDialogueEvent completebreakfast/Spouse {{CurrentSpouse}}/NpcVisibleHere {{CurrentSpouse}}/!DayOfWeek {{DaysBlocked}}/Random .25": {
+					14: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					24: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					28: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.5.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					30: "emote farmer 32",
+					31: "emote {{CurrentSpouse}} 32",
+				}
+			},
+			"When": {
+				"Roommate": "Sam",
+				"relationship:Sam": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Intro Replacers - Shane",
+			"Action": "EditData",
+			"Target": "Data/Events/FarmHouse",
+			"Fields": {
+				"1777513{{SpouseID}}/SawEvent 177755/!FestivalDay/!ActiveDialogueEvent completebreakfast/Spouse {{CurrentSpouse}}/NpcVisibleHere {{CurrentSpouse}}/!DayOfWeek {{DaysBlocked}}/Random .25": {
+					14: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					24: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					28: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.Intro.{{CurrentSpouse}}.5.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					30: "emote farmer 32",
+					31: "emote {{CurrentSpouse}} 32",
+				}
+			},
+			"When": {
+				"Roommate": "Shane",
+				"relationship:Shane": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+
+//Actual Dates
+
+		//Legend of Keys *and corresponding event replaces*:
+		//Line 2 requires replacing in all drink forks (so Maru and Emily will make me cry)
+		//Otherwise, *all replaces* are done in the final fork (1777514_end).
+
+		{
+			"LogName": "Date Replacers - Abigail",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_end": {
+					17: "playSound pickUpItem",
+					18: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.Hug |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					21: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.6.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					29: "playSound pickUpItem",
+					23: "emote farmer 32 true",
+					24: "emote {{CurrentSpouse}} 32 false",
+					15: "positionOffset {{CurrentSpouse}} -8 0",
+					20: "positionOffset {{CurrentSpouse}} 8 0",
+				},
+				"1777514_muffin": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_pancakes": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_omelet": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_hash": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_complete": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Abigail",
+				"relationship:Abigail": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Abigail, PPJA Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_waffles": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Abigail",
+				"relationship:Abigail": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=ppja.evenmorerecipes": "true",
+				"PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Abigail, RSV Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_donut": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Abigail",
+				"relationship:Abigail": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+				"PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Leah",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_end": {
+					10: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					17: "playSound pickUpItem",
+					18: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.Hug |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					21: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.6.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					29: "playSound pickUpItem",
+					23: "emote farmer 32 true",
+					24: "emote {{CurrentSpouse}} 32 false",
+					15: "positionOffset {{CurrentSpouse}} -8 0",
+					20: "positionOffset {{CurrentSpouse}} 8 0",
+				},
+				"1777514_muffin": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_pancakes": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_omelet": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_hash": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_complete": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Leah",
+				"relationship:Leah": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Leah, PPJA Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_waffles": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Leah",
+				"relationship:Leah": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=ppja.evenmorerecipes": "true",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Leah, RSV Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_donut": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Leah",
+				"relationship:Leah": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Penny",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_end": {
+					17: "playSound pickUpItem",
+					18: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.Hug |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					21: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.6.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					29: "playSound pickUpItem",
+					33: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.7.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					23: "emote farmer 32 true",
+					24: "emote {{CurrentSpouse}} 32 false",
+					15: "positionOffset {{CurrentSpouse}} -8 0",
+					20: "positionOffset {{CurrentSpouse}} 8 0",
+				},
+				"1777514_muffin": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_pancakes": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_omelet": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_hash": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_complete": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Penny",
+				"relationship:Penny": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Penny, PPJA Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_waffles": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Penny",
+				"relationship:Penny": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=ppja.evenmorerecipes": "true",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Penny, RSV Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_donut": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Penny",
+				"relationship:Penny": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Maru",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_end": {
+					17: "playSound pickUpItem",
+					18: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.Hug |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					21: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.6.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					29: "playSound pickUpItem",
+					23: "emote farmer 32 true",
+					24: "emote {{CurrentSpouse}} 32 false",
+					15: "positionOffset {{CurrentSpouse}} -8 0",
+					20: "positionOffset {{CurrentSpouse}} 8 0",
+				},
+				"1777514_tea": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_orange": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_milk": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_coffee": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_espresso": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_muffin": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_pancakes": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_omelet": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_hash": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_complete": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Maru",
+				"relationship:Maru": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:MaruRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Maru, PPJA Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_waffles": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Maru",
+				"relationship:Maru": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=ppja.evenmorerecipes": "true",
+				"PPAF.Core/ConfigValue:MaruRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Maru, RSV Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_apricot": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_apple": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_donut": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Maru",
+				"relationship:Maru": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:MaruRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Haley",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_end": {
+					10: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					17: "playSound pickUpItem",
+					18: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.Hug |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					21: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.6.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					29: "playSound pickUpItem",
+					33: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.7.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					35: "end dialogue {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.End.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					23: "emote farmer 32 true",
+					24: "emote {{CurrentSpouse}} 32 false",
+					15: "positionOffset {{CurrentSpouse}} -8 0",
+					20: "positionOffset {{CurrentSpouse}} 8 0",
+				},
+				"1777514_muffin": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_pancakes": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_omelet": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_hash": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_complete": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Haley",
+				"relationship:Haley": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Haley, PPJA Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_waffles": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Haley",
+				"relationship:Haley": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=ppja.evenmorerecipes": "true",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Haley, RSV Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_donut": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Haley",
+				"relationship:Haley": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Emily",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_end": {
+					17: "playSound pickUpItem",
+					18: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.Hug |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					21: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.6.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					29: "playSound pickUpItem",
+					23: "emote farmer 32 true",
+					24: "emote {{CurrentSpouse}} 32 false",
+					15: "positionOffset {{CurrentSpouse}} -8 0",
+					20: "positionOffset {{CurrentSpouse}} 8 0",
+				},
+				"1777514_tea": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_orange": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_milk": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_coffee": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_espresso": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_muffin": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_pancakes": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_omelet": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_hash": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_complete": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Emily",
+				"relationship:Emily": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:EmilyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Emily, PPJA Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_waffles": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Emily",
+				"relationship:Emily": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=ppja.evenmorerecipes": "true",
+				"PPAF.Core/ConfigValue:EmilyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Emily, RSV Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_apricot": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_apple": {
+					19: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.2.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+				},
+				"1777514_donut": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Emily",
+				"relationship:Emily": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:EmilyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Harvey",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_end": {
+					17: "playSound pickUpItem",
+					18: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.Hug |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					21: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.6.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					33: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.7.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					29: "playSound pickUpItem",
+					23: "emote farmer 32 true",
+					24: "emote {{CurrentSpouse}} 32 false",
+					15: "positionOffset {{CurrentSpouse}} -8 0",
+					20: "positionOffset {{CurrentSpouse}} 8 0",
+				},
+				"1777514_muffin": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_pancakes": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_omelet": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_hash": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_complete": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Harvey",
+				"relationship:Harvey": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:HarveyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Harvey, PPJA Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_waffles": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Harvey",
+				"relationship:Harvey": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=ppja.evenmorerecipes": "true",
+				"PPAF.Core/ConfigValue:HarveyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Harvey, RSV Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_donut": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Harvey",
+				"relationship:Harvey": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+				"PPAF.Core/ConfigValue:HarveyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Elliott",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_end": {
+					10: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					17: "playSound pickUpItem",
+					18: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.Hug |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					21: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.6.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					33: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.7.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					29: "playSound pickUpItem",
+					23: "emote farmer 32 true",
+					24: "emote {{CurrentSpouse}} 32 false",
+					15: "positionOffset {{CurrentSpouse}} -8 0",
+					20: "positionOffset {{CurrentSpouse}} 8 0",
+				},
+				"1777514_muffin": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_pancakes": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_omelet": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_hash": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_complete": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Elliott",
+				"relationship:Elliott": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Elliott, PPJA Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_waffles": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Elliott",
+				"relationship:Elliott": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=ppja.evenmorerecipes": "true",
+				"PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Elliott, RSV Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_donut": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Elliott",
+				"relationship:Elliott": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+				"PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Alex",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_end": {
+					17: "playSound pickUpItem",
+					18: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.Hug |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					21: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.6.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					33: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.7.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					29: "playSound pickUpItem",
+					23: "emote farmer 32 true",
+					24: "emote {{CurrentSpouse}} 32 false",
+					15: "positionOffset {{CurrentSpouse}} -8 0",
+					20: "positionOffset {{CurrentSpouse}} 8 0",
+				},
+				"1777514_muffin": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_pancakes": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_omelet": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_hash": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_complete": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Alex",
+				"relationship:Alex": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Alex, PPJA Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_waffles": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Alex",
+				"relationship:Alex": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=ppja.evenmorerecipes": "true",
+				"PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Alex, RSV Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_donut": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Alex",
+				"relationship:Alex": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+				"PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Sebastian",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_end": {
+					10: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.4.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					17: "playSound pickUpItem",
+					18: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.Hug |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					21: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.6.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					29: "playSound pickUpItem",
+					23: "emote farmer 32 true",
+					24: "emote {{CurrentSpouse}} 32 false",
+					15: "positionOffset {{CurrentSpouse}} -8 0",
+					20: "positionOffset {{CurrentSpouse}} 8 0",
+				},
+				"1777514_muffin": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_pancakes": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_omelet": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_hash": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_complete": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Sebastian",
+				"relationship:Sebastian": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Sebastian, PPJA Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_waffles": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Sebastian",
+				"relationship:Sebastian": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=ppja.evenmorerecipes": "true",
+				"PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Sebastian, RSV Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_donut": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Sebastian",
+				"relationship:Sebastian": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+				"PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Sam",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_end": {
+					17: "playSound pickUpItem",
+					18: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.Hug |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					21: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.6.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					29: "playSound pickUpItem",
+					23: "emote farmer 32 true",
+					24: "emote {{CurrentSpouse}} 32 false",
+					15: "positionOffset {{CurrentSpouse}} -8 0",
+					20: "positionOffset {{CurrentSpouse}} 8 0",
+				},
+				"1777514_muffin": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_pancakes": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_omelet": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_hash": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_complete": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Sam",
+				"relationship:Sam": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Sam, PPJA Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_waffles": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Sam",
+				"relationship:Sam": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=ppja.evenmorerecipes": "true",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Sam, RSV Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_donut": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Sam",
+				"relationship:Sam": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Shane",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_end": {
+					17: "playSound pickUpItem",
+					18: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.Hug |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					21: "speak {{CurrentSpouse}} \"{{i18n:BreakfastDate.{{CurrentSpouse}}.6.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					33: "message \"{{i18n:BreakfastDate.{{CurrentSpouse}}.7.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}\"",
+					29: "playSound pickUpItem",
+					23: "emote farmer 32 true",
+					24: "emote {{CurrentSpouse}} 32 false",
+					15: "positionOffset {{CurrentSpouse}} -8 0",
+					20: "positionOffset {{CurrentSpouse}} 8 0",
+				},
+				"1777514_muffin": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_pancakes": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_omelet": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_hash": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+				"1777514_complete": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Shane",
+				"relationship:Shane": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Shane, PPJA Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_waffles": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Shane",
+				"relationship:Shane": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=ppja.evenmorerecipes": "true",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+		{
+			"LogName": "Date Replacers - Shane, RSV Installed",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"1777514_donut": {
+					34: "speak Gus \"{{i18n:BreakfastDate.Gus.6.PPAF |Spouse={{CurrentSpouse}} }}\"",
+				},
+			},
+			"When": {
+				"Roommate": "Shane",
+				"relationship:Shane": "married",
+				"HasMod |contains=PPAF.Core": "true",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"VanillaSpouse": "true",
+				"BreakfastDate": "vanilla, all",
+			},
+        },
+		
+//Spouse Immersion Patches
+
+	//Schedule Strings for Night Market
+	
+	{
+			"LogName": "Haley Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Haley",
+			"Entries":{
+				"NightMarketMarriage": "{{i18n:Haley.NightMarket.Married.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "16",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"SpouseImmersion": "enabled",
+			},
+		},
+		
+		{
+			"LogName": "Alex Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Alex",
+			"Entries":{
+				"NightMarketMarriage": "{{i18n:Alex.NightMarket.Married.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "17",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"SpouseImmersion": "enabled",
+			},
+		},
+		
+		{
+			"LogName": "Sam Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sam",
+			"Entries":{
+				"NightMarketMarriage": "{{i18n:Sam.NightMarket.Married.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "17",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"SpouseImmersion": "enabled",
+			},
+		},
+
+	//funLeave for Night Market
+	
+		{
+			"LogName": "Abigail funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries":{
+				"funLeave_Abigail": "{{i18n:Abigail.NightMarket.Married.funLeave.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+				"SpouseImmersion": "enabled",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		{
+			"LogName": "Leah funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueLeah",
+			"Entries":{
+				"funLeave_Leah": "{{i18n:Leah.NightMarket.Married.funLeave.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+				"SpouseImmersion": "enabled",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		{
+			"LogName": "Penny funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"funLeave_Penny": "{{i18n:Penny.NightMarket.Married.funLeave.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+				"SpouseImmersion": "enabled",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		{
+			"LogName": "Haley funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries":{
+				"funLeave_Haley": "{{i18n:Haley.NightMarket.Married.funLeave.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "16",
+				"SpouseImmersion": "enabled",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+	//Doctor Visit Schedule String Patches
+		
+		//Leah, Spring 16
+		
+		{
+			"LogName": "Leah Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Leah",
+			"Entries":{
+				"marriageDoctorVisit": "{{i18n:Leah.NoBreakfast.Doctor.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "16",
+				"SpouseImmersion": "enabled",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Elliott, Summer 9
+		
+		{
+			"LogName": "Elliott Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Elliott",
+			"Entries":{
+				"marriageDoctorVisit": "{{i18n:Elliott.NoBreakfast.Doctor.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "summer",
+				"Day": "9",
+				"SpouseImmersion": "enabled",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+	//Doctor Visit FunLeave Patches
+		
+		{
+			"LogName": "Abigail funLeave - Doctor Visit",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries":{
+				"funLeave_Abigail": "{{i18n:Abigail.NoBreakfast.Doctor.funLeave.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Abigail": "{{i18n:Abigail.NoBreakfast.Doctor.funReturn.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "4",
+				"SpouseImmersion": "enabled",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		{
+			"LogName": "Leah funLeave - Doctor Visit",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueLeah",
+			"Entries":{
+				"funLeave_Leah": "{{i18n:Leah.NoBreakfast.Doctor.funLeave.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Leah": "{{i18n:Leah.NoBreakfast.Doctor.funReturn.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "16",
+				"SpouseImmersion": "enabled",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		{
+			"LogName": "Penny funLeave - Doctor Visit",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"funLeave_Penny": "{{i18n:Penny.NoBreakfast.Doctor.funLeave.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Penny": "{{i18n:Penny.NoBreakfast.Doctor.funReturn.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "4",
+				"SpouseImmersion": "enabled",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		{
+			"LogName": "Elliott funLeave - Doctor Visit",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries":{
+				"funLeave_Elliott": "{{i18n:Elliott.NoBreakfast.Doctor.funLeave.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Elliott": "{{i18n:Elliott.NoBreakfast.Doctor.funReturn.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"Season": "summer",
+				"Day": "9",
+				"SpouseImmersion": "enabled",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"HasMod |contains=PPAF.Core": "true",
+				"PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+
+	],
+}

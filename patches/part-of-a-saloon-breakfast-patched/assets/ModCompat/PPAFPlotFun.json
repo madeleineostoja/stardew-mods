@@ -1,0 +1,645 @@
+{
+	"Changes":[
+	
+	//Bachelorettes
+	
+		//Abigail
+		{
+			"LogName": "Abigail funLeave and funReturn Marriage Dialogue - ASS Gang Day",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries":{
+				"funLeave_Abigail": "{{i18n:SB.Morning.Abigail.Sunday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Abigail": "{{i18n:SB.Evening.Abigail.Sunday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Abigail": "married",
+				"DayOfWeek": "Sunday",
+				"Abigail": "enabled",
+				"Sebastian": "enabled",
+				"Sam": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Abigail funLeave and funReturn Marriage Dialogue - Solo Breakfast Sunday",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries":{
+				"funReturn_Abigail": "{{i18n:SB.Evening.Abigail.Sunday.NoSamSeb.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Abigail": "married",
+				"DayOfWeek": "Sunday",
+				"Abigail": "enabled",
+				"SebSam": "false",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Leah
+		{
+			"LogName": "Leah funLeave and funReturn Marriage Dialogue - Brunch with Elliott",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueLeah",
+			"Entries":{
+				"funLeave_Leah": "{{i18n:SB.Morning.Leah.Tuesday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Leah": "married",
+				"DayOfWeek": "Tuesday",
+				"Leah": "enabled",
+				"Elliott": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Leah funLeave and funReturn Marriage Dialogue - Solo Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueLeah",
+			"Entries":{
+				"funLeave_Leah": "{{i18n:SB.Morning.Leah.Tuesday.NoElliott.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Leah": "married",
+				"DayOfWeek": "Tuesday",
+				"Leah": "enabled",
+				"Elliott": "disabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah funLeave and funReturn Marriage Dialogue - CCR",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueLeah",
+			"Entries":{
+				"funLeave_Leah": "{{i18n:SB.Morning.Leah.ThursdayCCR.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Leah": "{{i18n:SB.Evening.Leah.ThursdayCCR.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Leah": "married",
+				"DayOfWeek": "Tuesday",
+				"Leah": "enabled",
+				"HasSeenEvent |contains=69660003": "true", //Cooking Class Active. Please note that in the plotmarriagelines dialogue, this should add the Leah event too.
+				"HasSeenEvent |contains=177759": "true", //Leah's cooking event seen
+				"ImmersionLeah": "true",
+				"CookingClass": "true",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+		//Penny
+		
+		{
+			"LogName": "Penny funLeave and funReturn Marriage Dialogue - Brunch with Pam",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"funLeave_Penny": "{{i18n:SB.Morning.Penny.Thursday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Penny": "{{i18n:SB.Evening.Penny.Thursday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+				"DayOfWeek": "Thursday",
+				"Penny": "enabled",
+				"Pam": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+				"CookingClass": "false",
+				"ThursdayToken": "true",
+			},
+		},
+		{
+			"LogName": "Penny funLeave and funReturn Marriage Dialogue - Brunch with Maru",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"funLeave_Penny": "{{i18n:SB.Morning.Penny.Sunday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Penny": "{{i18n:SB.Evening.Penny.Sunday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+				"DayOfWeek": "Sunday",
+				"Penny": "enabled",
+				"Maru": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Penny funLeave and funReturn Marriage Dialogue - Solo Thursday Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"funLeave_Penny": "{{i18n:SB.Morning.Penny.Thursday.NoPam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Penny": "{{i18n:SB.Evening.Penny.Thursday.NoPam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+				"DayOfWeek": "Thursday",
+				"Penny": "enabled",
+				"Pam": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+				"CookingClass": "false",
+				"ThursdayToken": "true",
+			},
+		},
+		{
+			"LogName": "Penny funLeave and funReturn Marriage Dialogue - Solo Sunday Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"funLeave_Penny": "{{i18n:SB.Morning.Penny.Sunday.NoMaru.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Penny": "{{i18n:SB.Evening.Penny.Sunday.NoMaru.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+				"DayOfWeek": "Sunday",
+				"Penny": "enabled",
+				"Maru": "disabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Maru
+		{
+			"LogName": "Maru funLeave and funReturn Marriage Dialogue - Breakfast with Family",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueMaru",
+			"Entries":{
+				"funLeave_Maru": "{{i18n:SB.Morning.Maru.Wednesday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Maru": "{{i18n:SB.Evening.Maru.Wednesday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Maru": "married",
+				"DayOfWeek": "Wednesday",
+				"Maru": "enabled",
+				"Robmetrius": "enabled",
+				"Sebastian": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:MaruRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Maru funLeave and funReturn Marriage Dialogue - Breakfast with Penny",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueMaru",
+			"Entries":{
+				"funLeave_Maru": "{{i18n:SB.Morning.Maru.Sunday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Maru": "{{i18n:SB.Evening.Maru.Sunday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Maru": "married",
+				"DayOfWeek": "Sunday",
+				"Penny": "enabled",
+				"Maru": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:MaruRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Maru funLeave and funReturn Marriage Dialogue - Solo Breakfast Wednesday",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueMaru",
+			"Entries":{
+				"funLeave_Maru": "{{i18n:SB.Morning.Maru.Wednesday.NoFam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Maru": "{{i18n:SB.Evening.Maru.Wednesday.NoFam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Maru": "married",
+				"DayOfWeek": "Wednesday",
+				"Maru": "enabled",
+				"SebFam": "false",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:MaruRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Maru funLeave and funReturn Marriage Dialogue - Solo Breakfast Sunday",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueMaru",
+			"Entries":{
+				"funReturn_Maru": "{{i18n:SB.Evening.Maru.Sunday.NoPenny.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Maru": "married",
+				"DayOfWeek": "Sunday",
+				"Maru": "enabled",
+				"Penny": "disabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:MaruRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Haley
+		{
+			"LogName": "Haley funLeave and funReturn Marriage Dialogue - Emily Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries":{
+				"funLeave_Haley": "{{i18n:SB.Morning.Haley.Saturday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Haley": "{{i18n:SB.Evening.Haley.Saturday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Haley": "married",
+				"DayOfWeek": "Saturday",
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		{
+			"LogName": "Haley funLeave and funReturn Marriage Dialogue - Solo Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries":{
+				"funLeave_Haley": "{{i18n:SB.Morning.Haley.Saturday.NoEmily.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Haley": "{{i18n:SB.Evening.Haley.Saturday.NoEmily.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Haley": "married",
+				"DayOfWeek": "Saturday",
+				"Haley": "enabled",
+				"Emily": "disabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		
+		//Emily
+		
+		{
+			"LogName": "Emily funLeave and funReturn Marriage Dialogue - Haley Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries":{
+				"funLeave_Emily": "{{i18n:SB.Morning.Emily.Saturday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Emily": "{{i18n:SB.Evening.Emily.Saturday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Emily": "married",
+				"DayOfWeek": "Saturday",
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:EmilyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		{
+			"LogName": "Emily funLeave and funReturn Marriage Dialogue - Solo Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries":{
+				"funReturn_Emily": "{{i18n:SB.Evening.Emily.Saturday.NoHaley.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Emily": "married",
+				"DayOfWeek": "Saturday",
+				"Emily": "enabled",
+				"Haley": "disabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:EmilyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		
+		{
+			"LogName": "Emily funLeave and funReturn Marriage Dialogue - Breakfast Waitress Job",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries":{
+				"funReturn_Emily": "{{i18n:SB.Evening.Emily.Sunday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Emily": "married",
+				"DayOfWeek": "Sunday",
+				"ImmersionEmily": "true",
+				"HasFlag": "saloonSportsRoom",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:EmilyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+	//Bachelors
+		
+		//Harvey has no relevant PPAF funLeave/Returns to fix
+		
+		//Elliott
+		{
+			"LogName": "Elliott funLeave and funReturn Marriage Dialogue - Brunch with Leah",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries":{
+				"funLeave_Elliott": "{{i18n:SB.Morning.Elliott.Tuesday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Elliott": "{{i18n:SB.Evening.Elliott.Tuesday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Elliott": "married",
+				"DayOfWeek": "Tuesday",
+				"Elliott": "enabled",
+				"Leah": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Elliott funLeave and funReturn Marriage Dialogue - Solo Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries":{
+				"funLeave_Elliott": "{{i18n:SB.Morning.Elliott.Tuesday.NoLeah.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Elliott": "{{i18n:SB.Evening.Elliott.Tuesday.NoLeah.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Elliott": "married",
+				"DayOfWeek": "Tuesday",
+				"Elliott": "enabled",
+				"Leah": "disabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Alex
+		{
+			"LogName": "Alex funLeave and funReturn Marriage Dialogue - Mullner Family Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAlex",
+			"Entries":{
+				"funReturn_Alex": "{{i18n:SB.Evening.Alex.Friday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Alex": "married",
+				"DayOfWeek": "Friday",
+				"Alex": "enabled",
+				"Geovelyn": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		{
+			"LogName": "Alex funLeave and funReturn Marriage Dialogue - Solo Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAlex",
+			"Entries":{
+				"funReturn_Alex": "{{i18n:SB.Evening.Alex.Friday.NoFam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Alex": "married",
+				"DayOfWeek": "Friday",
+				"Alex": "enabled",
+				"Geovelyn": "disabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		
+		//Sebastian
+		{
+			"LogName": "Sebastian funLeave and funReturn Marriage Dialogue - Family Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries":{
+				"funLeave_Sebastian": "{{i18n:SB.Morning.Sebastian.Wednesday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+				"DayOfWeek": "Wednesday",
+				"Sebastian": "enabled",
+				"Maru": "enabled",
+				"Robmetrius": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Sebastian funLeave and funReturn Marriage Dialogue - ASS Gang Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries":{
+				"funReturn_Sebastian": "{{i18n:SB.Evening.Sebastian.Sunday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+				"DayOfWeek": "Sunday",
+				"Sebastian": "enabled",
+				"Sam": "enabled",
+				"Abigail": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Sebastian funLeave and funReturn Marriage Dialogue - Solo (Wednesday) Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries":{
+				"funLeave_Sebastian": "{{i18n:SB.Morning.Sebastian.Wednesday.NoFam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Sebastian": "{{i18n:SB.Evening.Sebastian.Wednesday.NoFam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+				"DayOfWeek": "Wednesday",
+				"Sebastian": "enabled",
+				"MaruFam": "false",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Sebastian funLeave and funReturn Marriage Dialogue - Solo (Sunday) Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries":{
+				"funReturn_Sebastian": "{{i18n:SB.Evening.Sebastian.Sunday.NoAbSam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+				"DayOfWeek": "Sunday",
+				"Sebastian": "enabled",
+				"SamAbs": "false",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Sam
+		{
+			"LogName": "Sam funLeave and funReturn Marriage Dialogue - Family Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSam",
+			"Entries":{
+				"funLeave_Sam": "{{i18n:SB.Morning.Sam.Monday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Sam": "{{i18n:SB.Evening.Sam.Monday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+				"DayOfWeek": "Monday",
+				"Sam": "enabled",
+				"SamFam": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177756": "true",
+			},
+		},
+		{
+			"LogName": "Sam funLeave and funReturn Marriage Dialogue - Gus replacement Tuesdays",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSam",
+			"Entries":{
+				"funLeave_Sam": "{{i18n:SB.Morning.Sam.Job.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Sam": "{{i18n:SB.Evening.Sam.Job.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+				"DayOfWeek": "Tuesday",
+				"CCJob": "Sam",
+				"ImmersionSam": "true",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177758": "true",
+			},
+		},
+		{
+			"LogName": "Sam funLeave and funReturn Marriage Dialogue - ASS Gang Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSam",
+			"Entries":{
+				"funReturn_Sam": "{{i18n:SB.Evening.Sam.Sunday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+				"DayOfWeek": "Sunday",
+				"Sam": "enabled",
+				"Abigail": "enabled",
+				"Sebastian": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Sam funLeave and funReturn Marriage Dialogue - Solo (Monday) Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSam",
+			"Entries":{
+				"funReturn_Sam": "{{i18n:SB.Evening.Sam.Monday.NoFam.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+				"DayOfWeek": "Monday",
+				"Sam": "enabled",
+				"SamFam": "disabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177756": "true",
+			},
+		},
+		{
+			"LogName": "Sam funLeave and funReturn Marriage Dialogue - Solo (Sunday) Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSam",
+			"Entries":{
+				"funReturn_Sam": "{{i18n:SB.Evening.Sam.Sunday.NoAbSeb.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+				"DayOfWeek": "Sunday",
+				"Sam": "enabled",
+				"SebAbs": "false",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Shane
+		{
+			"LogName": "Shane funLeave and funReturn Marriage Dialogue - Marnie and Jas Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries":{
+				"funLeave_Shane": "{{i18n:SB.Morning.Shane.Monday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Shane": "{{i18n:SB.Evening.Shane.Monday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+				"DayOfWeek": "Monday",
+				"Shane": "enabled",
+				"Marnie": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177756": "true",
+			},
+		},
+		{
+			"LogName": "Shane funLeave and funReturn Marriage Dialogue - Jas Breakfast, Marnie Disabled",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries":{
+				"funLeave_Shane": "{{i18n:SB.Morning.Shane.Monday.NoMarnie.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Shane": "{{i18n:SB.Evening.Shane.Monday.NoMarnie.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+				"DayOfWeek": "Monday",
+				"Shane": "enabled",
+				"Marnie": "disabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177756": "true",
+			},
+		},
+		{
+			"LogName": "Shane funLeave and funReturn Marriage Dialogue - Jas Thursdays",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries":{
+				"funLeave_Shane": "{{i18n:SB.Morning.Shane.Thursday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+				"funReturn_Shane": "{{i18n:SB.Evening.Shane.Thursday.PPAF |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+				"DayOfWeek": "Thursday",
+				"Shane": "enabled",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"HasSeenEvent |contains=177755": "true",
+				"ThursdayToken": "true",
+			},
+		},
+	],
+}

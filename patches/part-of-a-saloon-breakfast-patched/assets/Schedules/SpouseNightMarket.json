@@ -1,0 +1,511 @@
+{
+	"Changes":[
+		
+		//Abigail
+		{
+			"LogName": "Abigail Attends the Night Market When Married", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Abigail",
+			"Entries": {
+				//Marriage
+				"marriage_winter_15": "800 SeedShop 36 9 0 \"Strings\\schedules\\Abigail:marriage_Mon.000\"/1100 Mountain 49 31 2 abigail_flute/1430 Beach 30 34 2 \"Strings\\schedules\\Abigail:NightMarketmarriage\"/2300 bed",	
+			},
+		},
+		
+		//Leah
+		{
+			"LogName": "Leah Attends the Night Market When Married", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",
+			"Entries": {
+				//Marriage
+				"marriage_winter_15": "830 Forest 63 50 2 leah_draw/1500 Beach 41 35 0 \"Strings\\schedules\\Leah:NightMarketmarriage\"/2300 bed",	
+			},
+		},
+		
+		//Penny
+		{
+			"LogName": "Penny Attends the Night Market When Married", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				//Marriage
+				"marriage_winter_15": "830 ArchaeologyHouse 17 9 2 penny_read/1600 Beach 35 36 2 \"Strings\\schedules\\Penny:NightMarketmarriage\"/2300 bed",	
+			},
+		},
+		
+		//Maru
+		{
+			"LogName": "Maru Attends the Night Market When Married", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Maru",
+			"Entries": {
+				//Marriage
+				"marriage_winter_16": "730 Hospital 6 15 2 \"Strings\\schedules\\Maru:marriageJob.000\"/1400 Hospital 9 15 3 \"Strings\\schedules\\Maru:marriageJob.001\"/1600 Hospital 8 17 1 \"Strings\\schedules\\Maru:marriageJob.002\"/1640 Beach 11 33 3 \"Strings\\schedules\\Maru:NightMarketmarriage\"/2300 bed",	
+			},
+			"When": {
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//Haley
+		{
+			"LogName": "Haley Attends the Night Market When Married", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Haley",
+			"Entries": {
+				//Marriage
+				"marriage_winter_16": "1500 Beach 27 34 2 \"Strings\\schedules\\Haley:NightMarketmarriage\"/2300 bed",	
+			},
+			"When": {
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//Emily
+		{
+			"LogName": "Emily Attends the Night Market When Married", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				//Marriage
+				"marriage_winter_15": "830 HaleyHouse 12 17 1 \"Strings\\schedules\\Emily:marriage_Mon.000\"/1100 Town 82 15 1 \"Strings\\schedules\\Emily:marriage_Mon.001\"/1450 Beach 25 36 2 \"Strings\\schedules\\Emily:NightMarketmarriage\"/2300 bed",	
+			},
+			"When": {
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//Harvey
+		{
+			"LogName": "Harvey Attends the Night Market When Married", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Harvey",
+			"Entries": {
+				//Marriage
+				"marriage_winter_15": "830 SeedShop 2 26 2 \"Strings\\schedules\\Harvey:marriage_Mon.000\"/1200 Town 23 27 1 \"Strings\\schedules\\Harvey:marriage_Mon.001\"/1600 Beach 37 31 0 \"Strings\\schedules\\Harvey:NightMarketmarriage\"/2300 bed",	
+			},
+			"When": {
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//Elliott
+		{
+			"LogName": "Elliott Attends the Night Market When Married", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Elliott",
+			"Entries": {
+				//Marriage
+				"marriage_winter_17": "1130 ArchaeologyHouse 21 11 2 elliott_read/1620 Beach 38 36 2 \"Strings\\schedules\\Elliott:NightMarketmarriage\"/2300 bed",	
+			},
+			"When": {
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//Alex
+		{
+			"LogName": "Alex Attends the Night Market When Married", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Alex",
+			"Entries": {
+				//Marriage
+				"marriage_winter_17": "900 BathHouse_MensLocker 3 5 2 alex_lift_weights/1430 Beach 27 24 1 \"Strings\\schedules\\Alex:NightMarketmarriage\"/2300 bed",	
+			},
+			"When": {
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//Sebastian
+		{
+			"LogName": "Sebastian Attends the Night Market When Married", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sebastian",
+			"Entries": {
+				//Marriage
+				"marriage_winter_16": "1520 Beach 10 39 2 \"Strings\\schedules\\Sebastian:NightMarketmarriage\"/2300 bed",	
+			},
+			"When": {
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//Sam
+		{
+			"LogName": "Sam Attends the Night Market When Married", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				//Marriage
+				"marriage_winter_17": "800 SamHouse 8 5 3 \"Strings\\schedules\\Sam:marriage_Mon.000\"/1100 SamHouse 3 13 2 \"Strings\\schedules\\Sam:marriage_Mon.001\"/1630 Beach 11 34 3 \"Strings\\schedules\\Sam:NightMarketmarriage\"/2300 bed",	
+			},
+			"When": {
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//Shane
+		{
+			"LogName": "Shane Attends the Night Market When Married", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {
+				//Marriage
+				"marriage_winter_15": "830 AnimalShop 16 13 2 \"Strings\\schedules\\Shane:marriage_Mon.000\"/1100 Forest 37 10 2 \"Strings\\schedules\\Shane:marriage_Mon.001\"/1500 Beach 20 24 2 \"Strings\\schedules\\Shane:NightMarketmarriage\"/2300 bed",	
+			},
+			"When": {
+				"HasMod |contains=iss.immersivespouses": "false",
+				"HasMod |contains=tenthousandcats.ImmersiveCShane": "false", //If IC-Shane installed, the below can still be patched in - it just won't be used.
+			},
+		},
+		
+		//Night Market Dialogues
+		
+		{
+			"LogName": "Abigail Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Abigail",
+			"Entries":{
+				"NightMarketmarriage": "{{i18n:Abigail.NightMarket.Married}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+				"relationship:Abigail": "married",
+			},
+		},
+		
+		{
+			"LogName": "Leah Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Leah",
+			"Entries":{
+				"NightMarketmarriage": "{{i18n:Leah.NightMarket.Married}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+				"relationship:Leah": "married",
+			},
+		},
+		
+		{
+			"LogName": "Penny Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Penny",
+			"Entries":{
+				"NightMarketmarriage": "{{i18n:Penny.NightMarket.Married}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+				"relationship:Penny": "married",
+			},
+		},
+		
+		{
+			"LogName": "Maru Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Maru",
+			"Entries":{
+				"NightMarketmarriage": "{{i18n:Maru.NightMarket.Married}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "16",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"relationship:Maru": "married",
+			},
+		},
+		
+		{
+			"LogName": "Haley Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Haley",
+			"Entries":{
+				"NightMarketmarriage": "{{i18n:Haley.NightMarket.Married}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "16",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"relationship:Haley": "married",
+			},
+		},
+		
+		{
+			"LogName": "Emily Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Emily",
+			"Entries":{
+				"NightMarketmarriage": "{{i18n:Emily.NightMarket.Married}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"relationship:Emily": "married",
+			},
+		},
+		
+		{
+			"LogName": "Harvey Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Harvey",
+			"Entries":{
+				"NightMarketmarriage": "{{i18n:Harvey.NightMarket.Married}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"relationship:Harvey": "married",
+			},
+		},
+		
+		{
+			"LogName": "Elliott Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Elliott",
+			"Entries":{
+				"NightMarketmarriage": "{{i18n:Elliott.NightMarket.Married}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "17",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"relationship:Elliott": "married",
+			},
+		},
+		
+		{
+			"LogName": "Alex Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Alex",
+			"Entries":{
+				"NightMarketmarriage": "{{i18n:Alex.NightMarket.Married}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "17",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"relationship:Alex": "married",
+			},
+		},
+		
+		{
+			"LogName": "Sebastian Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sebastian",
+			"Entries":{
+				"NightMarketmarriage": "{{i18n:Sebastian.NightMarket.Married}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "16",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"relationship:Sebastian": "married",
+			},
+		},
+		
+		{
+			"LogName": "Sam Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sam",
+			"Entries":{
+				"NightMarketmarriage": "{{i18n:Sam.NightMarket.Married}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "17",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"relationship:Sam": "married",
+			},
+		},
+		
+		{
+			"LogName": "Shane Marriage Night Market Dialogue",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Shane",
+			"Entries":{
+				"NightMarketmarriage": "{{i18n:Shane.NightMarket.Married}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"relationship:Shane": "married",
+			},
+		},
+		
+		//funLeave Dialogues
+		
+		{
+			"LogName": "Abigail funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries":{
+				"funLeave_Abigail": "{{i18n:Abigail.NightMarket.Married.funLeave}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+			},
+		},
+		
+		{
+			"LogName": "Leah funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueLeah",
+			"Entries":{
+				"funLeave_Leah": "{{i18n:Leah.NightMarket.Married.funLeave}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+			},
+		},
+		
+		{
+			"LogName": "Penny funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"funLeave_Penny": "{{i18n:Penny.NightMarket.Married.funLeave}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+			},
+		},
+		
+		{
+			"LogName": "Maru funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueMaru",
+			"Entries":{
+				"funLeave_Maru": "{{i18n:Maru.NightMarket.Married.funLeave}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "16",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Haley funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries":{
+				"funLeave_Haley": "{{i18n:Haley.NightMarket.Married.funLeave}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "16",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Emily funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries":{
+				"funLeave_Emily": "{{i18n:Emily.NightMarket.Married.funLeave}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Harvey funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHarvey",
+			"Entries":{
+				"funLeave_Harvey": "{{i18n:Harvey.NightMarket.Married.funLeave}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Elliott funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries":{
+				"funLeave_Elliott": "{{i18n:Elliott.NightMarket.Married.funLeave}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "17",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Alex funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAlex",
+			"Entries":{
+				"funLeave_Alex": "{{i18n:Alex.NightMarket.Married.funLeave}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "17",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Sebastian funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries":{
+				"funLeave_Sebastian": "{{i18n:Sebastian.NightMarket.Married.funLeave}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "16",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Sam funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSam",
+			"Entries":{
+				"funLeave_Sam": "{{i18n:Sam.NightMarket.Married.funLeave}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "17",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Shane funLeave - Night Market",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries":{
+				"funLeave_Shane": "{{i18n:Shane.NightMarket.Married.funLeave}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"HasMod |contains=tenthousandcats.ImmersiveCShane": "false",
+			},
+		},
+	]
+}

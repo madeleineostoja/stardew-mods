@@ -1,0 +1,743 @@
+{
+	"Changes":[
+	
+	//Bachelorettes
+	
+		//Abigail
+		{
+			"LogName": "Abigail Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Abigail",
+			"Entries":{
+				"breakfastThu": "{{i18n:SB.Abigail.Breakfast.Thursday}}",
+				"breakfastMarriage": "{{i18n:SB.Abigail.Breakfast.Thursday.Marriage}}",
+				"MarriageMines": "{{i18n:SB.Abigail.Marriage.Mines.Thursday}}",
+				"breakfastSun": "{{i18n:SB.Abigail.Breakfast.Sunday}}",
+				"breakfastMarriageSun": "{{i18n:SB.Abigail.Breakfast.Sunday.Marriage}}",
+				"band": "{{i18n:SB.Abigail.BandPractice}}",
+				"bandmarriage": "{{i18n:SB.Abigail.BandPractice.Marriage}}",
+				"mines": "{{i18n:SB.Abigail.Mines}}",
+				"MarriageMines2": "{{i18n:SB.Abigail.Marriage.Mines.Sunday}}",
+				
+				//Alt Lines
+				"breakfastThuAlt": "{{i18n:SB.Abigail.Breakfast.Thursday.NoFam}}",
+				"breakfastMarriageAlt": "{{i18n:SB.Abigail.Breakfast.Thursday.Marriage.NoFam}}",
+				"bandAlt": "{{i18n:SB.Abigail.Mines.NoSamSeb}}",
+				"minesAlt": "{{i18n:SB.Abigail.Mines.NoSamSeb}}",
+				"breakfastSunAlt": "{{i18n:SB.Abigail.Breakfast.Sunday.NoSamSeb}}",
+				"breakfastMarriageSunAlt": "{{i18n:SB.Abigail.Breakfast.Sunday.Marriage.NoSamSeb}}",
+			},
+		},
+		
+		//Leah
+		{
+			"LogName": "Leah Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Leah",
+			"Entries":{
+				"breakfastTue": "{{i18n:SB.Leah.Breakfast.Tuesday}}",
+				"breakfastMarriage": "{{i18n:SB.Leah.Breakfast.Tuesday.Marriage}}",
+				"sculptafterbreakfastmarriage": "{{i18n:SB.Leah.Tuesday.Marriage.Sculpt |season={{Season}} }}",
+				"drawafterbreakfastmarriage": "{{i18n:SB.Leah.Tuesday.Marriage.Draw}}",
+				"drawfallafterbreakfastmarriage": "{{i18n:SB.Leah.Tuesday.Marriage.Draw.Fall}}",
+				
+				//Alt Lines (No Elliott)
+				"breakfastTueAlt": "{{i18n:SB.Leah.Breakfast.Tuesday.NoElliott}}",
+				"breakfastMarriageAlt": "{{i18n:SB.Leah.Breakfast.Tuesday.Marriage.NoElliott}}",
+				
+				//Thursday Lines (CCR compat)
+				
+				"breakfastCashier": "{{i18n:SB.Leah.Breakfast.Thursday}}",
+				"breakfastCashierMarriage": "{{i18n:SB.Leah.Breakfast.Thursday.Marriage}}",
+				"sculptafterbreakfastmarriageThu": "{{i18n:SB.Leah.Thursday.Marriage.Sculpt}}",
+				"drawafterbreakfastmarriageThu": "{{i18n:SB.Leah.Thursday.Marriage.Draw}}",
+				"drawfallafterbreakfastmarriageThu": "{{i18n:SB.Leah.Thursday.Marriage.Draw.Fall}}",
+			},
+		},
+		
+		//Penny
+		{
+			"LogName": "Penny Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Penny",
+			"Entries":{
+				"breakfastThu": "{{i18n:SB.Penny.Breakfast.Thursday}}",
+				"breakfastMarriage": "{{i18n:SB.Penny.Breakfast.Thursday.Marriage}}",
+				"breakfastSun": "{{i18n:SB.Penny.Breakfast.Sunday}}",
+				"breakfastMarriageSun": "{{i18n:SB.Penny.Breakfast.Sunday.Marriage}}",
+				"marupenny": "{{i18n:SB.Penny.Maru.1}}",
+				"marupenny2": "{{i18n:SB.Penny.Maru.2}}",
+				
+				//Alt Lines
+				"breakfastThuAlt": "{{i18n:SB.Penny.Breakfast.Thursday.NoPam}}",
+				"breakfastMarriageAlt": "{{i18n:SB.Penny.Breakfast.Thursday.Marriage.NoPam}}",
+				"breakfastSunAlt": "{{i18n:SB.Penny.Breakfast.Sunday.NoMaru}}",
+				"breakfastMarriageSunAlt": "{{i18n:SB.Penny.Breakfast.Sunday.Marriage.NoMaru}}",
+				"nomarumarriage":"{{i18n:SB.Penny.NoMaru.Marriage.1}}",
+				"nomarumarriage2": "{{i18n:SB.Penny.NoMaru.Marriage.2}}",
+				"nomaru": "{{i18n:SB.Penny.NoMaru.1}}",
+				"nomaru2": "{{i18n:SB.Penny.NoMaru.2}}",
+			},
+		},
+		
+		//Maru
+		{
+			"LogName": "Maru Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Maru",
+			"Entries":{
+				"breakfastWed": "{{i18n:SB.Maru.Breakfast.Wednesday}}",
+				"breakfastMarriage": "{{i18n:SB.Maru.Breakfast.Wednesday.Marriage}}",
+				"breakfastSun": "{{i18n:SB.Maru.Breakfast.Sunday}}",
+				"breakfastMarriageSun": "{{i18n:SB.Maru.Breakfast.Sunday.Marriage}}",
+				"pennymaru": "{{i18n:SB.Maru.Penny.1}}",
+				"pennymaru2": "{{i18n:SB.Maru.Penny.2}}",
+				
+				//Alt Lines
+				"breakfastWedAlt": "{{i18n:SB.Maru.Breakfast.Wednesday.NoFam}}",
+				"breakfastMarriageAlt": "{{i18n:SB.Maru.Breakfast.Wednesday.Marriage.NoFam}}",
+				"breakfastSunAlt": "{{i18n:SB.Maru.Breakfast.Sunday.NoPenny}}",
+				"breakfastMarriageSunAlt": "{{i18n:SB.Maru.Breakfast.Sunday.Marriage.NoPenny}}",
+				"nopennymarriage": "{{i18n:SB.Maru.NoPenny.Marriage.1}}",
+				"nopennymarriage2": "{{i18n:SB.Maru.NoPenny.Marriage.2}}",
+				"nopenny": "{{i18n:SB.Maru.NoPenny.1}}",
+				"nopenny2": "{{i18n:SB.Maru.NoPenny.2}}",
+			},
+		},
+		
+		//Haley
+		{
+			"LogName": "Haley Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Haley",
+			"Entries":{
+				"breakfastSat": "{{i18n:SB.Haley.Breakfast.Saturday}}",
+				"breakfastSatHigh": "{{i18n:SB.Haley.Breakfast.Saturday.High}}",
+				"breakfastMarriage": "{{i18n:SB.Haley.Breakfast.Saturday.Marriage}}",
+				"breakfastvisitmarriage": "{{i18n:SB.Haley.Marriage.Visit}}",
+				
+				//Alt Lines
+				"breakfastSatAlt": "{{i18n:SB.Haley.Breakfast.Saturday.NoEmily}}",
+				"breakfastSatHighAlt": "{{i18n:SB.Haley.Breakfast.Saturday.High.NoEmily}}",
+				"breakfastMarriageAlt": "{{i18n:SB.Haley.Breakfast.Saturday.Marriage.NoEmily}}",
+			},
+		},
+		
+		//Emily
+		{
+			"LogName": "Emily Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Emily",
+			"Entries":{
+				"breakfastSat": "{{i18n:SB.Emily.Breakfast.Saturday}}",
+				"breakfastMarriage": "{{i18n:SB.Emily.Breakfast.Saturday.Marriage}}",
+				"breakfastvisitmarriage": "{{i18n:SB.Emily.Marriage.Visit}}",
+				"breakfastwaitress": "{{i18n:SB.Emily.Breakfast.Waitress}}",
+				"breakfastbreakmarriage": "{{i18n:SB.Emily.Breakfast.Break.Marriage}}",
+				
+				//Alt Lines
+				"breakfastSatAlt": "{{i18n:SB.Emily.Breakfast.Saturday.NoHaley}}",
+				"breakfastMarriageAlt": "{{i18n:SB.Emily.Breakfast.Saturday.Marriage.NoHaley}}",
+			},
+		},
+		
+	//Bachelors
+		
+		//Harvey
+		{
+			"LogName": "Harvey Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Harvey",
+			"Entries":{
+				"breakfastWed": "{{i18n:SB.Harvey.Breakfast.Wednesday}}",
+				"breakfastMarriage": "{{i18n:SB.Harvey.Breakfast.Wednesday.Marriage}}",
+				
+				//Alt Lines
+				"breakfastWedAlt": "{{i18n:SB.Harvey.Breakfast.Wednesday.NoMaru}}",
+				"breakfastMarriageAlt": "{{i18n:SB.Harvey.Breakfast.Wednesday.Marriage.NoMaru}}",
+			},
+		},
+		
+		//Elliott
+		{
+			"LogName": "Elliott Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Elliott",
+			"Entries":{
+				"breakfastTue": "{{i18n:SB.Elliott.Breakfast.Tuesday}}",
+				"breakfastMarriage": "{{i18n:SB.Elliott.Breakfast.Tuesday.Marriage}}",
+				"libraryreadmarriage": "{{i18n:SB.Elliott.Library}}",
+				
+				//Alt Lines
+				"breakfastTueAlt": "{{i18n:SB.Elliott.Breakfast.Tuesday.NoLeah}}",
+				"breakfastMarriageAlt": "{{i18n:SB.Elliott.Breakfast.Tuesday.Marriage.NoLeah}}",
+			},
+		},
+		
+		//Alex
+		{
+			"LogName": "Alex Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Alex",
+			"Entries":{
+				"breakfastFri": "{{i18n:SB.Alex.Breakfast.Friday}}",
+				"breakfastMarriage": "{{i18n:SB.Alex.Breakfast.Friday.Marriage}}",
+				
+				//Alt Lines
+				"breakfastFriAlt": "{{i18n:SB.Alex.Breakfast.Friday.NoFam}}",
+				"breakfastMarriageAlt": "{{i18n:SB.Alex.Breakfast.Friday.Marriage.NoFam}}",
+			},
+		},
+		
+		//Sebastian
+		{
+			"LogName": "Sebastian Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sebastian",
+			"Entries":{
+				"breakfastWed": "{{i18n:SB.Sebastian.Breakfast.Wednesday}}",
+				"breakfastMarriage": "{{i18n:SB.Sebastian.Breakfast.Wednesday.Marriage}}",
+				"postbreakfastmarriage": "{{i18n:SB.Sebastian.House.Visit}}",
+				"breakfastSun": "{{i18n:SB.Sebastian.Breakfast.Sunday}}",
+				"breakfastMarriageSun": "{{i18n:SB.Sebastian.Breakfast.Sunday.Marriage}}",
+				"bandpractice": "{{i18n:SB.Sebastian.Band}}",
+				"mines": "{{i18n:SB.Sebastian.Mines}}",
+				"MarriageMines": "{{i18n:SB.Sebastian.Marriage.Mines}}",
+				
+				//Alt Lines
+				"breakfastWedAlt": "{{i18n:SB.Sebastian.Breakfast.Wednesday.NoFam}}",
+				"breakfastMarriageAlt": "{{i18n:SB.Sebastian.Breakfast.Wednesday.Marriage.NoFam}}",
+				"breakfastSunAlt": "{{i18n:SB.Sebastian.Breakfast.Sunday.NoAbSam}}",
+				"breakfastMarriageSunAlt": "{{i18n:SB.Sebastian.Sunday.Marriage.NoAbSam}}",
+				"bandpracticeAlt": "{{i18n:SB.Sebastian.Band.NoAbSam}}",
+			},
+		},
+		
+		//Sam
+		{
+			"LogName": "Sam Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sam",
+			"Entries":{
+				"breakfastMon": "{{i18n:SB.Sam.Breakfast.Monday}}",
+				"breakfastMarriage": "{{i18n:SB.Sam.Breakfast.Monday.Marriage}}",
+				"breakfastSun": "{{i18n:SB.Sam.Breakfast.Sunday}}",
+				"breakfastMarriageSun": "{{i18n:SB.Sam.Breakfast.Sunday.Marriage}}",
+				"bandpractice": "{{i18n:SB.Sam.Band}}",
+				"mines": "{{i18n:SB.Sam.Mines}}",
+				"MarriageMines": "{{i18n:SB.Sam.Marriage.Mines}}",
+				
+				//Alt Lines
+				"breakfastMonAlt": "{{i18n:SB.Sam.Breakfast.Monday.NoSamFam}}",
+				"breakfastMarriageAlt": "{{i18n:SB.Sam.Breakfast.Monday.Marriage.NoSamFam}}",
+				"breakfastSunAlt": "{{i18n:SB.Sam.Breakfast.Sunday.NoSebAb}}",
+				"breakfastMarriageSunAlt": "{{i18n:SB.Sam.Breakfast.Sunday.Marriage.NoSebAb}}",
+				"bandpracticeAlt": "{{i18n:SB.Sam.Band.NoSebAb}}",
+				
+				//Alt Lines (CC Job Taken)
+				"communitycentermarriage": "{{i18n:SB.Sam.CCJob.Marriage}}",
+				"communitycenter": "{{i18n:SB.Sam.CCJob}}",
+				"reporting": "{{i18n:SB.Sam.CCJob.Report}}",
+				"reportingmarriage": "{{i18n:SB.Sam.CCJob.Report.Marriage}}",
+				"marriagepostCC": "{{i18n:SB.Sam.CCJob.Groceries}}",
+			},
+		},
+		{
+			"LogName": "Sam String Patch - Gus replacement Tuesdays",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sam",
+			"Entries":{
+				"CommunityCenter_Tue": "{{i18n:SB.Sam.CCJob}}",
+			},
+			"When": {
+				"Sam": "enabled",
+				"CCJob": "Sam",
+			},
+		},
+		{
+			"LogName": "Sam String Patch - Gus replacement Tuesdays, Marriage",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sam",
+			"Entries":{
+				"CommunityCenter_Tue": "{{i18n:SB.Sam.CCJob.Marriage}}",
+			},
+			"When": {
+				"Sam": "enabled",
+				"relationship:Sam": "married",
+				"CCJob": "Sam",
+			},
+		},
+		
+		//Shane
+		{
+			"LogName": "Shane Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Shane",
+			"Entries":{
+				"breakfastMon": "{{i18n:SB.Shane.Breakfast.Monday}}",
+				"breakfastMonHigh": "{{i18n:SB.Shane.Breakfast.Monday.High}}",
+				"breakfastMarriage": "{{i18n:SB.Shane.Breakfast.Monday.Marriage}}",
+				
+				"breakfastThu": "{{i18n:SB.Shane.Breakfast.Thursday}}",
+				"breakfastThuHigh": "{{i18n:SB.Shane.Breakfast.Thursday.High}}",
+				"breakfastThuHighIC": "{{i18n:SB.Shane.Breakfast.Thursday.High.ICS}}",
+				"breakfastMarriageThu": "{{i18n:SB.Shane.Breakfast.Thursday.Marriage}}",
+				"jasday": "{{i18n:SB.Shane.JasDay.1}}",
+				"jasdayread": "{{Random:{{i18n:SB.Shane.JasDay.2.1}},{{i18n:SB.Shane.JasDay.2.2}},{{i18n:SB.Shane.JasDay.2.3}} }}",
+				"jasdaybed": "{{i18n:SB.Shane.JasDay.3}}",
+				"jasdaysummer": "{{i18n:SB.Shane.JasDay.S}}",
+				
+				//Alt Lines (CC Job Taken)
+				"communitycenter": "{{i18n:SB.Shane.CCJob}}",
+				"communitycenterhigh": "{{i18n:SB.Shane.CCJob.High}}",
+				"communitycentermarriage": "{{i18n:SB.Shane.CCJob.Marriage}}",
+				"postCCmarriage": "{{i18n:SB.Shane.CCJob.Shop}}",
+				"reporting": "{{i18n:SB.Shane.CCJob.Report}}",
+				
+				//Alt Lines
+				"breakfastMonHighAlt": "{{i18n:SB.Shane.Breakfast.Monday.High.NoMarnie}}",
+			},
+		},
+		{
+			"LogName": "Shane String Patch - Gus replacement Tuesdays",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"CommunityCenter_Tue": "{{i18n:SB.Shane.CCJob.High}}",
+			},
+			"When": {
+				"Shane": "enabled",
+				"CCJob": "Shane",
+			},
+		},
+		{
+			"LogName": "Shane String Patch - Gus replacement Tuesdays, Low Hearts",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"CommunityCenter_Tue": "{{i18n:SB.Shane.CCJob}}",
+			},
+			"When": {
+				"Shane": "enabled",
+				"Hearts:Shane": "0, 1, 2, 3, 4, 5",
+				"CCJob": "Shane",
+			},
+		},
+		{
+			"LogName": "Shane String Patch - Gus replacement Tuesdays",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"CommunityCenter_Tue": "{{i18n:SB.Shane.CCJob.Marriage}}",
+			},
+			"When": {
+				"Shane": "enabled",
+				"relationship:Shane": "married",
+				"CCJob": "Shane",
+			},
+		},
+		
+		{
+			"LogName": "Shane Schedule Strings - Night Market Day (if no extra immersion)",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Shane",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Shane.Breakfast.Monday.NightMarket}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+			},
+		},
+		
+		
+		//Townspeople
+		
+		//Kent, Jodi, and Vincent
+		
+		{
+			"LogName": "Kent Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Jodi", //Patching to Jodi's schedule file since Kent doesn't have one in vanilla.
+			"Entries":{
+				"breakfastCashier": "{{i18n:SB.Kent.Breakfast.Cashier}}",
+				
+				//Alt Line if Sam is disabled.
+				"breakfastCashierAlt": "{{i18n:SB.Kent.Breakfast.Cashier.NoSam}}",
+			},
+		},
+		
+		{
+			//Recheck morning dialogue on warps, not every ten minutes. Staying past noon keeps the morning lines until the next warp.
+			"LogName": "Kent Locational Dialogue Fix - Immersive Saloon compat",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Kent",
+			"Update": "OnLocationChange",
+			"Entries":{
+				"Saloon": null,
+			},
+			"When": {
+				"Time": "{{Range: 0600, 1200}}",
+				"HasMod": "tiakall.saloon", //Only active with Immersive Saloon.
+			},
+		},
+		
+		{
+			"LogName": "Jodi Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Jodi",
+			"Entries":{
+				"breakfastMon": "{{i18n:SB.Jodi.Breakfast.Monday}}",
+				
+				//Alt Line if Sam is disabled.
+				"breakfastMonAlt": "{{i18n:SB.Jodi.Breakfast.Monday.NoSam}}",
+			},
+		},
+		{
+			"LogName": "Vincent Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Vincent",
+			"Entries":{
+				"breakfastMon": "{{i18n:SB.Vincent.Breakfast.Monday}}",
+				
+				//Alt Line if Sam is disabled
+				"breakfastMonAlt": "{{i18n:SB.Vincent.Breakfast.Monday.NoSam}}",
+			},
+		},
+		
+		//Marnie and Jas
+		
+		//Marnie
+		{
+			"LogName": "Marnie Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Marnie",
+			"Entries":{
+				"breakfastMon": "{{i18n:SB.Marnie.Breakfast.Monday}}",
+				
+				//Alt Line if Shane is disabled
+				"breakfastMonAlt": "{{i18n:SB.Marnie.Breakfast.Monday.NoShane}}",
+			},
+		},
+		
+		{
+			"LogName": "Marnie Locational Dialogue Fix",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Marnie",
+			"Update": "OnLocationChange",
+			"Entries":{
+				"Saloon": null,
+			},
+			"When": {
+				"Time": "{{Range: 0600, 1200}}"
+			},
+		},
+		
+		{
+			"LogName": "Marnie Schedule String - Night Market Fix",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Marnie",
+			"Entries":{
+				"breakfastMon": "{{i18n:SB.Marnie.Breakfast.Monday.NightMarket}}",
+				"breakfastMonAlt": "{{i18n:SB.Marnie.Breakfast.Monday.NightMarket}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "15",
+			},
+		},
+		
+		//Jas
+		{
+			"LogName": "Jas Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Jas",
+			"Entries":{
+				"breakfastMon": "{{i18n:SB.Jas.Breakfast.Monday}}",
+				"breakfastThu": "{{i18n:SB.Jas.Breakfast.Thursday}}",
+				"jasdaysummer": "{{i18n:SB.Jas.JasDay.S}}",
+				"jasdaybedtime": "{{i18n:SB.Jas.JasDay.Bed}}",
+				
+				//Alt Line if Marnie is disabled, but *not* Shane.
+				"breakfastMonAlt": "{{i18n:SB.Jas.Breakfast.Monday.NoMarnie}}",
+			},
+		},
+		
+		{
+			"LogName": "Jas Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Jas",
+			"Entries":{
+				"jasdaybedtime": "{{i18n:SB.Jas.JasDay.Bed.ShaneMarried}}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+			},
+		},
+		
+		//Clint
+		{
+			"LogName": "Clint Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Clint",
+			"Entries":{
+				"breakfastTue": "{{i18n:SB.Clint.Breakfast.Tuesday}}",
+			},
+		},
+		
+		{
+			"LogName": "Clint Locational Dialogue Fix - Immersive Saloon compat",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Clint",
+			"Update": "OnLocationChange",
+			"Entries":{
+				"Saloon": null,
+			},
+			"When": {
+				"Time": "{{Range: 0600, 1200}}",
+				"HasMod": "tiakall.saloon", //Only active with Immersive Saloon.
+			},
+		},
+		
+		//Willy
+		{
+			"LogName": "Willy Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Willy",
+			"Entries":{
+				"breakfastTue": "{{i18n:SB.Willy.Breakfast.Tuesday}}", //Short - it's unlikely someone will beeline it to opening hours to talk with Willy before he heads back to his shop at 9.
+				"breakfastrain": "{{i18n:SB.Willy.Breakfast.Rain}}", //Much more likely Willy will be encountered on rainy days.
+			},
+		},
+		
+		//Carpenter's Shop Crew
+		{
+			"LogName": "Robin Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Robin",
+			"Entries":{
+				"breakfastWed": "{{i18n:SB.Robin.Breakfast.Wednesday}}",
+				
+				//Alt Line if either Sebastian or Maru are disabled.
+				"breakfastWedAlt": "{{i18n:SB.Robin.Breakfast.Wednesday.NoSebMaru}}",
+			},
+		},
+		
+		{
+			"LogName": "Demetrius Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Demetrius",
+			"Entries":{
+				"breakfastWed": "{{i18n:SB.Demetrius.Breakfast.Wednesday}}",
+				
+				//Alt Line if either Sebastian or Maru are disabled.
+				"breakfastWedAlt": "{{i18n:SB.Demetrius.Breakfast.Wednesday.NoSebMaru}}",
+			},
+		},
+		
+		//Pierre and Caroline
+		{
+			"LogName": "Pierre Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Pierre",
+			"Entries":{
+				"breakfastThu": "{{i18n:SB.Pierre.Breakfast.Thursday}}",
+				"breakfastThuAlt": "{{i18n:SB.Pierre.Breakfast.Thursday.AbsGone}}",
+				
+				//Alt Line if Abigail is disabled entirely.
+				"breakfastThuAlt2": "{{i18n:SB.Pierre.Breakfast.Thursday.NoAbs}}",
+			},
+		},
+		
+		{
+			"LogName": "Caroline Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Caroline",
+			"Entries":{
+				"breakfastThu": "{{i18n:SB.Caroline.Breakfast.Thursday}}",
+				"breakfastThuAlt": "{{i18n:SB.Caroline.Breakfast.Thursday.AbsGone}}",
+				
+				//Alt Line if Abigail is disabled entirely.
+				"breakfastThuAlt2": "{{i18n:SB.Caroline.Breakfast.Thursday.NoAbs}}",
+			},
+		},
+		
+		//Pam
+		{
+			"LogName": "Pam Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Pam",
+			"Entries":{
+				"breakfastThu": "{{i18n:SB.Pam.Breakfast.Thursday}}",
+				
+				//Alt Line if Penny is disabled.
+				"breakfastThuAlt": "{{i18n:SB.Pam.Breakfast.Thursday.NoPenny}}",
+				"breakfastThuCCR": "{{i18n:SB.Pam.Breakfast.Thursday.CCR}}",
+			},
+		},
+		
+		{
+			"LogName": "Pam Speech Bubble Fix",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Pam",
+			"Update": "OnLocationChange",
+			"Entries":{
+				"Saloon_Entry": "{{i18n:SB.Pam.Breakfast.SpeechBubbles}}",
+			},
+			"When": {
+				"Time": "{{Range: 0600, 1200}}"
+			},
+		},
+		
+		{
+			"LogName": "Pam Speech Bubble Fix, CCR Installed",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Pam",
+			"Update": "OnLocationChange",
+			"Entries":{
+				"Saloon_Entry": "{{i18n:SB.Pam.Breakfast.SpeechBubbles.CCR}}",
+			},
+			"When": {
+				"Time": "{{Range: 0600, 1200}}",
+				"HasMod |contains=LemurKat.CommunityCenter.CP": true,
+				"DayOfWeek": "Thursday",
+			},
+		},
+		
+		{
+			"LogName": "Pam Locational Dialogue Fix",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Pam",
+			"Update": "OnLocationChange",
+			"Entries":{
+				"Saloon_Thu": null,
+				"Saloon6": null,
+				"Saloon": null,
+			},
+			"When": {
+				"Time": "{{Range: 0600, 1200}}"
+			},
+		},
+		
+		//Lewis
+		{
+			"LogName": "Lewis Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Lewis",
+			"Entries":{
+				"breakfastTue": "{{i18n:SB.Lewis.Breakfast.Tuesday}}",
+				"breakfastrain": "{{i18n:SB.Lewis.Breakfast.Rain}}", 
+			},
+		},
+		
+		{
+			"LogName": "Lewis Schedule Strings - Breakfast Time, Not Mayor",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Lewis",
+			"Entries":{
+				"breakfastTue": "{{i18n:SB.Lewis.Breakfast.Tuesday.NotMayor}}",
+			},
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasSeenEvent": "5553210",
+			},
+		},
+		
+		{
+			"LogName": "Lewis Locational Dialogue Fix", //This should work, although I took out a patch to add in locational dialogue. Probably should re-test.
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Lewis",
+			"Update": "OnLocationChange",
+			"Entries":{
+				"Saloon4": null,
+				"Saloon": null,
+			},
+			"When": {
+				"Time": "{{Range: 0600, 1200}}"
+			},
+		},
+		
+		//Evelyn and George
+		{
+			"LogName": "Evelyn Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Evelyn",
+			"Entries":{
+				"breakfastFri": "{{i18n:SB.Evelyn.Breakfast.Friday}}",
+				"breakfastrain": "{{i18n:SB.Evelyn.Breakfast.Rain}}",
+				
+				//Alt Line if Alex is disabled.
+				"breakfastFriAlt": "{{i18n:SB.Evelyn.Breakfast.Friday.NoAlex}}",
+			},
+		},
+		{
+			"LogName": "George Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/George",
+			"Entries":{
+				"breakfastFri": "{{i18n:SB.George.Breakfast.Friday}}",
+				"breakfastrain": "{{i18n:SB.George.Breakfast.Rain}}",
+				
+				//Alt Line if Alex is disabled.
+				"breakfastFriAlt": "{{i18n:SB.George.Breakfast.Friday.NoAlex}}",
+			},
+		},
+		
+		//Sandy - ONLY USED WITH SVE AND/OR IMMERSIVE SANDY
+		
+		{
+			"LogName": "Sandy Schedule Strings - Breakfast Time (SVE Compat)",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sandy",
+			"Entries":{
+				"breakfastSat": "{{i18n:SB.Sandy.Breakfast.Saturday}}",				
+				//Alt Lines
+				"breakfastSatAlt": "{{i18n:SB.Sandy.Breakfast.Saturday.NoHaley}}",
+			},
+		},
+		{
+			"LogName": "Sandy Schedule Strings - Breakfast Time (SVE and Immersive Sandy Compat)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sandy",
+			"Update": "OnLocationChange",
+			"Entries":{
+				"Saloon": "{{i18n:SB.Sandy.Breakfast.Saturday}}",				
+			},
+			"When": {
+				"Time": "{{Range: 0600, 1200}}",
+				"HasMod |contains=beyondrecovery.immersivesandy": true,
+			},
+		},
+		{
+			"LogName": "Sandy Schedule Strings - Breakfast Time (SVE and Immersive Sandy Compat), No Haley",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sandy",
+			"Update": "OnLocationChange",
+			"Entries":{
+				"Saloon": "{{i18n:SB.Sandy.Breakfast.Saturday.NoHaley}}",
+			},
+			"When": {
+				"Time": "{{Range: 0600, 1200}}",
+				"Haley": "disabled",
+				"HasMod |contains=beyondrecovery.immersivesandy": true,
+			},
+		},
+		
+		//Gus - LFL installed only
+		
+		{
+			"LogName": "Gus Schedule Strings - Breakfast Time (Marriage)",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Gus",
+			"Entries":{
+				"MarriageBreakfast": "{{i18n:SB.Gus.Breakfast.Marriage}}#$action AddMail Current AgentLyoko.GusBreakfastFree received",
+				"BreakfastDay": "{{i18n:SB.Gus.Breakfast.Marriage.Thursday}}",
+				"SundayBreakfast": "{{i18n:SB.Gus.Breakfast.Marriage.Sunday}}",
+				"SundaySportsBreakfast": "{{i18n:SB.Gus.Breakfast.Marriage.SportsRoom}}",
+			},
+			"When": {
+				"relationship:Gus": "married",
+			},
+		},
+	],
+}

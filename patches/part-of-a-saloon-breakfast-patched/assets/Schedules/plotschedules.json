@@ -1,0 +1,2160 @@
+{
+	"Changes":[
+	
+	//The Chef Supreme (all schedules altered that aren't specifically patched)
+		{
+			"LogName": "Gus Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Gus",			
+			"Entries": {
+				"spring": "820 Saloon 17 18 2/1200 Saloon 14 18 2 gus_clean/1830 Saloon 12 18 0/1850 Saloon 10 18 2/1940 Saloon 12 18 0/1950 Saloon 10 18 2/2030 Saloon 12 18 0/2040 Saloon 10 18 2/2400 Saloon 23 4 1 gus_sleep",
+				"Tue": "GOTO spring",
+			},
+			"When": {
+				"ImmersionGus": "true", // not both false - Thank you Pathos!
+				"DayOfWeek": "Friday, Saturday",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //At least the second event has been seen.
+			},
+		},
+		
+		{
+			"LogName": "Gus Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Gus",			
+			"Entries": {
+				"spring": "820 Saloon 17 18 2/1200 Saloon 14 18 2 gus_clean/1830 Saloon 12 18 0/1850 Saloon 10 18 2/1940 Saloon 12 18 0/1950 Saloon 10 18 2/2030 Saloon 12 18 0/2040 Saloon 10 18 2/2400 Saloon 23 4 1 gus_sleep",
+				"Tue": "GOTO spring",
+			},
+			"When": {
+				"ImmersionGus": "true", // not both false - Thank you Pathos!
+				"DayOfWeek": "Wednesday",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //The final event has been seen.
+			},
+		},
+		
+		{
+			"LogName": "Gus Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Gus",			
+			"Entries": {
+				"spring": "820 Saloon 17 18 2/1200 Saloon 14 18 2 gus_clean/1830 Saloon 12 18 0/1850 Saloon 10 18 2/1940 Saloon 12 18 0/1950 Saloon 10 18 2/2030 Saloon 12 18 0/2040 Saloon 10 18 2/2400 Saloon 23 4 1 gus_sleep",
+				"Tue": "GOTO spring",
+			},
+			"When": {
+				"ImmersionGus": "true", // not both false - Thank you Pathos!
+				"DayOfWeek": "Tuesday",
+				"TuesdayToken": "true",
+			},
+		},
+		
+		{
+			"LogName": "Gus Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Gus",			
+			"Entries": {
+				"spring": "820 Saloon 17 18 2/1200 Saloon 14 18 2 gus_clean/1830 Saloon 12 18 0/1850 Saloon 10 18 2/1940 Saloon 12 18 0/1950 Saloon 10 18 2/2030 Saloon 12 18 0/2040 Saloon 10 18 2/2400 Saloon 23 4 1 gus_sleep",
+				"Tue": "GOTO spring",
+			},
+			"When": {
+				"ImmersionGus": "true", // not both false - Thank you Pathos!
+				"DayOfWeek": "Thursday",
+				"HasMod |contains=LemurKat.CommunityCenter.CP": "false",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //The final event has been seen.
+			},
+		},
+		
+		{
+			"LogName": "Gus Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Gus",			
+			"Entries": {
+				"spring": "820 Saloon 17 18 2/1200 Saloon 14 18 2 gus_clean/1830 Saloon 12 18 0/1850 Saloon 10 18 2/1940 Saloon 12 18 0/1950 Saloon 10 18 2/2030 Saloon 12 18 0/2040 Saloon 10 18 2/2400 Saloon 23 4 1 gus_sleep",
+				"Tue": "GOTO spring",
+				"Thu": "820 Saloon 17 18 2/1200 Saloon 14 18 2 gus_clean/1830 Saloon 12 18 0/1850 Saloon 10 18 2/1940 Saloon 12 18 0/1950 Saloon 10 18 2/2030 Saloon 12 18 0/2040 Saloon 10 18 2/2400 Saloon 23 4 1 gus_sleep",
+			},
+			"When": {
+				"ImmersionGus": "true", // not both false - Thank you Pathos!
+				"DayOfWeek": "Thursday",
+				"HasMod |contains=LemurKat.CommunityCenter.CP": "true",
+				"HasSeenEvent: anyPlayer |contains=69660003": "false",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //The final event has been seen.
+			},
+		},
+		
+		{
+			"LogName": "Gus Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Gus",			
+			"Entries": {
+				"spring": "820 Saloon 17 18 2/1200 Saloon 14 18 2 gus_clean/1830 Saloon 12 18 0/1850 Saloon 10 18 2/1940 Saloon 12 18 0/1950 Saloon 10 18 2/2030 Saloon 12 18 0/2040 Saloon 10 18 2/2400 Saloon 23 4 1 gus_sleep",
+				"Tue": "GOTO spring",
+				"Thu": "820 Saloon 17 18 2/1200 Saloon 14 18 2 gus_clean/1830 Saloon 12 18 0/1850 Saloon 10 18 2/1940 Saloon 12 18 0/1950 Saloon 10 18 2/2030 Saloon 12 18 0/2040 Saloon 10 18 2/2400 Saloon 23 4 1 gus_sleep",
+			},
+			"When": {
+				"ImmersionGus": "true", // not both false - Thank you Pathos!
+				"HasMod |contains=LemurKat.CommunityCenter.CP": "true",
+				"HasSeenEvent: anyPlayer |contains=69660003": "true", //Penny's going to cooking class
+				"HasSeenEvent: anyPlayer |contains=177759": "true", //Leah's event has been seen.
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //The final event has been seen.
+				"CookingClass": "false",
+			},
+		},
+		
+		{
+			"LogName": "Gus Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Gus",			
+			"Entries": {
+				"spring": "820 Saloon 17 18 2/1200 Saloon 14 18 2 gus_clean/1830 Saloon 12 18 0/1850 Saloon 10 18 2/1940 Saloon 12 18 0/1950 Saloon 10 18 2/2030 Saloon 12 18 0/2040 Saloon 10 18 2/2400 Saloon 23 4 1 gus_sleep",
+				"Tue": "GOTO spring",
+			},
+			"When": {
+				"ImmersionGus": "true", // not both false - Thank you Pathos!
+				"DayOfWeek": "Sunday",
+				"HasFlag |contains=saloonSportsRoom": "false", //One of the final sports room events are *NOT* completed.
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //The final event has been seen.
+			},
+		},
+
+
+	//Breakfast Schedule
+	
+		//Monday Crew
+		
+		//Marnie, Jas, and Shane
+		
+		//Marnie
+		{
+			"LogName": "Marnie Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Marnie",			
+			"Entries": {			
+				"Mon": "700 Saloon 2 20 1 \"Strings\\schedules\\Marnie:breakfastMon\"/1100 SeedShop 11 20 0/1700 AnimalShop 24 15 0/2100 bed", //Marnie gets breakfast with Jas and Shane, then gets her groceries and heads home. Microwave time is now for cooking supper.
+			},
+			"When": {
+				"Marnie": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		{
+			"LogName": "Marnie Breakfast Schedule - Shane Schedules Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Marnie",			
+			"Entries": {			
+				"Mon": "700 Saloon 2 20 1 \"Strings\\schedules\\Marnie:breakfastMonAlt\"/1100 SeedShop 11 20 0/1700 AnimalShop 24 15 0/2100 bed", //Marnie gets breakfast with Jas and Shane, then gets her groceries and heads home. Microwave time is now for cooking supper.
+			},
+			"When": {
+				"Marnie": "enabled",
+				"Shane": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		//Jas
+		{
+			"LogName": "Jas Breakfast Schedule - Monday", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Jas",			
+			"Entries": {			
+				"Mon": "700 Saloon 4 19 2 \"Strings\\schedules\\Jas:breakfastMon\"/1100 Forest 38 10 2 jas_jumprope \"Strings\\schedules\\Jas:spring.000\"/1500 AnimalShop 17 15 3 jas_read/1900 AnimalShop 4 7 2/2100 bed", //Jas gets breakfast, then proceeds on her normal schedule.
+				"summer_Mon": "700 Saloon 4 19 2 \"Strings\\schedules\\Jas:breakfastMon\"/1100 Forest 92 20 1/1320 Beach 40 23 jas_jumprope \"Strings\\schedules\\Jas:summer.000\"/1600 AnimalShop 17 15 3 jas_read/1900 AnimalShop 4 7 2/2100 bed", //If summer, alternate ending
+			},
+			"When": {
+				"Marnie": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		{
+			"LogName": "Jas Breakfast Schedule - Monday, Marnie Schedules Disabled but Shane Schedules enabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Jas",			
+			"Entries": {			
+				"Mon": "700 Saloon 4 19 2 \"Strings\\schedules\\Jas:breakfastMonAlt\"/1100 Forest 38 10 2 jas_jumprope \"Strings\\schedules\\Jas:spring.000\"/1500 AnimalShop 17 15 3 jas_read/1900 AnimalShop 4 7 2/2100 bed", //Jas gets breakfast, then proceeds on her normal schedule.
+				"summer_Mon": "700 Saloon 4 19 2 \"Strings\\schedules\\Jas:breakfastMonAlt\"/1100 Forest 92 20 1/1320 Beach 40 23 jas_jumprope \"Strings\\schedules\\Jas:summer.000\"/1600 AnimalShop 17 15 3 jas_read/1900 AnimalShop 4 7 2/2100 bed", //If summer, alternate ending
+			},
+			"When": {
+				"Marnie": "disabled",
+				"Shane": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		//Shane
+		{
+			"LogName": "Shane Breakfast Schedule - Monday", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {			
+				"marriage_Mon": "630 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastMarriage\"/1100 AnimalShop 16 13 2 \"Strings\\schedules\\Shane:marriage_Mon.000\"/1400 Forest 37 10 2 \"Strings\\schedules\\Shane:marriage_Mon.001\"/1700 bed",
+				
+				"Mon": "700 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastMonHigh\"/1100 AnimalShop 24 5 0/1400 Saloon 11 20 0/1630 Saloon 21 17 2 shane_drink/1900 Saloon 27 23 1/2100 Saloon 24 17 2 shane_drink/2300 bed", //It fits Shane to go twice, so he goes twice under this schedule.
+			},
+			"When": {
+				"Shane": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		{
+			"LogName": "Shane Breakfast Schedule - Monday, Low Hearts", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {
+				"Mon": "700 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastMon\"/1100 AnimalShop 24 5 0/1400 Saloon 11 20 0/1630 Saloon 21 17 2 shane_drink/1900 Saloon 27 23 1/2100 Saloon 24 17 2 shane_drink/2300 bed", //It fits Shane to go twice, so he goes twice under this schedule.
+			},
+			"When": {
+				"Shane": "enabled",
+				"Hearts:Shane": "0, 1, 2, 3, 4, 5",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		{
+			"LogName": "Shane Breakfast Schedule - Monday", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {			
+				"marriage_Mon": "630 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastMarriage\"/1100 AnimalShop 16 13 2 \"Strings\\schedules\\Shane:marriage_Mon.000\"/1400 Forest 37 10 2 \"Strings\\schedules\\Shane:marriage_Mon.001\"/1700 bed",
+				
+				"Mon": "700 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastMonHighAlt\"/1100 AnimalShop 24 5 0/1400 Saloon 11 20 0/1630 Saloon 21 17 2 shane_drink/1900 Saloon 27 23 1/2100 Saloon 24 17 2 shane_drink/2300 bed", //It fits Shane to go twice, so he goes twice under this schedule.
+			},
+			"When": {
+				"Shane": "enabled",
+				"Marnie": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		{
+			"LogName": "Shane Breakfast Schedule - Monday, Low Hearts", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {
+				"Mon": "700 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastMon\"/1100 AnimalShop 24 5 0/1400 Saloon 11 20 0/1630 Saloon 21 17 2 shane_drink/1900 Saloon 27 23 1/2100 Saloon 24 17 2 shane_drink/2300 bed", //It fits Shane to go twice, so he goes twice under this schedule.
+			},
+			"When": {
+				"Shane": "enabled",
+				"Marnie": "disabled",
+				"Hearts:Shane": "0, 1, 2, 3, 4, 5",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		//Jodi, Vincent, Sam, and Kent (only patched once Kent works on Mondays)
+		
+		//Kent
+		{
+			"LogName": "Kent Breakfast Schedule - Cashier on Mondays", //Schedule strings in Jodi's file since Kent doesn't have one in vanilla
+			"Action": "EditData",
+			"Target": "Characters/schedules/Kent",			
+			"Entries": {
+				"Mon": "630 Saloon 17 18 2 \"Strings\\schedules\\Jodi:breakfastCashier\"/1130 SamHouse 8 12 2/1400 Town 6 72 1/1700 SamHouse 2 21 0/1900 SamHouse 8 5 3/2100 Town 6 89 2/2300 bed", //Kent mans the till on Mondays after the final event.
+			},
+			"When": {
+				"ImmersionKent": "true", // not both false - Thank you Pathos!
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		{
+			"LogName": "Kent Breakfast Schedule - Cashier on Mondays, Sam Schedules Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Kent",			
+			"Entries": {
+				"Mon": "630 Saloon 17 18 2 \"Strings\\schedules\\Jodi:breakfastCashierAlt\"/1130 SamHouse 8 12 2/1400 Town 6 72 1/1700 SamHouse 2 21 0/1900 SamHouse 8 5 3/2100 Town 6 89 2/2300 bed", //Kent mans the till on Mondays after the final event.
+			},
+			"When": {
+				"ImmersionKent": "true", // not both false - Thank you Pathos!
+				"Sam": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		//Jodi
+		{
+			"LogName": "Jodi Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Jodi",
+			"Entries": {
+				"Mon": "700 Saloon 9 22 1 \"Strings\\schedules\\Jodi:breakfastMon\"/1130 SamHouse 4 12 2 jodi_sit_down/1330 Town 22 72 1/1600 SamHouse 5 5 0/1900 SamHouse 6 5 0 jodi_dishes/1930 SamHouse 8 13 1/2100 SamHouse 10 22 3 \"Strings\\schedules\\Jodi:spring.000\"/2200 bed", //Jodi visits and doesn't do morning dishes as they eat at the Saloon.
+			},
+			"When": {
+				"SamFam": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		{
+			"LogName": "Jodi Breakfast Schedule - Sam Schedules Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Jodi",
+			"Entries": {
+				"Mon": "700 Saloon 9 22 1 \"Strings\\schedules\\Jodi:breakfastMon\"/1130 SamHouse 4 12 2 jodi_sit_down/1330 Town 22 72 1/1600 SamHouse 5 5 0/1900 SamHouse 6 5 0 jodi_dishes/1930 SamHouse 8 13 1/2100 SamHouse 10 22 3 \"Strings\\schedules\\Jodi:spring.000\"/2200 bed", //Jodi visits and doesn't do morning dishes as they eat at the Saloon.
+			},
+			"When": {
+				"SamFam": "enabled",
+				"Sam": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		//Vincent
+		{
+			"LogName": "Vincent Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Vincent",
+			"Entries": {
+				"Mon": "700 Saloon 12 21 3 \"Strings\\schedules\\Vincent:breakfastMon\"/1130 SamHouse 2 15 2 vincent_play/1400 Town 12 72 2 square_5_3/1700 SamHouse 5 7 3/1900 SamHouse 11 22 2 vincent_play/2000 bed", //Vincent visits (and must have a parent attending).
+			},
+			"When": {
+				"SamFam": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		{
+			"LogName": "Vincent Breakfast Schedule - Sam Schedules Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Vincent",
+			"Entries": {
+				"Mon": "700 Saloon 12 21 3 \"Strings\\schedules\\Vincent:breakfastMonAlt\"/1130 SamHouse 2 15 2 vincent_play/1400 Town 12 72 2 square_5_3/1700 SamHouse 5 7 3/1900 SamHouse 11 22 2 vincent_play/2000 bed", //Vincent visits (and must have a parent attending).
+			},
+			"When": {
+				"SamFam": "enabled",
+				"Sam": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		//Sam
+		
+		{
+			"LogName": "Sam Breakfast Schedule - Monday, Marriage (For Ease of Patching)",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				"marriage_Mon": "700 Saloon 11 21 2 \"Strings\\schedules\\Sam:breakfastMarriage\"/1130 SamHouse 8 5 3 \"Strings\\schedules\\Sam:marriage_Mon.000\"/1330 SamHouse 3 13 2 \"Strings\\schedules\\Sam:marriage_Mon.001\"/1700 bed", //Sam visits
+			},
+			"When": {
+				"Sam": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		{
+			"LogName": "Sam Breakfast Schedule - Monday, Marriage (For Ease of Patching), Sam's Family Disabled",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				"marriage_Mon": "700 Saloon 11 21 2 \"Strings\\schedules\\Sam:breakfastMarriageAlt\"/1130 SamHouse 8 5 3 \"Strings\\schedules\\Sam:marriage_Mon.000\"/1330 SamHouse 3 13 2 \"Strings\\schedules\\Sam:marriage_Mon.001\"/1700 bed", //Sam visits
+			},
+			"When": {
+				"Sam": "enabled",
+				"SamFam": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		{
+			"LogName": "Sam Breakfast Schedule",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				//JojaMart exists
+				"Mon": "610 SamHouse 21 13 3/700 Saloon 11 21 2 \"Strings\\schedules\\Sam:breakfastMon\"/1130 JojaMart 16 5 2 sam_work/1600 SamHouse 17 13 0/2130 bed",
+				"Wed": "1000 JojaMart 16 5 2 sam_work/1600 SamHouse 17 13 0/2130 bed", //Original is GOTO Mon
+			},
+			"When": {
+				"HasSeenEvent: anyPlayer |contains=191393": "false",
+				"Sam": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		{
+			"LogName": "Sam Breakfast Schedule",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				//JojaMart exists
+				"Mon": "610 SamHouse 21 13 3/700 Saloon 11 21 2 \"Strings\\schedules\\Sam:breakfastMonAlt\"/1130 JojaMart 16 5 2 sam_work/1600 SamHouse 17 13 0/2130 bed",
+				"Wed": "1000 JojaMart 16 5 2 sam_work/1600 SamHouse 17 13 0/2130 bed", //Original is GOTO Mon
+			},
+			"When": {
+				"HasSeenEvent: anyPlayer |contains=191393": "false",
+				"Sam": "enabled",
+				"SamFam": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		{
+			"LogName": "Sam Breakfast Schedule",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {			
+				//JojaMart is gone
+				"Mon": "610 SamHouse 21 13 3/700 Saloon 11 21 2 \"Strings\\schedules\\Sam:breakfastMon\"/1130 ArchaeologyHouse 40 4 2 sam_work/1600 SamHouse 17 13 0/2130 bed",
+				"Wed": "1000 ArchaeologyHouse 40 4 2 sam_work/1600 SamHouse 17 13 0/2130 bed", //Original is GOTO Mon
+			},
+			"When": {
+				"HasSeenEvent: anyPlayer |contains=191393": "true",
+				"Sam": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+		
+		{
+			"LogName": "Sam Breakfast Schedule",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {			
+				//JojaMart is gone
+				"Mon": "610 SamHouse 21 13 3/700 Saloon 11 21 2 \"Strings\\schedules\\Sam:breakfastMonAlt\"/1130 ArchaeologyHouse 40 4 2 sam_work/1600 SamHouse 17 13 0/2130 bed",
+				"Wed": "1000 ArchaeologyHouse 40 4 2 sam_work/1600 SamHouse 17 13 0/2130 bed", //Original is GOTO Mon
+			},
+			"When": {
+				"HasSeenEvent: anyPlayer |contains=191393": "true", //CC complete
+				"Sam": "enabled",
+				"SamFam": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Kent is now manning the till on Monday.
+			},
+		},
+
+	
+		//Tuesday Crew
+		
+		
+		//Shane's Job
+		
+		{
+			"LogName": "Shane Breakfast Schedule - Community Center Job", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {			
+				
+				//Shane gets to take Gus's responsibilities on Tuesday WHEN CC is complete.
+				
+				"marriage_Tue": "830 CommunityCenter 5 5 0 square_5_1_0 \"Strings\\schedules\\Shane:communitycentermarriage\"/1300 SeedShop 2 26 2 \"Strings\\schedules\\Shane:postCCmarriage\"/1700 Saloon 33 18 0 \"Strings\\schedules\\Shane:reporting\"/1900 bed", //Shane does Gus's CC schedule instead, gets his payment, then goes back home.
+				
+				"Tue": "830 CommunityCenter 5 5 0 square_5_1_0 \"Strings\\schedules\\Shane:communitycenterhigh\"/1400 Saloon 11 20 0 \"Strings\\schedules\\Shane:reporting\"/1630 Saloon 21 17 2 shane_drink/1900 Saloon 27 23 1/2100 Saloon 24 17 2 shane_drink/2300 bed", //Shane does Gus's CC schedule, reports in, drinks, then goes home.
+			},
+			"When": {
+				"CCJob": "Shane",
+				"ImmersionShane": "true",
+				"HasSeenEvent: anyPlayer |contains=191393": "true", //CC complete
+				"HasSeenEvent: anyPlayer |contains=177757": "true", //Shane is doing Gus's job on Tuesdays.
+			},
+		},
+		
+		//Sam's Job (Immersive Shane compat)
+		
+		{
+			"LogName": "Sam Breakfast Schedule - Community Center Job", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {			
+				
+				//Sam gets to take Gus's responsibilities on Tuesday WHEN CC is complete.
+				
+				"marriage_Tue": "830 CommunityCenter 5 5 0 square_5_1_0 \"Strings\\schedules\\Sam:communitycentermarriage\"/1300 SeedShop 2 26 2 \"Strings\\schedules\\Sam:marriagepostCC\"/1700 Saloon 33 18 0 \"Strings\\schedules\\Sam:reportingmarriage\"/1900 bed", //Sam does Gus's CC schedule instead, grabs extra food, gets his payment, then goes back home.
+				
+				"Tue": "610 SamHouse 21 13 3/830 CommunityCenter 5 5 0 square_5_1_0 \"Strings\\schedules\\Sam:communitycenter\"/1400 Saloon 11 20 0 \"Strings\\schedules\\Sam:reporting\"/1600 SamHouse 17 15 2 sam_guitar/1830 SamHouse 22 16 1/2100 SamHouse 22 13 1 sam_sleep/2300 bed", //Sam does Gus's CC schedule, reports in, then goes home.
+			},
+			"When": {
+				"CCJob": "Sam",
+				"ImmersionSam": "true",
+				"HasSeenEvent: anyPlayer |contains=191393": "true", //CC complete
+				"HasSeenEvent: anyPlayer |contains=177758": "true", //Sam is doing Gus's job on Tuesdays.
+			},
+		},
+		
+		//Leah and Elliott Brunch
+		
+		//Leah (warning: long due to seasonal schedules)
+		
+			//Elliott enabled
+		{
+			"LogName": "Leah Breakfast Schedule - Spring", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastMarriage\"/1200 LeahHouse 3 7 3 leah_sculpt \"Strings\\schedules\\Leah:sculptafterbreakfastmarriage\"/1730 BusStop -1 23 1", // Winter and Spring, main schedule
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastTue\"/1200 Forest 68 50 2/1500 Forest 33 25 2 leah_draw/1830 Forest 21 29 1/1930 LeahHouse 8 5 0/2200 LeahHouse 13 10 2/2400 bed",
+			},
+			"When": {
+				"Leah": "enabled",
+				"Elliott": "enabled",
+				"Season": "spring",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Summer, Bridge Broken", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastMarriage\"/1200 Beach 38 24 2 leah_draw \"Strings\\schedules\\Leah:drawafterbreakfastmarriage\"/1730 BusStop -1 23 1", //Draws on the Beach in Summer, no bridge
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"summer_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastTue\"/1200 Beach 38 24 2 leah_draw/1900 LeahHouse 8 5 0/2200 LeahHouse 13 10 2/2400 bed",
+			},
+			"When": {
+				"Leah": "enabled",
+				"Elliott": "enabled",
+				"Season": "summer",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Summer, Bridge Fixed", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastMarriage\"/1200 Beach 72 18 2 leah_draw \"Strings\\schedules\\Leah:drawafterbreakfastmarriage\"/1730 BusStop -1 23 1", //Draws on the Beach in Summer, bridge
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"summer_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastTue\"/1200 Beach 72 18 2 leah_draw/1900 LeahHouse 8 5 0/2200 LeahHouse 13 10 2/2400 bed", //Bridge fixed
+			},
+			"When": {
+				"Leah": "enabled",
+				"Elliott": "enabled",
+				"Season": "summer",
+				"HasFlag": "beachBridgeFixed",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Fall", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastMarriage\"/1200 Forest 33 25 2 leah_draw \"Strings\\schedules\\Leah:drawfallafterbreakfastmarriage\"/1730 BusStop -1 23 1", //Draws the Forest in Fall
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"fall_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastTue\"/1200 Town 86 66 3 square_1_5_3/1900 LeahHouse 8 5 0/2200 LeahHouse 13 10 2/2400 bed",
+			},
+			"When": {
+				"Leah": "enabled",
+				"Elliott": "enabled",
+				"Season": "fall",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Winter", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastMarriage\"/1200 LeahHouse 3 7 3 leah_sculpt \"Strings\\schedules\\Leah:sculptafterbreakfastmarriage\"/1730 BusStop -1 23 1", // Winter and Spring, main schedule
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"winter_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastTue\"/1200 LeahHouse 6 5 0/1400 LeahHouse 9 5 0/1600 Forest 33 25 2 leah_draw/2340 bed", //Small deviation to prevent Leah going twice to the Saloon in a day, which... doesn't make sense for her. Winter drawing!
+			},
+			"When": {
+				"Leah": "enabled",
+				"Elliott": "enabled",
+				"Season": "winter",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+			//Elliott Disabled
+			
+		{
+			"LogName": "Leah Breakfast Schedule - Spring, Elliott Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Tue": "810 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastMarriageAlt\"/1200 LeahHouse 3 7 3 leah_sculpt \"Strings\\schedules\\Leah:sculptafterbreakfastmarriage\"/1730 BusStop -1 23 1", // Winter and Spring, main schedule
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastTueAlt\"/1200 Forest 68 50 2/1500 Forest 33 25 2 leah_draw/1830 Forest 21 29 1/1930 LeahHouse 8 5 0/2200 LeahHouse 13 10 2/2400 bed",
+			},
+			"When": {
+				"Leah": "enabled",
+				"Elliott": "disabled",
+				"Season": "spring",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Summer, Bridge Not Fixed, Elliott Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Tue": "810 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastMarriageAlt\"/1200 Beach 38 24 2 leah_draw \"Strings\\schedules\\Leah:drawafterbreakfastmarriage\"/1730 BusStop -1 23 1", //Draws on the Beach in Summer, no bridge
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"summer_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastTueAlt\"/1200 Beach 38 24 2 leah_draw/1900 LeahHouse 8 5 0/2200 LeahHouse 13 10 2/2400 bed",
+			},
+			"When": {
+				"Leah": "enabled",
+				"Elliott": "disabled",
+				"Season": "summer",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Summer, Bridge Fixed, Elliott Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Tue": "810 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastMarriageAlt\"/1200 Beach 72 18 2 leah_draw \"Strings\\schedules\\Leah:drawafterbreakfastmarriage\"/1730 BusStop -1 23 1", //Draws on the Beach in Summer, bridge
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"summer_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastTueAlt\"/1200 Beach 72 18 2 leah_draw/1900 LeahHouse 8 5 0/2200 LeahHouse 13 10 2/2400 bed", //Bridge fixed
+			},
+			"When": {
+				"Leah": "enabled",
+				"Elliott": "disabled",
+				"Season": "summer",
+				"HasFlag": "beachBridgeFixed",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Fall, Elliott Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Tue": "810 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastMarriageAlt\"/1200 Forest 33 25 2 leah_draw \"Strings\\schedules\\Leah:drawfallafterbreakfastmarriage\"/1730 BusStop -1 23 1", //Draws the Forest in Fall
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"fall_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastTueAlt\"/1200 Town 86 66 3 square_1_5_3/1900 LeahHouse 8 5 0/2200 LeahHouse 13 10 2/2400 bed",
+			},
+			"When": {
+				"Leah": "enabled",
+				"Elliott": "disabled",
+				"Season": "fall",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Winter, Elliott Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Tue": "810 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastMarriageAlt\"/1200 LeahHouse 3 7 3 leah_sculpt \"Strings\\schedules\\Leah:sculptafterbreakfastmarriage\"/1730 BusStop -1 23 1", // Winter and Spring, main schedule
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"winter_Tue": "830 Saloon 3 21 0 \"Strings\\schedules\\Leah:breakfastTueAlt\"/1200 LeahHouse 6 5 0/1400 LeahHouse 9 5 0/1600 Forest 33 25 2 leah_draw/2340 bed", //Small deviation to prevent Leah going twice to the Saloon in a day, which... doesn't make sense for her. Winter drawing!
+			},
+			"When": {
+				"Leah": "enabled",
+				"Elliott": "disabled",
+				"Season": "winter",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		//Elliott's also requires some seasonal edits, though not his marriage schedule, so this is *much* easier.
+		{
+			"LogName": "Elliott Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Elliott",
+			"Entries": {
+				//Marriage
+				"marriage_Tue": "840 Saloon 4 19 2 \"Strings\\schedules\\Elliott:breakfastMarriage\"/1200 ArchaeologyHouse 21 11 2 elliott_read \"Strings\\schedules\\Elliott:libraryreadmarriage\"/1830 BusStop -1 23 1", // Elliott goes to read in the library for a day.
+				
+				//Regular Schedules - Elliott will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"Tue": "850 Saloon 4 19 2 \"Strings\\schedules\\Elliott:breakfastTue\"/1200 Beach 49 19 2/1330 ElliottHouse 1 5 0/1500 Town 55 104 1/1800 ElliottHouse 7 7 2/2000 ElliottHouse 1 5 0/2400 bed",
+				"summer_Tue": "850 Saloon 4 19 2 \"Strings\\schedules\\Elliott:breakfastTue\"/1200 Forest 96 39 2/1800 ElliottHouse 7 7 2/2200 ElliottHouse 1 5 0/2400 bed",
+				"fall_Tue": "850 Saloon 4 19 2 \"Strings\\schedules\\Elliott:breakfastTue\"/1200 ArchaeologyHouse 21 11 2 elliott_read/1730 ElliottHouse 7 7 2/2100 ElliottHouse 1 5 0/2400 bed",
+				"winter_Tue": "850 Saloon 4 19 2 \"Strings\\schedules\\Elliott:breakfastTue\"/1200 ArchaeologyHouse 21 11 2 elliott_read/1730 ElliottHouse 7 7 2/2100 ElliottHouse 1 5 0/2400 bed",
+			},
+			"When": {
+				"Elliott": "enabled",
+				"Leah": "enabled",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Elliott Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Elliott",
+			"Entries": {
+				//Marriage
+				"marriage_Tue": "840 Saloon 4 19 2 \"Strings\\schedules\\Elliott:breakfastMarriageAlt\"/1200 ArchaeologyHouse 21 11 2 elliott_read \"Strings\\schedules\\Elliott:libraryread\"/1830 BusStop -1 23 1", // Elliott goes to read in the library for a day.
+				
+				//Regular Schedules - Elliott will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"Tue": "850 Saloon 4 19 2 \"Strings\\schedules\\Elliott:breakfastTueAlt\"/1200 Beach 49 19 2/1330 ElliottHouse 1 5 0/1500 Town 55 104 1/1800 ElliottHouse 7 7 2/2000 ElliottHouse 1 5 0/2400 bed",
+				"summer_Tue": "850 Saloon 4 19 2 \"Strings\\schedules\\Elliott:breakfastTueAlt\"/1200 Forest 96 39 2/1800 ElliottHouse 7 7 2/2200 ElliottHouse 1 5 0/2400 bed",
+				"fall_Tue": "850 Saloon 4 19 2 \"Strings\\schedules\\Elliott:breakfastTueAlt\"/1200 ArchaeologyHouse 21 11 2 elliott_read/1730 ElliottHouse 7 7 2/2100 ElliottHouse 1 5 0/2400 bed",
+				"winter_Tue": "850 Saloon 4 19 2 \"Strings\\schedules\\Elliott:breakfastTueAlt\"/1200 ArchaeologyHouse 21 11 2 elliott_read/1730 ElliottHouse 7 7 2/2100 ElliottHouse 1 5 0/2400 bed",
+			},
+			"When": {
+				"Elliott": "enabled",
+				"Leah": "disabled",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		
+		//Clint
+		
+		{
+			"LogName": "Clint Breakfast Schedule", //Clint now is available starting at 10:30, and open until 7pm.
+			"Action": "EditData",
+			"Target": "Characters/schedules/Clint",
+			"Entries": {			
+				"Tue": "730 Saloon 19 23 3 \"Strings\\schedules\\Clint:breakfastTue\"/930 Blacksmith 3 13 2/1700 Blacksmith 8 12 1 clint_hammer/1900 Saloon 19 23 3/2400 bed", //Clint gets an early breakfast on Tuesdays, then heads back to work. Map patch his entrance to be open until 7pm.
+			},
+			"When": {
+				"Clint": "enabled",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		//Willy
+		{
+			"LogName": "Willy Breakfast Schedule - Tuesday", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Willy",
+			"Entries": {			
+				"Tue": "610 FishShop 5 4 2/720 Saloon 17 22 2 \"Strings\\schedules\\Willy:breakfastTue\"/930 FishShop 5 4 2/1700 Beach 25 36 2 dick_fish/2200 FishShop 5 4 2", //Willy gets an early breakfast on Tuesdays, then heads back to work.
+			},
+			"When": {
+				"Willy": "enabled",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		//Lewis
+		
+		{
+			"LogName": "Lewis Breakfast Schedule - Tuesday", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Lewis",
+			"Entries": {							
+				"Tue": "830 Saloon 12 21 3 lewis_drink \"Strings\\schedules\\Lewis:breakfastTue\"/1040 Town 65 86 3 lewis_garden/1240 Town 30 56 2/1500 Town 41 57 0/1700 ManorHouse 7 5 0 square_5_1_0/2000 ManorHouse 3 6 0/2200 bed",
+			},
+			"When": {
+				"Lewis": "enabled",
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Lewis Breakfast Schedule - Tuesday, CC Finished", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Lewis",	
+			"Entries": {							
+				"Tue": "830 Saloon 12 21 3 lewis_drink \"Strings\\schedules\\Lewis:breakfastTue\"/1040 Town 65 86 3 lewis_garden/1140 CommunityCenter 55 6 0/1400 CommunityCenter 47 5 0/1440 CommunityCenter 51 4 2/1600 CommunityCenter 47 13 0/1700 CommunityCenter 33 9 0/1830 ManorHouse 3 6 0/2300 bed",
+			},
+			"When": {
+				"Lewis": "enabled",
+				"HasSeenEvent: anyPlayer |contains=191393": "true", //CC complete
+				"TuesdayToken": "true", //Dynamic Token to make sure the player has seen a Sam/Shane event if they've seen the CC completion event.
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		//Wednesday Crew
+		
+		//Harvey
+		
+		{
+			"LogName": "Harvey Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Harvey",
+			"Entries": {
+				//Marriage
+				"marriage_Wed": "830 Saloon 12 20 0 \"Strings\\schedules\\Harvey:breakfastMarriage\"/1140 SeedShop 2 26 2 \"Strings\\schedules\\Harvey:marriage_Mon.000\"/1300 Town 23 27 1 \"Strings\\schedules\\Harvey:marriage_Mon.001\"/1700 bed",
+				
+				//Regular
+				"winter_Wed": "930 Saloon 12 20 0 \"Strings\\schedules\\Harvey:breakfastWed\"/1140 HarveyRoom 4 5 1 harvey_radio/1600 HarveyRoom 11 5 3 harvey_read/1730 Saloon 18 20 0/2200 bed",
+				"fall_Wed": "930 Saloon 12 20 0 \"Strings\\schedules\\Harvey:breakfastWed\"/1140 Town 46 102 2/1700 HarveyRoom 4 5 1 harvey_radio/2200 bed",
+				"summer_Wed": "930 Saloon 12 20 0 \"Strings\\schedules\\Harvey:breakfastWed\"/1140 Town 23 36 2 square_7_5/1730 Hospital 9 15 3/1840 HarveyRoom 11 5 3 harvey_read/2200 bed",
+				"Wed": "930 Saloon 12 20 0 \"Strings\\schedules\\Harvey:breakfastWed\"/1140 Town 10 64 2 square_5_5/1730 Hospital 9 15 3/1840 HarveyRoom 11 5 3 harvey_read/2200 bed"
+			},
+			"When": {
+				"Harvey": "enabled",
+				"Maru": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event complete.
+			},
+		},
+		
+		{
+			"LogName": "Harvey Breakfast Schedule, Maru Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Harvey",
+			"Entries": {
+				//Marriage
+				"marriage_Wed": "830 Saloon 12 20 0 \"Strings\\schedules\\Harvey:breakfastMarriageAlt\"/1140 SeedShop 2 26 2 \"Strings\\schedules\\Harvey:marriage_Mon.000\"/1300 Town 23 27 1 \"Strings\\schedules\\Harvey:marriage_Mon.001\"/1700 bed",
+				
+				//Regular
+				"winter_Wed": "930 Saloon 12 20 0 \"Strings\\schedules\\Harvey:breakfastWedAlt\"/1140 HarveyRoom 4 5 1 harvey_radio/1600 HarveyRoom 11 5 3 harvey_read/1730 Saloon 18 20 0/2200 bed",
+				"fall_Wed": "930 Saloon 12 20 0 \"Strings\\schedules\\Harvey:breakfastWedAlt\"/1140 Town 46 102 2/1700 HarveyRoom 4 5 1 harvey_radio/2200 bed",
+				"summer_Wed": "930 Saloon 12 20 0 \"Strings\\schedules\\Harvey:breakfastWedAlt\"/1140 Town 23 36 2 square_7_5/1730 Hospital 9 15 3/1840 HarveyRoom 11 5 3 harvey_read/2200 bed",
+				"Wed": "930 Saloon 12 20 0 \"Strings\\schedules\\Harvey:breakfastWedAlt\"/1140 Town 10 64 2 square_5_5/1730 Hospital 9 15 3/1840 HarveyRoom 11 5 3 harvey_read/2200 bed"
+			},
+			"When": {
+				"Harvey": "enabled",
+				"Maru": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event complete.
+			},
+		},
+		
+		//Carpenter's Shop Family Breakfast
+		
+		//Robin
+		{
+			"LogName": "Robin Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Robin",
+			"Entries": {
+				"Wed": "730 Saloon 17 22 2 \"Strings\\schedules\\Robin:breakfastWed\"/1120 ScienceHouse 8 18 2/1930 ScienceHouse 16 5 0/2100 bed", //Robin visits and doesn't do morning dishes as they eat at the Saloon. //Robin will eat at the Saloon with the family, but head back and work until 7:30 to make up for her missing time.
+			},
+			"When": {
+				"Robmetrius": "enabled",
+				"Sebastian": "enabled",
+				"Maru": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event complete.
+			},
+		},
+		
+		{
+			"LogName": "Robin Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Robin",
+			"Entries": {
+				"Wed": "730 Saloon 17 22 2 \"Strings\\schedules\\Robin:breakfastWedAlt\"/1120 ScienceHouse 8 18 2/1930 ScienceHouse 16 5 0/2100 bed", //Robin visits and doesn't do morning dishes as they eat at the Saloon. //Robin will eat at the Saloon with the family, but head back and work until 7:30 to make up for her missing time.
+			},
+			"When": {
+				"Robmetrius": "enabled",
+				"SebMaru": "false", //Either Sebastian or Maru are disabled
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event complete.
+			},
+		},
+		
+		//Demetrius
+		{
+			"LogName": "Demetrius Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Demetrius",
+			"Entries": {
+				"Wed": "730 Saloon 19 23 3 \"Strings\\schedules\\Demetrius:breakfastWed\"/1100 ScienceHouse 22 20 1 demetrius_notes/1430 Mountain 15 26 1/1530 Mountain 30 36 2/1900 ScienceHouse 27 9 0/2040 ScienceHouse 28 9 0/2100 ScienceHouse 15 4 0/2230 bed", //Demetrius gets the nice schedule and visits almost unbroken compared to spring.
+				"summer_Wed": "730 Saloon 19 23 3 \"Strings\\schedules\\Demetrius:breakfastWed\"/1120 Town 31 23 1 square_3_9/1900 ScienceHouse 27 9 0/2040 ScienceHouse 28 9 0/2100 ScienceHouse 15 4 0/2230 bed",
+				"fall_Wed": "730 Saloon 19 23 3 \"Strings\\schedules\\Demetrius:breakfastWed\"/1120 Mountain 45 8 demetrius_notes/1900 ScienceHouse 27 9 0/2040 ScienceHouse 28 9 0/2100 ScienceHouse 15 4 0/2230 bed",
+				"winter_Wed": "730 Saloon 19 23 3 \"Strings\\schedules\\Demetrius:breakfastWed\"/1120 ScienceHouse 22 20 1 demetrius_notes/1500 ScienceHouse 7 18 1/1540 ScienceHouse 22 20 1/1800 ScienceHouse 27 9 0/1920 ScienceHouse 28 9 0/2000 ScienceHouse 15 4 0/2200 bed",
+			},
+			"When": {
+				"Robmetrius": "enabled",
+				"Sebastian": "enabled",
+				"Maru": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event complete.
+			},
+		},
+		
+		{
+			"LogName": "Demetrius Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Demetrius",
+			"Entries": {
+				"Wed": "730 Saloon 19 23 3 \"Strings\\schedules\\Demetrius:breakfastWedAlt\"/1100 ScienceHouse 22 20 1 demetrius_notes/1430 Mountain 15 26 1/1530 Mountain 30 36 2/1900 ScienceHouse 27 9 0/2040 ScienceHouse 28 9 0/2100 ScienceHouse 15 4 0/2230 bed", //Demetrius gets the nice schedule and visits almost unbroken compared to spring.
+				"summer_Wed": "730 Saloon 19 23 3 \"Strings\\schedules\\Demetrius:breakfastWedAlt\"/1120 Town 31 23 1 square_3_9/1900 ScienceHouse 27 9 0/2040 ScienceHouse 28 9 0/2100 ScienceHouse 15 4 0/2230 bed",
+				"fall_Wed": "730 Saloon 19 23 3 \"Strings\\schedules\\Demetrius:breakfastWedAlt\"/1120 Mountain 45 8 demetrius_notes/1900 ScienceHouse 27 9 0/2040 ScienceHouse 28 9 0/2100 ScienceHouse 15 4 0/2230 bed",
+				"winter_Wed": "730 Saloon 19 23 3 \"Strings\\schedules\\Demetrius:breakfastWedAlt\"/1120 ScienceHouse 22 20 1 demetrius_notes/1500 ScienceHouse 7 18 1/1540 ScienceHouse 22 20 1/1800 ScienceHouse 27 9 0/1920 ScienceHouse 28 9 0/2000 ScienceHouse 15 4 0/2200 bed",
+			},
+			"When": {
+				"Robmetrius": "enabled",
+				"SebMaru": "false", //Either Sebastian or Maru are disabled
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event complete.
+			},
+		},
+		
+		//Maru
+		{
+			"LogName": "Maru Breakfast Schedule - Wednesday, Carpenter Shop Breakfast", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Maru",
+			"Entries": {
+			
+			//Marriage Schedule - Wednesday
+				"marriage_Wed": "730 Saloon 18 20 2 \"Strings\\schedules\\Maru:breakfastMarriage\"/1010 Saloon 16 20 0 \"Strings\\schedules\\Maru:breakfastMarriage\"/1120 ScienceHouse 7 20 0 \"Strings\\schedules\\Maru:marriage_Mon.000\"/1400 ScienceHouse 19 18 0 \"Strings\\schedules\\Maru:marriage_Mon.001\"/1800 bed",
+			
+			//Regular Schedule - Wednesday
+				"Wed": "730 Saloon 18 20 2 \"Strings\\schedules\\Maru:breakfastWed\"/1010 Saloon 16 20 0 \"Strings\\schedules\\Maru:breakfastWed\"/1120 ScienceHouse 19 18 0/1500 Town 63 15 2 maru_sit_down/1800 ScienceHouse 5 6 1 maru_tinker/2200 bed",
+				"summer_Wed": "730 Saloon 18 20 2 \"Strings\\schedules\\Maru:breakfastWed\"/1010 Saloon 16 20 0 \"Strings\\schedules\\Maru:breakfastWed\"/1120 ScienceHouse 19 18 0/1500 Mountain 55 31 0/1900 Mountain 8 23 3 \"Strings\\schedules\\Maru:summer.000\"/2400 bed",
+				
+				//Joja is still around
+				"winter_Wed": "730 Saloon 18 20 2 \"Strings\\schedules\\Maru:breakfastWed\"/1010 Saloon 16 20 0 \"Strings\\schedules\\Maru:breakfastWed\"/1120 ScienceHouse 5 19 1/1600 ScienceHouse 5 6 1 maru_tinker/2200 bed",
+				
+				//Joja is gone
+				"winter_Wed": "730 Saloon 18 20 2 \"Strings\\schedules\\Maru:breakfastWed\"/1010 Saloon 16 20 0 \"Strings\\schedules\\Maru:breakfastWed\"/1120 CommunityCenter 15 27 0/1600 ScienceHouse 5 6 1 maru_tinker/2200 bed",
+			},
+			"When": {
+				"Robmetrius": "enabled",
+				"Sebastian": "enabled",
+				"Maru": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event complete.
+			},
+		},
+		
+		{
+			"LogName": "Maru Breakfast Schedule - Wednesday, Carpenter Shop Breakfast", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Maru",
+			"Entries": {
+				//Joja is gone
+				"winter_Wed": "730 Saloon 18 20 2 \"Strings\\schedules\\Maru:breakfastWed\"/1010 Saloon 16 20 0 \"Strings\\schedules\\Maru:breakfastWed\"/1120 CommunityCenter 15 27 0/1600 ScienceHouse 5 6 1 maru_tinker/2200 bed",
+			},
+			"When": {
+				"Robmetrius": "enabled",
+				"Sebastian": "enabled",
+				"Maru": "enabled",
+				"HasSeenEvent: anyPlayer |contains=191393": "true", //CC complete
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event complete.
+			},
+		},
+		
+		{
+			"LogName": "Maru Breakfast Schedule - Wednesday, Carpenter Shop Breakfast", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Maru",
+			"Entries": {
+			
+			//Marriage Schedule - Wednesday
+				"marriage_Wed": "730 Saloon 18 20 2 \"Strings\\schedules\\Maru:breakfastMarriageAlt\"/1010 Saloon 16 20 0 \"Strings\\schedules\\Maru:breakfastMarriageAlt\"/1120 ScienceHouse 7 20 0 \"Strings\\schedules\\Maru:marriage_Mon.000\"/1400 ScienceHouse 19 18 0 \"Strings\\schedules\\Maru:marriage_Mon.001\"/1800 bed",
+			
+			//Regular Schedule - Wednesday
+				"Wed": "730 Saloon 18 20 2 \"Strings\\schedules\\Maru:breakfastWedAlt\"/1010 Saloon 16 20 0 \"Strings\\schedules\\Maru:breakfastWedAlt\"/1120 ScienceHouse 19 18 0/1500 Town 63 15 2 maru_sit_down/1800 ScienceHouse 5 6 1 maru_tinker/2200 bed",
+				"summer_Wed": "730 Saloon 18 20 2 \"Strings\\schedules\\Maru:breakfastWedAlt\"/1010 Saloon 16 20 0 \"Strings\\schedules\\Maru:breakfastWedAlt\"/1120 ScienceHouse 19 18 0/1500 Mountain 55 31 0/1900 Mountain 8 23 3 \"Strings\\schedules\\Maru:summer.000\"/2400 bed",
+				
+				//Joja is still around
+				"winter_Wed": "730 Saloon 18 20 2 \"Strings\\schedules\\Maru:breakfastWedAlt\"/1010 Saloon 16 20 0 \"Strings\\schedules\\Maru:breakfastWedAlt\"/1120 ScienceHouse 5 19 1/1600 ScienceHouse 5 6 1 maru_tinker/2200 bed",
+				
+				//Joja is gone
+				"winter_Wed": "730 Saloon 18 20 2 \"Strings\\schedules\\Maru:breakfastWedAlt\"/1010 Saloon 16 20 0 \"Strings\\schedules\\Maru:breakfastWedAlt\"/1120 CommunityCenter 15 27 0/1600 ScienceHouse 5 6 1 maru_tinker/2200 bed",
+			},
+			"When": {
+				"SebFam": "false",
+				"Maru": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event complete.
+			},
+		},
+		
+		{
+			"LogName": "Maru Breakfast Schedule - Wednesday, Carpenter Shop Breakfast", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Maru",
+			"Entries": {
+				//Joja is gone
+				"winter_Wed": "730 Saloon 18 20 2 \"Strings\\schedules\\Maru:breakfastWedAlt\"/1010 Saloon 16 20 0 \"Strings\\schedules\\Maru:breakfastWedAlt\"/1120 CommunityCenter 15 27 0/1600 ScienceHouse 5 6 1 maru_tinker/2200 bed",
+			},
+			"When": {
+				"SebFam": "false",
+				"Maru": "enabled",
+				"HasSeenEvent: anyPlayer |contains=191393": "true", //CC complete
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event complete.
+			},
+		},
+		
+		//Sebastian
+		{
+			"LogName": "Sebastian Breakfast Schedule - Wednesday, Carpenter Shop Breakfast", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sebastian",
+			"Entries": {
+			//Marriage
+			
+			"marriage_Wed": "740 Saloon 26 18 0 \"Strings\\schedules\\Sebastian:breakfastMarriage\"/1120 ScienceHouse 6 20 0 \"Strings\\schedules\\Sebastian:postbreakfastmarriage\"/1500 bed", //Sebastian gets back early for a nap.
+			
+			//Regular
+				"Wed": "740 Saloon 26 18 0 \"Strings\\schedules\\Sebastian:breakfastWed\"/1120 SebastianRoom 9 4 3 sebastian_computer/1530 ScienceHouse 27 9 0/1600 SebastianRoom 9 4 3 sebastian_computer/1830 Mountain 58 35 1 sebastian_smoking/2130 bed", //Sebastian is peeved about waking up this early, but he'll live.
+				"fall_Wed": "740 Saloon 26 18 0 \"Strings\\schedules\\Sebastian:breakfastWed\"/1120 Mountain 57 33 1/1400 Mountain 64 14 2/1500 Mountain 42 13 1 sebastian_smoking/1600 ScienceHouse 27 9 0/1730 SebastianRoom 9 4 3 sebastian_computer/2130 bed",
+			},
+			"When": {
+				"Robmetrius": "enabled",
+				"Maru": "enabled",
+				"Sebastian": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event complete.
+			},
+		},
+		
+		{
+			"LogName": "Sebastian Breakfast Schedule - Wednesday, Carpenter Shop Breakfast", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sebastian",
+			"Entries": {
+			//Marriage
+			
+			"marriage_Wed": "740 Saloon 26 18 0 \"Strings\\schedules\\Sebastian:breakfastMarriageAlt\"/1120 ScienceHouse 6 20 0 \"Strings\\schedules\\Sebastian:postbreakfastmarriage\"/1500 bed", //Sebastian gets back early for a nap.
+			
+			//Regular
+				"Wed": "740 Saloon 26 18 0 \"Strings\\schedules\\Sebastian:breakfastWedAlt\"/1120 SebastianRoom 9 4 3 sebastian_computer/1530 ScienceHouse 27 9 0/1600 SebastianRoom 9 4 3 sebastian_computer/1830 Mountain 58 35 1 sebastian_smoking/2130 bed", //Sebastian is peeved about waking up this early, but he'll live.
+				"fall_Wed": "740 Saloon 26 18 0 \"Strings\\schedules\\Sebastian:breakfastWedAlt\"/1120 Mountain 57 33 1/1400 Mountain 64 14 2/1500 Mountain 42 13 1 sebastian_smoking/1600 ScienceHouse 27 9 0/1730 SebastianRoom 9 4 3 sebastian_computer/2130 bed",
+			},
+			"When": {
+				"MaruFam": "false",
+				"Sebastian": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event complete.
+			},
+		},
+		
+		//Thursday Crew
+		
+		//Shane and Jas have uncle/goddaughter bonding time
+		
+		//Jas - only active if Shane is to prevent Jas from going to the Saloon alone
+		{
+			"LogName": "Jas Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Jas",
+			"Entries": {			
+				"Thu": "730 Saloon 4 19 2 \"Strings\\schedules\\Jas:breakfastThu\"/1100 Forest 38 10 2 jas_jumprope \"Strings\\schedules\\Jas:spring.000\"/1500 AnimalShop 17 15 3 jas_read/1900 AnimalShop 4 7 2 \"Strings\\schedules\\Jas:jasdaybedtime\"/2100 bed", //Jas gets breakfast, then proceeds on her normal schedule.
+				"summer_Thu": "730 Saloon 4 19 2 \"Strings\\schedules\\Jas:breakfastThu\"/1100 Forest 92 20 1 \"Strings\\schedules\\Jas:jasdaysummer\"/1320 Beach 40 23 jas_jumprope \"Strings\\schedules\\Jas:summer.000\"/1600 AnimalShop 17 15 3 jas_read/1900 AnimalShop 4 7 2 \"Strings\\schedules\\Jas:jasdaybedtime\"/2100 bed", //If summer, alternate ending
+			},
+			"When": {
+				"Shane": "enabled",
+				"ThursdayToken": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		//Shane (only active with Shane toggle - he will not follow these without Jas existing)
+		{
+			"LogName": "Shane Breakfast Schedule - Thursday Jas Day", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {
+				//Marriage
+				"marriage_Thu": "730 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastMarriageThu\"/1100 Forest 37 10 1 \"Strings\\schedules\\Shane:jasday\"/1500 AnimalShop 17 16 0 \"Strings\\schedules\\Shane:jasdayread\"/1900 AnimalShop 5 8 3 \"Strings\\schedules\\Shane:jasdaybed\"/2000 bed",
+				
+				//Regular
+				"Thu": "730 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastThuHigh\"/1100 Forest 37 10 1 \"Strings\\schedules\\Shane:jasday\"/1500 AnimalShop 17 16 0 \"Strings\\schedules\\Shane:jasdayread\"/1900 AnimalShop 5 8 3 \"Strings\\schedules\\Shane:jasdaybed\"/2100 bed",
+				"summer_Thu": "730 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastThuHigh\"/1100 Forest 93 20 3 \"Strings\\schedules\\Shane:jasdaysummer\"/1320 Beach 40 23 jas_jumprope \"Strings\\schedules\\Shane:jasday\"/1600 AnimalShop 17 16 0 \"Strings\\schedules\\Shane:jasdayread\"/1900 AnimalShop 5 8 3 \"Strings\\schedules\\Shane:jasdaybed\"/2100 bed", //Summer variant
+			},
+			"When": {
+				"Shane": "enabled",
+				"ThursdayToken": "true",
+				"Query: {{Season|contains=winter}} AND {{Day|contains=18}}": "false",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Shane Breakfast Schedule - Thursday Jas Day, Summer Marriage Variant", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {			
+				"marriage_Thu": "730 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastMarriageThu\"/1100 Forest 93 20 3 \"Strings\\schedules\\Shane:jasdaysummer\"/1320 Beach 40 23 jas_jumprope \"Strings\\schedules\\Shane:jasday\"/1600 AnimalShop 17 16 0 \"Strings\\schedules\\Shane:jasdayread\"/1900 AnimalShop 5 8 3 \"Strings\\schedules\\Shane:jasdaybed\"/2000 bed", //Summer variant
+			},
+			"When": {
+				"Shane": "enabled",
+				"Season": "summer",
+				"ThursdayToken": "true",
+				"Query: {{Season|contains=winter}} AND {{Day|contains=18}}": "false",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Shane Breakfast Schedule - Thursday Jas Day, Immersive Shane Compat",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {			
+				"Thu": "730 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastThuHighIC\"/1100 Forest 37 10 1 \"Strings\\schedules\\Shane:jasday\"/1500 AnimalShop 17 16 0 \"Strings\\schedules\\Shane:jasdayread\"/1900 AnimalShop 5 8 3 \"Strings\\schedules\\Shane:jasdaybed\"/2100 bed",
+				"summer_Thu": "730 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastThuHighIC\"/1100 Forest 93 20 3 \"Strings\\schedules\\Shane:jasdaysummer\"/1320 Beach 40 23 jas_jumprope \"Strings\\schedules\\Shane:jasday\"/1600 AnimalShop 17 16 0 \"Strings\\schedules\\Shane:jasdayread\"/1900 AnimalShop 5 8 3 \"Strings\\schedules\\Shane:jasdaybed\"/2100 bed", //Summer variant
+			},
+			"When": {
+				"Shane": "enabled",
+				"HasMod": "tenthousandcats.ImmersiveCShane",
+				"ThursdayToken": "true",
+				"Query: {{Season|contains=winter}} AND {{Day|contains=18}}": "false",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Shane Breakfast Schedule - Thursday Jas Day, Low Hearts Variant", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {			
+				"Thu": "730 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastThu\"/1100 Forest 37 10 1 \"Strings\\schedules\\Shane:jasday\"/1500 AnimalShop 17 16 0 \"Strings\\schedules\\Shane:jasdayread\"/1900 AnimalShop 5 8 3 \"Strings\\schedules\\Shane:jasdaybed\"/2100 bed",
+				"summer_Thu": "730 Saloon 3 21 0 \"Strings\\schedules\\Shane:breakfastThu\"/1100 Forest 93 20 3 \"Strings\\schedules\\Shane:jasdaysummer\"/1320 Beach 40 23 jas_jumprope \"Strings\\schedules\\Shane:jasday\"/1600 AnimalShop 17 16 0 \"Strings\\schedules\\Shane:jasdayread\"/1900 AnimalShop 5 8 3 \"Strings\\schedules\\Shane:jasdaybed\"/2100 bed", //Summer variant
+			},
+			"When": {
+				"Shane": "enabled",
+				"Hearts:Shane": "0, 1, 2, 3, 4, 5",
+				"ThursdayToken": "true",
+				"Query: {{Season|contains=winter}} AND {{Day|contains=18}}": "false",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		//Penny and Pam
+		
+		//Pam
+		{
+			"LogName": "Pam Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Pam",
+			"Entries": {							
+				"Thu": "850 Saloon 9 22 1 \"Strings\\schedules\\Pam:breakfastThu\"/1000 JojaMart 6 19 1/1600 Saloon 7 18 1/2400 bed", //Small alteration to make sure Pam and Penny have an early breakfast. This key works if and only if the bus isn't repaired.
+				
+				//Bus repaired
+				"bus": "850 Saloon 9 22 1 \"Strings\\schedules\\Pam:breakfastThu\"/1000 BusStop 11 10 2/1900 Saloon 7 18 1/2400 bed", //Pam will not be at the bus until around noon, but will stay until 7 pm as compensation. Bus key *must* be edited for this to work, so restrict its edits to Thursdays.
+			},
+			"When": {
+				"DayOfWeek": "Thursday", //Since bus is always used post-completion of bundles
+				"Pam": "enabled",
+				"Penny": "enabled",
+				"Weather |contains=rain,storm": false,
+				"ThursdayToken": "true",
+				"CookingClass": "false",
+				"PamBus": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Pam Breakfast Schedule, Penny Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Pam",
+			"Entries": {							
+				"Thu": "850 Saloon 9 22 1 \"Strings\\schedules\\Pam:breakfastThuAlt\"/1000 JojaMart 6 19 1/1600 Saloon 7 18 1/2400 bed", //Small alteration to make sure Pam and Penny have an early breakfast. This key works if and only if the bus isn't repaired.
+				
+				//Bus repaired
+				"bus": "850 Saloon 9 22 1 \"Strings\\schedules\\Pam:breakfastThuAlt\"/1000 BusStop 11 10 2/1900 Saloon 7 18 1/2400 bed", //Pam will not be at the bus until around noon, but will stay until 7 pm as compensation. Bus key *must* be edited for this to work, so restrict its edits to Thursdays.
+			},
+			"When": {
+				"DayOfWeek": "Thursday", //Since bus is always used post-completion of bundles
+				"Pam": "enabled",
+				"Penny": "disabled",
+				"Weather |contains=rain,storm": false,
+				"ThursdayToken": "true",
+				"PamBus": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Pam Breakfast Schedule, Penny Disabled, CC Reimagined Event Cooking Class", //Cooking Class on 4th and 11th, so does not touch the birthday
+			"Action": "EditData",
+			"Target": "Characters/schedules/Pam",
+			"Entries": {							
+				"Thu": "850 Saloon 9 22 1 \"Strings\\schedules\\Pam:breakfastThuAlt\"/1000 JojaMart 6 19 1/1600 Saloon 7 18 1/2400 bed", //Small alteration to make sure Pam and Penny have an early breakfast. This key works if and only if the bus isn't repaired.
+				
+				//Bus repaired
+				"bus": "850 Saloon 9 22 1 \"Strings\\schedules\\Pam:breakfastThuAlt\"/1000 BusStop 11 10 2/1900 Saloon 7 18 1/2400 bed", //Pam will not be at the bus until around noon, but will stay until 7 pm as compensation. Bus key *must* be edited for this to work, so restrict its edits to Thursdays.
+			},
+			"When": {
+				"DayOfWeek": "Thursday", //Since bus is always used post-completion of bundles
+				"Pam": "enabled",
+				"Penny": "enabled",
+				"Weather |contains=rain,storm": false,
+				"ThursdayToken": "true",
+				"CookingClass": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		//Penny
+		
+		
+		{
+			"LogName": "Penny Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				"marriage_Thu": "750 Saloon 12 21 3 \"Strings\\schedules\\Penny:breakfastMarriage\"/1000 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 bed",				
+				"Thu": "850 Saloon 12 21 3 \"Strings\\schedules\\Penny:breakfastThu\"/1000 Trailer 12 6 0 penny_dishes/1600 Town 44 77 2 penny_sit_down/1840 bed",
+				"summer_Thu": "850 Saloon 12 21 3 \"Strings\\schedules\\Penny:breakfastThu\"/1000 Town 63 15 2 penny_sit_down/1800 Trailer 12 6 0 penny_dishes/2100 bed",
+
+				//CC not repaired
+				"winter_Thu": "850 Saloon 12 21 3 \"Strings\\schedules\\Penny:breakfastThu\"/1000 ArchaeologyHouse 16 10 2 penny_read/1500 ArchaeologyHouse 16 10 2/1800 Trailer 12 6 0 penny_dishes/2100 bed",
+			},
+			"When": {
+				"Pam": "enabled",
+				"Penny": "enabled",
+				"ThursdayToken": "true",
+				"CookingClass": "false",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Penny Breakfast Schedule - Unmarried CC complete schedule, Winter", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				//CC repaired
+				"winter_Thu": "850 Saloon 12 21 3 \"Strings\\schedules\\Penny:breakfastThu\"/1000 CommunityCenter 23 17 2 penny_read/1500 CommunityCenter 46 13 0/1800 Trailer 12 6 0 penny_dishes/2100 bed",
+			},
+			"When": {
+				"HasSeenEvent: anyPlayer |contains=191393": "true", //CC complete
+				"Pam": "enabled",
+				"Penny": "enabled",
+				"ThursdayToken": "true",
+				"CookingClass": "false",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Penny Breakfast Schedule, Pam Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				"marriage_Thu": "750 Saloon 12 21 3 \"Strings\\schedules\\Penny:breakfastMarriageAlt\"/1000 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 bed",				
+				"Thu": "850 Saloon 12 21 3 \"Strings\\schedules\\Penny:breakfastThuAlt\"/1000 Trailer 12 6 0 penny_dishes/1600 Town 44 77 2 penny_sit_down/1840 bed",
+				"summer_Thu": "850 Saloon 12 21 3 \"Strings\\schedules\\Penny:breakfastThuAlt\"/1000 Town 63 15 2 penny_sit_down/1800 Trailer 12 6 0 penny_dishes/2100 bed",
+
+				//CC not repaired
+				"winter_Thu": "850 Saloon 12 21 3 \"Strings\\schedules\\Penny:breakfastThuAlt\"/1000 ArchaeologyHouse 16 10 2 penny_read/1500 ArchaeologyHouse 16 10 2/1800 Trailer 12 6 0 penny_dishes/2100 bed",
+			},
+			"When": {
+				"Pam": "disabled",
+				"Penny": "enabled",
+				"ThursdayToken": "true",
+				"CookingClass": "false",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Penny Breakfast Schedule - Unmarried CC complete schedule, Winter, Pam Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				//CC repaired
+				"winter_Thu": "850 Saloon 12 21 3 \"Strings\\schedules\\Penny:breakfastThuAlt\"/1000 CommunityCenter 23 17 2 penny_read/1500 CommunityCenter 46 13 0/1800 Trailer 12 6 0 penny_dishes/2100 bed",
+			},
+			"When": {
+				"HasSeenEvent: anyPlayer |contains=191393": "true", //CC complete
+				"Pam": "disabled",
+				"Penny": "enabled",
+				"ThursdayToken": "true",
+				"CookingClass": "false",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		//Pierre, Caroline, and Abigail (every other week)
+		
+		//Pierre
+		{
+			"LogName": "Pierre Breakfast Schedule - Abigail Attends", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Pierre",
+			"Entries": {							
+				"Thu": "810 Saloon 17 22 2 \"Strings\\schedules\\Pierre:breakfastThu\"/1030 SeedShop 4 17 2/1900 SeedShop 37 5 0/2100 SeedShop 20 5 0/2300 bed", //Pierre is open later in the morning on Thursdays, but opens until 7:00 to compensate.
+			},
+			"When": {
+				"Pierreoline": "enabled",
+				"Abigail": "enabled",
+				"AbigailAttends": "true",
+				"ThursdayToken": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Pierre Breakfast Schedule - Abigail Skips Out", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Pierre",
+			"Entries": {							
+				"Thu": "810 Saloon 17 22 2 \"Strings\\schedules\\Pierre:breakfastThuAlt\"/1030 SeedShop 4 17 2/1900 SeedShop 37 5 0/2100 SeedShop 20 5 0/2300 bed", //Pierre is open later in the morning on Thursdays, but opens until 7:00 to compensate.
+			},
+			"When": {
+				"Pierreoline": "enabled",
+				"Abigail": "enabled",
+				"AbigailAttends": "false",
+				"ThursdayToken": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Pierre Breakfast Schedule - Abigail Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Pierre",
+			"Entries": {							
+				"Thu": "810 Saloon 17 22 2 \"Strings\\schedules\\Pierre:breakfastThuAlt2\"/1030 SeedShop 4 17 2/1900 SeedShop 37 5 0/2100 SeedShop 20 5 0/2300 bed", //Pierre is open later in the morning on Thursdays, but opens until 7:00 to compensate.
+			},
+			"When": {
+				"Pierreoline": "enabled",
+				"Abigail": "disabled",
+				"ThursdayToken": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		//Caroline
+		{
+			"LogName": "Caroline Breakfast Schedule - Abigail Attends", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Caroline",
+			"Entries": {							
+				"Thu": "800 Saloon 19 23 3 \"Strings\\schedules\\Caroline:breakfastThu\"/1030 Sunroom 5 7 1/1230 SeedShop 15 23 0/1330 Town 23 71 2/1600 SeedShop 25 18 2 square_9_9/2100 bed",
+			},
+			"When": {
+				"Pierreoline": "enabled",
+				"Abigail": "enabled",
+				"AbigailAttends": "true",
+				"ThursdayToken": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		
+		{
+			"LogName": "Caroline Breakfast Schedule - Abigail Skips Out", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Caroline",
+			"Entries": {							
+				"Thu": "800 Saloon 19 23 3 \"Strings\\schedules\\Caroline:breakfastThuAlt\"/1030 Sunroom 5 7 1/1230 SeedShop 15 23 0/1330 Town 23 71 2/1600 SeedShop 25 18 2 square_9_9/2100 bed",
+			},
+			"When": {
+				"Pierreoline": "enabled",
+				"Abigail": "enabled",
+				"AbigailAttends": "false",
+				"ThursdayToken": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Caroline Breakfast Schedule - Abigail Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Caroline",
+			"Entries": {							
+				"Thu": "800 Saloon 19 23 3 \"Strings\\schedules\\Caroline:breakfastThuAlt2\"/1030 Sunroom 5 7 1/1230 SeedShop 15 23 0/1330 Town 23 71 2/1600 SeedShop 25 18 2 square_9_9/2100 bed",
+			},
+			"When": {
+				"Pierreoline": "enabled",
+				"Abigail": "disabled",
+				"ThursdayToken": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		//Abigail
+		{
+			"LogName": "Abigail Breakfast Schedule - Abigail Decides to Go", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Abigail",
+			"Entries": {
+				
+				//Marriage 4 and 18
+				"marriage_Thu": "730 Saloon 18 20 2 \"Strings\\schedules\\Abigail:breakfastMarriage\"/1030 Mountain 49 31 2 abigail_flute/1400 Mine 18 4 2 \"Strings\\schedules\\Abigail:MarriageMines\"/2000 bed",
+				
+				//Regular 4 and 18
+				"fall_Thu": "730 Saloon 18 20 2 \"Strings\\schedules\\Abigail:breakfastThu\"/1030 SeedShop 2 20 3/1300 BusStop 22 5 2/1700 SeedShop 3 6 0 abigail_videogames/1930 bed",
+			    "winter_Thu": "730 Saloon 18 20 2 \"Strings\\schedules\\Abigail:breakfastThu\"/1030 ScienceHouse 5 19 1/1430 SeedShop 3 6 0 abigail_videogames/1930 bed",
+			    "summer_Thu": "730 Saloon 18 20 2 \"Strings\\schedules\\Abigail:breakfastThu\"/1030 Railroad 30 45 0/1400 Mountain 49 31 1/1740 SeedShop 3 6 0 abigail_videogames/1930 bed",
+			    "spring_Thu": "730 Saloon 18 20 2 \"Strings\\schedules\\Abigail:breakfastThu\"/1030 SeedShop 2 20 3/1300 Town 73 54 2/1630 SeedShop 3 6 0 abigail_videogames/1930 bed",
+			},
+			"When": {
+				"Pierreoline": "enabled",
+				"Abigail": "enabled",
+				"AbigailAttends": "true",
+				"ThursdayToken": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Abigail Breakfast Schedule - Pierre and Caroline Disabled", //Abigail will go every Thursday if Pierre and Caroline aren't there, for obvious reasons
+			"Action": "EditData",
+			"Target": "Characters/schedules/Abigail",
+			"Entries": {
+				//Marriage
+				"marriage_Thu": "730 Saloon 18 20 2 \"Strings\\schedules\\Abigail:breakfastMarriageAlt\"/1030 Mountain 49 31 2 abigail_flute/1400 Mine 18 4 2 \"Strings\\schedules\\Abigail:MarriageMines\"/2000 bed",
+				
+				//Regular
+				"fall_Thu": "730 Saloon 18 20 2 \"Strings\\schedules\\Abigail:breakfastThuAlt\"/1030 SeedShop 2 20 3/1300 BusStop 22 5 2/1700 SeedShop 3 6 0 abigail_videogames/1930 bed",
+			    "winter_Thu": "730 Saloon 18 20 2 \"Strings\\schedules\\Abigail:breakfastThuAlt\"/1030 ScienceHouse 5 19 1/1430 SeedShop 3 6 0 abigail_videogames/1930 bed",
+			    "summer_Thu": "730 Saloon 18 20 2 \"Strings\\schedules\\Abigail:breakfastThuAlt\"/1030 Railroad 30 45 0/1400 Mountain 49 31 1/1740 SeedShop 3 6 0 abigail_videogames/1930 bed",
+			    "spring_Thu": "730 Saloon 18 20 2 \"Strings\\schedules\\Abigail:breakfastThuAlt\"/1030 SeedShop 2 20 3/1300 Town 73 54 2/1630 SeedShop 3 6 0 abigail_videogames/1930 bed",
+			},
+			"When": {
+				"Pierreoline": "disabled",
+				"Abigail": "enabled",
+				"ThursdayToken": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		//Friday Crew
+		
+		//Muller Breakfast Friday
+		
+		//Evelyn
+		{
+			"LogName": "Evelyn Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Evelyn",
+			"Entries": {
+				"Fri": "800 Saloon 9 22 1 \"Strings\\schedules\\Evelyn:breakfastFri\"/1200 JoshHouse 3 19 2/1300 Town 36 78 3/1630 JoshHouse 4 17 0 square_3_1_0/1900 JoshHouse 17 17 0/2130 JoshHouse 2 5 1",		
+			},
+			"When": {
+				"Alex": "enabled",
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "Evelyn Breakfast Schedule, Alex Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Evelyn",
+			"Entries": {
+				"Fri": "800 Saloon 9 22 1 \"Strings\\schedules\\Evelyn:breakfastFriAlt\"/1200 JoshHouse 3 19 2/1300 Town 36 78 3/1630 JoshHouse 4 17 0 square_3_1_0/1900 JoshHouse 17 17 0/2130 JoshHouse 2 5 1",		
+			},
+			"When": {
+				"Alex": "disabled",
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		//George
+		{
+			"LogName": "George Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/George",
+			"Entries": {
+				"Fri": "800 Saloon 11 23 0 \"Strings\\schedules\\George:breakfastFri\"/1200 JoshHouse 5 21 3/1500 JoshHouse 16 22 0/2000 bed",		
+			},
+			"When": {
+				"Alex": "enabled",
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "George Breakfast Schedule, Alex Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/George",
+			"Entries": {
+				"Fri": "800 Saloon 11 23 0 \"Strings\\schedules\\George:breakfastFriAlt\"/1200 JoshHouse 5 21 3/1500 JoshHouse 16 22 0/2000 bed",		
+			},
+			"When": {
+				"Alex": "disabled",
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "George Summer Fridays Schedule Null", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/George",
+			"Entries": {
+				"summer_Fri": null,		
+			},
+			"When": {
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		//Alex
+		{
+			"LogName": "Alex Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Alex",
+			"Entries": {
+				"marriage_Fri": "720 Saloon 12 21 3 \"Strings\\schedules\\Alex:breakfastMarriage\"/1200 JoshHouse 6 18 2 \"Strings\\schedules\\Alex:marriage_Mon.000\"/1900 bed",
+				"Fri": "610 JoshHouse 19 6 2/800 Saloon 12 21 3 \"Strings\\schedules\\Alex:breakfastFri\"/1300 JoshHouse 14 5 2 alex_lift_weights/1600 Town 50 68 1/1830 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 bed"
+			},
+			"When": {
+				"Alex": "enabled",
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		{
+			"LogName": "Alex Breakfast Schedule, George and Evelyn disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Alex",
+			"Entries": {
+				"marriage_Fri": "720 Saloon 12 21 3 \"Strings\\schedules\\Alex:breakfastMarriageAlt\"/1200 JoshHouse 6 18 2 \"Strings\\schedules\\Alex:marriage_Mon.000\"/1900 bed",
+				"Fri": "610 JoshHouse 19 6 2/800 Saloon 12 21 3 \"Strings\\schedules\\Alex:breakfastFriAlt\"/1300 JoshHouse 14 5 2 alex_lift_weights/1600 Town 50 68 1/1830 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 bed"
+			},
+			"When": {
+				"Alex": "enabled",
+				"Geovelyn": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		//Saturday Crew
+		
+		//Haley and Emily Brunch Saturday
+		
+		//Haley
+		{
+			"LogName": "Haley Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Haley",
+			"Entries": {
+				"marriage_Sat": "820 Saloon 3 21 0 \"Strings\\schedules\\Haley:breakfastMarriage\"/1230 HaleyHouse 7 21 3 \"Strings\\schedules\\Haley:breakfastvisitmarriage\"/1530 BusStop -1 23 1", //Haley and Emily have a weekly brunch, then Haley visits the house before heading home.
+				"Sat": "800 HaleyHouse 6 5 0/850 HaleyHouse 8 7 1/900 Saloon 3 21 0 \"Strings\\schedules\\Haley:breakfastSatHigh\"/1230 Town 23 22 2/1630 HaleyHouse 19 16 0 square_5_1_0/2000 HaleyHouse 5 7 0 square_5_5/2230 bed" //Haley wakes up a tad earlier, puts makeup on, then heads to brunch with Emily, proceeds with spring schedule after.
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "Haley Breakfast Schedule, Haley Low Hearts", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Haley",
+			"Entries": {
+				"Sat": "800 HaleyHouse 6 5 0/850 HaleyHouse 8 7 1/900 Saloon 3 21 0 \"Strings\\schedules\\Haley:breakfastSat\"/1230 Town 23 22 2/1630 HaleyHouse 19 16 0 square_5_1_0/2000 HaleyHouse 5 7 0 square_5_5/2230 bed" //Haley wakes up a tad earlier, puts makeup on, then heads to brunch with Emily, proceeds with spring schedule after.
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"Hearts:Haley": "0, 1, 2, 3, 4, 5",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "Haley Breakfast Schedule, Emily Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Haley",
+			"Entries": {
+				"marriage_Sat": "820 Saloon 3 21 0 \"Strings\\schedules\\Haley:breakfastMarriageAlt\"/1230 HaleyHouse 7 21 3 \"Strings\\schedules\\Haley:breakfastvisitmarriage\"/1530 BusStop -1 23 1", //Haley and Emily have a weekly brunch, then Haley visits the house before heading home.
+				"Sat": "800 HaleyHouse 6 5 0/850 HaleyHouse 8 7 1/900 Saloon 3 21 0 \"Strings\\schedules\\Haley:breakfastSatHighAlt\"/1230 Town 23 22 2/1630 HaleyHouse 19 16 0 square_5_1_0/2000 HaleyHouse 5 7 0 square_5_5/2230 bed" //Haley wakes up a tad earlier, puts makeup on, then heads to brunch with Emily, proceeds with spring schedule after.
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "Haley Breakfast Schedule, Emily Disabled, Haley Low Hearts", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Haley",
+			"Entries": {
+				"Sat": "800 HaleyHouse 6 5 0/850 HaleyHouse 8 7 1/900 Saloon 3 21 0 \"Strings\\schedules\\Haley:breakfastSatAlt\"/1230 Town 23 22 2/1630 HaleyHouse 19 16 0 square_5_1_0/2000 HaleyHouse 5 7 0 square_5_5/2230 bed" //Haley wakes up a tad earlier, puts makeup on, then heads to brunch with Emily, proceeds with spring schedule after.
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "disabled",
+				"Hearts:Haley": "0, 1, 2, 3, 4, 5",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		//Emily
+		{
+			"LogName": "Emily Breakfast Schedule", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				"marriage_Sat": "820 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastMarriage\"/1230 HaleyHouse 5 20 2 \"Strings\\schedules\\Emily:breakfastvisitmarriage\"/1500 Saloon 15 17 0 \"Strings\\schedules\\Emily:marriage_Mon.002\"/2200 bed", //Marriage schedule, Haley unmarried
+				"Sat": "850 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastSat\"/1230 HaleyHouse 3 16 0/1530 Saloon 15 17 0 square_5_1_0/2430 HaleyHouse 21 4 1 emily_sleep", //Regular schedule, Haley unmarried
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "Emily Breakfast Schedule - Haley married to player", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				"marriage_Sat": "820 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastMarriage\"/1230 HaleyHouse 5 20 2 \"Strings\\schedules\\Emily:breakfastvisitmarriage\"/1500 Saloon 15 17 0 \"Strings\\schedules\\Emily:marriage_Mon.002\"/2200 bed", //Marriage schedule, Haley married
+				"Sat": "850 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastSat\"/1230 HaleyHouse 5 20 2/1530 Saloon 15 17 0 square_5_1_0/2430 bed", //Regular schedule, Haley married
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"relationship:Haley": "married", //I'm not testing the marriage relationship in this patch - I don't think Emily and Haley, in universe, would be thrilled at marrying/moving in with the same person. You can edit it yourself, file searcher.
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "Emily Breakfast Schedule - Haley married to (multiplayer) player", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				"marriage_Sat": "820 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastMarriage\"/1230 HaleyHouse 5 20 2 \"Strings\\schedules\\Emily:breakfastvisitmarriage\"/1500 Saloon 15 17 0 \"Strings\\schedules\\Emily:marriage_Mon.002\"/2200 bed", //Marriage schedule, Haley married
+				"Sat": "850 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastSat\"/1230 HaleyHouse 5 20 2/1530 Saloon 15 17 0 square_5_1_0/2430 bed", //Regular schedule, Haley married
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"Spouse": "Haley", //Feel free to report if this is a problem, though, since this would be a multiplayer issue.
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "Emily Breakfast Schedule - Haley disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				"marriage_Sat": "820 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastMarriageAlt\"/1230 HaleyHouse 5 20 2 \"Strings\\schedules\\Emily:breakfastvisitmarriage\"/1500 Saloon 15 17 0 \"Strings\\schedules\\Emily:marriage_Mon.002\"/2200 bed", //Marriage schedule, Haley unmarried
+				"Sat": "850 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastSatAlt\"/1230 HaleyHouse 3 16 0/1530 Saloon 15 17 0 square_5_1_0/2430 HaleyHouse 21 4 1 emily_sleep", //Regular schedule, Haley unmarried
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177752": "true", //Second Breakfast Event Seen
+			},
+		},
+		
+		//Sunday Crew
+		
+		//Emily runs the till on Sunday mornings when Gus is watching the game (and doing bookkeeping)
+		{
+			"LogName": "Emily Waitress Schedule (Immersion Mode)", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",		
+			"Entries": {
+				"marriage_Sun": "700 Saloon 17 18 2 \"Strings\\schedules\\Emily:breakfastwaitress\"/1500 Town 82 15 1 \"Strings\\schedules\\Emily:breakfastbreakmarriage\"/2100 bed",
+				"Sun": "630 HaleyHouse 16 5 2/700 Saloon 17 18 2 \"Strings\\schedules\\Emily:breakfastwaitress\"/1500 HaleyHouse 3 16 0/1800 Saloon 15 17 0 square_5_1_0/2430 bed",
+			},
+			"When": {
+				"ImmersionEmily": "true", // not both false - Thank you Pathos!
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"HasFlag": "saloonSportsRoom", //One of the final sports room events are completed.
+			},
+		},
+		
+		//Maru and Penny get breakfast together (platonic or romantic? You decide!)
+		
+		//Maru
+		{
+			"LogName": "Maru Breakfast Schedule - Penny Hangout", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Maru",
+			"Entries": {
+				//Marriage Sunday should have Monday's schedule, which allows Penny and Maru to spend the whole day together.
+				"marriage_Sun": "630 Saloon 12 21 3 \"Strings\\schedules\\Maru:breakfastMarriageSun\"/1130 Town 32 90 2 \"Strings\\schedules\\Maru:pennymaru\"/1400 Town 43 77 2 maru_sit_down \"Strings\\schedules\\Maru:pennymaru2\"/1830 bed",
+				
+				//Regular
+				"Sun": "630 Saloon 12 21 3 \"Strings\\schedules\\Maru:breakfastSun\"/1130 Town 32 90 2 \"Strings\\schedules\\Maru:pennymaru\"/1400 Town 43 77 2 maru_sit_down \"Strings\\schedules\\Maru:pennymaru2\"/1830 ScienceHouse 5 6 1 maru_tinker/2300 bed",
+				"summer_Sun": "630 Saloon 12 21 3 \"Strings\\schedules\\Maru:breakfastSun\"/1130 Town 32 90 2 \"Strings\\schedules\\Maru:pennymaru\"/1400 Town 43 77 2 maru_sit_down \"Strings\\schedules\\Maru:pennymaru2\"/1830 ScienceHouse 5 6 1 maru_tinker/2300 bed",
+			},
+			"When": {
+				"Maru": "enabled",
+				"Penny": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "Maru Breakfast Schedule - Penny Hangout, Penny Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Maru",
+			"Entries": {
+				//Marriage
+				"marriage_Sun": "630 Saloon 12 21 3 \"Strings\\schedules\\Maru:breakfastMarriageSunAlt\"/1130 Town 32 90 2 \"Strings\\schedules\\Maru:nopennymarriage\"/1400 Town 43 77 2 maru_sit_down \"Strings\\schedules\\Maru:nopennymarriage2\"/1830 bed",
+				
+				//Regular
+				"Sun": "630 Saloon 12 21 3 \"Strings\\schedules\\Maru:breakfastSun\"/1130 Town 32 90 2 \"Strings\\schedules\\Maru:nopenny\"/1400 Town 43 77 2 maru_sit_down \"Strings\\schedules\\Maru:nopenny2\"/1830 ScienceHouse 5 6 1 maru_tinker/2300 bed",
+				"summer_Sun": "630 Saloon 12 21 3 \"Strings\\schedules\\Maru:breakfastSun\"/1130 Town 32 90 2 \"Strings\\schedules\\Maru:nopenny\"/1400 Town 43 77 2 maru_sit_down \"Strings\\schedules\\Maru:nopenny2\"/1830 ScienceHouse 5 6 1 maru_tinker/2300 bed",
+			},
+			"When": {
+				"Maru": "enabled",
+				"Penny": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+			},
+		},
+		
+		//Penny
+		{
+			"LogName": "Penny Breakfast Schedule - Maru Hangout", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				//Marriage
+				"marriage_Sun": "730 Saloon 9 22 1 \"Strings\\schedules\\Penny:breakfastMarriageSun\"/1130 Town 33 90 2 \"Strings\\schedules\\Penny:marupenny\"/1400 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marupenny2\"/1830 bed",
+				
+				//Regular
+				"Sun": "730 Saloon 9 22 1 \"Strings\\schedules\\Penny:breakfastSun\"/1130 Town 33 90 2 \"Strings\\schedules\\Penny:marupenny\"/1400 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marupenny2\"/1830 bed",
+				"summer_Sun": "730 Saloon 9 22 1 \"Strings\\schedules\\Penny:breakfastSun\"/1130 Town 33 90 2 \"Strings\\schedules\\Penny:marupenny\"/1400 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marupenny2\"/1830 bed",				
+			},
+			"When": {
+				"Penny": "enabled",
+				"Maru": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "Penny Breakfast Schedule - Maru Hangout, Maru Disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				//Marriage
+				"marriage_Sun": "730 Saloon 9 22 1 \"Strings\\schedules\\Penny:breakfastMarriageSunAlt\"/1130 Town 33 90 2 \"Strings\\schedules\\Penny:nomarumarriage\"/1400 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:nomarumarriage2\"/1830 bed",
+				
+				//Regular
+				"Sun": "730 Saloon 9 22 1 \"Strings\\schedules\\Penny:breakfastSun\"/1130 Town 33 90 2 penny_read \"Strings\\schedules\\Penny:nomaru\"/1400 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:nomaru2\"/1830 bed",
+				"summer_Sun": "730 Saloon 9 22 1 \"Strings\\schedules\\Penny:breakfastSun\"/1130 Town 33 90 2 penny_read \"Strings\\schedules\\Penny:nomaru\"/1400 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:nomaru2\"/1830 bed",				
+			},
+			"When": {
+				"Penny": "enabled",
+				"Maru": "disabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+			},
+		},
+		
+		//ASS Gang Unite!
+		
+		//Abigail
+		{
+			"LogName": "Abigail Breakfast Schedule - Sunday, ASS Gang Hangout", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Abigail",
+			"Entries": {
+				//Marriage
+				"marriage_Sun": "700 Saloon 41 18 2 \"Strings\\schedules\\Abigail:breakfastMarriageSun\"/1000 SamHouse 16 15 1 \"Strings\\schedules\\Abigail:bandmarriage\"/1230 Mine 18 4 2 \"Strings\\schedules\\Abigail:MarriageMines2\"/1700 Mountain 47 31 2 abigail_flute/1900 bed",	
+				//Regular
+				"Sun": "800 Saloon 41 18 2 \"Strings\\schedules\\Abigail:breakfastSun\"/1000 SamHouse 16 15 1 \"Strings\\schedules\\Abigail:band\"/1230 Mine 18 4 2 \"Strings\\schedules\\Abigail:mines\"/1700 Mountain 47 31 2 abigail_flute/2100 bed"
+			},
+			"When": {
+				"Abigail": "enabled",
+				"Sam": "enabled",
+				"Sebastian": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "Abigail Breakfast Schedule - Sunday, ASS Gang Hangout, Sam or Seb disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Abigail",
+			"Entries": {
+				//Marriage
+				"marriage_Sun": "700 Saloon 41 18 2 \"Strings\\schedules\\Abigail:breakfastMarriageSunAlt\"/1000 SamHouse 16 15 1 \"Strings\\schedules\\Abigail:bandmarriage\"/1230 Mine 18 4 2 \"Strings\\schedules\\Abigail:MarriageMines\"/1700 Mountain 47 31 2 abigail_flute/1900 bed",	
+				//Regular
+				"Sun": "800 Saloon 41 18 2 \"Strings\\schedules\\Abigail:breakfastSunAlt\"/1000 SamHouse 16 15 1 \"Strings\\schedules\\Abigail:bandAlt\"/1230 Mine 18 4 2 \"Strings\\schedules\\Abigail:minesAlt\"/1700 Mountain 47 31 2 abigail_flute/2100 bed"
+			},
+			"When": {
+				"Abigail": "enabled",
+				"SebSam": "false", //Either Sam or Sebastian are disabled, or both are.
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+			},
+		},
+		
+		//Sebastian
+		{
+			"LogName": "Sebastian Breakfast Schedule - Sunday, ASS Gang Hangout", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sebastian",
+			"Entries": {
+				//Marriage
+				"marriage_Sun": "700 Saloon 40 19 1 \"Strings\\schedules\\Sebastian:breakfastMarriageSun\"/1000 SamHouse 18 15 3 \"Strings\\schedules\\Sebastian:bandpractice\"/1230 Mine 17 5 1 \"Strings\\schedules\\Sebastian:MarriageMines\"/1700 Mountain 46 32 1 sebastian_smoking/1900 bed",
+				//Regular
+				"Sun": "650 Saloon 40 19 1 \"Strings\\schedules\\Sebastian:breakfastSun\"/1000 SamHouse 18 15 3 \"Strings\\schedules\\Sebastian:bandpractice\"/1230 Mine 17 5 1 \"Strings\\schedules\\Sebastian:mines\"/1700 Mountain 46 32 1 sebastian_smoking/2100 bed",
+			},
+			"When": {
+				"Sebastian": "enabled",
+				"Abigail": "enabled",
+				"Sam": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "Sebastian Breakfast Schedule - Sunday, ASS Gang Hangout, Sam or Abigail disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sebastian",
+			"Entries": {
+				//Marriage
+				"marriage_Sun": "700 Saloon 40 19 1 \"Strings\\schedules\\Sebastian:breakfastMarriageSunAlt\"/1000 SamHouse 18 15 3 \"Strings\\schedules\\Sebastian:bandpracticeAlt\"/1230 Mine 17 5 1 \"Strings\\schedules\\Sebastian:MarriageMines\"/1700 Mountain 46 32 1 sebastian_smoking/1900 bed",
+				//Regular
+				"Sun": "650 Saloon 40 19 1 \"Strings\\schedules\\Sebastian:breakfastSunAlt\"/1000 SamHouse 18 15 3 \"Strings\\schedules\\Sebastian:bandpracticeAlt\"/1230 Mine 17 5 1 \"Strings\\schedules\\Sebastian:mines\"/1700 Mountain 46 32 1 sebastian_smoking/2100 bed",
+			},
+			"When": {
+				"Sebastian": "enabled",
+				"SamAbs": "false", //Either Sam or Abigail are disabled, or both are.
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+			},
+		},
+		
+		//Sam
+		{
+			"LogName": "Sam Breakfast Schedule - Sunday, ASS Gang Hangout", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				//Marriage
+				"marriage_Sun": "700 Saloon 42 19 3 \"Strings\\schedules\\Sam:breakfastMarriageSun\"/1000 SamHouse 17 14 2 \"Strings\\schedules\\Sam:bandpractice\"/1230 Mine 19 5 3 \"Strings\\schedules\\Sam:MarriageMines\"/1700 Mountain 50 32 3 sam_gameboy/1900 bed",
+				//Regular
+				"Sun": "610 SamHouse 21 13 3/800 Saloon 42 19 3 \"Strings\\schedules\\Sam:breakfastSun\"/1000 SamHouse 17 14 2 \"Strings\\schedules\\Sam:bandpractice\"/1230 Mine 19 5 3 \"Strings\\schedules\\Sam:mines\"/1700 Mountain 48 32 3 sam_gameboy/2100 bed",
+			},
+			"When": {
+				"Sam": "enabled",
+				"Sebastian": "enabled",
+				"Abigail": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+			},
+		},
+		
+		{
+			"LogName": "Sam Breakfast Schedule - Sunday, ASS Gang Hangout, Abigail or Sebastian disabled", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				//Marriage
+				"marriage_Sun": "700 Saloon 42 19 3 \"Strings\\schedules\\Sam:breakfastMarriageSunAlt\"/1000 SamHouse 17 14 2 \"Strings\\schedules\\Sam:bandpracticeAlt\"/1230 Mine 19 5 3 \"Strings\\schedules\\Sam:MarriageMines\"/1700 Mountain 50 32 3 sam_gameboy/1900 bed",
+				//Regular
+				"Sun": "610 SamHouse 21 13 3/800 Saloon 42 19 3 \"Strings\\schedules\\Sam:breakfastSunAlt\"/1000 SamHouse 17 14 2 \"Strings\\schedules\\Sam:bandpracticeAlt\"/1230 Mine 19 5 3 \"Strings\\schedules\\Sam:mines\"/1700 Mountain 48 32 3 sam_gameboy/2100 bed",
+			},
+			"When": {
+				"Sam": "enabled",
+				"SebAbs": "false", //Either Sebastian or Abigail are disabled, or both are.
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+			},
+		},
+		
+		//Rain Crew
+		
+		//Willy
+		{
+			"LogName": "Willy Breakfast Schedule - Rain", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Willy",
+			"Entries": {			
+				"rain": "610 FishShop 5 4 2/720 Saloon 17 22 2 \"Strings\\schedules\\Willy:breakfastrain\"/1100 FishShop 5 4 2", //Willy gets an early breakfast on Tuesdays, then heads back and stays in. Assume he bought a later meal to go if need be.
+			},
+			"When": {
+				"Willy": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"DayOfWeek": "Wednesday, Friday, Saturday, Sunday",
+			},
+		},
+		
+		{
+			"LogName": "Willy Breakfast Schedule - Rain", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Willy",
+			"Entries": {			
+				"rain": "610 FishShop 5 4 2/720 Saloon 17 22 2 \"Strings\\schedules\\Willy:breakfastrain\"/1100 FishShop 5 4 2", //Willy gets an early breakfast on Tuesdays, then heads back and stays in. Assume he bought a later meal to go if need be.
+			},
+			"When": {
+				"Willy": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Final Breakfast Event Seen
+				"DayOfWeek": "Monday",
+			},
+		},
+		
+		{
+			"LogName": "Willy Breakfast Schedule - Rain", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Willy",
+			"Entries": {			
+				"rain": "610 FishShop 5 4 2/720 Saloon 17 22 2 \"Strings\\schedules\\Willy:breakfastrain\"/1100 FishShop 5 4 2", //Willy gets an early breakfast on Tuesdays, then heads back and stays in. Assume he bought a later meal to go if need be.
+			},
+			"When": {
+				"Willy": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"TuesdayToken": "true",
+			},
+		},
+		
+		{
+			"LogName": "Willy Breakfast Schedule - Rain", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Willy",
+			"Entries": {			
+				"rain": "610 FishShop 5 4 2/720 Saloon 17 22 2 \"Strings\\schedules\\Willy:breakfastrain\"/1100 FishShop 5 4 2", //Willy gets an early breakfast on Tuesdays, then heads back and stays in. Assume he bought a later meal to go if need be.
+			},
+			"When": {
+				"Willy": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"ThursdayToken": "true",
+			},
+		},
+		
+		//Lewis
+		{
+			"LogName": "Lewis Breakfast Schedule - Rain, CC not complete",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Lewis",
+			"Entries": {							
+				"rain": "830 Saloon 19 23 3 lewis_drink \"Strings\\schedules\\Lewis:breakfastrain\"/1040 ManorHouse 7 5 0 square_5_1_0/1400 Saloon 12 20 0/1700 ManorHouse 7 5 0 square_5_1_0/2000 ManorHouse 3 6 0/2200 bed",
+			},
+			"When": {
+				"Lewis": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"DayOfWeek": "Wednesday, Friday, Saturday, Sunday",
+			},
+		},
+		
+		{
+			"LogName": "Lewis Breakfast Schedule - Rain, CC not complete",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Lewis",
+			"Entries": {							
+				"rain": "830 Saloon 19 23 3 lewis_drink \"Strings\\schedules\\Lewis:breakfastrain\"/1040 ManorHouse 7 5 0 square_5_1_0/1240 CommunityCenter 55 6 0/1400 CommunityCenter 47 5 0/1440 CommunityCenter 51 4 2/1600 CommunityCenter 47 13 0/1700 CommunityCenter 33 9 0/1830 ManorHouse 3 6 0/2300 bed",
+			},
+			"When": {
+				"Lewis": "enabled",
+				"HasSeenEvent: anyPlayer |contains=191393": "true", //CC complete
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"DayOfWeek": "Wednesday, Friday, Saturday, Sunday",
+			},
+		},
+		
+		{
+			"LogName": "Lewis Breakfast Schedule - Rain, CC not complete",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Lewis",
+			"Entries": {							
+				"rain": "830 Saloon 19 23 3 lewis_drink \"Strings\\schedules\\Lewis:breakfastrain\"/1040 ManorHouse 7 5 0 square_5_1_0/1400 Saloon 12 20 0/1700 ManorHouse 7 5 0 square_5_1_0/2000 ManorHouse 3 6 0/2200 bed",
+			},
+			"When": {
+				"Lewis": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Final Breakfast Event Seen
+				"DayOfWeek": "Monday",
+			},
+		},
+		
+		{
+			"LogName": "Lewis Breakfast Schedule - Rain, CC not complete",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Lewis",
+			"Entries": {							
+				"rain": "830 Saloon 19 23 3 lewis_drink \"Strings\\schedules\\Lewis:breakfastrain\"/1040 ManorHouse 7 5 0 square_5_1_0/1240 CommunityCenter 55 6 0/1400 CommunityCenter 47 5 0/1440 CommunityCenter 51 4 2/1600 CommunityCenter 47 13 0/1700 CommunityCenter 33 9 0/1830 ManorHouse 3 6 0/2300 bed",
+			},
+			"When": {
+				"Lewis": "enabled",
+				"HasSeenEvent: anyPlayer |contains=191393": "true", //CC complete
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Final Breakfast Event Seen
+				"DayOfWeek": "Monday",
+			},
+		},
+		
+		{
+			"LogName": "Lewis Breakfast Schedule - Rain, CC not complete",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Lewis",
+			"Entries": {							
+				"rain": "830 Saloon 19 23 3 lewis_drink \"Strings\\schedules\\Lewis:breakfastrain\"/1040 ManorHouse 7 5 0 square_5_1_0/1400 Saloon 12 20 0/1700 ManorHouse 7 5 0 square_5_1_0/2000 ManorHouse 3 6 0/2200 bed",
+			},
+			"When": {
+				"Lewis": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"TuesdayToken": "true",
+			},
+		},
+		
+		{
+			"LogName": "Lewis Breakfast Schedule - Rain, CC not complete",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Lewis",
+			"Entries": {							
+				"rain": "830 Saloon 19 23 3 lewis_drink \"Strings\\schedules\\Lewis:breakfastrain\"/1040 ManorHouse 7 5 0 square_5_1_0/1240 CommunityCenter 55 6 0/1400 CommunityCenter 47 5 0/1440 CommunityCenter 51 4 2/1600 CommunityCenter 47 13 0/1700 CommunityCenter 33 9 0/1830 ManorHouse 3 6 0/2300 bed",
+			},
+			"When": {
+				"Lewis": "enabled",
+				"HasSeenEvent: anyPlayer |contains=191393": "true", //CC complete
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"TuesdayToken": "true",
+			},
+		},
+		
+		{
+			"LogName": "Lewis Breakfast Schedule - Rain, CC not complete",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Lewis",
+			"Entries": {							
+				"rain": "830 Saloon 19 23 3 lewis_drink \"Strings\\schedules\\Lewis:breakfastrain\"/1040 ManorHouse 7 5 0 square_5_1_0/1400 Saloon 12 20 0/1700 ManorHouse 7 5 0 square_5_1_0/2000 ManorHouse 3 6 0/2200 bed",
+			},
+			"When": {
+				"Lewis": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"ThursdayToken": "true",
+			},
+		},
+		
+		{
+			"LogName": "Lewis Breakfast Schedule - Rain, CC not complete",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Lewis",
+			"Entries": {							
+				"rain": "830 Saloon 19 23 3 lewis_drink \"Strings\\schedules\\Lewis:breakfastrain\"/1040 ManorHouse 7 5 0 square_5_1_0/1240 CommunityCenter 55 6 0/1400 CommunityCenter 47 5 0/1440 CommunityCenter 51 4 2/1600 CommunityCenter 47 13 0/1700 CommunityCenter 33 9 0/1830 ManorHouse 3 6 0/2300 bed",
+			},
+			"When": {
+				"Lewis": "enabled",
+				"HasSeenEvent: anyPlayer |contains=191393": "true", //CC complete
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"ThursdayToken": "true",
+			},
+		},
+		
+		//Evelyn
+		{
+			"LogName": "Evelyn Breakfast Schedule - Rain", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Evelyn",
+			"Entries": {
+				"rain": "800 Saloon 9 22 1 \"Strings\\schedules\\Evelyn:breakfastrain\"/1200 JoshHouse 3 19 2/1630 JoshHouse 4 17 0 square_3_1_0/1900 JoshHouse 17 17 0/2130 JoshHouse 2 5 1",
+			},
+			"When": {
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"DayOfWeek": "Wednesday, Friday, Saturday, Sunday",
+			},
+		},
+		
+		{
+			"LogName": "Evelyn Breakfast Schedule - Rain", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Evelyn",
+			"Entries": {
+				"rain": "800 Saloon 9 22 1 \"Strings\\schedules\\Evelyn:breakfastrain\"/1200 JoshHouse 3 19 2/1630 JoshHouse 4 17 0 square_3_1_0/1900 JoshHouse 17 17 0/2130 JoshHouse 2 5 1",
+			},
+			"When": {
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Final Breakfast Event Seen
+				"DayOfWeek": "Monday",
+			},
+		},
+		
+		{
+			"LogName": "Evelyn Breakfast Schedule - Rain", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Evelyn",
+			"Entries": {
+				"rain": "800 Saloon 9 22 1 \"Strings\\schedules\\Evelyn:breakfastrain\"/1200 JoshHouse 3 19 2/1630 JoshHouse 4 17 0 square_3_1_0/1900 JoshHouse 17 17 0/2130 JoshHouse 2 5 1",
+			},
+			"When": {
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"TuesdayToken": "true",
+			},
+		},
+		
+		{
+			"LogName": "Evelyn Breakfast Schedule - Rain", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Evelyn",
+			"Entries": {
+				"rain": "800 Saloon 9 22 1 \"Strings\\schedules\\Evelyn:breakfastrain\"/1200 JoshHouse 3 19 2/1630 JoshHouse 4 17 0 square_3_1_0/1900 JoshHouse 17 17 0/2130 JoshHouse 2 5 1",
+			},
+			"When": {
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"ThursdayToken": "true",
+			},
+		},
+		
+		//George
+		{
+			"LogName": "George Breakfast Schedule - Rain", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/George",
+			"Entries": {
+				"rain": "800 Saloon 11 23 0 \"Strings\\schedules\\George:breakfastrain\"/1200 JoshHouse 5 21 3/1500 JoshHouse 16 22 0/2000 bed", //Due to marriage complications, Alex should not attend on rainy days.
+			},
+			"When": {
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"DayOfWeek": "Wednesday, Friday, Saturday, Sunday",
+			},
+		},
+		
+		{
+			"LogName": "George Breakfast Schedule - Rain", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/George",
+			"Entries": {
+				"rain": "800 Saloon 11 23 0 \"Strings\\schedules\\George:breakfastrain\"/1200 JoshHouse 5 21 3/1500 JoshHouse 16 22 0/2000 bed", //Due to marriage complications, Alex should not attend on rainy days.
+			},
+			"When": {
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177756": "true", //Final Breakfast Event Seen
+				"DayOfWeek": "Monday",
+			},
+		},
+		
+		{
+			"LogName": "George Breakfast Schedule - Rain", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/George",
+			"Entries": {
+				"rain": "800 Saloon 11 23 0 \"Strings\\schedules\\George:breakfastrain\"/1200 JoshHouse 5 21 3/1500 JoshHouse 16 22 0/2000 bed", //Due to marriage complications, Alex should not attend on rainy days.
+			},
+			"When": {
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"TuesdayToken": "true",
+				"Day |contains=2": "false",
+			},
+		},
+		
+		{
+			"LogName": "George Breakfast Schedule - Rain", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/George",
+			"Entries": {
+				"rain": "800 Saloon 11 23 0 \"Strings\\schedules\\George:breakfastrain\"/1200 JoshHouse 5 21 3/1500 JoshHouse 16 22 0/2000 bed", //Due to marriage complications, Alex should not attend on rainy days.
+			},
+			"When": {
+				"Geovelyn": "enabled",
+				"HasSeenEvent: anyPlayer |contains=177755": "true", //Final Breakfast Event Seen
+				"ThursdayToken": "true",
+			},
+		},
+		
+	]
+}

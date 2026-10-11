@@ -1,0 +1,717 @@
+{
+    "Changes": [
+	//To prevent abandoning Stardrop Breakfast schedules, the following days are being patched out.
+		//Monday
+		
+		{
+			"LogName": "Kent Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Kent": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "ImmersionKent": "true",
+				"DayOfWeek": "Monday",
+				"MondayToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Jodi Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Jodi": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "SamFam": "enabled",
+				"DayOfWeek": "Monday",
+				"MondayToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Vincent Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Vincent": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "SamFam": "enabled",
+				"DayOfWeek": "Monday",
+				"MondayToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Sam Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Sam": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Sam": "enabled",
+				"DayOfWeek": "Monday",
+				"MondayToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Marnie Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Marnie": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Marnie": "enabled",
+				"DayOfWeek": "Monday",
+				"MondayToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Jas Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Jas": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "JasToken": "true",
+				"DayOfWeek": "Monday",
+				"MondayToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Shane Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Shane": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Shane": "enabled",
+				"DayOfWeek": "Monday",
+				"MondayToken": "true",
+            }
+        },
+		
+		//Tuesday
+		
+		{
+			"LogName": "Leah Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Leah": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Leah": "enabled",
+				"DayOfWeek": "Tuesday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Elliott Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Elliott": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Elliott": "enabled",
+				"DayOfWeek": "Tuesday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Willy Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Willy": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Willy": "enabled",
+				"DayOfWeek": "Tuesday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Clint Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Clint": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Clint": "enabled",
+				"DayOfWeek": "Tuesday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Lewis Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Lewis": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Lewis": "enabled",
+				"DayOfWeek": "Tuesday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Shane Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Shane": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Shane": "enabled",
+				"DayOfWeek": "Tuesday",
+				"CCJob": "Shane",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Sam Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Sam": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Sam": "enabled",
+				"DayOfWeek": "Tuesday",
+				"CCJob": "Sam",
+				"WeekToken": "true",
+            }
+        },
+		
+		//Wednesday
+		
+		{
+			"LogName": "Robin Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Robin": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Robmetrius": "enabled",
+				"DayOfWeek": "Wednesday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Demetrius Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Demetrius": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Robmetrius": "enabled",
+				"DayOfWeek": "Wednesday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Sebastian Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Sebastian": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Sebastian": "enabled",
+				"DayOfWeek": "Wednesday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Maru Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Maru": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Maru": "enabled",
+				"DayOfWeek": "Wednesday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Harvey Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Harvey": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Harvey": "enabled",
+				"DayOfWeek": "Wednesday",
+				"WeekToken": "true",
+            }
+        },
+		
+		
+		//Thursday
+		
+		
+		{
+			"LogName": "Leah Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Leah": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "ImmersionLeah": "true",
+				"CookingClass": "true",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Penny Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Penny": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Penny": "enabled",
+				"CookingClass": "false",
+				"DayOfWeek": "Thursday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Pam Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Pam": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Pam": "enabled",
+				"PamBus": "true",
+				"DayOfWeek": "Thursday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Shane Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Shane": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Shane": "enabled",
+				"DayOfWeek": "Thursday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Jas Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Jas": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "JasToken": "true",
+				"DayOfWeek": "Thursday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Pierre Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Pierre": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Pierreoline": "enabled",
+				"DayOfWeek": "Thursday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Caroline Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Caroline": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Pierreoline": "enabled",
+				"DayOfWeek": "Thursday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Abigail Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Abigail": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Abigail": "enabled",
+				"AbigailAttends": "true",
+				"DayOfWeek": "Thursday",
+				"WeekToken": "true",
+            }
+        },
+		
+		//Friday
+		
+		{
+			"LogName": "Alex Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Alex": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Alex": "enabled",
+				"DayOfWeek": "Friday",
+				"WeekendToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "George Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"George": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Geovelyn": "enabled",
+				"DayOfWeek": "Friday",
+				"WeekendToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Evelyn Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Evelyn": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Geovelyn": "enabled",
+				"DayOfWeek": "Friday",
+				"WeekendToken": "true",
+            }
+        },
+		
+		//Saturday
+		
+		{
+			"LogName": "Haley Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Haley": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Haley": "enabled",
+				"DayOfWeek": "Saturday",
+				"WeekendToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Emily Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Emily": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Emily": "enabled",
+				"DayOfWeek": "Saturday",
+				"WeekendToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Sandy Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Sandy": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Emily": "enabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"Day": "6, 27",
+				"WeekendToken": "true",
+            }
+        },
+		
+		//Sunday
+		
+		{
+			"LogName": "Penny Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Penny": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Penny": "enabled",
+				"DayOfWeek": "Sunday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Maru Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Maru": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Maru": "enabled",
+				"DayOfWeek": "Sunday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Abigail Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Abigail": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Abigail": "enabled",
+				"DayOfWeek": "Sunday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Sam Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Sam": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Sam": "enabled",
+				"DayOfWeek": "Sunday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Sebastian Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Sebastian": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Sebastian": "enabled",
+				"DayOfWeek": "Sunday",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Emily Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Emily": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "ImmersionEmily": "true",
+				"DayOfWeek": "Sunday",
+				"HasFlag": "saloonSportsRoom",
+				"WeekToken": "true",
+            }
+        },
+		
+		//Rain
+		
+		{
+			"LogName": "Lewis Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Lewis": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Lewis": "enabled",
+				"Weather:Valley": "Rain, Storm, GreenRain",
+				"WeekToken": "true",
+            }
+        },
+
+		{
+			"LogName": "Willy Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Willy": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Willy": "enabled",
+				"Weather:Valley": "Rain, Storm, GreenRain",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "George Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"George": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Geovelyn": "enabled",
+				"Weather:Valley": "Rain, Storm, GreenRain",
+				"WeekToken": "true",
+            }
+        },
+		
+		{
+			"LogName": "Evelyn Island Exclusion",
+            "Action": "EditData",
+			"Target": "Data/Characters",
+            "Fields": {
+				"Evelyn": {
+					"CanVisitIsland": false,
+				},
+			},
+            "When": {
+                "Geovelyn": "enabled",
+				"Weather:Valley": "Rain, Storm, GreenRain",
+				"WeekToken": "true",
+            }
+        },
+    ]
+}
