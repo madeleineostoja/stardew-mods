@@ -1,0 +1,296 @@
+{
+	"Changes":[
+	//No line changes should be made to the middle of the appointments, under *ANY* circumstance. Let the poor spouses have their privacy!
+	
+		//Abigail Doctor Appointment
+		{
+			"LogName": "Abigail Doctor Appointment", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Abigail",
+			"Entries": {
+				//Marriage
+				"marriage_spring_4": "1000 Hospital 13 14 0 \"Strings\\schedules\\Abigail:marriageDoctorVisit\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Abigail:spring_4.002\"/1630 bed",	
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "4",
+				"HasSeenEvent |contains=177755": "true",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//Leah
+		{
+			"LogName": "Leah Doctor Appointment", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",
+			"Entries": {
+				//Marriage
+				"marriage_spring_16": "1000 Hospital 12 14 0 \"Strings\\schedules\\Leah:marriageDoctorVisit\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Leah:spring_16.001\"/1600 Saloon 2 20 1/1900 bed",	
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "16",
+				"HasSeenEvent |contains=177755": "true",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//Penny
+		{
+			"LogName": "Penny Doctor Appointment", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				//Marriage - no extra line due to no line before the doctor visit thanks to the animation.
+				"marriage_winter_4": "1000 Hospital 4 17 2 penny_sit_down/1330 Hospital 4 6 1 \"Strings\\schedules\\Penny:winter_4.001\"/1600 Town 75 52 2 penny_sit_down/1900 bed", 
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "4",
+				"HasSeenEvent |contains=177755": "true",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//Elliott
+		{
+			"LogName": "Elliott Doctor Appointment", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Elliott",
+			"Entries": {
+				//Marriage
+				"marriage_summer_9": "1000 Hospital 12 14 0 \"Strings\\schedules\\Elliott:marriageDoctorVisit\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Elliott:summer_9.001\"/1630 bed",	
+			},
+			"When": {
+				"Season": "summer",
+				"Day": "9",
+				"HasSeenEvent |contains=177755": "true",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//Line Changes
+		
+		//Abigail, Spring 4
+		
+		//Abigail
+		{
+			"LogName": "Abigail Schedule String for Doctor Visit (Spring 4)",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Abigail",
+			"Entries":{
+				"marriageDoctorVisit": "{{i18n:Abigail.NoBreakfast.Doctor}}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "4",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+
+		{
+			"LogName": "Pierre Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Pierre",
+			"Entries":{
+				"breakfastThu": "{{i18n:SB.Pierre.Breakfast.Thursday.NoAbs}}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "4",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Caroline Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Caroline",
+			"Entries":{
+				"breakfastThu": "{{i18n:SB.Caroline.Breakfast.Thursday.NoAbs}}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "4",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+
+		
+		//Leah, Spring 16
+		
+		{
+			"LogName": "Leah Schedule String - Doctor Visit",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Leah",
+			"Entries":{
+				"marriageDoctorVisit": "{{i18n:Leah.NoBreakfast.Doctor}}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "16",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Elliott Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Elliott",
+			"Entries":{
+				"breakfastTue": "{{i18n:SB.Elliott.Breakfast.Tuesday.NoLeah}}",
+				"breakfastMarriage": "{{i18n:SB.Elliott.Breakfast.Tuesday.Marriage.NoLeah}}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "16",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Elliott Schedule Strings - Breakfast Time, Multiplayer Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Elliott",
+			"Entries":{
+				"breakfastTue": "{{i18n:SB.Elliott.Breakfast.Tuesday.NoLeah}}",
+				"breakfastMarriage": "{{i18n:SB.Elliott.Breakfast.Tuesday.NoLeah}}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "16",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"relationship:Elliott |contains=married": "false",
+			},
+		},
+		
+		//Elliott, Summer 9
+		
+		{
+			"LogName": "Elliott Schedule String - Doctor Visit",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Elliott",
+			"Entries":{
+				"marriageDoctorVisit": "{{i18n:Elliott.NoBreakfast.Doctor}}",
+			},
+			"When": {
+				"Season": "summer",
+				"Day": "9",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Leah Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Leah",
+			"Entries":{
+				"breakfastTue": "{{i18n:SB.Leah.Breakfast.Tuesday.NoElliott}}",
+				"breakfastMarriage": "{{i18n:SB.Leah.Breakfast.Tuesday.Marriage.NoElliott}}",
+			},
+			"When": {
+				"Season": "summer",
+				"Day": "9",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Leah Schedule Strings - Breakfast Time, Multiplayer Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Leah",
+			"Entries":{
+				"breakfastTue": "{{i18n:SB.Leah.Breakfast.Tuesday.NoElliott}}",
+				"breakfastMarriage": "{{i18n:SB.Leah.Breakfast.Tuesday.NoElliott}}",
+			},
+			"When": {
+				"Season": "summer",
+				"Day": "9",
+				"HasMod |contains=iss.immersivespouses": "false",
+				"relationship:Leah |contains=married": "false",
+			},
+		},
+		
+		//Penny, Winter 4
+		
+		//Pam (only alteration due to schedule string not necessary for Penny)
+		
+		{
+			"LogName": "Pam Schedule Strings - Breakfast Time",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Pam",
+			"Entries":{
+				"breakfastThu": "{{i18n:SB.Pam.Breakfast.Thursday.NoPenny}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "4",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		//funLeaves
+		
+		{
+			"LogName": "Abigail funLeave - Doctor Visit",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries":{
+				"funLeave_Abigail": "{{i18n:Abigail.NoBreakfast.Doctor.funLeave}}",
+				"funReturn_Abigail": "{{i18n:Abigail.NoBreakfast.Doctor.funReturn}}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "4",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Leah funLeave - Doctor Visit",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueLeah",
+			"Entries":{
+				"funLeave_Leah": "{{i18n:Leah.NoBreakfast.Doctor.funLeave}}",
+				"funReturn_Leah": "{{i18n:Leah.NoBreakfast.Doctor.funReturn}}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "16",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Penny funLeave - Doctor Visit",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"funLeave_Penny": "{{i18n:Penny.NoBreakfast.Doctor.funLeave}}",
+				"funReturn_Penny": "{{i18n:Penny.NoBreakfast.Doctor.funReturn}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "4",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+		{
+			"LogName": "Elliott funLeave - Doctor Visit",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries":{
+				"funLeave_Elliott": "{{i18n:Elliott.NoBreakfast.Doctor.funLeave}}",
+				"funReturn_Elliott": "{{i18n:Elliott.NoBreakfast.Doctor.funReturn}}",
+			},
+			"When": {
+				"Season": "summer",
+				"Day": "9",
+				"HasMod |contains=iss.immersivespouses": "false",
+			},
+		},
+		
+	]
+}

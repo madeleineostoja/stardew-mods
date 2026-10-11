@@ -1,0 +1,580 @@
+{
+	"Changes":[
+	
+	//Bachelorettes
+	
+		//Abigail
+		{
+			"LogName": "Abigail Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Abigail",
+			"Entries":{
+				"resourcerot": "{{i18n:Abigail.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Abigail.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Abigail.CT.completebreakfast}}",
+				"ccSam": "{{i18n:Abigail.CT.ccSam}}",
+				"healthybreakfast": "{{i18n:Abigail.CT.healthybreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Abigail Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Abigail",
+			"Entries":{
+				"resourcerot": "{{i18n:Abigail.CT.resourcerot.Marriage}}",
+				"townbreakfast": "{{i18n:Abigail.CT.townbreakfast.Marriage}}",
+				"completebreakfast": "{{i18n:Abigail.CT.completebreakfast.Marriage}}",
+			},
+			"When": {
+				"relationship:Abigail": "married",
+			},
+		},
+		
+		//Leah
+		{
+			"LogName": "Leah Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Leah",
+			"Entries":{
+				"resourcerot": "{{i18n:Leah.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Leah.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Leah.CT.completebreakfast}}",
+				"healthybreakfast": "{{i18n:Leah.CT.healthybreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Leah Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Leah",
+			"Entries":{
+				"resourcerot": "{{i18n:Leah.CT.resourcerot.Marriage}}",
+				"townbreakfast": "{{i18n:Leah.CT.townbreakfast.Marriage}}",
+				"completebreakfast": "{{i18n:Leah.CT.completebreakfast.Marriage}}",
+				"healthybreakfast": "{{i18n:Leah.CT.healthybreakfast.Marriage}}",
+			},
+			"When": {
+				"relationship:Leah": "married",
+			},
+		},
+		
+		//Penny
+		{
+			"LogName": "Penny Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Penny",
+			"Entries":{
+				"resourcerot": "{{i18n:Penny.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Penny.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Penny.CT.completebreakfast}}",
+				"healthybreakfast": "{{i18n:Penny.CT.healthybreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Penny Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Penny",
+			"Entries":{
+				"resourcerot": "{{i18n:Penny.CT.resourcerot.Marriage}}",
+				"townbreakfast": "{{i18n:Penny.CT.townbreakfast.Marriage}}",
+				"completebreakfast": "{{i18n:Penny.CT.completebreakfast.Marriage}}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+			},
+		},
+		
+		//Maru
+		{
+			"LogName": "Maru Conversation Topics", //Honestly, this works for normal, marriage, AND PPAF, so I won't alter these for now.
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Maru",
+			"Entries":{
+				"resourcerot": "{{i18n:Maru.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Maru.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Maru.CT.completebreakfast}}",
+			},
+		},
+		
+		
+		//Haley
+		{
+			"LogName": "Haley Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"breakfastopen": "{{i18n:Haley.CT.breakfastopen}}",
+				"townbreakfast": "{{i18n:Haley.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Haley.CT.completebreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Haley Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"breakfastopen": "{{i18n:Haley.CT.breakfastopen.Marriage}}",
+				"completebreakfast": "{{i18n:Haley.CT.completebreakfast.Marriage}}",
+			},
+			"When": {
+				"relationship:Haley": "married",
+			},
+		},
+		
+		//Emily
+		{
+			"LogName": "Emily Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Emily",
+			"Entries":{
+				"breakfastopen": "{{i18n:Emily.CT.breakfastopen}}",
+				"townbreakfast": "{{i18n:Emily.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Emily.CT.completebreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Emily Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Emily",
+			"Entries":{
+				"completebreakfast": "{{i18n:Emily.CT.completebreakfast.Marriage}}",
+			},
+			"When": {
+				"relationship:Emily": "married",
+			},
+		},
+		
+	//Bachelors
+		
+		//Harvey
+		{
+			"LogName": "Harvey Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Harvey",
+			"Entries":{
+				"resourcerot": "{{i18n:Harvey.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Harvey.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Harvey.CT.completebreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Harvey Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Harvey",
+			"Entries":{
+				"resourcerot": "{{i18n:Harvey.CT.resourcerot.Marriage}}",
+				"completebreakfast": "{{i18n:Harvey.CT.completebreakfast.Marriage}}",
+			},
+			"When": {
+				"relationship:Harvey": "married",
+			},
+		},
+		
+		//Elliott
+		{
+			"LogName": "Elliott Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Elliott",
+			"Entries":{
+				"townbreakfast": "{{i18n:Elliott.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Elliott.CT.completebreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Elliott Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Elliott",
+			"Entries":{
+				"townbreakfast": "{{i18n:Elliott.CT.townbreakfast.Marriage}}",
+				"completebreakfast": "{{i18n:Elliott.CT.completebreakfast.Marriage}}",
+			},
+			"When": {
+				"relationship:Elliott": "married",
+			},
+		},
+		
+		//Alex
+		{
+			"LogName": "Alex Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex",
+			"Entries":{
+				"breakfastopen": "{{i18n:Alex.CT.breakfastopen}}",
+				"townbreakfast": "{{i18n:Alex.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Alex.CT.completebreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Alex Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex",
+			"Entries":{
+				"breakfastopen": "{{i18n:Alex.CT.breakfastopen.Marriage}}",
+				"townbreakfast": "{{i18n:Alex.CT.townbreakfast.Marriage}}",
+			},
+			"When": {
+				"relationship:Alex": "married",
+			},
+		},
+		
+		//Sebastian
+		{
+			"LogName": "Sebastian Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sebastian",
+			"Entries":{
+				"ccSam": "{{i18n:Sebastian.CT.ccSam}}",
+				"townbreakfast": "{{i18n:Sebastian.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Sebastian.CT.completebreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Sebastian Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sebastian",
+			"Entries":{
+				"townbreakfast": "{{i18n:Sebastian.CT.townbreakfast.Marriage}}",
+				"completebreakfast": "{{i18n:Sebastian.CT.completebreakfast.Marriage}}",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+			},
+		},
+		
+		//Sam
+		{
+			"LogName": "Sam Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sam",
+			"Entries":{
+				"resourcerot": "{{i18n:Sam.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Sam.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Sam.CT.completebreakfast}}",
+				"ccSam": "{{i18n:Sam.CT.ccSam}}",
+				"kentcook": "{{i18n:Sam.CT.kentcook}}",
+			},
+		},
+		
+		{
+			"LogName": "Sam Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sam",
+			"Entries":{
+				"resourcerot": "{{i18n:Sam.CT.resourcerot.Marriage}}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+			},
+		},
+		
+		//Shane
+		{
+			"LogName": "Shane Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"ccShane": "{{i18n:Shane.CT.ccShane}}",
+				"townbreakfast": "{{i18n:Shane.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Shane.CT.completebreakfast}}",
+				"healthybreakfast": "{{i18n:Shane.CT.healthybreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Shane Conversation Topics - Marriage Replacements",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"ccShane": "{{i18n:Shane.CT.ccShane.Marriage}}",
+				"townbreakfast": "{{i18n:Shane.CT.townbreakfast.Marriage}}",
+				"completebreakfast": "{{i18n:Shane.CT.completebreakfast.Marriage}}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+			},
+		},
+		
+		//Townspeople
+		
+		//Kent, Jodi, and Vincent
+		
+		{
+			"LogName": "Kent Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Kent",
+			"Entries":{
+				"kentcook": "{{i18n:Kent.CT.kentcook}}",
+				"townbreakfast": "{{i18n:Kent.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Kent.CT.completebreakfast}}",
+				"ccSam": "{{i18n:Kent.CT.ccSam}}",
+			},
+		},
+		{
+			"LogName": "Jodi Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jodi",
+			"Entries":{
+				"resourcerot": "{{i18n:Jodi.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Jodi.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Jodi.CT.completebreakfast}}",
+				"kentcook": "{{i18n:Jodi.CT.kentcook}}",
+				"ccSam": "{{i18n:Jodi.CT.ccSam}}",
+			},
+		},
+		{
+			"LogName": "Vincent Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Vincent",
+			"Entries":{
+				"resourcerot": "{{i18n:Vincent.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Vincent.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Vincent.CT.completebreakfast}}",
+				"ccSam": "{{i18n:Vincent.CT.ccSam}}",
+				"kentcook": "{{i18n:Vincent.CT.kentcook}}",
+			},
+		},
+		
+		//Marnie and Jas
+		
+		//Marnie
+		{
+			"LogName": "Marnie Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Marnie",
+			"Entries":{
+				"resourcerot": "{{i18n:Marnie.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Marnie.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Marnie.CT.completebreakfast}}",
+				"ccShane": "{{i18n:Marnie.CT.ccShane}}",
+			},
+		},
+		
+		{
+			"LogName": "Marnie Conversation Topics - Immersion or Challenge Mode",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Marnie",
+			"Entries":{
+				"townbreakfast": "{{i18n:Marnie.CT.townbreakfast.Immersion}}",
+			},
+			"When": {
+				"DuckEggs": "100, 200",
+			},
+		},
+		
+		//Jas
+		{
+			"LogName": "Jas Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Jas",
+			"Entries":{
+				"ccShane": "{{i18n:Jas.CT.ccShane}}",
+				"resourcerot": "{{i18n:Jas.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Jas.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Jas.CT.completebreakfast}}",
+				"healthybreakfast": "{{i18n:Jas.CT.healthybreakfast}}",
+			},
+		},
+		
+		//Clint
+		{
+			"LogName": "Clint Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Clint",
+			"Entries":{
+				"townbreakfast": "{{i18n:Clint.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Clint.CT.completebreakfast}}",
+			},
+		},
+		
+		//Willy
+		{
+			"LogName": "Willy Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Willy",
+			"Entries":{
+				"resourcerot": "{{i18n:Willy.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Willy.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Willy.CT.completebreakfast}}",
+			},
+		},
+		
+		//Carpenter's Shop Crew
+		{
+			"LogName": "Robin Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Robin",
+			"Entries":{
+				"resourcerot": "{{i18n:Robin.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Robin.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Robin.CT.completebreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Demetrius Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Demetrius",
+			"Entries":{
+				"resourcerot": "{{i18n:Demetrius.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Demetrius.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Demetrius.CT.completebreakfast}}",
+			},
+		},
+		
+		//Seed Shop Crew
+		{
+			"LogName": "Pierre Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Pierre",
+			"Entries":{
+				"resourcerot": "{{i18n:Pierre.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Pierre.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Pierre.CT.completebreakfast}}",
+				"healthybreakfast": "{{i18n:Pierre.CT.healthybreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Caroline Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Caroline",
+			"Entries":{
+				"resourcerot": "{{i18n:Caroline.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Caroline.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Caroline.CT.completebreakfast}}",
+				"healthybreakfast": "{{i18n:Caroline.CT.healthybreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Caroline Conversation Topics - Abigail Married to Player",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Caroline",
+			"Entries":{
+				"completebreakfast": "{{i18n:Caroline.CT.completebreakfast.AbigailMarried}}",
+				"healthybreakfast": "{{i18n:Caroline.CT.healthybreakfast.AbigailMarried}}",
+			},
+			"When": {
+				"relationship:Abigail": "married",
+			},
+		},
+		
+		//Pam
+		{
+			"LogName": "Pam Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Pam",
+			"Entries":{
+				"resourcerot": "{{i18n:Pam.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Pam.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Pam.CT.completebreakfast}}",
+				"healthybreakfast": "{{i18n:Pam.CT.healthybreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Pam Conversation Topics - Penny Married to Player",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Pam",
+			"Entries":{
+				"resourcerot": "{{i18n:Pam.CT.resourcerot.PennyMarried}}",
+				"townbreakfast": "{{i18n:Pam.CT.townbreakfast.PennyMarried}}",
+				"completebreakfast": "{{i18n:Pam.CT.completebreakfast.PennyMarried}}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+			},
+		},
+		
+		//Lewis
+		{
+			"LogName": "Lewis Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Lewis",
+			"Entries":{
+				"resourcerot": "{{i18n:Lewis.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Lewis.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Lewis.CT.completebreakfast}}",
+			},
+		},
+		
+		//Evelyn and George
+		{
+			"LogName": "Evelyn Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Evelyn",
+			"Entries":{
+				"resourcerot": "{{i18n:Evelyn.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Evelyn.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Evelyn.CT.completebreakfast}}",
+				"breakfastopen": "{{i18n:Evelyn.CT.breakfastopen}}",
+			},
+		},
+		{
+			"LogName": "George Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/George",
+			"Entries":{
+				"breakfastopen": "{{i18n:George.CT.breakfastopen}}",
+				"townbreakfast": "{{i18n:George.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:George.CT.completebreakfast}}",
+			},
+		},
+		
+		//Sandy
+		
+		{
+			"LogName": "Sandy Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sandy",
+			"Entries":{
+				"townbreakfast": "{{i18n:Sandy.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Sandy.CT.completebreakfast}}",
+			},
+		},
+		
+		//Gus
+		
+		{
+			"LogName": "Gus Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Gus",
+			"Entries":{
+				"eggsforgus": "{{i18n:Gus.CT.EggsForGus |DuckEggs={{DuckEggs}}}}",
+				"resourcerot": "{{i18n:Gus.CT.resourcerot}}",
+				"townbreakfast": "{{i18n:Gus.CT.townbreakfast}}",
+				"completebreakfast": "{{i18n:Gus.CT.completebreakfast}}",
+			},
+		},
+		
+		{
+			"LogName": "Gus Conversation Topics - Immersion or Challenge Mode",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Gus",
+			"Entries":{
+				"eggsforgus": "{{i18n:Gus.CT.EggsForGus.Immersion |DuckEggs={{DuckEggs}}}}",
+			},
+			"When": {
+				"DuckEggs": "100, 200",
+			},
+		},
+		
+		//Linus (though he doesn't attend stuff)
+		{
+			"LogName": "Linus Conversation Topics",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Linus",
+			"Entries":{
+				"completebreakfast": "{{i18n:Linus.CT.completebreakfast}}",
+			},
+		},
+	],
+}

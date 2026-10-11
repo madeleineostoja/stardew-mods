@@ -1,0 +1,174 @@
+{
+	"Changes":[
+			//17775201: Mod Slogan
+			//17775202: LOTR Slogan
+			//17775203: Breakfast at Tiffany's
+			//17775204: Breakfast Club
+			//17775205: Breakfast of Champions
+			
+			{
+				"LogName": "Stardrop Saloon is Open Mail", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"stardropbreakfastopen": "{{i18n:Open.177752.1}}^^{{i18n:Open.177752.2}}^^{{i18n:Open.177752.3}}^^{{i18n:Open.177752.4}}[#]{{i18n:Open.177752.9}}",
+				},
+				"When": {
+				  "HasDialogueAnswer": "17775201",
+				},
+			},
+			{
+				"LogName": "Stardrop Saloon is Open Mail", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"stardropbreakfastopen": "{{i18n:Open.177752.1}}^^{{i18n:Open.177752.2}}^^{{i18n:Open.177752.3}}^^{{i18n:Open.177752.5}}[#]{{i18n:Open.177752.9}}",
+				},
+				"When": {
+				  "HasDialogueAnswer": "17775202",
+				},
+			},
+			{
+				"LogName": "Stardrop Saloon is Open Mail", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"stardropbreakfastopen": "{{i18n:Open.177752.1}}^^{{i18n:Open.177752.2}}^^{{i18n:Open.177752.3}}^^{{i18n:Open.177752.6}}[#]{{i18n:Open.177752.9}}",
+				},
+				"When": {
+				  "HasDialogueAnswer": "17775203",
+				},
+			},
+			{
+				"LogName": "Stardrop Saloon is Open Mail", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"stardropbreakfastopen": "{{i18n:Open.177752.1}}^^{{i18n:Open.177752.2}}^^{{i18n:Open.177752.3}}^^{{i18n:Open.177752.7}}[#]{{i18n:Open.177752.9}}",
+				},
+				"When": {
+				  "HasDialogueAnswer": "17775204",
+				},
+			},
+			{
+				"LogName": "Stardrop Saloon is Open Mail", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"stardropbreakfastopen": "{{i18n:Open.177752.1}}^^{{i18n:Open.177752.2}}^^{{i18n:Open.177752.3}}^^{{i18n:Open.177752.8}}[#]{{i18n:Open.177752.9}}",
+				},
+				"When": {
+				  "HasDialogueAnswer": "17775205",
+				},
+			},
+			
+			{
+				"LogName": "Stardrop Saloon is Open Mail - Backup in case of event skip", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"stardropbreakfastopen": "{{i18n:Open.177752.1}}^^{{i18n:Open.177752.2}}^^{{i18n:Open.177752.3}}^^{{i18n:Open.177752.{{Random: 4, 5, 6, 7, 8}} }}[#]{{i18n:Open.177752.9}}",
+				},
+				"When": {
+				  "HasDialogueAnswer |contains=17775201, 17775202, 17775203, 17775204, 17775205": "false",
+				  "HasSeenEvent": "177752",
+				},
+			},
+			
+			{
+				"LogName": "Gus has his ingredients list", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"breakfastIngredients": "{{i18n:Grocery.177753.1}}^^{{i18n:Grocery.177753.2}}^^{{i18n:Grocery.177753.3}}^*{{i18n:Grocery.177753.4}}^*{{i18n:Grocery.177753.5}}^*{{i18n:Grocery.177753.6}}^*{{i18n:Grocery.177753.7}}^*{{i18n:Grocery.177753.13}}^^{{i18n:Grocery.177753.8}}^^{{i18n:Grocery.177753.9}}^^{{i18n:Grocery.177753.10}} %action AddConversationTopic eggsforgus 2%%[#]{{i18n:Grocery.177753.12}}",
+				},
+			},
+			
+			{
+				"LogName": "Stardrop Breakfast is Open Every Day (Mostly)!", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"breakfastDaily": "{{i18n:EndMails.177755.1}}^^{{i18n:EndMails.177755.2}}^^{{i18n:EndMails.177755.3}}[#]{{i18n:EndMails.177755.11}}",
+				},
+			},
+			
+			{
+				"LogName": "Secret Reward", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"breakfastSecretReward": "{{i18n:EndMails.177755.4}}^^{{i18n:EndMails.177755.5}}^^{{i18n:EndMails.177755.6}}^^{{i18n:EndMails.177755.7}}^^{{i18n:EndMails.177755.8}}^^{{i18n:EndMails.177755.9}}%item id (O)279 7 %%[#]{{i18n:EndMails.177755.10}}",
+				},
+			},
+			
+			{
+				"LogName": "Wizard Rewards", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"wizardBreakfast": "[letterbg 2]{{i18n:WizardMail.1777511.1}}^^{{i18n:WizardMail.1777511.2}}^^{{i18n:WizardMail.1777511.3 |farming={{FarmName}}}}^^{{i18n:WizardMail.1777511.4}}^^{{i18n:WizardMail.1777511.5}}^{{i18n:WizardMail.1777511.6 |WizName={{WizName}} }}, {{i18n:WizardMail.1777511.7 |Wizard={{Wizard}} }} %item id (O)201 10 %%[#]{{i18n:WizardMail.1777511.8}}",
+				},
+			},
+			
+			{
+				"LogName": "Special Order Mails", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"MarniePartnerThanks": "{{i18n:MarnieReward.1}}^{{i18n:MarnieReward.2}}^^{{i18n:MarnieReward.3}}^^{{i18n:MarnieReward.4}}^^{{i18n:MarnieReward.5}}^^{{i18n:MarnieReward.5}} %item id (BC)246 %%[#]{{i18n:MarnieReward.Title}}",
+					"gusSplitMail": "{{i18n:GusSplitReward.1}}^^{{i18n:GusSplitReward.2}}^^{{i18n:GusSplitReward.3}}^^{{i18n:GusSplitReward.4{{DSVMuslimGusCompat}}}}^^{{i18n:GusSplitReward.5}}^^{{i18n:GusSplitReward.6}} %item id (BC)12 10 %% %item id (O)AgentLyoko.SaloonBreakfast_FreshOrangeJuice 30 %% [#]{{i18n:GusSplitReward.7}}",
+					"gusPartnerMail": "{{i18n:GusPartnerReward.1}}^^{{i18n:GusPartnerReward.2}}^^{{i18n:GusPartnerReward.3}}^^{{i18n:GusPartnerReward.4}}^^{{i18n:GusPartnerReward.5}}^^{{i18n:GusPartnerReward.6}} %item id (BC)246 3 %% %item id (O)917 100 %% [#]{{i18n:GusPartnerReward.7}}",
+					"WizardBonusThanks": "[letterbg 2]{{i18n:BonusBundleReward.1}}^^{{i18n:BonusBundleReward.2}}^^{{i18n:BonusBundleReward.3}}^^{{i18n:BonusBundleReward.4}}^^{{i18n:BonusBundleReward.5}}^^{{i18n:BonusBundleReward.6 |WizName={{WizName}} }}, {{i18n:BonusBundleReward.7 |Wizard={{Wizard}} }} %item id (O)872 50 %%[#]{{i18n:BonusBundleReward.8}}",
+				},
+			},
+			
+			{
+				"LogName": "Hours Alteration for Robin and Pierre", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"PierreThursdayHours": "{{i18n:Pierre.Hours.Mail.1}}^^{{i18n:Pierre.Hours.Mail.2.{{Caroline}} }}^^{{i18n:Pierre.Hours.Mail.3}}^^{{i18n:Pierre.Hours.Mail.4}}^^{{i18n:Pierre.Hours.Mail.5}}^^{{i18n:Pierre.Hours.Mail.6}}[#]{{i18n:Pierre.Hours.Mail.7}}",
+					"RobinWednesdayHours": "{{i18n:Robin.Hours.Mail.1}}^^{{i18n:Robin.Hours.Mail.2}}^^{{i18n:Robin.Hours.Mail.3}}^^{{i18n:Robin.Hours.Mail.4}}^^{{i18n:Robin.Hours.Mail.5}}^^{{i18n:Robin.Hours.Mail.6}}[#]{{i18n:Robin.Hours.Mail.7}}",
+				},
+			},
+			
+			{
+				"LogName": "Orange Juice Recipe", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"OrangeJuiceRecipe": "{{i18n:OrangeJuiceRecipe.1}}^^{{i18n:OrangeJuiceRecipe.2}}^^{{i18n:OrangeJuiceRecipe.3}}^^{{i18n:OrangeJuiceRecipe.4}} %item cookingRecipe AgentLyoko.SaloonBreakfast_FreshOrangeJuice%%[#]{{i18n:OrangeJuiceRecipe.5}}",
+				},
+			},
+			
+			//1.6 Bonus Stuff
+			{
+				"LogName": "Optional Special Order Mail Backups", 
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"BackupInitialSpecial": "{{i18n:SpecialOrderBackup.Prep.1}}^^{{i18n:SpecialOrderBackup.Prep.2}}^^{{i18n:SpecialOrderBackup.Prep.3}}^^{{i18n:SpecialOrderBackup.Prep.4}}^^{{i18n:SpecialOrderBackup.Prep.5}} %item specialOrder Gus_BreakfastPrep true %%[#]{{i18n:SpecialOrderBackup.Prep.Title}}",
+					"BackupDoubleSpecial": "{{i18n:SpecialOrderBackup.Special.1}}^^{{i18n:SpecialOrderBackup.Special.2}}^^{{i18n:SpecialOrderBackup.Special.3}}^^{{i18n:SpecialOrderBackup.Special.4}} %item specialOrder Gus_BreakfastSpecial true %%[#]{{i18n:SpecialOrderBackup.Special.Title}}",
+					"breakfaststart": "[letterbg 2]{{i18n:WizardBackupMail.1}}^^{{i18n:WizardBackupMail.2}}^^{{i18n:WizardBackupMail.3}}^^{{i18n:WizardBackupMail.4}}^^{{i18n:WizardBackupMail.5}}^^{{i18n:WizardBackupMail.6 |WizName={{WizName}} }}, {{i18n:WizardBackupMail.7 |Wizard={{Wizard}} }} %item specialOrder Wizard_BreakfastBundle true %% [#]{{i18n:WizardBackupMail.8}}",
+					
+					"BackupInitialSpecialRepeat": "{{i18n:SpecialOrderBackup.PrepRepeat.1}}^^{{i18n:SpecialOrderBackup.PrepRepeat.2}}^^{{i18n:SpecialOrderBackup.PrepRepeat.3}}^^{{i18n:SpecialOrderBackup.PrepRepeat.4}}^^{{i18n:SpecialOrderBackup.PrepRepeat.5}} %item specialOrder Gus_BreakfastPrep true %%[#]{{i18n:SpecialOrderBackup.PrepRepeat.Title}}",
+					"BackupDoubleSpecialRepeat": "{{i18n:SpecialOrderBackup.SpecialRepeat.1}}^^{{i18n:SpecialOrderBackup.SpecialRepeat.2 |farming={{FarmName}} }}^^{{i18n:SpecialOrderBackup.SpecialRepeat.3}}^^{{i18n:SpecialOrderBackup.SpecialRepeat.4}} %item specialOrder Gus_BreakfastSpecial true %%[#]{{i18n:SpecialOrderBackup.SpecialRepeat.Title}}",
+					"breakfaststartRepeat": "[letterbg 2]{{i18n:WizardBackupMailRepeat.1}}^^{{i18n:WizardBackupMailRepeat.2}}^^{{i18n:WizardBackupMailRepeat.3}}^^{{i18n:WizardBackupMailRepeat.4}}^^{{i18n:WizardBackupMailRepeat.5 |WizName={{WizName}} }}, {{i18n:WizardBackupMailRepeat.6 |Wizard={{Wizard}} }} %item specialOrder Wizard_BreakfastBundle true %% [#]{{i18n:WizardBackupMailRepeat.7}}",
+				},
+			},
+			
+			{
+				"LogName": "Orange Juice Recall (Old JA Reward Errored Out)",
+				"Action": "EditData",
+				"Target": "Data/mail",			
+				"Entries": {
+					"OJRecallNotice": "{{i18n:OJRecall.1}}^^{{i18n:OJRecall.2}}^^{{i18n:OJRecall.3}}^^{{i18n:OJRecall.4}}^^{{i18n:OJRecall.5}} %item id (O)AgentLyoko.SaloonBreakfast_FreshOrangeJuice 30 %%[#]{{i18n:OJRecall.Title}}",
+				},
+				"When": {
+					"HasFlag": "AgentLyoko.GusBreakfastThanks",
+				},
+			},
+			
+	]
+}

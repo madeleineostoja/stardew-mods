@@ -1,0 +1,18 @@
+{
+  "config.general.title": "General",
+  "config.categories.title": "Categories",
+  "config.enable.name": "Enable screen shake",
+  "config.enable.description": "Enable restrained camera feedback.",
+  "config.strength.name": "Shake strength",
+  "config.strength.description": "Overall shake strength, from 0% to 200%.",
+  "config.mining.name": "Large rock breaks",
+  "config.mining.description": "Shake when a pickaxe destroys a boulder, meteorite, or other large mineral clump. Ordinary rocks and ore nodes do not shake the camera.",
+  "config.combat.name": "Combat specials",
+  "config.combat.description": "Shake on successful defensive-sword parries. Club specials already use Stardew Valley's native shake.",
+  "config.damage.name": "Player damage",
+  "config.damage.description": "Shake when the local player takes damage.",
+  "config.explosions.name": "Explosions",
+  "config.explosions.description": "Shake for nearby explosions.",
+  "config.trees.name": "Falling trees",
+  "config.trees.description": "Shake subtly when a wild tree felled by the local player lands."
+}

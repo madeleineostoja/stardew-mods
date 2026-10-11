@@ -1,0 +1,659 @@
+{
+	"Changes":[
+	
+	//Bachelorettes
+	
+		//Abigail
+		{
+			"LogName": "Abigail funLeave and funReturn Marriage Dialogue - Breakfast with Family",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries":{
+				"funLeave_Abigail": "{{i18n:SB.Morning.Abigail.Thursday}}",
+				"funReturn_Abigail": "{{i18n:SB.Evening.Abigail.Thursday}}",
+			},
+			"When": {
+				"relationship:Abigail": "married",
+				"AbigailAttends": "true",
+				"Abigail": "enabled",
+				"Pierreoline": "enabled",
+				"HasSeenEvent |contains=177755": "true",
+				"DayofWeek": "Thursday",
+				"ThursdayToken": "true",
+			},
+		},
+		{
+			"LogName": "Abigail funLeave and funReturn Marriage Dialogue - ASS Gang Day",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries":{
+				"funLeave_Abigail": "{{i18n:SB.Morning.Abigail.Sunday}}",
+				"funReturn_Abigail": "{{i18n:SB.Evening.Abigail.Sunday}}",
+			},
+			"When": {
+				"relationship:Abigail": "married",
+				"DayOfWeek": "Sunday",
+				"Abigail": "enabled",
+				"Sebastian": "enabled",
+				"Sam": "enabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Abigail funLeave and funReturn Marriage Dialogue - Solo Breakfast Thursday",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries":{
+				"funLeave_Abigail": "{{i18n:SB.Morning.Abigail.Thursday.NoFam}}",
+				"funReturn_Abigail": "{{i18n:SB.Evening.Abigail.Thursday.NoFam}}",
+			},
+			"When": {
+				"relationship:Abigail": "married",
+				"DayOfWeek": "Thursday",
+				"Abigail": "enabled",
+				"Pierreoline": "disabled",
+				"HasSeenEvent |contains=177755": "true",
+				"ThursdayToken": "true",
+			},
+		},
+		{
+			"LogName": "Abigail funLeave and funReturn Marriage Dialogue - Solo Breakfast Sunday",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries":{
+				"funLeave_Abigail": "{{i18n:SB.Morning.Abigail.Sunday.NoSamSeb}}",
+				"funReturn_Abigail": "{{i18n:SB.Evening.Abigail.Sunday.NoSamSeb}}",
+			},
+			"When": {
+				"relationship:Abigail": "married",
+				"DayOfWeek": "Sunday",
+				"Abigail": "enabled",
+				"SebSam": "false",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Leah
+		{
+			"LogName": "Leah funLeave and funReturn Marriage Dialogue - Brunch with Elliott",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueLeah",
+			"Entries":{
+				"funLeave_Leah": "{{i18n:SB.Morning.Leah.Tuesday}}",
+				"funReturn_Leah": "{{i18n:SB.Evening.Leah.Tuesday}}",
+			},
+			"When": {
+				"relationship:Leah": "married",
+				"DayOfWeek": "Tuesday",
+				"Leah": "enabled",
+				"Elliott": "enabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Leah funLeave and funReturn Marriage Dialogue - Solo Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueLeah",
+			"Entries":{
+				"funLeave_Leah": "{{i18n:SB.Morning.Leah.Tuesday.NoElliott}}",
+				"funReturn_Leah": "{{i18n:SB.Evening.Leah.Tuesday.NoElliott}}",
+			},
+			"When": {
+				"relationship:Leah": "married",
+				"DayOfWeek": "Tuesday",
+				"Leah": "enabled",
+				"Elliott": "disabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah funLeave and funReturn Marriage Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueLeah",
+			"Entries":{
+				"funLeave_Leah": "{{i18n:SB.Morning.Leah.ThursdayCCR}}",
+				"funReturn_Leah": "{{i18n:SB.Evening.Leah.ThursdayCCR}}",
+			},
+			"When": {
+				"relationship:Leah": "married",
+				"DayOfWeek": "Tuesday",
+				"Leah": "enabled",
+				"HasSeenEvent |contains=177759": "true",
+				"HasSeenEvent |contains=69660003": "true", //Cooking Class Active. Please note that in the plotmarriagelines dialogue, this should add the Leah event too.
+				"ImmersionLeah": "true",
+				"CookingClass": "true",
+				"ThursdayToken": "true",
+			},
+		},
+		
+		//Penny
+		
+		{
+			"LogName": "Penny funLeave and funReturn Marriage Dialogue - Brunch with Pam",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"funLeave_Penny": "{{i18n:SB.Morning.Penny.Thursday}}",
+				"funReturn_Penny": "{{i18n:SB.Evening.Penny.Thursday}}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+				"DayOfWeek": "Thursday",
+				"Penny": "enabled",
+				"Pam": "enabled",
+				"CookingClass": "false",
+				"HasSeenEvent |contains=177755": "true",
+				"ThursdayToken": "true",
+			},
+		},
+		{
+			"LogName": "Penny funLeave and funReturn Marriage Dialogue - Brunch with Maru",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"funLeave_Penny": "{{i18n:SB.Morning.Penny.Sunday}}",
+				"funReturn_Penny": "{{i18n:SB.Evening.Penny.Sunday}}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+				"DayOfWeek": "Sunday",
+				"Penny": "enabled",
+				"Maru": "enabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Penny funLeave and funReturn Marriage Dialogue - Solo Thursday Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"funLeave_Penny": "{{i18n:SB.Morning.Penny.Thursday.NoPam}}",
+				"funReturn_Penny": "{{i18n:SB.Evening.Penny.Thursday.NoPam}}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+				"DayOfWeek": "Thursday",
+				"Penny": "enabled",
+				"Pam": "enabled",
+				"CookingClass": "false",
+				"HasSeenEvent |contains=177755": "true",
+				"ThursdayToken": "true",
+			},
+		},
+		{
+			"LogName": "Penny funLeave and funReturn Marriage Dialogue - Solo Sunday Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries":{
+				"funLeave_Penny": "{{i18n:SB.Morning.Penny.Sunday.NoMaru}}",
+				"funReturn_Penny": "{{i18n:SB.Evening.Penny.Sunday.NoMaru}}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+				"DayOfWeek": "Sunday",
+				"Penny": "enabled",
+				"Maru": "disabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Maru
+		{
+			"LogName": "Maru funLeave and funReturn Marriage Dialogue - Breakfast with Family",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueMaru",
+			"Entries":{
+				"funLeave_Maru": "{{i18n:SB.Morning.Maru.Wednesday}}",
+				"funReturn_Maru": "{{i18n:SB.Evening.Maru.Wednesday}}",
+			},
+			"When": {
+				"relationship:Maru": "married",
+				"DayOfWeek": "Wednesday",
+				"Maru": "enabled",
+				"Robmetrius": "enabled",
+				"Sebastian": "enabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Maru funLeave and funReturn Marriage Dialogue - Breakfast with Penny",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueMaru",
+			"Entries":{
+				"funLeave_Maru": "{{i18n:SB.Morning.Maru.Sunday}}",
+				"funReturn_Maru": "{{i18n:SB.Evening.Maru.Sunday}}",
+			},
+			"When": {
+				"relationship:Maru": "married",
+				"DayOfWeek": "Sunday",
+				"Penny": "enabled",
+				"Maru": "enabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Maru funLeave and funReturn Marriage Dialogue - Solo Breakfast Wednesday",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueMaru",
+			"Entries":{
+				"funLeave_Maru": "{{i18n:SB.Morning.Maru.Wednesday.NoFam}}",
+				"funReturn_Maru": "{{i18n:SB.Evening.Maru.Wednesday.NoFam}}",
+			},
+			"When": {
+				"relationship:Maru": "married",
+				"DayOfWeek": "Wednesday",
+				"Maru": "enabled",
+				"SebFam": "false",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Maru funLeave and funReturn Marriage Dialogue - Solo Breakfast Sunday",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueMaru",
+			"Entries":{
+				"funLeave_Maru": "{{i18n:SB.Morning.Maru.Sunday.NoPenny}}",
+				"funReturn_Maru": "{{i18n:SB.Evening.Maru.Sunday.NoPenny}}",
+			},
+			"When": {
+				"relationship:Maru": "married",
+				"DayOfWeek": "Sunday",
+				"Maru": "enabled",
+				"Penny": "disabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Haley
+		{
+			"LogName": "Haley funLeave and funReturn Marriage Dialogue - Emily Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries":{
+				"funLeave_Haley": "{{i18n:SB.Morning.Haley.Saturday}}",
+				"funReturn_Haley": "{{i18n:SB.Evening.Haley.Saturday}}",
+			},
+			"When": {
+				"relationship:Haley": "married",
+				"DayOfWeek": "Saturday",
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		{
+			"LogName": "Haley funLeave and funReturn Marriage Dialogue - Solo Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries":{
+				"funLeave_Haley": "{{i18n:SB.Morning.Haley.Saturday.NoEmily}}",
+				"funReturn_Haley": "{{i18n:SB.Evening.Haley.Saturday.NoEmily}}",
+			},
+			"When": {
+				"relationship:Haley": "married",
+				"DayOfWeek": "Saturday",
+				"Haley": "enabled",
+				"Emily": "disabled",
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		
+		//Emily
+		
+		{
+			"LogName": "Emily funLeave and funReturn Marriage Dialogue - Haley Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries":{
+				"funLeave_Emily": "{{i18n:SB.Morning.Emily.Saturday}}",
+				"funReturn_Emily": "{{i18n:SB.Evening.Emily.Saturday}}",
+			},
+			"When": {
+				"relationship:Emily": "married",
+				"DayOfWeek": "Saturday",
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		{
+			"LogName": "Emily funLeave and funReturn Marriage Dialogue - Solo Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries":{
+				"funLeave_Emily": "{{i18n:SB.Morning.Emily.Saturday.NoHaley}}",
+				"funReturn_Emily": "{{i18n:SB.Evening.Emily.Saturday.NoHaley}}",
+			},
+			"When": {
+				"relationship:Emily": "married",
+				"DayOfWeek": "Saturday",
+				"Emily": "enabled",
+				"Haley": "disabled",
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		
+		{
+			"LogName": "Emily funLeave and funReturn Marriage Dialogue - Breakfast Waitress Job",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries":{
+				"funLeave_Emily": "{{i18n:SB.Morning.Emily.Sunday}}",
+				"funReturn_Emily": "{{i18n:SB.Evening.Emily.Sunday}}",
+			},
+			"When": {
+				"relationship:Emily": "married",
+				"DayOfWeek": "Sunday",
+				"ImmersionEmily": "true",
+				"HasFlag": "saloonSportsRoom",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+	//Bachelors
+		
+		//Harvey
+		{
+			"LogName": "Harvey funLeave and funReturn Marriage Dialogue - Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHarvey",
+			"Entries":{
+				//These should be the same regardless of Maru on or off - he's going off on his own and just has crossover in schedule lines
+				"funLeave_Harvey": "{{i18n:SB.Morning.Harvey.Wednesday}}",
+				"funReturn_Harvey": "{{i18n:SB.Evening.Harvey.Wednesday}}",
+			},
+			"When": {
+				"relationship:Harvey": "married",
+				"DayOfWeek": "Wednesday",
+				"Harvey": "enabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Elliott
+		{
+			"LogName": "Elliott funLeave and funReturn Marriage Dialogue - Brunch with Leah",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries":{
+				"funLeave_Elliott": "{{i18n:SB.Morning.Elliott.Tuesday}}",
+				"funReturn_Elliott": "{{i18n:SB.Evening.Elliott.Tuesday}}",
+			},
+			"When": {
+				"relationship:Elliott": "married",
+				"DayOfWeek": "Tuesday",
+				"Elliott": "enabled",
+				"Leah": "enabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Elliott funLeave and funReturn Marriage Dialogue - Solo Brunch",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries":{
+				"funLeave_Elliott": "{{i18n:SB.Morning.Elliott.Tuesday.NoLeah}}",
+				"funReturn_Elliott": "{{i18n:SB.Evening.Elliott.Tuesday.NoLeah}}",
+			},
+			"When": {
+				"relationship:Elliott": "married",
+				"DayOfWeek": "Tuesday",
+				"Elliott": "enabled",
+				"Leah": "disabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Alex
+		{
+			"LogName": "Alex funLeave and funReturn Marriage Dialogue - Mullner Family Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAlex",
+			"Entries":{
+				"funLeave_Alex": "{{i18n:SB.Morning.Alex.Friday}}",
+				"funReturn_Alex": "{{i18n:SB.Evening.Alex.Friday}}",
+			},
+			"When": {
+				"relationship:Alex": "married",
+				"DayOfWeek": "Friday",
+				"Alex": "enabled",
+				"Geovelyn": "enabled",
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		{
+			"LogName": "Alex funLeave and funReturn Marriage Dialogue - Solo Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueAlex",
+			"Entries":{
+				"funLeave_Alex": "{{i18n:SB.Morning.Alex.Friday.NoFam}}",
+				"funReturn_Alex": "{{i18n:SB.Evening.Alex.Friday.NoFam}}",
+			},
+			"When": {
+				"relationship:Alex": "married",
+				"DayOfWeek": "Friday",
+				"Alex": "enabled",
+				"Geovelyn": "disabled",
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		
+		//Sebastian
+		{
+			"LogName": "Sebastian funLeave and funReturn Marriage Dialogue - Family Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries":{
+				"funLeave_Sebastian": "{{i18n:SB.Morning.Sebastian.Wednesday}}",
+				"funReturn_Sebastian": "{{i18n:SB.Evening.Sebastian.Wednesday}}",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+				"DayOfWeek": "Wednesday",
+				"Sebastian": "enabled",
+				"Maru": "enabled",
+				"Robmetrius": "enabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Sebastian funLeave and funReturn Marriage Dialogue - ASS Gang Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries":{
+				"funLeave_Sebastian": "{{i18n:SB.Morning.Sebastian.Sunday}}",
+				"funReturn_Sebastian": "{{i18n:SB.Evening.Sebastian.Sunday}}",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+				"DayOfWeek": "Sunday",
+				"Sebastian": "enabled",
+				"Sam": "enabled",
+				"Abigail": "enabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Sebastian funLeave and funReturn Marriage Dialogue - Solo (Wednesday) Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries":{
+				"funLeave_Sebastian": "{{i18n:SB.Morning.Sebastian.Wednesday.NoFam}}",
+				"funReturn_Sebastian": "{{i18n:SB.Evening.Sebastian.Wednesday.NoFam}}",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+				"DayOfWeek": "Wednesday",
+				"Sebastian": "enabled",
+				"MaruFam": "false",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Sebastian funLeave and funReturn Marriage Dialogue - Solo (Sunday) Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries":{
+				"funLeave_Sebastian": "{{i18n:SB.Morning.Sebastian.Sunday.NoAbSam}}",
+				"funReturn_Sebastian": "{{i18n:SB.Evening.Sebastian.Sunday.NoAbSam}}",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+				"DayOfWeek": "Sunday",
+				"Sebastian": "enabled",
+				"SamAbs": "false",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Sam
+		{
+			"LogName": "Sam funLeave and funReturn Marriage Dialogue - Family Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSam",
+			"Entries":{
+				"funLeave_Sam": "{{i18n:SB.Morning.Sam.Monday}}",
+				"funReturn_Sam": "{{i18n:SB.Evening.Sam.Monday}}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+				"DayOfWeek": "Monday",
+				"Sam": "enabled",
+				"SamFam": "enabled",
+				"HasSeenEvent |contains=177756": "true",
+			},
+		},
+		{
+			"LogName": "Sam funLeave and funReturn Marriage Dialogue - Gus replacement Tuesdays",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSam",
+			"Entries":{
+				"funLeave_Sam": "{{i18n:SB.Morning.Sam.Job}}",
+				"funReturn_Sam": "{{i18n:SB.Evening.Sam.Job}}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+				"DayOfWeek": "Tuesday",
+				"CCJob": "Sam",
+				"ImmersionSam": "true",
+				"HasSeenEvent |contains=177758": "true",
+			},
+		},
+		{
+			"LogName": "Sam funLeave and funReturn Marriage Dialogue - ASS Gang Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSam",
+			"Entries":{
+				"funLeave_Sam": "{{i18n:SB.Morning.Sam.Sunday}}",
+				"funReturn_Sam": "{{i18n:SB.Evening.Sam.Sunday}}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+				"DayOfWeek": "Sunday",
+				"Sam": "enabled",
+				"Abigail": "enabled",
+				"Sebastian": "enabled",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		{
+			"LogName": "Sam funLeave and funReturn Marriage Dialogue - Solo (Monday) Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSam",
+			"Entries":{
+				"funLeave_Sam": "{{i18n:SB.Morning.Sam.Monday.NoFam}}",
+				"funReturn_Sam": "{{i18n:SB.Evening.Sam.Monday.NoFam}}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+				"DayOfWeek": "Monday",
+				"Sam": "enabled",
+				"SamFam": "disabled",
+				"HasSeenEvent |contains=177756": "true",
+			},
+		},
+		{
+			"LogName": "Sam funLeave and funReturn Marriage Dialogue - Solo (Sunday) Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSam",
+			"Entries":{
+				"funLeave_Sam": "{{i18n:SB.Morning.Sam.Sunday.NoAbSeb}}",
+				"funReturn_Sam": "{{i18n:SB.Evening.Sam.Sunday.NoAbSeb}}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+				"DayOfWeek": "Sunday",
+				"Sam": "enabled",
+				"SebAbs": "false",
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		//Shane
+		{
+			"LogName": "Shane funLeave and funReturn Marriage Dialogue - Marnie and Jas Breakfast",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries":{
+				"funLeave_Shane": "{{i18n:SB.Morning.Shane.Monday}}",
+				"funReturn_Shane": "{{i18n:SB.Evening.Shane.Monday}}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+				"DayOfWeek": "Monday",
+				"Shane": "enabled",
+				"Marnie": "enabled",
+				"HasSeenEvent |contains=177756": "true",
+			},
+		},
+		{
+			"LogName": "Shane funLeave and funReturn Marriage Dialogue - Jas Breakfast, Marnie Disabled",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries":{
+				"funLeave_Shane": "{{i18n:SB.Morning.Shane.Monday.NoMarnie}}",
+				"funReturn_Shane": "{{i18n:SB.Evening.Shane.Monday.NoMarnie}}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+				"DayOfWeek": "Monday",
+				"Shane": "enabled",
+				"Marnie": "disabled",
+				"HasSeenEvent |contains=177756": "true",
+			},
+		},
+		{
+			"LogName": "Shane funLeave and funReturn Marriage Dialogue - Gus replacement Tuesdays",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries":{
+				"funLeave_Shane": "{{i18n:SB.Morning.Shane.CCJob}}",
+				"funReturn_Shane": "{{i18n:SB.Evening.Shane.CCJob}}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+				"DayOfWeek": "Tuesday",
+				"CCJob": "Shane",
+				"ImmersionShane": "true",
+				"HasSeenEvent |contains=177757": "true",
+			},
+		},
+		{
+			"LogName": "Shane funLeave and funReturn Marriage Dialogue - Jas Thursdays",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries":{
+				"funLeave_Shane": "{{i18n:SB.Morning.Shane.Thursday}}",
+				"funReturn_Shane": "{{i18n:SB.Evening.Shane.Thursday}}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+				"DayOfWeek": "Thursday",
+				"Shane": "enabled",
+				"HasSeenEvent |contains=177755": "true",
+				"ThursdayToken": "true",
+			},
+		},
+	],
+}

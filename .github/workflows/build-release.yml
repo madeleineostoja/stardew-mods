@@ -1,0 +1,96 @@
+name: Build and release
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.packages.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test repository tooling
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate packages and prepare matrix
+        id: packages
+        run: |
+          matrix="$(python3 scripts/mods.py matrix)"
+          echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
+
+  build:
+    needs: prepare
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-dotnet@v4
+        if: matrix.compiled
+        with:
+          global-json-file: global.json
+      - name: Check out Stardew and SMAPI reference assemblies
+        if: matrix.compiled
+        uses: actions/checkout@v4
+        with:
+          repository: StardewModders/mod-reference-assemblies
+          ref: 0141355fecb8536715ecff22f99374b5e632cbed
+          path: .references/stardew
+          persist-credentials: false
+      - name: Build, test, and package
+        env:
+          PACKAGE_ID: ${{ matrix.id }}
+        run: python3 scripts/mods.py build "$PACKAGE_ID" --game-path "$GITHUB_WORKSPACE/.references/stardew"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.id }}
+          path: dist/*.zip
+          if-no-files-found: error
+
+  release:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [prepare, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ matrix.id }}
+          path: dist
+      - name: Publish unreleased package version
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PACKAGE_ID: ${{ matrix.id }}
+        run: python3 -m scripts.release "$PACKAGE_ID" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA"

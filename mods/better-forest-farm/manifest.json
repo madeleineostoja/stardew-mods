@@ -1,0 +1,18 @@
+{
+  "Name": "Better Forest Farm",
+  "Author": "heyitsmads",
+  "Version": "1.2.0",
+  "Description": "An immersive, configurable alteration of the forest (foraging) farm map. Compatible with all recolours",
+  "UniqueID": "heyitsmads.BetterForestFarm",
+  "UpdateKeys": ["Nexus:46969"],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+    "MinimumVersion": "2.0.0"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ]
+}

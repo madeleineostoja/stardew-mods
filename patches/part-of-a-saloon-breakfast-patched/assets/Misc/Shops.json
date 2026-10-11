@@ -1,0 +1,253 @@
+{
+  "Changes": [
+	{
+		"LogName": "Reward for the Questline in the Saloon",
+		"Action": "EditData",
+		"Target": "Data/Shops",
+		"TargetField": [ "Saloon", "Items" ],
+		"Entries": {
+			"AgentLyoko.SaloonBreakfast_StardropBreakfast.LuckyLunch": {
+				"Id": "AgentLyoko.SaloonBreakfast.LuckyLunch",
+				"ItemId": "(O)204",
+				"Price": 10,
+				"AvailableStock": "1",
+				"AvailableStockLimit": "Player",
+				"Condition": "PLAYER_HAS_MAIL Current FreeLuckyLunch",
+			},
+			"AgentLyoko.SaloonBreakfast_StardropBreakfast.SpicyEel": {
+				"Id": "AgentLyoko.SaloonBreakfast.SpicyEel",
+				"ItemId": "(O)226",
+				"Price": 10,
+				"AvailableStock": "1",
+				"AvailableStockLimit": "Player",
+				"Condition": "PLAYER_HAS_MAIL Current FreeSpicyEel",
+			},
+			"AgentLyoko.SaloonBreakfast_StardropBreakfast.CrabCakes": {
+				"Id": "AgentLyoko.SaloonBreakfast.CrabCakes",
+				"ItemId": "(O)732",
+				"Price": 10,
+				"AvailableStock": "1",
+				"AvailableStockLimit": "Player",
+				"Condition": "PLAYER_HAS_MAIL Current FreeCrabCakes",
+			},
+			"AgentLyoko.SaloonBreakfast_StardropBreakfast.DishOfSea": {
+				"Id": "AgentLyoko.SaloonBreakfast.DishOfSea",
+				"ItemId": "(O)242",
+				"Price": 10,
+				"AvailableStock": "1",
+				"AvailableStockLimit": "Player",
+				"Condition": "PLAYER_HAS_MAIL Current FreeDishOfSea",
+			},
+			"AgentLyoko.SaloonBreakfast_StardropBreakfast.CrispyBass": {
+				"Id": "AgentLyoko.SaloonBreakfast.CrispyBass",
+				"ItemId": "(O)214",
+				"Price": 10,
+				"AvailableStock": "1",
+				"AvailableStockLimit": "Player",
+				"Condition": "PLAYER_HAS_MAIL Current FreeCrispyBass",
+			},
+			"AgentLyoko.SaloonBreakfast_StardropBreakfast.Pizza": {
+				"Id": "AgentLyoko.SaloonBreakfast.Pizza",
+				"ItemId": "(O)206",
+				"Price": 10,
+				"AvailableStock": "1",
+				"AvailableStockLimit": "Player",
+				"Condition": "PLAYER_HAS_MAIL Current FreePizza",
+			},
+			"AgentLyoko.SaloonBreakfast_StardropBreakfast.Burger": {
+				"Id": "AgentLyoko.SaloonBreakfast.SurvivalBurger",
+				"ItemId": "(O)241",
+				"Price": 10,
+				"AvailableStock": "1",
+				"AvailableStockLimit": "Player",
+				"Condition": "PLAYER_HAS_MAIL Current FreeBurger",
+			},
+			"AgentLyoko.SaloonBreakfast_StardropBreakfast.PinkCake": {
+				"Id": "AgentLyoko.SaloonBreakfast.PinkCake",
+				"ItemId": "(O)221",
+				"Price": 10,
+				"AvailableStock": "1",
+				"AvailableStockLimit": "Player",
+				"Condition": "PLAYER_HAS_MAIL Current FreePinkCake",
+			},
+			"AgentLyoko.SaloonBreakfast_StardropBreakfast.RandomFreeFood": {
+				"Id": "AgentLyoko.SaloonBreakfast.RandomFood",
+				"RandomItemId": ["(O)221", "(O)204", "(O)226", "(O)732", "(O)242", "(O)214", "(O)206", "(O)241", "(O)223", "(O)196", "(O)197", "(O)198", "(O)199", "(O)200", "(O)202", "(O)205", "(O)207", "(O)208", "(O)209", "(O)212", "(O)213", "(O)215", "(O)218", "(O)219", "(O)220", "(O)222", "(O)224", "(O)225", "(O)227", "(O)228", "(O)230", "(O)231", "(O)232", "(O)233", "(O)234", "(O)235", "(O)236", "(O)237", "(O)238", "(O)239", "(O)240", "(O)243", "(O)244", "(O)265", "(O)456", "(O)457", "(O)604", "(O)605", "(O)606", "(O)607", "(O)608", "(O)609", "(O)610", "(O)611", "(O)612", "(O)618", "(O)648", "(O)649", "(O)727", "(O)728", "(O)729", "(O)730", "(O)731", "(O)733", "(O)904", "(O)905", "(O)906", "(O)907", "(O)921", "(O)279"],
+				"Price": 10,
+				"AvailableStock": "1",
+				"AvailableStockLimit": "Player",
+				"Condition": "PLAYER_HAS_MAIL Current RandomFreeFood",
+			},
+		},
+		"MoveEntries": [
+                { "Id": "AgentLyoko.SaloonBreakfast.LuckyLunch", "BeforeId": "(O)346" },
+				{ "Id": "AgentLyoko.SaloonBreakfast.SpicyEel", "BeforeId": "(O)346" },
+				{ "Id": "AgentLyoko.SaloonBreakfast.CrabCakes", "BeforeId": "(O)346" },
+				{ "Id": "AgentLyoko.SaloonBreakfast.DishOfSea", "BeforeId": "(O)346" },
+				{ "Id": "AgentLyoko.SaloonBreakfast.CrispyBass", "BeforeId": "(O)346" },
+				{ "Id": "AgentLyoko.SaloonBreakfast.Pizza", "BeforeId": "(O)346" },
+				{ "Id": "AgentLyoko.SaloonBreakfast.SurvivalBurger", "BeforeId": "(O)346" },
+				{ "Id": "AgentLyoko.SaloonBreakfast.PinkCake", "BeforeId": "(O)346" },
+				{ "Id": "AgentLyoko.SaloonBreakfast.RandomFood", "BeforeId": "(O)346" },
+        ],
+	},
+	
+	{
+      "LogName": "Saloon Breakfast Shop (and its myriad rules)",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Entries": {
+        "AgentLyoko.SaloonBreakfast_StardropBreakfast": {
+          "ID": "AgentLyoko.SaloonBreakfast_StardropBreakfast",
+          "Owners": [
+            {
+			  "Name": "Leah",
+              "Condition": "PLAYER_HAS_SEEN_EVENT Any 177759, DAY_OF_MONTH 4 11",
+              "Portrait": "Portraits/Leah",
+              "Dialogues": [
+                {
+                  "Condition": "DAY_OF_WEEK Thursday",
+                  "Dialogue": "{{i18n:SB.LeahBreakfast.1 |PlayerName={{PlayerName}} }}",
+                },
+				{
+                  "Condition": "DAY_OF_WEEK Thursday",
+                  "Dialogue": "{{i18n:SB.LeahBreakfast.2}}",
+                },
+                {
+                  "Condition": "!DAY_OF_WEEK Thursday",
+                  "Dialogue": "{{i18n:SB.LeahBreakfast.BugReport |PlayerName={{PlayerName}} }}",
+                },
+              ],
+			  "RandomizeDialogueOnOpen": true,
+            },
+			{
+			  "Name": "Emily",
+              "Condition": "PLAYER_HAS_MAIL Any saloonSportsRoom, DAY_OF_WEEK Sunday",
+              "Portrait": "Portraits/Emily",
+              "Dialogues": [
+                {
+                  "Condition": "DAY_OF_WEEK Sunday",
+                  "Dialogue": "{{i18n:SB.EmilyBreakfast.1}}",
+                },
+                {
+                  "Condition": "!DAY_OF_WEEK Sunday",
+                  "Dialogue": "{{i18n:SB.EmilyBreakfast.BugReport |PlayerName={{PlayerName}} }}",
+                },
+              ],
+            },
+			{
+			  "Name": "Kent",
+              "Condition": "PLAYER_HAS_SEEN_EVENT Any 177756, DAY_OF_WEEK Monday",
+              "Portrait": "Portraits/Kent",
+              "Dialogues": [
+                {
+                  "Condition": "DAY_OF_WEEK Monday",
+                  "Dialogue": "{{i18n:SB.KentBreakfast.1}}",
+                },
+                {
+                  "Condition": "!DAY_OF_WEEK Monday",
+                  "Dialogue": "{{i18n:SB.KentBreakfast.BugReport}}",
+                },
+              ],
+            },
+			{
+			  "Name": "Gus",
+              "Condition": null,
+              "Portrait": "{{Random: {{InternalAssetKey: assets/Misc/Sprites/Shop_StardropBreakfast.png}}, Portraits/Gus}}",
+              "Dialogues": [
+                {
+                  "Condition": null,
+                  "Dialogue": "{{i18n:SB.GusBreakfast.Default}}",
+                },
+              ],
+            },
+			//Keep closures after the staffed owners. Self-service OpenShop actions bypass these entries.
+			{
+			  "Id": "ClosedMixologist",
+			  "Name": "None",
+			  "Condition": "TIME 1200 2600, {{HasMod |contains=Airyn.EmilytheMixologist.CP}}",
+			  "ClosedMessage": "{{i18n:SB.ShopClosed.Mixologist}}",
+            },
+			{
+			  "Id": "ClosedAfterNoon",
+			  "Name": "None",
+			  "Condition": "TIME 1200 2600",
+			  "ClosedMessage": "{{i18n:SB.ShopClosed.After.Noon}}",
+            },
+			{
+			  "Id": "ClosedMorning",
+			  "Name": "None",
+			  "ClosedMessage": "{{i18n:SB.ShopClosed.Morning}}",
+            },
+          ],
+          "PriceModifiers": null,
+		  "OpenSound": "{{ShopOpenSound}}",
+		  "PurchaseSound": "{{ShopPurchaseSound}}",
+		  "purchaseRepeatSound": "{{RepeatPurchaseSound}}",
+          "Items": [
+			{
+              "Id": "AgentLyoko.SaloonBreakfast_StardropBreakfast.Drink1",
+              "ItemId": "{{Random: {{DrinkList}} }}",
+              "Price": "{{DrinkPrice}}",
+			  "AvoidRepeat": true,
+            },
+			{
+              "Id": "AgentLyoko.SaloonBreakfast_StardropBreakfast.Drink2",
+              "ItemId": "{{Random: {{DrinkList}} }}",
+              "Price": "{{DrinkPrice}}",
+			  "AvoidRepeat": true,
+            },
+			{
+              "Id": "AgentLyoko.SaloonBreakfast_StardropBreakfast.Food1",
+              "ItemId": "{{Random: {{FoodList}} }}",
+              "Price": "{{FoodPrice}}",
+			  "AvoidRepeat": true,
+            },
+			{
+              "Id": "AgentLyoko.SaloonBreakfast_StardropBreakfast.Food2",
+              "ItemId": "{{Random: {{FoodList}} }}",
+              "Price": "{{FoodPrice}}",
+			  "AvoidRepeat": true,
+            },
+			{
+              "Id": "AgentLyoko.SaloonBreakfast_StardropBreakfast.Food3",
+              "ItemId": "{{Random: {{FoodList}} }}",
+              "Price": "{{FoodPrice}}",
+			  "AvoidRepeat": true,
+            },
+			{
+              "Id": "AgentLyoko.SaloonBreakfast_StardropBreakfast.SpecialFood",
+              "ItemId": "{{Random: {{PremiumList}} }}",
+              "Price": "700",
+			  "AvoidRepeat": true,
+			  "Condition": "ANY \"PLAYER_HAS_SEEN_EVENT Current 177755\" {{PlotSchedules|contains=enabled}}",
+            },
+			{
+              "Id": "AgentLyoko.SaloonBreakfast_StardropBreakfast.Drink3",
+              "ItemId": "{{Random: {{DrinkList}} }}",
+              "Price": "{{DrinkPrice}}",
+			  "AvoidRepeat": true,
+			  "Condition": "!PLAYER_HAS_SEEN_EVENT Current 177755",
+            },
+			{
+              "Id": "AgentLyoko.SaloonBreakfast_StardropBreakfast.FreeBreakfast",
+              "ItemId": "(O)201",
+              "Price": "10",
+			  "AvailableStock": "1",
+			  "AvailableStockLimit": "Player",
+			  "Condition": "PLAYER_HAS_SEEN_EVENT Current 177755",
+            },
+			{
+              "Id": "AgentLyoko.SaloonBreakfast_StardropBreakfast.FreeBreakfastMarriage",
+              "ItemId": "{{Random: {{FoodList}} }}",
+              "Price": "1",
+			  "AvailableStock": "1",
+			  "AvailableStockLimit": "Player",
+			  "Condition": "PLAYER_HAS_SEEN_EVENT Current 177755, PLAYER_NPC_RELATIONSHIP Current Gus Married, PLAYER_HAS_MAIL Current AgentLyoko.GusBreakfastFree received",
+            },
+          ],
+        },
+	  },
+	},
+  ]
+}

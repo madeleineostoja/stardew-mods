@@ -1,0 +1,185 @@
+{
+    "Changes": [
+        // add item
+        {
+            "LogName": "Add Orange Juice Data",
+			"Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "AgentLyoko.SaloonBreakfast_FreshOrangeJuice": {
+                    "Name": "AgentLyoko.SaloonBreakfast_FreshOrangeJuice",
+                    "DisplayName": "{{i18n:SB.OJ.Name}}",
+                    "Description": "{{i18n:SB.OJ.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 100,
+					"Texture": "Mods/AgentLyoko.SaloonBreakfast/Objects",
+					"SpriteIndex": 0,
+					"Edibility": 42,
+					"IsDrink": true,
+					"Buff": {
+					  "BuffId": null,
+					  "IconTexture": null,
+					  "IconSpriteIndex": 0,
+					  "Duration": 250,
+					  "IsDebuff": false,
+					  "GlowColor": null,
+					  "CustomAttributes": {
+						"FarmingLevel": 0,
+						"FishingLevel": 0,
+						"MiningLevel": 0,
+						"LuckLevel": 0,
+						"ForagingLevel": 0,
+						"MaxStamina": 75,
+						"MagneticRadius": 0,
+						"Speed": 0,
+						"Defense": 0,
+						"Attack": 0
+					  },
+					  "CustomFields": {}
+					},
+					"GeodeDropsDefaultItems": false,
+					"GeodeDrops": null,
+					"ArtifactSpotChances": null,
+					"ContextTags": [
+					  "color_orange",
+					  "food_breakfast",
+					  "saloon_breakfast",
+					  "dye_strong"
+					],
+					"CustomFields": {}
+				}
+			},
+		},
+		
+		{
+			"LogName": "Orange Juice Recipe",
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+            "Entries": {
+				"AgentLyoko.SaloonBreakfast_FreshOrangeJuice": "635 2/77 7/AgentLyoko.SaloonBreakfast_FreshOrangeJuice/modmail/{{i18n:SB.OJ.Name}}/",
+            },
+        },
+
+        // add gift tastes
+        {
+			"LogName": "Leah Gift Taste Edit",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Leah", 1],
+                    "Value": "AgentLyoko.SaloonBreakfast_FreshOrangeJuice",
+                    "Delimiter": " "
+                }
+            ]
+        },
+		
+		{
+			"LogName": "Abigail Gift Taste Edit",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Abigail", 5],
+                    "Value": "AgentLyoko.SaloonBreakfast_FreshOrangeJuice",
+                    "Delimiter": " "
+                }
+            ]
+        },
+		
+		{
+			"LogName": "Gus Gift Taste Edit",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Gus", 1],
+                    "Value": "AgentLyoko.SaloonBreakfast_FreshOrangeJuice",
+                    "Delimiter": " "
+                }
+            ]
+        },
+		
+		{
+			"LogName": "Harvey Gift Taste Edit",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Harvey", 1],
+                    "Value": "AgentLyoko.SaloonBreakfast_FreshOrangeJuice",
+                    "Delimiter": " "
+                }
+            ]
+        },
+		
+		{
+			"LogName": "Alex Gift Taste Edit",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Alex", 1],
+                    "Value": "AgentLyoko.SaloonBreakfast_FreshOrangeJuice",
+                    "Delimiter": " "
+                }
+            ]
+        },
+		
+		{
+			"LogName": "Vincent Gift Taste Edit",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Vincent", 5],
+                    "Value": "AgentLyoko.SaloonBreakfast_FreshOrangeJuice",
+                    "Delimiter": " "
+                }
+            ]
+        },
+		
+		{
+			"LogName": "Sam Gift Taste Edit",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Sam", 5],
+                    "Value": "AgentLyoko.SaloonBreakfast_FreshOrangeJuice",
+                    "Delimiter": " "
+                }
+            ]
+        },
+		
+		{
+			"LogName": "Jas Gift Taste Edit",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Jas", 9],
+                    "Value": "AgentLyoko.SaloonBreakfast_FreshOrangeJuice",
+                    "Delimiter": " "
+                }
+            ]
+        },
+
+        // Loading the "spritesheet" (sprite) of the OJ
+        {
+			"LogName": "Orange Juice Image",
+            "Action": "Load",
+            "Target": "Mods/AgentLyoko.SaloonBreakfast/Objects",
+            "FromFile": "assets/Misc/Sprites/FreshOrangeJuice.png"
+        },
+    ]
+}

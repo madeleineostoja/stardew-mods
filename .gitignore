@@ -1,0 +1,20 @@
+# Build and packaging output
+bin/
+obj/
+dist/
+package/
+artifacts/
+/.references/
+__pycache__/
+*.zip
+
+# Local runtime configuration and experiments
+config.json
+tmp/
+build-local.sh
+
+# Editor, agent, and OS files
+.pi/
+.vscode/
+.idea/
+.DS_Store

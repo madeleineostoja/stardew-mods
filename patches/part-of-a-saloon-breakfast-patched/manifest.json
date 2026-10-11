@@ -1,0 +1,25 @@
+{
+   "Name": "Part of a Saloon Breakfast",
+   "Author": "Agent Lyoko",
+   "Description": "Opens the Saloon for breakfast time in a lore friendly, story way with special orders, events, and new schedules.",
+   "Version": "2.2.0",
+   "UniqueID": "agentlyoko.stardropbreakfast",
+   "ContentPackFor": {
+       "UniqueID": "Pathoschild.ContentPatcher"
+    },
+   "UpdateKeys": [ "Nexus:17775" ],
+   "Dependencies": [
+   {
+      "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+      "IsRequired": false
+   },
+   {
+      "UniqueID": "LemurKat.CommunityCenter.CP",
+      "IsRequired": false
+   },
+   {
+      "UniqueID": "beyondrecovery.immersivesandy",
+      "IsRequired": false
+   }
+  ]
+}

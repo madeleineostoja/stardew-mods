@@ -1,0 +1,546 @@
+{
+	"Changes":[
+		
+		//Leah mans the Saloon on the 4th and 18th if CCR is installed. Variant for marriage_{{season}}_4 and marriage_{{season}}_18 if rain/storm!
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Spring", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Thu": "630 Saloon 17 18 2 \"Strings\\schedules\\Leah:breakfastCashierMarriage\"/1200 LeahHouse 3 7 3 leah_sculpt \"Strings\\schedules\\Leah:sculptafterbreakfastmarriageThu\"/1730 BusStop -1 23 1", // Winter and Spring, main schedule
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"Thu": "630 Saloon 17 18 2 \"Strings\\schedules\\Leah:breakfastCashier\"/1200 Forest 68 50 2/1500 Forest 33 25 2 leah_draw/1830 Forest 21 29 1/1930 LeahHouse 8 5 0/2200 LeahHouse 13 10 2/2400 bed",
+			},
+			"When": {
+				"ImmersionLeah": "true",
+				"Season": "spring",
+				"CookingClass": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Summer, Bridge Broken", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Thu": "630 Saloon 17 18 2 \"Strings\\schedules\\Leah:breakfastCashierMarriage\"/1200 Beach 38 24 2 leah_draw \"Strings\\schedules\\Leah:drawafterbreakfastmarriageThu\"/1730 BusStop -1 23 1", //Draws on the Beach in Summer, no bridge
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"summer_Thu": "630 Saloon 17 18 2 \"Strings\\schedules\\Leah:breakfastCashier\"/1200 Beach 38 24 2 leah_draw/1900 LeahHouse 8 5 0/2200 LeahHouse 13 10 2/2400 bed",
+			},
+			"When": {
+				"ImmersionLeah": "true",
+				"Season": "summer",
+				"CookingClass": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Summer, Bridge Fixed", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Thu": "630 Saloon 17 18 2 \"Strings\\schedules\\Leah:breakfastCashierMarriage\"/1200 Beach 72 18 2 leah_draw \"Strings\\schedules\\Leah:drawafterbreakfastmarriageThu\"/1730 BusStop -1 23 1", //Draws on the Beach in Summer, bridge
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"summer_Thu": "630 Saloon 17 18 2 \"Strings\\schedules\\Leah:breakfastCashier\"/1200 Beach 72 18 2 leah_draw/1900 LeahHouse 8 5 0/2200 LeahHouse 13 10 2/2400 bed", //Bridge fixed
+			},
+			"When": {
+				"ImmersionLeah": "true",
+				"Season": "summer",
+				"HasFlag": "beachBridgeFixed",
+				"CookingClass": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Fall", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Thu": "630 Saloon 17 18 2 \"Strings\\schedules\\Leah:breakfastCashierMarriage\"/1200 Forest 33 25 2 leah_draw \"Strings\\schedules\\Leah:drawfallafterbreakfastmarriageThu\"/1730 BusStop -1 23 1", //Draws the Forest in Fall
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"fall_Thu": "630 Saloon 17 18 2 \"Strings\\schedules\\Leah:breakfastCashier\"/1200 Town 86 66 3 square_1_5_3/1900 LeahHouse 8 5 0/2200 LeahHouse 13 10 2/2400 bed",
+			},
+			"When": {
+				"ImmersionLeah": "true",
+				"Season": "fall",
+				"CookingClass": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Winter", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_Thu": "630 Saloon 17 18 2 \"Strings\\schedules\\Leah:breakfastCashierMarriage\"/1200 LeahHouse 3 7 3 leah_sculpt \"Strings\\schedules\\Leah:sculptafterbreakfastmarriageThu\"/1730 BusStop -1 23 1", // Winter and Spring, main schedule
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"winter_Thu": "630 Saloon 17 18 2 \"Strings\\schedules\\Leah:breakfastCashier\"/1200 LeahHouse 6 5 0/1400 LeahHouse 9 5 0/1600 Forest 33 25 2 leah_draw/2340 bed", //Small deviation to prevent Leah going twice to the Saloon in a day, which... doesn't make sense for her. Winter drawing!
+			},
+			"When": {
+				"ImmersionLeah": "true",
+				"Season": "winter",
+				"CookingClass": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Leah Breakfast Schedule - Rainy Thursdays, Cooking Class Active", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",		
+			"Entries": {
+			
+				//Marriage Activities, also known as Agent writes schedules for his partner integrated with breakfast
+				"marriage_{{season}}_{{day}}": "630 Saloon 17 18 2 \"Strings\\schedules\\Leah:breakfastCashierMarriage\"/1200 LeahHouse 3 7 3 leah_sculpt \"Strings\\schedules\\Leah:sculptafterbreakfastmarriageThu\"/1730 BusStop -1 23 1", // rain schedule
+				
+				//Regular Schedules - Leah will always leave at noon for a specific seasonal activity. Keep this in mind.
+				"rain": "630 Saloon 17 18 2 \"Strings\\schedules\\Leah:breakfastCashier\"/1200 LeahHouse 3 7 3 leah_sculpt/1730 LeahHouse 7 5 0/2200 LeahHouse 13 10 2/2400 bed",
+			},
+			"When": {
+				"ImmersionLeah": "true",
+				"Season": "spring",
+				"CookingClass": "true",
+				"Weather": "rain, storm",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		
+		
+		//SVE Schedule Edits - Sandy joins the breakfast crew on the Saturdays she visits.
+		
+		//Haley
+		{
+			"LogName": "Haley Breakfast Schedule - SVE installed, Haley and Emily both enabled", //When Haley is disabled, no patches apply. When Emily is disabled, she will go about her usual Emily disabled schedule.
+			"Action": "EditData",
+			"Target": "Characters/schedules/Haley",
+			"Entries": {
+				"marriage_Sat": "830 Saloon 3 21 0 \"Strings\\schedules\\Haley:breakfastMarriage\"/1100 HaleyHouse 7 21 3 \"Strings\\schedules\\Haley:breakfastvisitmarriage\"/1530 BusStop -1 23 1", //Haley and Emily have a weekly brunch, then Haley visits the house before heading home.
+				"Sat": "800 HaleyHouse 6 5 0/850 HaleyHouse 8 7 1/900 Saloon 3 21 0 \"Strings\\schedules\\Haley:breakfastSatHigh\"/1100 Town 23 22 2/1630 HaleyHouse 19 16 0 square_5_1_0/2000 HaleyHouse 5 7 0 square_5_5/2230 bed" //Haley wakes up a tad earlier, puts makeup on, then heads to brunch with Emily, proceeds with spring schedule after.
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"Weather |contains=rain,storm": false,
+				"HasSeenEvent: anyPlayer |contains=177752": "true",
+			},
+		},
+		
+		{
+			"LogName": "Haley Breakfast Schedule - SVE installed, Haley and Emily both enabled, Haley Low Hearts", //When Haley is disabled, no patches apply. When Emily is disabled, she will go about her usual Emily disabled schedule.
+			"Action": "EditData",
+			"Target": "Characters/schedules/Haley",
+			"Entries": {
+				"Sat": "800 HaleyHouse 6 5 0/850 HaleyHouse 8 7 1/900 Saloon 3 21 0 \"Strings\\schedules\\Haley:breakfastSat\"/1100 Town 23 22 2/1630 HaleyHouse 19 16 0 square_5_1_0/2000 HaleyHouse 5 7 0 square_5_5/2230 bed" //Haley wakes up a tad earlier, puts makeup on, then heads to brunch with Emily, proceeds with spring schedule after.
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"Hearts:Haley": "0, 1, 2, 3, 4, 5",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"Weather |contains=rain,storm": false,
+				"HasSeenEvent: anyPlayer |contains=177752": "true",
+			},
+		},
+		
+		
+		//Emily
+		{
+			"LogName": "Emily Breakfast Schedule - SVE Compat", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				"marriage_Sat": "830 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastMarriage\"/1100 HaleyHouse 5 20 2 \"Strings\\schedules\\Emily:breakfastvisitmarriage\"/1500 Saloon 15 17 0 \"Strings\\schedules\\Emily:marriage_Mon.002\"/2200 bed", //Marriage schedule, Haley unmarried
+				"6": "850 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastSat\"/1100 HaleyHouse 18 6 1/1300 Town 24 64 3/1500 Town 101 98 2/1720 Saloon 15 17 0/2010 Saloon 14 17 0/2100 Saloon 15 18 2/2130 Saloon 16 17 0/2200 Saloon 17 18 2/2230 Saloon 13 17 0/2300 Saloon 17 21 0/2330 bed", //Regular schedule, Haley unmarried
+				"27": "850 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastSat\"/1100 HaleyHouse 18 6 1/1300 Town 24 64 3/1500 Town 101 98 2/1720 Saloon 15 17 0/2010 Saloon 14 17 0/2100 Saloon 15 18 2/2130 Saloon 16 17 0/2200 Saloon 17 18 2/2230 Saloon 13 17 0/2300 Saloon 17 21 0/2330 bed", //Regular schedule, Haley unmarried
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"Weather |contains=rain,storm": false,
+				"HasSeenEvent: anyPlayer |contains=177752": "true",
+			},
+		},
+		
+		{
+			"LogName": "Emily Breakfast Schedule - SVE Compat",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				"marriage_Sat": "830 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastMarriage\"/1100 HaleyHouse 5 20 2 \"Strings\\schedules\\Emily:breakfastvisitmarriage\"/1500 Saloon 15 17 0 \"Strings\\schedules\\Emily:marriage_Mon.002\"/2200 bed", //Marriage schedule, Haley married
+				"6": "850 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastSat\"/1100 HaleyHouse 18 6 1/1300 Town 24 64 3/1500 Town 101 98 2/1720 Saloon 15 17 0/2010 Saloon 14 17 0/2100 Saloon 15 18 2/2130 Saloon 16 17 0/2200 Saloon 17 18 2/2230 Saloon 13 17 0/2300 Saloon 17 21 0/2330 bed",
+				"27": "850 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastSat\"/1100 HaleyHouse 18 6 1/1300 Town 24 64 3/1500 Town 101 98 2/1720 Saloon 15 17 0/2010 Saloon 14 17 0/2100 Saloon 15 18 2/2130 Saloon 16 17 0/2200 Saloon 17 18 2/2230 Saloon 13 17 0/2300 Saloon 17 21 0/2330 bed",
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"relationship:Haley": "married",
+				"Weather |contains=rain,storm": false,
+				"HasSeenEvent: anyPlayer |contains=177752": "true",
+			},
+		},
+		
+		{
+			"LogName": "Emily Breakfast Schedule - SVE Compat",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				"marriage_Sat": "830 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastMarriage\"/1100 HaleyHouse 5 20 2 \"Strings\\schedules\\Emily:breakfastvisitmarriage\"/1500 Saloon 15 17 0 \"Strings\\schedules\\Emily:marriage_Mon.002\"/2200 bed", //Marriage schedule, Haley married
+				"6": "850 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastSat\"/1100 HaleyHouse 18 6 1/1300 Town 24 64 3/1500 Town 101 98 2/1720 Saloon 15 17 0/2010 Saloon 14 17 0/2100 Saloon 15 18 2/2130 Saloon 16 17 0/2200 Saloon 17 18 2/2230 Saloon 13 17 0/2300 Saloon 17 21 0/2330 bed",
+				"27": "850 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastSat\"/1100 HaleyHouse 18 6 1/1300 Town 24 64 3/1500 Town 101 98 2/1720 Saloon 15 17 0/2010 Saloon 14 17 0/2100 Saloon 15 18 2/2130 Saloon 16 17 0/2200 Saloon 17 18 2/2230 Saloon 13 17 0/2300 Saloon 17 21 0/2330 bed",
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"Spouse": "Haley", //Multiplayer compat - it's possible the main player has Haley as a secondary spouse (first patch) or a different player has her as a spouse (this patch).
+				"Weather |contains=rain,storm": false,
+				"HasSeenEvent: anyPlayer |contains=177752": "true",
+			},
+		},
+		
+		{
+			"LogName": "Emily Breakfast Schedule - SVE Compat, Haley Disabled",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				"marriage_Sat": "830 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastMarriage\"/1100 HaleyHouse 5 20 2 \"Strings\\schedules\\Emily:breakfastvisitmarriage\"/1500 Saloon 15 17 0 \"Strings\\schedules\\Emily:marriage_Mon.002\"/2200 bed", //Marriage schedule, Haley unmarried
+				"6": "850 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastSatAlt\"/1100 HaleyHouse 18 6 1/1300 Town 24 64 3/1500 Town 101 98 2/1720 Saloon 15 17 0/2010 Saloon 14 17 0/2100 Saloon 15 18 2/2130 Saloon 16 17 0/2200 Saloon 17 18 2/2230 Saloon 13 17 0/2300 Saloon 17 21 0/2330 bed", //Regular schedule, Haley unmarried
+				"27": "850 Saloon 4 19 2 \"Strings\\schedules\\Emily:breakfastSatAlt\"/1100 HaleyHouse 18 6 1/1300 Town 24 64 3/1500 Town 101 98 2/1720 Saloon 15 17 0/2010 Saloon 14 17 0/2100 Saloon 15 18 2/2130 Saloon 16 17 0/2200 Saloon 17 18 2/2230 Saloon 13 17 0/2300 Saloon 17 21 0/2330 bed", //Regular schedule, Haley unmarried
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "disabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"Weather |contains=rain,storm": false,
+				"HasSeenEvent: anyPlayer |contains=177752": "true",
+			},
+		},
+		
+		
+		//Sandy
+		{
+			"LogName": "Sandy Breakfast Schedule - SVE Compat",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sandy",
+			"Entries": {
+				"6": "0 Custom_Sandy_WarpRoom 3 4 2/840 Saloon 2 20 1 \"Strings\\schedules\\Sandy:breakfastSat\"/1100 HaleyHouse 20 6 3/1300 Town 22 64 1/1500 Town 103 98 2/1720 Saloon 17 20 0/2310 Saloon 17 20 2/2330 HaleyHouse 19 4 1",
+				"27": "0 Custom_Sandy_WarpRoom 3 4 2/840 Saloon 2 20 1 \"Strings\\schedules\\Sandy:breakfastSat\"/1100 HaleyHouse 20 6 3/1300 Town 22 64 1/1500 Town 103 98 2/1720 Saloon 17 20 0/2310 Saloon 17 20 2/2330 HaleyHouse 19 4 1",
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "enabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"Weather |contains=rain,storm": false,
+				"HasSeenEvent: anyPlayer |contains=177752": "true",
+			},
+		},
+		
+		{
+			"LogName": "Sandy Breakfast Schedule - SVE Compat, Haley Disabled",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sandy",
+			"Entries": {
+				"6": "0 Custom_Sandy_WarpRoom 3 4 2/840 Saloon 2 20 1 \"Strings\\schedules\\Sandy:breakfastSatAlt\"/1100 HaleyHouse 20 6 3/1300 Town 22 64 1/1500 Town 103 98 2/1720 Saloon 17 20 0/2310 Saloon 17 20 2/2330 HaleyHouse 19 4 1",
+				"27": "0 Custom_Sandy_WarpRoom 3 4 2/840 Saloon 2 20 1 \"Strings\\schedules\\Sandy:breakfastSatAlt\"/1100 HaleyHouse 20 6 3/1300 Town 22 64 1/1500 Town 103 98 2/1720 Saloon 17 20 0/2310 Saloon 17 20 2/2330 HaleyHouse 19 4 1",
+			},
+			"When": {
+				"Emily": "enabled",
+				"Haley": "disabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"Weather |contains=rain,storm": false,
+				"HasSeenEvent: anyPlayer |contains=177752": "true",
+			},
+			
+		},
+		
+		//Alex/Jeric Compatibility for Fridays
+		
+		{
+			"LogName": "Alex Schedule Fix - Alex/Jeric Compat",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Alex",
+			"Fields": {
+				"Fri": {
+					0: "0 Custom_Ridgeside_RidgesideVillage 108 31 1",
+				}
+			},
+			"When": {
+				"Alex": "enabled", //As this is the first part of the schedule and doesn't contain strings, do not need to check for Geovelyn
+				"HasSeenEvent: anyPlayer |contains=955807": "true", //Wedding seen
+				"HasMod |contains=ZoeDoll.JericAlexRivalHearts": true,
+				"DayOfWeek": "Friday",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+        },
+		
+		//Sam/Alissa Compatibility for Sundays and Mondays
+		
+		{
+			"LogName": "Sam Schedule Fix - Sam/Alissa Compat",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Fields": {
+				"Mon": {
+					0: "0 Custom_Ridgeside_RidgesideVillage 108 31 1", //Family Day
+				},
+			},
+			"When": {
+				"Sam": "enabled",
+				"HasSeenEvent: anyPlayer |contains=902207": "true", //Wedding seen
+				"HasMod |contains=ZoeDoll.SamAndAlissaRivalHearts": true,
+				"DayOfWeek": "Monday",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+        },
+		
+		{
+			"LogName": "Sam Schedule Fix - Sam/Alissa Compat",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Fields": {
+				"Tue": {
+					0: "0 Custom_Ridgeside_RidgesideVillage 108 31 1", //Job, if chosen
+				},
+			},
+			"When": {
+				"Sam": "enabled",
+				"HasSeenEvent: anyPlayer |contains=902207": "true", //Wedding seen
+				"HasMod |contains=ZoeDoll.SamAndAlissaRivalHearts": true,
+				"DayOfWeek": "Tuesday",
+				"HasSeenEvent: anyPlayer |contains=177758": "true",
+				"CCJob": "Sam",
+			},
+        },
+		
+		{
+			"LogName": "Sam Schedule Fix - Sam/Alissa Compat",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Fields": {
+				"Sun": {
+					0: "0 Custom_Ridgeside_RidgesideVillage 108 31 1", //ASS Gang Day
+				},
+			},
+			"When": {
+				"Sam": "enabled",
+				"HasSeenEvent: anyPlayer |contains=902207": "true", //Wedding seen
+				"HasMod |contains=ZoeDoll.SamAndAlissaRivalHearts": true,
+				"DayOfWeek": "Sunday",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+        },
+		
+		//SVE Nulls (Overrides)
+		{
+			"LogName": "Sam goes to breakfast - SVE installed",
+			"Action": "EditData",
+			"Target": "characters/schedules/Sam",
+			"Entries": {
+				"7": null,
+				"21": null
+			},
+			"When": {
+				"Sam": "enabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"ModScheduleOverrides": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Penny goes to breakfast - SVE installed",
+			"Action": "EditData",
+			"Target": "characters/schedules/Penny",
+			"Entries": {
+				"7": null,
+				"21": null
+			},
+			"When": {
+				"Penny": "enabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"ModScheduleOverrides": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+			},
+		},
+		
+		{
+			"LogName": "Alex doesn't hallucinate Haley - SVE installed",
+			"Action": "EditData",
+			"Target": "characters/schedules/Alex",
+			"Entries": {
+				"6": null,
+				"20": null
+			},
+			"When": {
+				"Alex": "enabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"ModScheduleOverrides": "true",
+				"HasSeenEvent: anyPlayer |contains=177752": "true",
+			},
+		},
+		
+		{
+			"LogName": "Haley goes to breakfast - SVE installed",
+			"Action": "EditData",
+			"Target": "characters/schedules/Haley",
+			"Entries": {
+				"6": null,
+				"20": null
+			},
+			"When": {
+				"Haley": "enabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"ModScheduleOverrides": "true",
+				"HasSeenEvent: anyPlayer |contains=177752": "true",
+			},
+		},
+		
+		{
+			"LogName": "Marnie goes to breakfast in Winter - SVE installed",
+			"Action": "EditData",
+			"Target": "characters/schedules/Marnie",
+			"Entries": {
+				"winter_Mon": null,
+			},
+			"When": {
+				"Marnie": "enabled",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"ModScheduleOverrides": "true",
+				"HasSeenEvent: anyPlayer |contains=177756": "true",
+			},
+		},
+		
+		{
+			"LogName": "Gus mans the breakfast counter in Winter - SVE installed",
+			"Action": "EditData",
+			"Target": "characters/schedules/Gus",
+			"Entries": {
+				"Tue": null,
+				"winter_Tue": null,
+			},
+			"When": {
+				"ImmersionGus": "true",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"ModScheduleOverrides": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+				"HasSeenEvent: anyPlayer |contains=191393": "false",
+			},
+		},
+		
+		{
+			"LogName": "Gus takes care of things in Winter - SVE installed",
+			"Action": "EditData",
+			"Target": "characters/schedules/Gus",
+			"Entries": {
+				"Tue": null,
+				"winter_Tue": null,
+			},
+			"When": {
+				"ImmersionGus": "true",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"ModScheduleOverrides": "true",
+				"HasSeenEvent: anyPlayer |contains=177755": "true",
+				"HasSeenEvent: anyPlayer |contains=177757, 177758": "true",
+			},
+		},
+		
+		// Gus LFL schedule - married to the player
+		
+		{
+			"LogName": "Gus Breakfast Schedule - Married to Player with LFL", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Gus",		
+			"Entries": {
+				"marriage_Fri": "630 Saloon 17 18 2 \"Strings\\schedules\\Gus:MarriageBreakfast\"/1200 Saloon 10 18 2 \"Strings\\schedules\\Gus:Marriage_Fri.000\"/1400 Saloon 14 18 2 gus_clean/1700 Saloon 10 18 0 \"Strings\\schedules\\Gus:Marriage_Fri.001\"/2330 bed",
+				"marriage_Sat": "630 Saloon 17 18 2 \"Strings\\schedules\\Gus:MarriageBreakfast\"/1200 Saloon 10 18 2 \"Strings\\schedules\\Gus:Marriage_Sat.000\"/2200 bed",
+			},
+			"When": {
+				"WeekendToken": "true",
+				"ImmersionGus": "true",
+				"HasMod": "mush.loveydovey", //Marriage schedules only used if someone is married to them
+			},
+		},
+		
+		{
+			"LogName": "Gus Breakfast Schedule - Married to Player with LFL", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Gus",		
+			"Entries": {
+				"marriage_Wed": "630 Saloon 17 18 2 \"Strings\\schedules\\Gus:MarriageBreakfast\"/1200 Saloon 10 18 2 \"Strings\\schedules\\Gus:BreakfastDay\"/1900 bed",
+			},
+			"When": {
+				"WeekToken": "true",
+				"ImmersionGus": "true",
+				"HasMod": "mush.loveydovey", //Marriage schedules only used if someone is married to them
+			},
+		},
+		
+		{
+			"LogName": "Gus Breakfast Schedule - Married to Player with LFL", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Gus",		
+			"Entries": {
+				"marriage_Thu": "630 Saloon 17 18 2 \"Strings\\schedules\\Gus:MarriageBreakfast\"/1200 Saloon 10 18 2 \"Strings\\schedules\\Gus:Marriage_Mon.001\"/2200 bed",
+			},
+			"When": {
+				"WeekToken": "true",
+				"ImmersionGus": "true",
+				"HasMod": "mush.loveydovey", //Marriage schedules only used if someone is married to them
+				"CookingClass": "false", //Gus is staffing the counter on Thursday
+			},
+		},
+		
+		{
+			"LogName": "Gus Breakfast Schedule - Married to Player with LFL", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Gus",		
+			"Entries": {
+				"marriage_Sun": "630 Saloon 17 18 2 \"Strings\\schedules\\Gus:SundayBreakfast\"/1200 Saloon 10 18 2 \"Strings\\schedules\\Gus:Marriage_Sun.000\"/1500 bed",
+			},
+			"When": {
+				"WeekToken": "true",
+				"ImmersionGus": "true",
+				"HasMod": "mush.loveydovey", //Marriage schedules only used if someone is married to them
+			},
+		},
+		
+		{
+			"LogName": "Gus Breakfast Schedule - Married to Player with LFL", 
+			"Action": "EditData",
+			"Target": "Characters/schedules/Gus",		
+			"Entries": {
+				"marriage_Sun": "1000 Saloon 34 8 0 \"Strings\\schedules\\Gus:SundaySportsBreakfast\"/1400 Saloon 10 18 2 \"Strings\\schedules\\Gus:Marriage_Sun.000\"/1700 bed",
+			},
+			"When": {
+				"WeekToken": "true",
+				"ImmersionGus": "true",
+				"HasMod": "mush.loveydovey", //Marriage schedules only used if someone is married to them
+				"HasFlag": "saloonSportsRoom",
+			},
+		},
+	]
+}

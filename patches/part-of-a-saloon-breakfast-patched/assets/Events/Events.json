@@ -1,0 +1,444 @@
+{
+	"Changes":[
+		{
+			"LogName": "Event 1: Saloon In Crisis", 
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",			
+			"Entries": {
+				"177751/SawEvent 96/DaysPlayed 84": "Saloon1/14 19/farmer -100 -100 0 Gus 14 18 2/skippable/addMailReceived breakfastBegins/addConversationTopic breakfastpause {{CTDelay}}/pause 1700/textAboveHead Gus \"{{i18n:Crisis.177751.0}}\"/pause 1500/animate Gus false true 77 18 18 18 19 19 20 20 19 19 18 18 18 18 19 19 20 20 19 19 18/pause 5000/shake Gus 1500/emote Gus 28/pause 1000/textAboveHead Gus \"{{i18n:Crisis.177751.1}}\"/pause 1500/stopAnimation Gus 0/move Gus 0 -1 0/pause 200/move Gus -11 0 3/playSound openBox/stopMusic/pause 1000/playSound openBox/playMusic shaneTheme/pause 500/move Gus 11 0 1/move Gus 0 1 2/animate Gus false true 50 18 18 18 19 19 20 20 19 19 18 18 18 18 19 19 20 20 19 19 18/pause 1000/playSound doorClose/warp farmer 14 24/pause 500/faceDirection Gus 2 true/move farmer 0 -4 0/speak Gus \"{{i18n:Crisis.177751.2}}\"/pause 500/speak Gus \"$q 177751 null#{{i18n:Crisis.177751.3}}#$r 177751 0 crisis_spaghetti#{{i18n:Crisis.177751.4}}#$r 177751 25 crisis_mood#{{i18n:Crisis.177751.6}}#$r 177751 10 crisis_lost#{{i18n:Crisis.177751.8}}\"/faceDirection Gus 2/pause 800/emote farmer 40/pause 500/move farmer 0 2 2 true/pause 200/stopAnimation Gus 0 true/speak Gus \"{{i18n:Crisis.177751.10}}\"/faceDirection farmer 0/emote farmer 8/pause 700/speak Gus \"$q 177752 null#{{i18n:Crisis.177751.11}}#$r 177752 0 crisis_guess#{{i18n:Crisis.177751.12}}#$r 177752 25 crisis_sure#{{i18n:Crisis.177751.14}}#$r 177752 50 crisis_humor#{{i18n:Crisis.177751.16}}\"/pause 500/emote Gus 40/pause 500/speak Gus \"{{i18n:Crisis.177751.18}}\"/pause 200/jump farmer 5 true/emote farmer 16 false/pause 1500/speak Gus \"{{i18n:Crisis.177751.19}}\"/pause 100/emote farmer 8/pause 1000/speak Gus \"{{i18n:Crisis.177751.20}}\"/pause 200/emote farmer 32/pause 1000/speak Gus \"{{i18n:Crisis.177751.21}}\"/pause 500/shake Gus 500/pause 500/speak Gus \"{{i18n:Crisis.177751.22}}\"/pause 1000/speak Gus \"{{i18n:Crisis.177751.23{{DSVMuslimGusCompat}}}}\"/pause 500/emote Gus 40/pause 500/speak Gus \"{{i18n:Crisis.177751.24}}\"/pause 100/emote farmer 32/pause 1000/speak Gus \"{{i18n:Crisis.177751.25}}\"/pause 100/emote Gus 28/pause 1000/speak Gus \"{{i18n:Crisis.177751.26-Mild}}\"/pause 100/emote Gus 40/pause 1000/speak Gus \"{{i18n:Crisis.177751.27}}\"/pause 200/shake Gus 300/pause 200/emote Gus 28/pause 1000/speak Gus \"{{i18n:Crisis.177751.28}}\"/pause 200/emote Gus 40/pause 1000/speak Gus \"{{i18n:Crisis.177751.29{{DSVMuslimGusCompat}}}}\"/pause 500/speak Gus \"$q 177753 null#{{i18n:Crisis.177751.30}}#$r 177753 -50 crisis_prices#{{i18n:Crisis.177751.31}}#$r 177753 -25 crisis_joja#{{i18n:Crisis.177751.33}}#$r 177753 0 crisis_way#{{i18n:Crisis.177751.35}}\"/pause 1000/speak Gus \"{{i18n:Crisis.177751.37}}\"/pause 500/emote Gus 40/pause 500/speak Gus \"{{i18n:Crisis.177751.38{{DSVMuslimGusCompat}}}}\"/pause 200/jump farmer 4/emote farmer 36/pause 1000/speak Gus \"{{i18n:Crisis.177751.39}}\"/pause 500/speak Gus \"$q 177754 null#{{i18n:Crisis.177751.40}}#$r 177754 0 crisis_breakfast#{{i18n:Crisis.177751.41}}#$r 177754 0 crisis_breakfast#{{i18n:Crisis.177751.42}}#$r 177754 0 crisis_breakfast#{{i18n:Crisis.177751.43}}\"/pause 1000/stopMusic/pause 100/emote Gus 40/pause 100/emote Gus 40/pause 100/playMusic junimoStarSong/speak Gus \"{{i18n:Crisis.177751.45}}\"/pause 100/emote farmer 32/pause 1000/speak Gus \"{{i18n:Crisis.177751.46}}\"/pause 100/emote farmer 8/pause 1000/speak Gus \"{{i18n:Crisis.177751.47}}\"/pause 500/emote farmer 32/pause 500/speak Gus \"{{i18n:Crisis.177751.48}}\"/pause 100/shake Gus 200/emote Gus 28/pause 100/speak Gus \"{{i18n:Crisis.177751.49}}\"/pause 100/emote farmer 32/pause 200/move farmer 0 2 2/warp farmer -100 -100 true/playSound doorClose false/pause 1000/speak Gus \"{{i18n:Crisis.177751.50}}\"/stopMusic/end",
+				},
+		},
+			
+		{
+			"LogName": "Event 2: Stardrop Breakfast Open for Business!", 
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",			
+			"Entries": {
+				"177752/LocalMail IngredientsReceived/SawEvent 177751": "Saloon1/14 19/farmer -100 -100 0 Gus 18 18 2/skippable/addObject 18 18 186 1/addMailReceived WizardSpoil/addConversationTopic breakfastopen/mail stardropbreakfastopen/pause 1500/shake Gus 200/playSound pickUpItem/removeObject 18 18/pause 1000/move Gus 0 -1 0/shake Gus 200/playSound pickUpItem/pause 500/speak Gus \"{{i18n:Breakfast.177752.1}}\"/pause 1500/playSound doorClose/warp farmer 14 24/pause 500/emote Gus 16/faceDirection Gus 2/speak Gus \"{{i18n:Breakfast.177752.2}}\"/speed Gus 4/advancedMove Gus false -4 0 2 100 0 1 2 100/move farmer 0 -4 0 true/speak Gus \"{{i18n:Breakfast.177752.3}}\"/pause 500/emote Gus 40/pause 500/speak Gus \"{{i18n:Breakfast.177752.4}}\"/pause 500/emote Gus 40/pause 500/shake Gus 200/message \"{{i18n:Breakfast.177752.5}}\"/pause 1000 false/speak Gus \"{{i18n:Breakfast.177752.6}}\"/pause 500/itemAboveHead (O)201/pause 100/message \"{{i18n:Breakfast.177752.7}}\"/pause 100/faceDirection farmer 0/pause 200/speak Gus \"{{i18n:Breakfast.177752.8}}\"/pause 200/emote farmer 32/pause 800/speak Gus \"{{i18n:Breakfast.177752.9}}\"/pause 500/speak Gus \"$q 177755 null#{{i18n:Breakfast.177752.10}}#$r 17775201 0 slogan_mod#{{i18n:Breakfast.177752.11}}#$r 17775202 0 slogan_lotr#{{i18n:Breakfast.177752.12}}#$r 17775203 0 slogan_tiffany#{{i18n:Breakfast.177752.13}}#$r 17775204 0 slogan_club#{{i18n:Breakfast.177752.14}}#$r 17775205 0 slogan_champion#{{i18n:Breakfast.177752.15}}\"/pause 500/speak Gus \"{{i18n:Breakfast.177752.21}}\"/pause 500/speak Gus \"{{i18n:Breakfast.177752.22}}\"/pause 500/speak Gus \"{{i18n:Breakfast.177752.23}}\"/globalFade/viewport -1000 -1000/playSound reward/message \"{{i18n:Breakfast.177752.24}}\"/pause 500/end",
+			},
+		},
+		//17775201: Mod Slogan
+		//17775202: LOTR Slogan
+		//17775203: Breakfast at Tiffany's
+		//17775204: Breakfast Club
+		//17775205: Breakfast of Champions
+			
+			
+		{
+			"LogName": "Event 3: An Infamous Omelet",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",			
+			"Entries": {
+				"177753/SawEvent 3206194/SawEvent 177752/Time 800 1200/DayOfWeek Fri Sat/!ActiveDialogueEvent breakfastopen": "shaneTheme/14 19/farmer -100 -100 0 Gus 14 18 2/skippable/addConversationTopic gusThinking 2/addConversationTopic breakfastpauseagain {{CTDelay}}/animate Gus false true 50 18 18 18 19 19 20 20 19 19 18 18 18 18 19 19 20 20 19 19 18/pause 2000/textAboveHead Gus \"{{i18n:Omelet.177753.1}}\"/pause 2000/playSound doorClose/warp farmer 14 24/pause 500/faceDirection Gus 2 true/move farmer 0 -4 0/speak Gus \"{{i18n:Omelet.177753.2}}\"/pause 500/stopAnimation Gus 0/speak Gus \"{{i18n:Omelet.177753.3}}\"/pause 500/emote farmer 8/pause 500/message \"{{i18n:Omelet.177753.4}}\"/pause 500/speak Gus \"{{i18n:Omelet.177753.5}}\"/pause 100/speak Gus \"{{i18n:Omelet.177753.6}}\"/pause 100/shake Gus 200/pause 100/speak Gus \"{{i18n:Omelet.177753.7}}\"/pause 500/speak Gus \"$q 177756 null#{{i18n:Omelet.177753.8}}#$r 177756 0 omelet_person#{{i18n:Omelet.177753.9}}#$r 177756 0 omelet_deserted#{{i18n:Omelet.177753.11}}#$r 177756 -10 omelet_sucks#{{i18n:Omelet.177753.13}}\"/pause 1000/speak Gus \"{{i18n:Omelet.177753.15}}\"/pause 100/emote farmer 28/emote farmer 12 true/jump farmer 7/pause 1500 false/speak Gus \"{{i18n:Omelet.177753.15.2}}\"/pause 1000/speak Gus \"$q 177757 null#{{i18n:Omelet.177753.16}}#$r 177757 0 omelet_farmeggs#{{i18n:Omelet.177753.17 |farming={{FarmName}}}}#$r 177757 50 omelet_help#{{i18n:Omelet.177753.19}}#$r 177757 10 omelet_beg#{{i18n:Omelet.177753.21}}#$r 177757 -100 omelet_yousuck#{{i18n:Omelet.177753.23}}\"/pause 700/stopMusic/emote Gus 40/pause 500/jump Gus 7 true/emote Gus 16 false/playMusic distantBanjo/speak Gus \"{{i18n:Omelet.177753.25}}\"/pause 500/emote farmer 8/pause 500/speak Gus \"{{i18n:Omelet.177753.26}}\"/pause 100/emote farmer 8/pause 1000/speak Gus \"{{i18n:Omelet.177753.27}}\"/pause 1000/speak Gus \"$q 177758 null#{{i18n:Omelet.177753.28}}#$r 177758 10 omelet_vaguely#{{i18n:Omelet.177753.29}}#$r 177758 25 omelet_jealous#{{i18n:Omelet.177753.31}}#$r 177758 0 omelet_amnesia#{{i18n:Omelet.177753.33}}\"/pause 500/speak Gus \"{{i18n:Omelet.177753.35}}\"/pause 500/emote farmer 16/pause 500/speak Gus \"{{i18n:Omelet.177753.36}}\"/pause 100/emote Gus 40/pause 700/speak Gus \"{{i18n:Omelet.177753.37}}\"/pause 500/speak Gus \"{{i18n:Omelet.177753.38}}\"/pause 100/emote Gus 40/pause 600/speak Gus \"{{i18n:Omelet.177753.39}}\"/pause 100/emote farmer 32/pause 1000/speak Gus \"{{i18n:Omelet.177753.40}}\"/pause 1000/textAboveHead Gus \"{{i18n:Omelet.177753.41}}\"/pause 1000/speak Gus \"{{i18n:Omelet.177753.42}}\"/pause 500/speak Gus \"{{i18n:Omelet.177753.43}}\"/pause 500/emote farmer 16/pause 500/speak Gus \"$q 177759 null#{{i18n:Omelet.177753.44}}#$r 177759 0 omelet_eggs#{{i18n:Omelet.177753.45}}#$r 177759 0 omelet_eggs#{{i18n:Omelet.177753.46}}#$r 177759 10 omelet_eggs#{{i18n:Omelet.177753.47}}#$r 177759 10 omelet_eggs#{{i18n:Omelet.177753.48}}\"/pause 500/speak Gus \"{{i18n:Omelet.177753.50}}\"/pause 200/speak Gus \"{{i18n:Omelet.177753.51}}\"/pause 700/speak Gus \"{{i18n:Omelet.177753.52}}\"/pause 100/emote farmer 32/pause 1000/speak Gus \"{{i18n:Omelet.177753.53}}\"/stopMusic/end",
+				},
+		},
+
+		{
+			"LogName": "Event 4: That's the Ticket (for the Omelet Breakfast)!",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",			
+			"Entries": {
+				"177754/LocalMail OmeletReady/SawEvent 177753": "Saloon1/14 19/farmer -100 -100 0 Gus 18 17 0/skippable/addConversationTopic townbreakfast 7/pause 1500/shake Gus 200/playSound pickUpItem/pause 500/playSound doorClose/warp farmer 14 24/pause 500/emote Gus 16/faceDirection Gus 2/speak Gus \"{{i18n:Ticket.177754.1}}\"/speed Gus 4/advancedMove Gus false -4 0 2 100 0 1 2 100/move farmer 0 -4 0 true/speak Gus \"{{i18n:Ticket.177754.2}}\"/pause 500/emote farmer 32/speak Gus \"{{i18n:Ticket.177754.3}}\"/pause 100/shake Gus 200/playSound pickUpItem/addObject 14 18 809 1/pause 1000/message \"{{i18n:Ticket.177754.4}}\"/pause 500 false/pause 500/speak Gus \"{{i18n:Ticket.177754.5}}\"/pause 100/pause 100/startJittering/pause 100/playSound pickUpItem/removeObject 14 18/pause 100/stopJittering/pause 700/speak Gus \"{{i18n:Ticket.177754.6}}\"/pause 500/speak Gus \"{{i18n:Ticket.177754.7}}\"/pause 500/emote Gus 40/pause 500/speak Gus \"{{i18n:Ticket.177754.8{{DSVMuslimGusCompat}}}}\"/pause 500/emote farmer 32/pause 500/speak Gus \"{{i18n:Ticket.177754.9}}\"/globalFade/viewport -1000 -1000/playSound reward/message \"{{i18n:Ticket.177754.10}}\"/pause 500/end",
+			},
+		},
+		
+		{
+			"LogName": "Event 5: The Stardrop Omelet Breakfast (Finale)",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",			
+			"Entries": {
+				"177755/SawEvent 177754/!ActiveDialogueEvent townbreakfast/DayOfWeek Fri Sat/Time 800 1200/DaysPlayed 113": "50s/14 19/farmer -100 -100 0 Gus 14 18 2 Shane 21 17 2 Leah 2 20 1 Abigail 24 17 2 Sebastian 23 18 1 Sam 25 18 3 Jodi 26 19 3 Kent 27 20 3 Vincent 26 21 3 Jas 25 22 3 Marnie 20 18 3 Lewis 21 22 0 Elliott 3 21 0 Clint 19 23 3 Willy 17 22 2 Robin 18 20 0 Haley 9 20 0 Emily 10 18 2 George 11 23 0 Evelyn 12 21 3 Alex 9 22 1 Maru 5 20 3 Harvey 4 19 2 Pierre 1 22 2 Caroline 3 23 3 Sandy 7 18 1 Pam 11 20 2 Demetrius 16 20 0 {{PennyLeoToken}}/skippable/addConversationTopic completebreakfast 7/mail breakfastDaily/specificTemporarySprite staticSprite LooseSprites\\\\Cursors2 145 193 32 28 10 20.75 8 .15/removeTile 20 18 Buildings/removeTile 24 17 Buildings/removeTile 24 16 Front/animate Shane false true 77 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 24 24 24 23 22 21/pause 1700/pause 1500/speak Gus \"{{i18n:Finale.177755.1}}\"/pause 1000/shake Sam 500/playSound eat/pause 700/textAboveHead Jodi \"{{i18n:Finale.177755.2}}\"/pause 250/pause 250/speak Gus \"{{i18n:Finale.177755.3}}\"/pause 500/message \"{{i18n:Finale.177755.4}}\"/pause 500/playSound doorClose/warp farmer 14 24/pause 500/faceDirection Gus 2 true/move farmer 0 -4 0/speak Gus \"{{i18n:Finale.177755.5}}\"/pause 250/emote farmer 32/pause 500/speak Gus \"{{i18n:Finale.177755.6}}\"/pause 250/move farmer 0 1 2 true/move Evelyn 0 -1 0 false/move farmer -2 0 3/pause 700/startJittering/pause 500/playSound pickUpItem/stopJittering/pause 500/move farmer 2 0 0/move Evelyn 0 1 3 true/move farmer 0 -1 0 false/pause 500/speak Gus \"{{i18n:Finale.177755.7}}\"/stopAnimation Shane/pause 200/shake Sam 200/playSound eat/pause 700/shake Abigail 200/playSound eat/pause 700/shake Leah 200/playSound eat/pause 700/shake Demetrius 200/playSound eat/pause 500/shake Robin 200/playSound eat/pause 500/shake Elliott 200/playSound eat/pause 500/shake Evelyn 200/playSound eat/pause 400/shake George 200/playSound eat/pause 400/shake Alex 200/playSound eat/pause 300/shake Maru 200/playSound eat/pause 300/shake Emily 200/playSound eat/pause 200/shake Haley 200/playSound eat/pause 200/shake Penny 200/playSound eat/pause 200/shake Pam 200/playSound eat/pause 200/shake Pierre 200/playSound eat/pause 500/shake Caroline 200/playSound eat/pause 200/shake Sebastian 200/playSound eat/pause 200/shake Harvey 200/playSound eat/pause 200/shake Shane 200/playSound eat/pause 200/shake Kent 200/playSound eat/pause 200/shake Clint 200/playSound eat/pause 200/shake Jodi 200/playSound eat/pause 200/shake Lewis 200/playSound eat/pause 200/shake Marnie 200/playSound eat/pause 200/shake Willy 200/playSound eat/pause 200/shake Jas 200/playSound eat/pause 200/shake Vincent 200/playSound eat/pause 200/pause 1000/speak Gus \"{{i18n:Finale.177755.8}}\"/stopMusic/pause 1000/message \"{{i18n:Finale.177755.9}}\"/pause 1500/message \"{{i18n:Finale.177755.10}}\"/pause 1000/playMusic SettlingIn/pause 250/speak Leah \"{{i18n:Finale.177755.11}}\"/pause 1000/textAboveHead Sebastian \"{{i18n:Finale.177755.12}}\"/pause 2000/textAboveHead Shane \"{{i18n:Finale.177755.13}}\"/pause 1000/move Vincent 0 -1 1/pause 500/textAboveHead Vincent \"{{i18n:Finale.177755.14}}\"/pause 1000/pause 1000/textAboveHead Kent \"{{i18n:Finale.177755.15}}\"/pause 500/speak Jas \"{{i18n:Finale.177755.16}}\"/pause 800/textAboveHead Marnie \"{{i18n:Finale.177755.17}}\"/move Marnie 0 2 1 true/pause 2000 false/textAboveHead Abigail \"{{i18n:Finale.177755.18}}\"/move Marnie 5 0 2 true/pause 400 false/speak Clint \"{{i18n:Finale.177755.19}}\"/pause 1000/move Marnie 0 1 2/textAboveHead Emily \"{{i18n:Finale.177755.20}}\"/shake Marnie 500 true/pause 2000 false/textAboveHead Clint \"{{i18n:Finale.177755.21}}\"/pause 2000/textAboveHead Maru \"{{i18n:Finale.177755.22}}\"/move Marnie 0 -2 3/pause 700/speak Demetrius \"{{i18n:Finale.177755.23}}\"/move Marnie -5 0 3 true/faceDirection Robin 3 false/pause 1000/textAboveHead Robin \"{{i18n:Finale.177755.24}}\"/pause 100/move Marnie 0 -1 3/pause 1500/textAboveHead Willy \"{{i18n:Finale.177755.25}}\"/pause 2000/textAboveHead Harvey \"{{i18n:Finale.177755.26}}\"/pause 400/faceDirection Pam 0 true/faceDirection Robin 0 false/pause 100/speak Pam \"{{i18n:Finale.177755.27}}\"/pause 400/faceDirection Penny 3/pause 100/textAboveHead Penny \"{{i18n:Finale.177755.28}}\"/pause 500/faceDirection Pierre 1/pause 250/speak Pierre \"{{i18n:Finale.177755.29}}\"/pause 1000/textAboveHead Caroline \"{{i18n:Finale.177755.30}}\"/faceDirection Penny 1/pause 500/emote farmer 28 true/emote Abigail 28 false/pause 700/speak Gus \"{{i18n:Finale.177755.31}}\"/pause 250/emote Marnie 32 true/emote farmer 32 false/pause 250/faceDirection Lewis 3/pause 500/speak Lewis \"{{i18n:Finale.177755.32}}\"/pause 500/speak Elliott \"{{i18n:Finale.177755.33}}\"/pause 500/message \"{{i18n:Finale.177755.107}}\"/pause 500/speak Gus \"{{i18n:Finale.177755.34}}\"/pause 1000/faceDirection Elliott 1/textAboveHead Elliott \"{{i18n:Finale.177755.105}}\"/pause 2000/textAboveHead Sam \"{{i18n:Finale.177755.35}}\"/pause 2000/textAboveHead Shane \"{{i18n:Finale.177755.36}}\"/pause 500/speak Penny \"{{i18n:Finale.177755.37}}\"/pause 250/message \"{{i18n:Finale.177755.38}}\"/pause 500/faceDirection Lewis 0/speak Gus \"{{i18n:Finale.177755.39}}\"/pause 500/speak Haley \"{{i18n:Finale.177755.40}}\"/pause 1000/textAboveHead Alex \"{{i18n:Finale.177755.41}}\"/pause 2000/textAboveHead George \"{{i18n:Finale.177755.42}}\"/pause 800/speak Evelyn \"{{i18n:Finale.177755.43}}\"/pause 250/emote Gus 40/pause 250/speak Gus \"{{i18n:Finale.177755.44}}\"/pause 500/speak Emily \"{{i18n:Finale.177755.45}}\"/pause 250/move Vincent 0 1 3 true/faceDirection Kent 3 false/emote Kent 40/pause 250/speak Kent \"{{i18n:Finale.177755.46}}\"/pause 250/speak Gus \"{{i18n:Finale.177755.47}}\"/pause 250/speak Kent \"{{i18n:Finale.177755.48}}\"/pause 250/faceDirection Jodi 2/pause 100/speak Jodi \"{{i18n:Finale.177755.49}}\"/pause 250/speak Kent \"{{i18n:Finale.177755.50}}\"/pause 250/emote Jodi 32/pause 250/faceDirection Jodi 3/pause 250/speak Gus \"{{i18n:Finale.177755.51}}\"/pause 250/quickQuestion {{i18n:Finale.177755.52}}#{{i18n:Finale.177755.53 |farming={{FarmName}}}}#{{i18n:Finale.177755.55}}#{{i18n:Finale.177755.59}}#(break)addMailReceived stardropPartner\\addMailReceived SpecialOrderChosen\\pause 250\\speak Gus \"{{i18n:Finale.177755.54}}\"\\pause 200(break)addMailReceived marniePartner\\addMailReceived SpecialOrderChosen\\pause 200\\pause 250\\speak Gus \"{{i18n:Finale.177755.56}}\"\\pause 250\\speak Marnie \"{{i18n:Finale.177755.57}}\"\\pause 250\\speak Gus \"{{i18n:Finale.177755.58}}\"\\pause 200(break)addMailReceived partnerShare\\addMailReceived SpecialOrderChosen\\pause 250\\speak Gus \"{{i18n:Finale.177755.60}}\"\\pause 250\\speak Marnie \"{{i18n:Finale.177755.61}}\"\\pause 250\\speak Gus \"{{i18n:Finale.177755.62}}\"\\pause 200/pause 250/speak Gus \"{{i18n:Finale.177755.63}}\"/pause 250/speak Gus \"{{i18n:Finale.177755.64}}\"/pause 250/shake Gus 1000/pause 250/message \"{{i18n:Finale.177755.65}}\"/stopMusic/shake Gus 5000/pause 1000/textAboveHead Elliott \"{{i18n:Finale.177755.66}}\"/pause 1500/textAboveHead Sam \"{{i18n:Finale.177755.67}}\"/pause 2000/textAboveHead Abigail \"{{i18n:Finale.177755.68}}\"/pause 500/playMusic CloudCountry/pause 50/speak Gus \"{{i18n:Finale.177755.69}}\"/pause 1000/textAboveHead Sam \"{{i18n:Finale.177755.70}}\"/pause 1000/textAboveHead Jas \"{{i18n:Finale.177755.71}}\"/pause 1000/textAboveHead Vincent \"{{i18n:Finale.177755.71}}\"/pause 1000/textAboveHead Leah \"{{i18n:Finale.177755.72}}\"/pause 1000/move Abigail 0 2 3/textAboveHead Abigail \"{{i18n:Finale.177755.72}}\"/pause 100/pause 1000/textAboveHead Elliott \"{{i18n:Finale.177755.72}}\"/pause 1000/faceDirection Sebastian 3/textAboveHead Sebastian \"{{i18n:Finale.177755.108}}\"/pause 700/textAboveHead Pierre \"{{i18n:Finale.177755.72}}\"/pause 700/faceDirection Caroline 1/textAboveHead Caroline \"{{i18n:Finale.177755.109}}\"/pause 700/faceDirection Clint 0/textAboveHead Clint \"{{i18n:Finale.177755.109}}\"/pause 700/textAboveHead Emily \"{{i18n:Finale.177755.72}}\"/pause 700/faceDirection Evelyn 0/textAboveHead Evelyn \"{{i18n:Finale.177755.109}}\"/pause 700/textAboveHead Sandy \"{{i18n:Finale.177755.72}}\"/pause 500/textAboveHead Haley \"{{i18n:Finale.177755.109}}\"/pause 400/{{LeoToken}}/faceDirection Penny 3/textAboveHead Penny \"{{i18n:Finale.177755.72}}\"/pause 500/faceDirection Maru 1/textAboveHead Maru \"{{i18n:Finale.177755.72}}\"/pause 500/faceDirection Willy 0/textAboveHead Willy \"{{i18n:Finale.177755.109}}\"/pause 500/textAboveHead Robin \"{{i18n:Finale.177755.72}}\"/pause 500/faceDirection Alex 0/textAboveHead Alex \"{{i18n:Finale.177755.72}}\"/pause 500/textAboveHead Kent \"{{i18n:Finale.177755.109}}\"/pause 500/faceDirection Lewis 3/textAboveHead Lewis \"{{i18n:Finale.177755.72}}\"/pause 500/textAboveHead George \"{{i18n:Finale.177755.72}}\"/pause 500/textAboveHead Demetrius \"{{i18n:Finale.177755.72}}\"/pause 500/textAboveHead Marnie \"{{i18n:Finale.177755.72}}\"/pause 500/textAboveHead Jodi \"{{i18n:Finale.177755.72}}\"/pause 500/faceDirection Harvey 1/textAboveHead Harvey \"{{i18n:Finale.177755.72}}\"/pause 500/faceDirection Shane 3/textAboveHead Shane \"{{i18n:Finale.177755.108}}\"/pause 500/textAboveHead Pam \"{{i18n:Finale.177755.72}}\"/pause 250/speak Gus \"{{i18n:Finale.177755.73}}\"/globalFade/viewport -1000 -1000/pause 250/message \"{{i18n:Finale.177755.74}}\"/pause 250/message \"{{i18n:Finale.177755.75}}\"/pause 250/changeLocation Town/warp Gus 45 73/warp farmer 43 73/faceDirection farmer 1/faceDirection Gus 3/fade/stopMusic/playMusic junimoStarSong/viewport 44 73/pause 1000/speak Gus \"{{i18n:Finale.177755.76}}\"/pause 250/emote farmer 32/pause 250/speak Gus \"{{i18n:Finale.177755.77}}\"/pause 250/speak Gus \"$q 1777510 null#{{i18n:Finale.177755.78}}#$r 1777510 10 finale_pleasure#{{i18n:Finale.177755.79}}#$r 1777510 20 finale_perspective#{{i18n:Finale.177755.81}}#$r 1777510 -50 finale_rewards#{{i18n:Finale.177755.83}}#$r 1777510 50 finale_bored#{{i18n:Finale.177755.85}}#$r 1777510 100 finale_hug#{{i18n:Finale.177755.87}}\"/pause 250/speak Gus \"{{i18n:Finale.177755.89}}\"/pause 250/speak Gus \"{{i18n:Finale.177755.90}}\"/pause 250/emote farmer 32/pause 250/speak Gus \"{{i18n:Finale.177755.91}}\"/pause 250/quickQuestion {{i18n:Finale.177755.92}}#{{i18n:Finale.177755.93}}#{{i18n:Finale.177755.94}}#{{i18n:Finale.177755.95}}#{{i18n:Finale.177755.96}}#{{i18n:Finale.177755.97}}#{{i18n:Finale.177755.98}}#{{i18n:Finale.177755.99}}#{{i18n:Finale.177755.100}}#{{i18n:Finale.177755.101}}(break)addMailReceived FreeLuckyLunch\\addMailReceived FoodChosen(break)addMailReceived FreeSpicyEel\\addMailReceived FoodChosen(break)addMailReceived FreeCrabCakes\\addMailReceived FoodChosen(break)addMailReceived FreeDishOfSea\\addMailReceived FoodChosen(break)addMailReceived FreeCrispyBass\\addMailReceived FoodChosen(break)addMailReceived FreePizza\\addMailReceived FoodChosen(break)addMailReceived FreeBurger\\addMailReceived FoodChosen(break)addMailReceived FreePinkCake\\addMailReceived FoodChosen(break)addMailReceived RandomFreeFood\\addMailReceived FoodChosen/pause 250/speak Gus \"{{i18n:Finale.177755.102}}\"/pause 250/move Gus 0 -1 3 true/move farmer -1 0 3 true/pause 100 false/speak Gus \"{{i18n:Finale.177755.103}}\"/faceDirection farmer 1/pause 250/speak Gus \"{{i18n:Finale.177755.104}}\"/emote farmer 32/move Gus 0 -1 0/playSound doorClose/warp Gus 1000 1000 true/move farmer -10 0 0 true/pause 200/globalFade/viewport -1000 -1000/pause 500/playSound stardrop/message \"{{i18n:Finale.177755.106}}\"/pause 500/end"
+			},
+		},
+			//17775700: Lucky Lunch
+			//17775701: Spicy Eel
+			//17775702: Crab Cakes
+			//17775703: Dish O' The Sea
+			//17775704: Crispy Bass
+			//17775705: Pizza
+			//17775706: Survival Burger
+			//17775707: Pink Cake
+			//17775708: Surprise Option
+
+
+		{
+			"LogName": "Gus Event Responses", //Sorry, I used $q a lot early. By the time I learned otherwise, this was already done and that would be really annoying to rewrite. Sorry to those who see all this patched in.
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Gus",			
+			"Entries": {
+				"crisis_spaghetti": "{{i18n:Crisis.177751.5}}",
+				"crisis_mood": "{{i18n:Crisis.177751.7}}",
+				"crisis_lost": "{{i18n:Crisis.177751.9}}",
+				
+				"crisis_guess": "{{i18n:Crisis.177751.13}}",
+				"crisis_sure": "{{i18n:Crisis.177751.15}}",
+				"crisis_humor": "{{i18n:Crisis.177751.17{{DSVMuslimGusCompat}}}}",
+				
+				"crisis_prices": "{{i18n:Crisis.177751.32}}",
+				"crisis_joja": "{{i18n:Crisis.177751.34}}",
+				"crisis_way": "{{i18n:Crisis.177751.36}}",
+				
+				"crisis_breakfast": "{{i18n:Crisis.177751.44}}",
+				
+				"slogan_mod": "{{i18n:Breakfast.177752.16}}",
+				"slogan_lotr": "{{i18n:Breakfast.177752.17}}",
+				"slogan_tiffany": "{{i18n:Breakfast.177752.18}}",
+				"slogan_club": "{{i18n:Breakfast.177752.19}}",
+				"slogan_champion": "{{i18n:Breakfast.177752.20}}",
+				
+				"omelet_person": "{{i18n:Omelet.177753.10}}",
+				"omelet_deserted": "{{i18n:Omelet.177753.12{{DSVMuslimGusCompat}}}}",
+				"omelet_sucks": "{{i18n:Omelet.177753.14}}",
+				
+				"omelet_farmeggs": "{{i18n:Omelet.177753.18}}",
+				"omelet_help": "{{i18n:Omelet.177753.20}}",
+				"omelet_beg": "{{i18n:Omelet.177753.22}}",
+				"omelet_yousuck": "{{i18n:Omelet.177753.24}}",
+				
+				"omelet_vaguely": "{{i18n:Omelet.177753.30}}",
+				"omelet_jealous": "{{i18n:Omelet.177753.32}}",
+				"omelet_amnesia": "{{i18n:Omelet.177753.34}}",
+				
+				"omelet_eggs": "{{i18n:Omelet.177753.49}}",
+				
+				"finale_pleasure": "{{i18n:Finale.177755.80}}",
+				"finale_perspective": "{{i18n:Finale.177755.82}}",
+				"finale_rewards": "{{i18n:Finale.177755.84}}",
+				"finale_bored": "{{i18n:Finale.177755.86}}",
+				"finale_hug": "{{i18n:Finale.177755.88}}",
+			},
+		},
+		
+		{
+			"LogName": "Gus Event Responses", 
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Gus",			
+			"Entries": {				
+				"crisis_prices": "{{i18n:Crisis.177751.32-6}}",
+			},
+			"When": {
+				"HasSeenEvent": "3910975",
+			},
+		},
+		
+		{
+			"LogName": "Gus Event Responses", 
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Gus",			
+			"Entries": {				
+				"crisis_prices": "{{i18n:Crisis.177751.32-M}}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+			},
+		},
+		
+		//Auxiliary Events
+		
+		
+		//Auxiliary Event 1
+		{
+			"LogName": "Auxiliary Event 1: Kent (the) Cook", 
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",			
+			"Entries": {
+				"177756/SawEvent 177755/!ActiveDialogueEvent completebreakfast": "shaneTheme/14 19/farmer -100 -100 0 Kent 14 17 1 Gus 15 17 3/skippable/pause 1500/pause 500/emote Gus 40/speak Gus \"{{i18n:KentCook.177756.1}}\"/pause 250/emote Kent 32/pause 250/speak Kent \"{{i18n:KentCook.177756.2}}\"/pause 500/emote Gus 28/pause 500/speak Gus \"{{i18n:KentCook.177756.3}}\"/pause 500/shake Gus 1000/pause 500 false/speak Kent \"{{i18n:KentCook.177756.4}}\"/pause 100/message \"{{i18n:KentCook.177756.5}}\"/pause 100/pause 200/speak Kent \"{{i18n:KentCook.177756.6}}\"/pause 200/pause 200/speak Kent \"{{i18n:KentCook.177756.7}}\"/pause 500/speak Gus \"{{i18n:KentCook.177756.8}}\"/pause 500/shake Kent 200/message \"{{i18n:KentCook.177756.9}}\"/pause 500/speak Kent \"{{i18n:KentCook.177756.10}}\"/pause 250/emote Kent 32 true/emote Gus 32 false/pause 1500/globalFade/viewport -1000 -1000/playSound reward/message \"{{i18n:KentCook.177756.11}}\"/pause 500/end",
+			},
+		},
+		
+		//Auxiliary Event 2 - Two Variants
+		
+		{
+			"LogName": "Auxiliary Event 2: A Second Chance for Shane (officially 'A New Job for Shane')", 
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",			
+			"Entries": {
+				"177757/SawEvent 177755/SawEvent 191393/!ActiveDialogueEvent completebreakfast/Time 1700 2400": "shaneTheme/14 19/farmer -100 -100 0 Shane 21 17 2 Gus 10 18 2/skippable/removeTile 20 18 Buildings/animate Shane false true 77 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 24 24 24 23 22 21/pause 1500/pause 500/speak Shane \"{{i18n:ShaneJob.177757.1}}\"/pause 1500/shake Shane 2000/pause 2000/emote Shane 28/pause 500/stopAnimation Shane 0/advancedMove Shane false 0 1 3 100 -1 0 3 100/pause 500/speak Shane \"{{i18n:ShaneJob.177757.2}}\"/pause 100/emote Gus 28/pause 100/speed Gus 3/move Gus 8 0 1/pause 500/playSound pickUpItem/pause 500/playSound glug/pause 500/playSound glug/pause 500/playSound glug/pause 1000/speak Shane \"{{i18n:ShaneJob.177757.3}}\"/pause 500/emote Shane 40/speak Shane \"{{i18n:ShaneJob.177757.4}}\"/pause 500/speak Gus \"{{i18n:ShaneJob.177757.5}}\"/pause 100/emote Shane 12/pause 500/speak Shane \"{{i18n:ShaneJob.177757.6}}\"/pause 500/shake Shane 1000/emote Shane 12/pause 500/speak Shane \"{{i18n:ShaneJob.177757.7}}\"/pause 500/shake Shane 5000/speak Shane \"{{i18n:ShaneJob.177757.8}}\"/pause 250/emote Shane 28/pause 250/speak Shane \"{{i18n:ShaneJob.177757.9}}\"/pause 200/emote Gus 40/pause 200/speak Gus \"{{i18n:ShaneJob.177757.10}}\"/pause 400/emote Shane 12/pause 400/speak Shane \"{{i18n:ShaneJob.177757.11}}\"/pause 250/emote Gus 28/pause 250/message \"{{i18n:ShaneJob.177757.12}}\"/pause 250/pause 250/speak Gus \"{{i18n:ShaneJob.177757.13}}\"/pause 250/pause 250/speak Shane \"{{i18n:ShaneJob.177757.14}}\"/pause 250/pause 250/speak Gus \"{{i18n:ShaneJob.177757.15}}\"/pause 250/emote Shane 40/pause 250/speak Shane \"{{i18n:ShaneJob.177757.16}}\"/pause 500/speak Gus \"{{i18n:ShaneJob.177757.17}}\"/pause 500/speak Shane \"{{i18n:ShaneJob.177757.18}}\"/pause 500/speak Gus \"{{i18n:ShaneJob.177757.19}}\"/pause 500/shake Shane 3000/pause 2000/speak Shane \"{{i18n:ShaneJob.177757.20}}\"/pause 250/emote Gus 32/pause 250/speak Gus \"{{i18n:ShaneJob.177757.21}}\"/pause 250/emote Shane 40/pause 250/speak Shane \"{{i18n:ShaneJob.177757.22}}\"/pause 500/speak Gus \"{{i18n:ShaneJob.177757.23}}\"/pause 250/emote Shane 40/pause 250/speak Shane \"{{i18n:ShaneJob.177757.24}}\"/pause 500/globalFade/viewport -1000 -1000/playSound reward/message \"{{i18n:ShaneJob.177757.25}}\"/pause 500/end",
+			},
+			"When": {
+				"CCJob": "Shane",
+			},
+		},
+		
+		{
+			"LogName": "Auxiliary Event 2: The Search for More Money (for Sam) (officially 'A New Job for Sam')", 
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",			
+			"Entries": {
+				"177758/SawEvent 177755/SawEvent 191393/!ActiveDialogueEvent completebreakfast/Time 600 1200": "Saloon1/14 19/farmer -100 -100 0 Sam -200 -200 0 Gus 17 18 2/skippable/pause 1500/playSound doorClose/warp Sam 14 24/pause 500/speak Sam \"{{i18n:SamJob.177758.1}}\"/speed Sam 4/advancedMove Sam false 0 -3 1 100 3 0 4 100 0 -1 4 100/pause 500/speak Gus \"{{i18n:SamJob.177758.2}}\"/pause 500/playSound pickUpItem/playSound furnace/pause 1000/speak Sam \"{{i18n:SamJob.177758.3}}\"/pause 500/emote Gus 40/speak Gus \"{{i18n:SamJob.177758.4}}\"/pause 1000/speak Sam \"{{i18n:SamJob.177758.5}}\"/pause 100/speak Sam \"{{i18n:SamJob.177758.6}}\"/pause 100/emote Gus 40/pause 200/speak Gus \"{{i18n:SamJob.177758.7}}\"/pause 800/speak Sam \"{{i18n:SamJob.177758.8}}\"/pause 250/emote Gus 40/pause 250/speak Gus \"{{i18n:SamJob.177758.9}}\"/pause 250/emote Sam 16/pause 250/speak Sam \"{{i18n:SamJob.177758.10}}\"/pause 250/emote Gus 32/pause 250/speak Gus \"{{i18n:SamJob.177758.11}}\"/pause 250/emote Sam 32/pause 250/speak Sam \"{{i18n:SamJob.177758.12}}\"/pause 500/globalFade/viewport -1000 -1000/playSound reward/message \"{{i18n:SamJob.177758.13}}\"/pause 500/end",
+			},
+			"When": {
+				"CCJob": "Sam",
+			},
+		},
+		
+		//Auxiliary Event 3 (CCR ONLY) - Health Food Thursdays
+
+		{
+			"LogName": "Auxiliary Event 3: Part of a Balanced, Healthy Breakfast", 
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",			
+			"Entries": {
+				"177759/SawEvent 177755/SawEvent 191393/SawEvent 69660003/!ActiveDialogueEvent completebreakfast/Time 600 1200": "jaunty/14 19/farmer -100 -100 0 Leah -200 -200 0 Gus 17 18 2/skippable/pause 1500/playSound doorClose/warp Leah 14 24/pause 500/speak Leah \"{{i18n:LeahFood.177759.1}}\"/advancedMove Leah false 0 -3 1 10 3 0 4 10 0 -1 4 10/pause 1000/speak Gus \"{{i18n:LeahFood.177759.2}}\"/pause 1000/playSound pickUpItem/pause 1000/message \"{{i18n:LeahFood.177759.3}}\"/pause 500/speak Leah \"{{i18n:LeahFood.177759.4}}\"/pause 500/emote Gus 28/pause 500/speak Gus \"{{i18n:LeahFood.177759.5}}\"/pause 200/emote Leah 8/pause 200/speak Leah \"{{i18n:LeahFood.177759.6}}\"/pause 100/emote Gus 40/pause 200/speak Gus \"{{i18n:LeahFood.177759.7}}\"/pause 250/emote Leah 16/pause 250/speak Leah \"{{i18n:LeahFood.177759.8}}\"/pause 250/emote Gus 40/pause 250/speak Gus \"{{i18n:LeahFood.177759.9}}\"/pause 250/pause 250/speak Leah \"{{i18n:LeahFood.177759.10}}\"/pause 250/pause 250/speak Gus \"{{i18n:LeahFood.177759.11}}\"/pause 250/emote Leah 40/pause 250/speak Leah \"{{i18n:LeahFood.177759.12}}\"/pause 500/speak Gus \"{{i18n:LeahFood.177759.13}}\"/pause 500/speak Leah \"{{i18n:LeahFood.177759.14}}\"/pause 500/emote Gus 40/pause 500/speak Gus \"{{i18n:LeahFood.177759.15}}\"/pause 400/speak Leah \"{{i18n:LeahFood.177759.16}}\"/pause 400/speak Gus \"{{i18n:LeahFood.177759.17}}\"/pause 500/emote Leah 32/pause 500/speak Leah \"{{i18n:LeahFood.177759.18}}\"/pause 500/globalFade/viewport -1000 -1000/playSound reward/message \"{{i18n:LeahFood.177759.19}}\"/pause 500/end",
+			},
+			"When": {
+				"HasMod": "LemurKat.CommunityCenter.CP",
+			},
+		},
+			
+		
+		//WIZARD EVENTS
+		
+		
+		//Event 1: The Magic Decays
+		
+		{
+			"LogName": "Wizard Sidequest: Resource Rot: The Magic Decays",
+			"Action": "EditData",
+			"Target": "Data/Events/WizardHouse",			
+			"Entries": {
+				"1777510/SawEvent 177752/LocalMail WizardSpoil": "WizardSong/-1000 -1000/farmer 8 24 0 Wizard 10 15 2/skippable/addObject 10 17 747 1/addConversationTopic resourcerot/addConversationTopic breakfastpausewizard {{CTDelay}}/addMailReceived wizardBreakfastBundle/viewport 8 18 true/move farmer 0 -3 0/pause 1000/speak Wizard \"{{i18n:Magic.1777510.1}}\"/pause 800/move Wizard -2 0 3 false/move Wizard 0 2 2/pause 700/speak Wizard \"{{i18n:Magic.1777510.2}}\"/pause 500/emote farmer 8/move Wizard 0 1 2/speak Wizard \"{{i18n:Magic.1777510.3}}\"/pause 700/emote Wizard 40/pause 800/speak Wizard \"{{i18n:Magic.1777510.4}}\"/pause 500/speak Wizard \"$q 1777513 null#{{i18n:Magic.1777510.5}}#$r 1777513 0 magic_junimo#{{i18n:Magic.1777510.6}}#$r 1777513 0 magic_fairy#{{i18n:Magic.1777510.8}}#$r 1777513 0 magic_ignorance#{{i18n:Magic.1777510.10}}#$r 1777513 0 magic_whocares#{{i18n:Magic.1777510.12}}\"/faceDirection Wizard 1/pause 1000/speak Wizard \"{{i18n:Magic.1777510.14}}\"/move Wizard 0 -1 1/pause 500/emote Wizard 40/pause 500/speak Wizard \"{{i18n:Magic.1777510.15}}\"/pause 1000/showFrame Wizard 0/pause 500/speak Wizard \"$q 1777514 null#{{i18n:Magic.1777510.16}}#$r 1777514 0 magic_exasperated#{{i18n:Magic.1777510.17}}#$r 1777514 0 magic_raisedeyebrow#{{i18n:Magic.1777510.19}}#$r 1777514 0 magic_shutupalready#{{i18n:Magic.1777510.21 |Wizard={{Wizard}}}}\"/pause 1000/move farmer 0 -1 0/emote farmer 8/pause 1000/speak Wizard \"{{i18n:Magic.1777510.23}}\"/move Wizard 0 1 2/speak Wizard \"{{i18n:Magic.1777510.24}}\"/pause 100/emote farmer 16 true/jump farmer 7/pause 1000 false/speak Wizard \"{{i18n:Magic.1777510.25}}\"/pause 800/speak Wizard \"{{i18n:Magic.1777510.26}}\"/pause 500/emote farmer 8/pause 500/emote Wizard 40/speak Wizard \"{{i18n:Magic.1777510.27}}\"/pause 500/emote farmer 28/pause 500/speak Wizard \"{{i18n:Magic.1777510.28}}\"/pause 200/pause 800/speak Wizard \"$q 1777515 null#{{i18n:Magic.1777510.29}}#$r 1777515 0 magic_bundle#{{i18n:Magic.1777510.30}}#$r 1777515 0 magic_town#{{i18n:Magic.1777510.32| Wizard={{Wizard}}}}#$r 1777515 0 magic_farmer#{{i18n:Magic.1777510.34}}\"/pause 800/faceDirection Wizard 1/speak Wizard \"{{i18n:Magic.1777510.36}}\"/pause 500/emote farmer 32/pause 500/move farmer 0 10 0 true/globalFade .008/viewport -1000 -1000/pause 2000/message \"{{i18n:Magic.1777510.37}}\"/end warpOut",
+			},
+			"When": {
+				"WizardPlot": "enabled",
+			},
+		},
+			
+			
+		//Event 2: The Magic Restored
+		{
+			"LogName": "Wizard Sidequest: Resource Rejuvenation: The Magic Restored",
+			"Action": "EditData",
+			"Target": "Data/Events/WizardHouse",			
+			"Entries": {
+				"1777511/SawEvent 1777510/LocalMail breakfastBundle": "WizardSong/-1000 -1000/farmer 8 24 0 Wizard 10 21 0 Junimo 10 17 2/skippable/mail wizardBreakfast/removeTile 10 19 Front/removeTile 9 21 Buildings/removeTile 10 20 Buildings/removeTile 9 22 Buildings/removeTile 10 21 Buildings/removeTile 10 22 Buildings/removeTile 11 21 Buildings/removeTile 11 22 Buildings/removeTile 12 22 Buildings/removeTile 12 21 Front/removeTile 10 22 Front/removeTile 9 20 Front/removeTile 10 20 Front/removeTile 11 20 Front/removeTile 10 21 Front/positionOffset Junimo 4 32/specificTemporarySprite junimoCage/viewport 8 18 true/pause 3000/playSound junimoMeep1/pause 1000/textAboveHead Junimo \"{{i18n:Bundle.1777511.1}}\"/pause 1000/playSound dwop/faceDirection Wizard 2 true/showFrame Wizard 17/pause 500/playSound wand/screenFlash .8/warp Junimo -3000 -3000/specificTemporarySprite junimoCageGone/pause 1000/showFrame Wizard 2/faceDirection Wizard 2/pause 500/speak Wizard \"{{i18n:Bundle.1777511.2}}\"/pause 1000/move farmer 0 -3 1/faceDirection Wizard 3/pause 500/emote farmer 8/speak Wizard \"{{i18n:Bundle.1777511.3}}\"/pause 500/emote farmer 32/pause 500/speak Wizard \"{{i18n:Bundle.1777511.4}}\"/pause 1000/message \"{{i18n:Bundle.1777511.5 |Wizard={{Wizard}}}}\"/pause 500/emote farmer 12/pause 500/move Wizard -1 0 3/speak Wizard \"{{i18n:Bundle.1777511.6}}\"/pause 700/speak Wizard \"$q 1777516 null#{{i18n:Bundle.1777511.7}}#$r 1777516 0 bundle_breakfast#{{i18n:Bundle.1777511.8}}#$r 1777516 0 bundle_stardrop#{{i18n:Bundle.1777511.10}}#$r 1777516 0 bundle_joke#{{i18n:Bundle.1777511.12}}\"/pause 500/move Wizard 1 0 3/emote Wizard 40/message \"{{i18n:Bundle.1777511.14 |Wizard={{Wizard}}}}\"/pause 1000/speak Wizard \"{{i18n:Bundle.1777511.15}}\"/pause 700/emote farmer 48/pause 200/emote farmer 8/pause 250/speak Wizard \"{{i18n:Bundle.1777511.16}}\"/pause 400/emote farmer 28/speak Wizard \"{{i18n:Bundle.1777511.17}}\"/pause 500/move farmer 0 2 2 true/move Wizard -2 0 2 false/pause 50/speak Wizard \"{{i18n:Bundle.1777511.18}}\"/faceDirection farmer 0/emote farmer 8/pause 500/speak Wizard \"{{i18n:Bundle.1777511.19}}\"/pause 800/speak Wizard \"{{i18n:Bundle.1777511.20}}\"/pause 500/emote farmer 28/pause 500/move farmer 0 10 2 true/move Wizard 0 -10 0 true/globalFade .007/specificTemporarySprite junimoCageGone2/viewport -1000 -1000/pause 300/end warpOut",
+			},
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false",
+				"WizardPlot": "enabled",
+			},
+		},
+		
+		
+		{
+			"LogName": "Wizard Sidequest: Resource Rejuvenation: The Magic Restored (SVE Installed)",
+			"Action": "EditData",
+			"Target": "Data/Events/WizardHouse",			
+			"Entries": {
+				"1777511/SawEvent 1777510/LocalMail breakfastBundle": "WizardSong/-1000 -1000/farmer 8 24 0 Wizard 10 21 0 Junimo 10 17 2/skippable/mail wizardBreakfast/positionOffset Junimo 4 32/specificTemporarySprite junimoCage/viewport 8 18 true/pause 3000/playSound junimoMeep1/pause 1000/textAboveHead Junimo \"{{i18n:Bundle.1777511.1}}\"/pause 1000/playSound dwop/faceDirection Wizard 2 true/showFrame Wizard 17/pause 500/playSound wand/screenFlash .8/warp Junimo -3000 -3000/specificTemporarySprite junimoCageGone/pause 1000/showFrame Wizard 2/faceDirection Wizard 2/pause 500/speak Wizard \"{{i18n:Bundle.1777511.2}}\"/pause 1000/move farmer 0 -3 1/faceDirection Wizard 3/pause 500/emote farmer 8/speak Wizard \"{{i18n:Bundle.1777511.3}}\"/pause 500/emote farmer 32/pause 500/speak Wizard \"{{i18n:Bundle.1777511.4}}\"/pause 1000/message \"{{i18n:Bundle.1777511.5 |Wizard={{Wizard}}}}\"/pause 500/emote farmer 12/pause 500/move Wizard -1 0 3/speak Wizard \"{{i18n:Bundle.1777511.6}}\"/pause 700/speak Wizard \"$q 1777516 null#{{i18n:Bundle.1777511.7}}#$r 1777516 0 bundle_breakfast#{{i18n:Bundle.1777511.8}}#$r 1777516 0 bundle_stardrop#{{i18n:Bundle.1777511.10}}#$r 1777516 0 bundle_joke#{{i18n:Bundle.1777511.12}}#$r 1777516 0 bundle_outrage#{{i18n:Bundle.1777511.21}}\"/pause 500/move Wizard 1 0 3/emote Wizard 40/message \"{{i18n:Bundle.1777511.14 |Wizard={{Wizard}}}}\"/pause 1000/speak Wizard \"{{i18n:Bundle.1777511.15}}\"/pause 700/emote farmer 48/pause 200/emote farmer 8/pause 250/speak Wizard \"{{i18n:Bundle.1777511.16}}\"/pause 400/emote farmer 28/speak Wizard \"{{i18n:Bundle.1777511.17}}\"/pause 500/move farmer 0 2 2 true/move Wizard -2 0 2 false/pause 50/speak Wizard \"{{i18n:Bundle.1777511.18}}\"/faceDirection farmer 0/emote farmer 8/pause 500/speak Wizard \"{{i18n:Bundle.1777511.19}}\"/pause 800/speak Wizard \"{{i18n:Bundle.1777511.20}}\"/pause 500/emote farmer 28/pause 500/move farmer 0 10 2 true/move Wizard 0 -10 0 true/globalFade .007/specificTemporarySprite junimoCageGone2/viewport -1000 -1000/pause 300/end warpOut",
+			},
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"WizardPlot": "enabled",
+			},
+		},
+		
+		
+		
+		{
+			"LogName": "Wizard Event Responses", //Again, I learned $q first, sorry.
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Wizard",			
+			"Entries": {
+				"magic_junimo": "{{i18n:Magic.1777510.7}}",
+				"magic_fairy": "{{i18n:Magic.1777510.9}}",
+				"magic_ignorance": "{{i18n:Magic.1777510.11}}",
+				"magic_whocares": "{{i18n:Magic.1777510.13}}",
+				
+				"magic_exasperated": "{{i18n:Magic.1777510.18}}",
+				"magic_raisedeyebrow": "{{i18n:Magic.1777510.20}}",
+				"magic_shutupalready": "{{i18n:Magic.1777510.22}}",
+				
+				"magic_bundle": "{{i18n:Magic.1777510.31}}",
+				"magic_town": "{{i18n:Magic.1777510.33}}",
+				"magic_farmer": "{{i18n:Magic.1777510.35}}",
+				
+				"bundle_breakfast": "{{i18n:Bundle.1777511.9}}",
+				"bundle_stardrop": "{{i18n:Bundle.1777511.11}}",
+				"bundle_joke": "{{i18n:Bundle.1777511.13}}",
+				"bundle_outrage": "{{i18n:Bundle.1777511.22}}",
+			},
+		},
+		
+		{
+			"LogName": "Wizard Event Response - Bonus", //Wizard recognizes they've done a special order before
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Wizard",			
+			"Entries": {
+				"magic_town": "{{i18n:Magic.1777510.33-SO}}",
+			},
+			"When": {
+				"HasFlag": "WizardReward2, WizardReward",
+			},
+		},
+		
+		//Event Dialogue Changes
+		
+		//Event 1 (World State alterations)
+		{
+			"LogName": "Event 1: Shane Replacer",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177751/SawEvent 96/DaysPlayed 84": {
+					84: "speak Gus \"{{i18n:Crisis.177751.26}}\"",
+				}
+			},
+			"When": {
+				"EventDialogue": "serious",
+			},
+        },
+		
+		{
+			"LogName": "Event 1: Shane Replacer",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177751/SawEvent 96/DaysPlayed 84": {
+					84: "speak Gus \"{{i18n:Crisis.177751.26-6}}\"",
+				}
+			},
+			"When": {
+				"HasSeenEvent": "3910975",
+			},
+        },
+		
+		{
+			"LogName": "Event 1: Shane Replacer",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177751/SawEvent 96/DaysPlayed 84": {
+					84: "speak Gus \"{{i18n:Crisis.177751.26-M{{DSVMuslimGusCompat}}}}\"",
+				}
+			},
+			"When": {
+				"relationship:Shane": "married", //PPAF variant in PPAF compat universal
+				"HasMod |contains=tenthousandcats.ImmersiveCShane": "false", //IC-S is not allowed this line
+			},
+        },
+		
+		{
+			"LogName": "Event 1: Clint Replacer",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177751/SawEvent 96/DaysPlayed 84": {
+					88: "speak Gus \"{{i18n:Crisis.177751.27-E}}\"",
+				}
+			},
+			"When": {
+				"relationship:Emily": "married", //PPAF variant in PPAF compat universal (PPAFBreakfast)
+				"HasMod |contains=PPAF.Core": "false",
+			},
+        },
+		
+		{
+			"LogName": "Event 1: Clint Replacer",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177751/SawEvent 96/DaysPlayed 84": {
+					88: "speak Gus \"{{i18n:Crisis.177751.27-CR}}\"",
+				}
+			},
+			"When": {
+				"HasMod": "agentlyoko.rewrittenclint", //Clint Rewritten True is the only thing here and should apply over the above. Duplicate in PPAF as an override to compat with PPAF.
+			},
+        },
+		
+		//Event 2 (Spoilage installed/Wizard Plot disabled)
+		{
+			"LogName": "Event 2: Spoilage Replacer",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177752/LocalMail IngredientsReceived/SawEvent 177751": {
+					32: "speak Gus \"{{i18n:Breakfast.177752.4-S}}\"",
+				}
+			},
+			"When": {
+				"WizardPlot": "disabled",
+			},
+        },
+		
+		//Event 4 (Player is getting all the eggs)
+		{
+			"LogName": "Event 4: Duck Eggs Replacer",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177754/LocalMail OmeletReady/SawEvent 177753": {
+					18: "speak Gus \"{{i18n:Ticket.177754.2-I}}\"",
+				}
+			},
+			"When": {
+				"DuckEggs": "100, 200",
+			},
+        },
+		
+		//Event 5 (Player obtained all the eggs)
+		{
+			"LogName": "Event 5: Duck Eggs Replacer",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177755/SawEvent 177754/!ActiveDialogueEvent townbreakfast/DayOfWeek Fri Sat/Time 800 1200/DaysPlayed 113": {
+					207: "speak Gus \"{{i18n:Finale.177755.31-I}}\"",
+					209: "emote farmer 32",
+					210: "pause 200",
+				},
+			},
+			"When": {
+				"DuckEggs": "100, 200",
+				"HasSeenEvent": "177754", //In multiplayer, this somehow gives a warn message if this isn't done. I may end up getting reports on it, but hopefully it's few and far between.
+			},
+        },
+		
+		//Auxiliary Event 2A Replacers (Shane World State)
+		{
+			"LogName": "Shane Event: Line Replacers",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177757/SawEvent 177755/SawEvent 191393/!ActiveDialogueEvent completebreakfast/Time 1700 2400": {
+					17: "speak Shane \"{{i18n:ShaneJob.177757.2-6}}\"",
+				}
+			},
+			"When": {
+				"HasSeenEvent": "3910975", //6 Heart Seen - no matter what, he'll drink Joja Cola if this is seen.
+				"CCJob": "Shane",
+			},
+        },
+		
+		{
+			"LogName": "Shane Event: Line Replacers",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177757/SawEvent 177755/SawEvent 191393/!ActiveDialogueEvent completebreakfast/Time 1700 2400": {
+					49: "speak Shane \"{{i18n:ShaneJob.177757.8-6}}\"",
+				}
+			},
+			"When": {
+				"HasSeenEvent": "3910975", //6 Heart Seen
+				"CCJob": "Shane",
+			},
+        },
+		
+		{
+			"LogName": "Shane Event: Line Replacers",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"177757/SawEvent 177755/SawEvent 191393/!ActiveDialogueEvent completebreakfast/Time 1700 2400": {
+					49: "speak Shane \"{{i18n:ShaneJob.177757.8-M}}\"",
+				}
+			},
+			"When": {
+				"relationship:Shane": "married", //No PPAF variant necessary - works platonic or romantic.
+				"CCJob": "Shane",
+			},
+        },	
+	]
+}

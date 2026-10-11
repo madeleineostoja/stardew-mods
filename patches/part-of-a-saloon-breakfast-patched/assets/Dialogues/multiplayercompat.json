@@ -1,0 +1,394 @@
+{
+	"Changes":[
+//This is the multiplayer compatibility document. All of these should ONLY apply when not married to the character in question. Most are only targeting marriage schedule strings, but some target Heart differences.
+
+	//Bachelorettes
+	
+		//Abigail
+		{
+			"LogName": "Abigail Schedule Strings - Breakfast Time, Multiplayer Patch",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Abigail",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Abigail.Breakfast.Thursday}}",
+				"MarriageMines": "{{i18n:SB.Abigail.Mines.NoSamSeb}}",
+				"breakfastSun": "{{i18n:SB.Abigail.Breakfast.Sunday}}",
+				"breakfastMarriageSun": "{{i18n:SB.Abigail.Breakfast.Sunday}}",
+				"bandmarriage": "{{i18n:SB.Abigail.BandPractice}}",
+				"MarriageMines2": "{{i18n:SB.Abigail.Mines}}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Abigail.Breakfast.Thursday.NoFam}}", //Used if Pierreoline schedule changes are disabled.
+				"breakfastMarriageSunAlt": "{{i18n:SB.Abigail.Breakfast.Sunday.NoSamSeb}}",
+			},
+			"When": {
+				"relationship:Abigail |contains=married": "false",
+			},
+		},
+		
+		//Leah
+		{
+			"LogName": "Leah Schedule Strings - Breakfast Time, Multiplayer Patch",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Leah",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Leah.Breakfast.Tuesday}}",
+				
+				//Alt Lines (No Elliott)
+				"breakfastMarriageAlt": "{{i18n:SB.Leah.Breakfast.Tuesday.NoElliott}}",
+				
+				//Thursday Lines (CCR compat)
+				"breakfastCashierMarriage": "{{i18n:SB.Leah.Breakfast.Thursday}}",
+			},
+			"When": {
+				"relationship:Leah |contains=married": "false",
+			},
+		},
+		
+		//Penny
+		{
+			"LogName": "Penny Schedule Strings - Breakfast Time, Multiplayer Patch",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Penny",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Penny.Breakfast.Thursday}}",
+				"breakfastMarriageSun": "{{i18n:SB.Penny.Breakfast.Sunday}}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Penny.Breakfast.Thursday.NoPam}}",
+				"breakfastMarriageSunAlt": "{{i18n:SB.Penny.Breakfast.Sunday.NoMaru}}",
+			},
+			"When": {
+				"relationship:Penny |contains=married": "false",
+			},
+		},
+		
+		//Maru
+		{
+			"LogName": "Maru Schedule Strings - Breakfast Time, Multiplayer Patch",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Maru",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Maru.Breakfast.Wednesday}}",
+				"breakfastMarriageSun": "{{i18n:SB.Maru.Breakfast.Sunday}}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Maru.Breakfast.Wednesday.NoFam}}",
+				"breakfastMarriageSunAlt": "{{i18n:SB.Maru.Breakfast.Sunday.NoPenny}}",
+			},
+			"When": {
+				"relationship:Maru |contains=married": "false",
+			},
+		},
+		
+		//Haley
+		{
+			"LogName": "Haley Schedule Strings - Breakfast Time, Multiplayer Patch", //High Hearts
+			"Action": "EditData",
+			"Target": "Strings/schedules/Haley",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Haley.Breakfast.Saturday.High}}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Haley.Breakfast.Saturday.High.NoEmily}}",
+			},
+			"When": {
+				"relationship:Haley |contains=married": "false",
+			},
+		},
+		
+		{
+			"LogName": "Haley Schedule Strings - Breakfast Time, Multiplayer Patch, Low Hearts",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Haley",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Haley.Breakfast.Saturday}}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Haley.Breakfast.Saturday.NoEmily}}",
+			},
+			"When": {
+				"relationship:Haley |contains=married": "false",
+				"Hearts:Haley": "0, 1, 2, 3, 4, 5",
+			},
+		},
+		
+			//Multiplayer Patch - Low heart schedule, but farmhand has high hearts
+		{
+			"LogName": "Haley Schedule Strings - Breakfast Time, Multiplayer, Farmhand High Hearts",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Haley",
+			"Entries":{
+				"breakfastSat": "{{i18n:SB.Haley.Breakfast.Saturday.High}}",
+				
+				//Alt Lines
+				"breakfastSatAlt": "{{i18n:SB.Haley.Breakfast.Saturday.High.NoEmily}}",
+			},
+			"When": {
+				"Hearts:Haley": "6, 7, 8, 9, 10",
+			},
+		},
+		
+			//Multiplayer Patch - High Heart Schedule, but farmhand has low hearts
+		{
+			"LogName": "Haley Schedule Strings - Breakfast Time, Multiplayer, Farmhand Low Hearts",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Haley",
+			"Entries":{
+				"breakfastSatHigh": "{{i18n:SB.Haley.Breakfast.Saturday}}",
+				
+				//Alt Lines
+				"breakfastSatHighAlt": "{{i18n:SB.Haley.Breakfast.Saturday.NoEmily}}",
+			},
+			"When": {
+				"Hearts:Haley": "0, 1, 2, 3, 4, 5",
+			},
+		},
+		
+		//Emily
+		{
+			"LogName": "Emily Schedule Strings - Breakfast Time, Multiplayer Patch",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Emily",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Emily.Breakfast.Saturday}}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Emily.Breakfast.Saturday.NoHaley}}",
+			},
+			"When": {
+				"relationship:Emily |contains=married": "false",
+			},
+		},
+		
+	//Bachelors
+		
+		//Harvey
+		{
+			"LogName": "Harvey Schedule Strings - Breakfast Time, Multiplayer Patch",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Harvey",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Harvey.Breakfast.Wednesday}}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Harvey.Breakfast.Wednesday.NoMaru}}",
+			},
+			"When": {
+				"relationship:Harvey |contains=married": "false",
+			},
+		},
+		
+		//Elliott
+		{
+			"LogName": "Elliott Schedule Strings - Breakfast Time, Multiplayer Patch",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Elliott",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Elliott.Breakfast.Tuesday}}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Elliott.Breakfast.Tuesday.NoLeah}}",
+			},
+			"When": {
+				"relationship:Elliott |contains=married": "false",
+			},
+		},
+		
+		//Alex
+		{
+			"LogName": "Alex Schedule Strings - Breakfast Time, Multiplayer Patch",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Alex",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Alex.Breakfast.Friday}}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Alex.Breakfast.Friday.NoFam}}",
+			},
+			"When": {
+				"relationship:Alex |contains=married": "false",
+			},
+		},
+		
+		//Sebastian
+		{
+			"LogName": "Sebastian Schedule Strings - Breakfast Time, Multiplayer Patch",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sebastian",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Sebastian.Breakfast.Wednesday}}",
+				"breakfastMarriageSun": "{{i18n:SB.Sebastian.Breakfast.Sunday}}",
+				"MarriageMines": "{{i18n:SB.Sebastian.Mines}}",
+				
+				//Alt Lines
+				"breakfastMarriageAlt": "{{i18n:SB.Sebastian.Breakfast.Wednesday.NoFam}}",
+				"breakfastMarriageSunAlt": "{{i18n:SB.Sebastian.Breakfast.Sunday.NoAbSam}}",
+			},
+			"When": {
+				"relationship:Sebastian |contains=married": "false",
+			},
+		},
+		
+		//Sam
+		{
+			"LogName": "Sam Schedule Strings - Breakfast Time, Multiplayer Patch",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sam",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Sam.Breakfast.Monday}}",
+				"breakfastMarriageSun": "{{i18n:SB.Sam.Breakfast.Sunday}}",
+				"MarriageMines": "{{i18n:SB.Sam.Mines}}",
+				
+				//Alt Lines
+				"breakfastMonAlt": "{{i18n:SB.Sam.Breakfast.Monday.NoSamFam}}",
+				"breakfastMarriageAlt": "{{i18n:SB.Sam.Breakfast.Monday.Marriage.NoSamFam}}",
+				"breakfastSunAlt": "{{i18n:SB.Sam.Breakfast.Sunday.NoSebAb}}",
+				"breakfastMarriageSunAlt": "{{i18n:SB.Sam.Breakfast.Sunday.Marriage.NoSebAb}}",
+			},
+			"When": {
+				"relationship:Sam |contains=married": "false",
+			},
+		},
+		
+		//Shane
+		
+			//Marriage patches
+		{
+			"LogName": "Shane Schedule Strings - Breakfast Time, Multiplayer Patch", //High Hearts
+			"Action": "EditData",
+			"Target": "Strings/schedules/Shane",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Shane.Breakfast.Monday.High}}",
+				
+				"breakfastMarriageThu": "{{i18n:SB.Shane.Breakfast.Thursday.High}}",
+			},
+			"When": {
+				"relationship:Shane |contains=married": "false",
+			},
+		},
+		
+		{
+			"LogName": "Shane Schedule Strings - Breakfast Time, Multiplayer Patch, Immersive Shane Compat",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Shane",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Shane.Breakfast.Monday.High}}",
+	
+				"breakfastMarriageThu": "{{i18n:SB.Shane.Breakfast.Thursday.High.ICS}}",
+			},
+			"When": {
+				"relationship:Shane |contains=married": "false",
+				"HasMod": "tenthousandcats.ImmersiveCShane",
+			},
+		},
+		
+		{
+			"LogName": "Shane Schedule Strings - Breakfast Time, Multiplayer Patch, Shane Low Hearts",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Shane",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Shane.Breakfast.Monday}}",
+				
+				"breakfastMarriageThu": "{{i18n:SB.Shane.Breakfast.Thursday}}",
+				
+			},
+			"When": {
+				"relationship:Shane |contains=married": "false",
+				"Hearts:Shane": "0, 1, 2, 3, 4, 5",
+			},
+		},
+		
+		{
+			"LogName": "Shane Schedule Strings - Breakfast Time, Multiplayer Patch, Marnie Disabled",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Shane",
+			"Entries":{
+				"breakfastMarriage": "{{i18n:SB.Shane.Breakfast.Monday.High.NoMarnie}}",
+			},
+			"When": {
+				"relationship:Shane |contains=married": "false",
+				"Marnie": "disabled",
+			},
+		},
+		
+			//Non-Marriage Patches
+		
+				//Multiplayer Patch 1 (No IS-Shane), Marnie Enabled, Low Hearts schedule but Shane is at High Hearts
+		{
+			"LogName": "Shane Schedule Strings - Breakfast Time, Multiplayer, Farmhand High Hearts, Host Low Hearts",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Shane",
+			"Entries":{
+				"breakfastMon": "{{i18n:SB.Shane.Breakfast.Monday.High}}",
+				
+				"breakfastThu": "{{i18n:SB.Shane.Breakfast.Thursday.High}}",
+				
+				//Shane CC Job
+				"communitycenter": "{{i18n:SB.Shane.CCJob.High}}",
+			},
+			"When": {
+				"Marnie": "enabled",
+				"HasMod |contains=tenthousandcats.ImmersiveCShane": "false",
+				"Hearts:Shane": "6, 7, 8, 9, 10",
+			},
+		},
+		
+			//Multiplayer Patch 2, Marnie Disabled, Low Hearts Schedule but Shane is at high hearts
+		{
+			"LogName": "Shane Schedule Strings - Breakfast Time, Multiplayer, Farmhand High Hearts, Host Low Hearts",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Shane",
+			"Entries":{
+				"breakfastMon": "{{i18n:SB.Shane.Breakfast.Monday.High.NoMarnie}}",
+			},
+			"When": {
+				"Marnie": "disabled",
+				"Hearts:Shane": "6, 7, 8, 9, 10",
+			},
+		},
+		
+			//Multiplayer Patch 3 (IS-Shane), Low Hearts Schedule but Shane is at High Hearts
+		{
+			"LogName": "Shane Schedule Strings - Breakfast Time, Multiplayer, Farmhand High Hearts, Host Low Hearts",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Shane",
+			"Entries":{
+				"breakfastMon": "{{i18n:SB.Shane.Breakfast.Monday.High}}",
+				
+				"breakfastThu": "{{i18n:SB.Shane.Breakfast.Thursday.High.ICS}}",
+				
+				//Shane CC Job
+				"communitycenter": "{{i18n:SB.Shane.CCJob.High}}",
+			},
+			"When": {
+				"Marnie": "enabled",
+				"HasMod |contains=tenthousandcats.ImmersiveCShane": "true",
+				"Hearts:Shane": "6, 7, 8, 9, 10",
+			},
+		},
+		
+			//Multiplayer Patch 4, Host High Heart Schedule but Farmhand Low Hearts
+		{
+			"LogName": "Shane Schedule Strings - Breakfast Time, Multiplayer, Host High Hearts, Farmhand Low Hearts",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Shane",
+			"Entries":{
+				"breakfastMonHigh": "{{i18n:SB.Shane.Breakfast.Monday}}",
+				
+				"breakfastThuHigh": "{{i18n:SB.Shane.Breakfast.Thursday}}",
+				"breakfastThuHighIC": "{{i18n:SB.Shane.Breakfast.Thursday}}",
+				
+				//Shane CC Job
+				"communitycenterhigh": "{{i18n:SB.Shane.CCJob}}",
+				
+				//Alt Lines
+				"breakfastMonHighAlt": "{{i18n:SB.Shane.Breakfast.Monday}}",
+			},
+			"When": {
+				"Hearts:Shane": "0, 1, 2, 3, 4, 5",
+			},
+		},
+		
+	],
+}

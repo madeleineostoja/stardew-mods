@@ -1,0 +1,3437 @@
+{
+    "Format": "2.4.0",
+	"ConfigSchema": {
+        "ImmersionMode": {
+			"AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, will prevent certain hardcoded patches from running with their relevant schedule disabled (Kent manning the counter on Mondays, Shane or Sam taking over for Gus on Tuesdays, and Emily taking a shift on Saturdays). Not recommended to disable unless you absolutely do not want the characters' schedules altered.",
+			"Section": "Main Mod Changes",
+        },
+		"TuesdayJob": {
+			"AllowValues": "Sam, Shane, auto",
+            "Default": "auto",
+			"Description": "Determines whether Shane or Sam take over for Gus on Tuesdays in Immersion Mode. Automatic selects Shane unless Immersive Shane is installed, in which case Sam is the default. You can also manually change it to the desired person.",
+			"Section": "Main Mod Changes",
+        },
+		"HarveyRain": {
+			"AllowValues": "true, false",
+            "Default": "true",
+			"Description": "Disables Harvey's vanilla rain schedules on Tuesdays and Thursdays so that he doesn't abandon patients on those days. Set to off if you'd rather he abandon his duty or have alternate patches.",
+			"Section": "Main Mod Changes",
+        },
+		"SpouseImmersion": {
+			"AllowValues": "enabled, disabled",
+            "Default": "disabled",
+			"Description": "Adds Night Market schedules and adds doctor appointment schedules for spouses affected by doctor appointments (Abigail, Leah, Penny, and Elliott). Disabled by default so mods such as Immersive Spouses take priority, although this will cause some characters to speak of others that are not there (due to the spouses being at the doctor appointment or Shane speaking about Jas while she goes about her Winter 15 schedule).",
+			"Section": "Main Mod Changes",
+        },
+		"EventDialogue": {
+			"AllowValues": "normal, serious",
+            "Default": "normal",
+			"Description": "Enables original dialogue for event 1 if set to serious (TW: Alcoholism and mention of death). Defaults to normal.",
+			"Section": "Main Mod Changes",
+        },
+		"DuckEggs": {
+			"AllowValues": "25, 50, 75, 100, 200",
+            "Default": "50",
+			"Description": "Chooses the amount of Duck Eggs Gus will ask for in the second special order. (He will acquire the remainder by buying them from Marnie or elsewhere in-universe - this is merely a difficulty setting for the farmer.)",
+			"Section": "Main Mod Changes",
+        },
+		"WizardSidequest": {
+			"AllowValues": "enabled, auto, disabled",
+            "Default": "auto",
+			"Description": "Determine whether an optional subplot containing the Valley's resources spoiling activates or not. Defaults to automatic - this means the plot is on unless Spoilage is installed.",
+			"Section": "Main Mod Changes",
+        },
+		"BreakfastDate": {
+			"AllowValues": "disabled, vanilla, all",
+            "Default": "vanilla",
+			"Description": "Determine whether an optional subplot containing the Valley's resources spoiling activates or not. Defaults to automatic - this means the plot is on unless Spoilage is installed.",
+			"Section": "Main Mod Changes",
+        },
+		"AutoOrder": {
+			"AllowValues": "disabled, enabled, repeatable",
+            "Default": "disabled",
+			"Description": "If enabled, this setting will allow a backup event to fire to give you the plot special orders after a delay chosen in Backup Mail Delay. Set to repeatable in order to repeatedly get the special order mail every time the special order expires.",
+			"Section": "Main Mod Changes",
+        },
+		"CTDelay": {
+			"AllowValues": "1, 7, 14, 28, 56",
+            "Default": "14",
+			"Description": "If Special Order by Mail is enabled, chooses how long the delay is before Gus will send the backup mail giving the Special Order.",
+			"Section": "Main Mod Changes",
+        },
+		"ShopHours": {
+			"AllowValues": "default, noperson, allday",
+            "Default": "default",
+			"Description": "This option can be used to change the shop's hours and access rules. Default will only allow access when it's breakfast hours and someone's behind the counter, self-serve will allow for breakfast without a person manning the counter, and all day will allow access to the menu all day.",
+			"Section": "Main Mod Changes",
+        },
+		"ShopSounds": {
+			"AllowValues": "default, drinks, cooking, ducks",
+            "Default": "default",
+			"Description": "Changes the sounds of the shop when opened. Default will keep vanilla behavior, drinks will replace purchase sounds with drink pouring sounds, cooking will replace purchase sounds with cooking sounds, and duck sounds is a fun option in case you'd prefer a mass of ducks quacking while you purchase something.",
+			"Section": "Main Mod Changes",
+        },
+		"PlotSchedules": {
+            "AllowValues": "enabled, plot, disabled",
+            "Default": "plot",
+			"Description": "Choose how breakfast schedules are enabled. Enabled will immediately have everyone proceed on their chosen breakfast schedules irrespective of plot progression, unlocked by plot progression will unlock schedules based on plot progression, and disabled will disable all breakfast schedule changes.",
+			"Section": "Breakfast Schedules",
+        },
+		"ModScheduleOverrides": {
+            "AllowValues": "true, false",
+            "Default": "false",
+			"Description": "If enabled, will null out select mod schedules for more accurate breakfast time. This currently overrides specific day schedules (e.g. '7th Day of Month') for Sam (Sunday), Penny (Sunday) and Haley (Saturday), as well as Alex (Saturday) for immersion's sake.",
+			"Section": "Breakfast Schedules",
+        },
+		"IslandOverride": {
+            "AllowValues": "true, false",
+            "Default": "false",
+			"Description": "If enabled, characters will not go to Ginger Island on their breakfast schedule day.",
+			"Section": "Breakfast Schedules",
+        },
+		"Abigail": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Abigail's Breakfast Schedule from being followed. This will affect her Thursday and Sunday regular and marriage schedules, and cause alternate dialogue for Pierre, Caroline, Sam, and Sebastian, if they are enabled.",
+			"Section": "Breakfast Schedules",
+        },
+		"Leah": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Leah's Breakfast Schedule from being followed. This will affect her Tuesday regular and marriage schedules, and cause alternate dialogue for Elliott if he is enabled.",
+			"Section": "Breakfast Schedules",
+        },
+		"Penny": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Penny's Breakfast Schedule from being followed. This will affect her Thursday and Sunday regular and marriage schedules, and cause alternate dialogue for Pam and Maru, if they are enabled.",
+			"Section": "Breakfast Schedules",
+        },
+		"Maru": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Maru's Breakfast Schedule from being followed. This will affect her Wednesday and Sunday regular and marriage schedules, and cause alternate dialogue for Sebastian, Harvey, Robin, Demetrius, and Penny, if they are enabled.",
+			"Section": "Breakfast Schedules",
+        },
+		"Haley": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Haley's Breakfast Schedule from being followed. This will affect her Saturday regular and marriage schedules, and cause alternate dialogue for Emily (and Sandy with SVE installed) if she is enabled.",
+			"Section": "Breakfast Schedules",
+        },
+		"Emily": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Emily's Breakfast Schedule from being followed. This will affect her Saturday regular and marriage schedules, and cause alternate dialogue for Haley, if she is enabled. Will also disable her working the counter on Sundays if the Saloon Sports Room is built and Immersion Mode is disabled.",
+			"Section": "Breakfast Schedules",
+        },
+		"Harvey": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Harvey's Breakfast Schedule from being followed. This will affect his Wednesday regular and marriage schedules.",
+			"Section": "Breakfast Schedules",
+        },
+		"Elliott": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Elliott's Breakfast Schedule from being followed. This will affect his Tuesday regular and marriage schedules, and cause alternate dialogue for Leah, if she is enabled.",
+			"Section": "Breakfast Schedules",
+        },
+		"Alex": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Alex's Breakfast Schedule from being followed. This will affect his Friday regular and marriage schedules, and cause alternate dialogue for Evelyn and George, if they are enabled.",
+			"Section": "Breakfast Schedules",
+        },
+		"Sebastian": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Sebastian's Breakfast Schedule from being followed. This will affect his Wednesday and Sunday regular and marriage schedules, and cause alternate dialogue for Robin, Demetrius, Maru, Abigail, and Sam, if they are enabled.",
+			"Section": "Breakfast Schedules",
+        },
+		"Sam": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Sam's Breakfast Schedule from being followed. This will affect his Monday and Sunday regular and marriage schedules, and cause alternate dialogue for Kent, Jodi, Vincent, Abigail, and Sebastian, if they are enabled. If Immersion Mode is turned off and Sam is Gus's Tuesday replacement, that schedule will also be turned off.",
+			"Section": "Breakfast Schedules",
+        },
+		"Shane": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Shane's Breakfast Schedule from being followed. This will affect his Monday, Tuesday, and Thursday regular and marriage schedules, and cause alternate dialogue for Marnie and Jas, if they are enabled. Will also disable his Tuesday patch to replace Gus at the Community Center post-CC completion if Immersion Mode is turned off.",
+			"Section": "Breakfast Schedules",
+        },
+		"SamFam": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Kent, Jodi, and Vincent's Breakfast Schedule from being followed. This will affect their Monday schedules and cause alternate dialogue for Sam, if he is enabled. Will also disable Kent's Monday Saloon Breakfast job if Immersion Mode is turned off, once it's been unlocked.",
+			"Section": "Breakfast Schedules",
+        },
+		"Robmetrius": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Robin and Demetrius's Breakfast Schedule from being followed. This will affect their Wednesday schedules and cause alternate dialogue for Sebastian and Maru, if they are enabled. (This will also prevent Robin from being open later on Wednesdays.)",
+			"Section": "Breakfast Schedules",
+        },
+		"Geovelyn": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Evelyn and George's Breakfast Schedule from being followed. This will affect their Friday and rainy day schedules and cause alternate dialogue for Alex, if they are enabled. (This will also prevent Robin from being open later on Wednesdays.)",
+			"Section": "Breakfast Schedules",
+        },
+		"Pierreoline": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Pierre and Caroline's Breakfast Schedule from being followed. This will affect their Thursday schedules and cause alternate dialogue for Abigail, if she is enabled. This will prevent Pierre from being open later on Thursdays.",
+			"Section": "Breakfast Schedules",
+        },
+		"Marnie": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Marnie's Breakfast Schedule from being followed. This will affect their Monday schedules and cause alternate dialogue for Shane and Jas, if they are enabled. Disabling this and Shane's patches will prevent Jas from visiting the Saloon.",
+			"Section": "Breakfast Schedules",
+        },
+		"Pam": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Pam's Breakfast Schedule from being followed. This will affect their Thursday schedules and cause alternate dialogue for Penny, if she is enabled. (This will prevent her from being able to drive the player to the Desert later on Thursdays as well.)",
+			"Section": "Breakfast Schedules",
+        },
+		"Lewis": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Lewis's Breakfast Schedule from being followed. This will affect his Thursday and rainy day schedules.",
+			"Section": "Breakfast Schedules",
+        },
+		"Clint": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Clint's Breakfast Schedule from being followed. This will affect his Tuesday schedule. This will also return Clint to his counter at 9am on Tuesday - he will be slightly delayed with his breakfast schedule.",
+			"Section": "Breakfast Schedules",
+        },
+		"Willy": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "If disabled, prevents Willy's Breakfast Schedule from being followed. This will affect their Tuesday and rainy day schedules.",
+			"Section": "Breakfast Schedules",
+        },
+		"Gus": {
+            "AllowValues": "enabled, disabled",
+            "Default": "enabled",
+			"Description": "On its own, this option does nothing. If this option is disabled and Immersion Mode is disabled, Gus's breakfast schedule will no longer be followed, meaning Gus will never actually cook breakfast. It is advised not to turn this off.",
+			"Section": "Breakfast Schedules",
+        },
+    },
+	
+	"DynamicTokens": [
+	
+	//I am so sorry if you have to read this section. This is a hellscape of dynamic tokens. May you find what you're looking for quickly!
+	
+	//Community Center Job - Who takes over on Tuesdays?
+	
+		// by default, apply the player's config
+		{
+			"Name": "CCJob",
+			"Value": "{{TuesdayJob}}"
+		},
+
+		// if config is set to 'auto' and Immersive Shane is installed, set default to Sam
+		{
+			"Name": "CCJob",
+			"Value": "Sam",
+			"When": {
+				"CCJob": "auto",
+				"HasMod": "tenthousandcats.ImmersiveCShane"
+			},
+		},
+
+		// if it's still 'auto', set the fallback default (Shane)
+		{
+			"Name": "CCJob",
+			"Value": "Shane",
+			"When": {
+				"CCJob": "auto"
+			},
+		},
+		
+		{
+			"Name": "EventStuff",
+			"Value": "{{HasSeenEvent |contains=17775131, 17775132, 17775133, 17775134, 17775135, 17775136, 17775137, 17775138, 17775139, 177751310, 177751311, 177751312}}"
+		},
+	
+	//Money Reward for Second Special order
+	
+		{
+			"Name": "BreakfastMoney",
+			"Value": "55000" //50 eggs (Default)
+		},
+		
+		{
+			"Name": "BreakfastMoney",
+			"Value": "45000", //Story Mode Eggs
+			"When": {
+				"DuckEggs": "25"
+			},
+		},
+		
+		{
+			"Name": "BreakfastMoney",
+			"Value": "65000", //Hard Mode Eggs
+			"When": {
+				"DuckEggs": "75"
+			},
+		},
+		
+		{
+			"Name": "BreakfastMoney",
+			"Value": "75000", //Immersion Mode Eggs
+			"When": {
+				"DuckEggs": "100"
+			},
+		},
+		
+		{
+			"Name": "BreakfastMoney",
+			"Value": "100000", //Challenge Mode Eggs
+			"When": {
+				"DuckEggs": "200"
+			},
+		},
+	
+	//Wizard Plot - are the Valley resources rotting?
+	
+		// by default, apply the player's config
+		{
+			"Name": "WizardPlot",
+			"Value": "{{WizardSidequest}}"
+		},
+
+		// if config is set to 'auto' and Spoilage is installed, disable
+		{
+			"Name": "WizardPlot",
+			"Value": "disabled",
+			"When": {
+				"WizardPlot": "auto",
+				"HasMod": "aedenthorn.Spoilage" //Valley stuff is already rotting, and no magical spell will fix that.
+			},
+		},
+
+		// if it's still 'auto', then enable as default
+		{
+			"Name": "WizardPlot",
+			"Value": "enabled",
+			"When": {
+				"WizardPlot": "auto"
+			},
+		},
+		
+	//Rasmodia Tokens
+	
+		{
+			"Name": "Wizard",
+			"Value": "Wizard"
+		},
+		
+		{
+			"Name": "Wizard",
+			"Value": "Witch",
+			"When": {
+				"HasMod": "Nom0ri.RomRas"
+			},
+		},
+		
+		{
+			"Name": "WizName",
+			"Value": "Rasmodius"
+		},
+		
+		{
+			"Name": "WizName",
+			"Value": "Rasmodia",
+			"When": {
+				"HasMod": "Nom0ri.RomRas"
+			},
+		},
+	
+	//Leo at final events
+	
+		{
+			"Name": "PennyLeoToken",
+			"Value": "Penny 23 22 1",
+		},
+		
+		{
+			"Name": "PennyLeoToken",
+			"Value": "Penny 23 22 1 Leo 24 23 0",
+			"When": {
+				"HasFlag": "addedParrotBoy"
+			},
+		},
+	
+		{
+			"Name": "LeoToken",
+			"Value": "pause 100",
+		},
+		
+		{
+			"Name": "LeoToken",
+			"Value": "pause 100/faceDirection Leo 3",
+			"When": {
+				"HasFlag": "addedParrotBoy"
+			},
+		},
+		
+	//Day Tokens
+	
+		{
+			"Name": "TuesdayToken", //Is Stardrop Breakfast Open on Tuesdays? By default, yes.
+			"Value": "true",
+		},
+		
+		{
+			"Name": "TuesdayToken", //Close after CC opens until Sam or Shane are doing Gus's job
+			"Value": "false",
+			"When": {
+				"HasSeenEvent: anyPlayer |contains=177757, 177758": "false",
+				"HasSeenEvent: anyPlayer |contains=191393": "true",
+			},
+		},
+		
+		{
+			"Name": "TuesdayToken", //Gus has someone taking over for him.
+			"Value": "true",
+			"When": {
+				"HasSeenEvent: anyPlayer |contains=177757, 177758": "true",
+				"HasSeenEvent: anyPlayer |contains=191393": "true",
+			},
+		},
+		
+		{
+			"Name": "TuesdayToken", //Patch simplification
+			"Value": "true",
+			"When": {
+				"PlotSchedules": "enabled",
+			},
+		},
+		
+		{
+			"Name": "ThursdayToken", //Is Stardrop Breakfast open on Thursdays? By default, yes.
+			"Value": "true",
+		},
+		
+		{
+			"Name": "ThursdayToken", //If Penny's attending Cooking Class, but Leah's event isn't seen, close Stardrop Breakfast on Thursdays
+			"Value": "false",
+			"When": {
+				"HasSeenEvent: anyPlayer |contains=177759": "false",
+				"HasSeenEvent: anyPlayer |contains=69660003": "true",
+			},
+		},
+		
+		{
+			"Name": "ThursdayToken", //Reopened on Thursdays if Leah's event is seen.
+			"Value": "true",
+			"When": {
+				"HasSeenEvent: anyPlayer |contains=177759": "true",
+				"HasSeenEvent: anyPlayer |contains=69660003": "true",
+			},
+		},
+		
+		{
+			"Name": "ThursdayToken", //Patch simplification
+			"Value": "true",
+			"When": {
+				"PlotSchedules": "enabled",
+			},
+		},
+		
+		{
+			"Name": "CookingClass", //Is Penny going to cooking class? Well, that's not vanilla, so default no.
+			"Value": "false",
+		},
+		
+		{
+			"Name": "CookingClass", //Cooking Class event seen, and it's the 4th or 11th
+			"Value": "true",
+			"When": {
+				"HasSeenEvent: anyPlayer |contains=69660003": "true",
+				"Day": "4, 11",
+			},
+		},
+		
+		{
+			"Name": "CookingClass", //Cooking Class event seen, and it's the 18th or 25th
+			"Value": "false",
+			"When": {
+				"HasSeenEvent: anyPlayer |contains=69660003": "true",
+				"Day": "18, 25",
+			},
+		},
+		
+		{
+			"Name": "AbigailAttends", //Is Abigail going to Stardrop Breakfast? By default, she is.
+			"Value": "true",
+		},
+		
+		{
+			"Name": "AbigailAttends", //Abigail really doesn't want to deal with parents on these mornings... and besides, visits Sebastian usually.
+			"Value": "false",
+			"When": {
+				"Pierreoline": "enabled",
+				"Day": "11, 25",
+			},
+		},
+		
+		{
+			"Name": "AbigailAttends", //If her parents aren't there, then Abigail is all about Stardrop Breakfast.
+			"Value": "true",
+			"When": {
+				"Pierreoline": "disabled",
+			},
+		},
+		
+		{
+			"Name": "AbigailAttends", //Abigail has Wizard class if she's an adventurer
+			"Value": "false",
+			"When": {
+				"HasMod |contains=SiTheGreat.AdventurerAbigail": "true",
+				"Day": "18",
+			},
+		},
+		
+		{
+			"Name": "PamBus", //Is Pam's bus schedule being affected? By default, it is. (This also temporarily affects her non-bus schedule, for simplicity.)
+			"Value": "true",
+		},
+		
+		{
+			"Name": "PamBus", //Pam's birthday! Auto toggle it off - Penny's schedule should already be superseded, so it shouldn't cause weird dialogue.
+			"Value": "false",
+			"When": {
+				"Season": "spring",
+				"Day": "18",
+				"HasMod |contains=nraittanna.RememberMyBirthday": "true",
+			},
+		},
+		
+		{
+			"Name": "JasToken", //Simple Jas token
+			"Value": "true",
+		},
+		
+		{
+			"Name": "JasToken", //Jas doesn't follow a schedule if Marnie and Shane are disabled.
+			"Value": "false",
+			"When": {
+				"Marnie": "disabled",
+				"Shane": "disabled",
+			},
+		},
+		
+		{
+			"Name": "DayTrim", //For GIMA, what day is it? Default to Monday, trim the string down.
+			"Value": "Mon",
+		},
+		
+		{
+			"Name": "DayTrim",
+			"Value": "Tue",
+			"When": {
+				"DayOfWeek": "Tuesday",
+			},
+		},
+		
+		{
+			"Name": "DayTrim",
+			"Value": "Wed",
+			"When": {
+				"DayOfWeek": "Wednesday",
+			},
+		},
+		
+		{
+			"Name": "DayTrim",
+			"Value": "Thu",
+			"When": {
+				"DayOfWeek": "Thursday",
+			},
+		},
+		
+		{
+			"Name": "DayTrim",
+			"Value": "Fri",
+			"When": {
+				"DayOfWeek": "Friday",
+			},
+		},
+		
+		{
+			"Name": "DayTrim",
+			"Value": "Sat",
+			"When": {
+				"DayOfWeek": "Saturday",
+			},
+		},
+		
+		{
+			"Name": "DayTrim",
+			"Value": "Sun",
+			"When": {
+				"DayOfWeek": "Sunday",
+			},
+		},
+
+		//Render Token Replacements
+		
+		//Immersion (not both false)
+		{
+			"Name": "ImmersionLeah",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "ImmersionLeah",
+			"Value": "false",
+			"When": {
+				"ImmersionMode": "disabled",
+				"Leah": "disabled",
+			},
+		},
+		{
+			"Name": "ImmersionEmily",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "ImmersionEmily",
+			"Value": "false",
+			"When": {
+				"ImmersionMode": "disabled",
+				"Emily": "disabled",
+			},
+		},
+		{
+			"Name": "ImmersionSam",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "ImmersionSam",
+			"Value": "false",
+			"When": {
+				"ImmersionMode": "disabled",
+				"Sam": "disabled",
+			},
+		},
+		{
+			"Name": "ImmersionShane",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "ImmersionShane",
+			"Value": "false",
+			"When": {
+				"ImmersionMode": "disabled",
+				"Shane": "disabled",
+			},
+		},
+		{
+			"Name": "ImmersionGus",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "ImmersionGus",
+			"Value": "false",
+			"When": {
+				"ImmersionMode": "disabled",
+				"Gus": "disabled",
+			},
+		},
+		{
+			"Name": "ImmersionKent",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "ImmersionKent",
+			"Value": "false",
+			"When": {
+				"ImmersionMode": "disabled",
+				"SamFam": "disabled",
+			},
+		},
+		
+		//Characters (any are false)
+		{
+			"Name": "SebSam",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "SebSam",
+			"Value": "false",
+			"When": {
+				"Sebastian": "disabled",
+			},
+		},
+		{
+			"Name": "SebSam",
+			"Value": "false",
+			"When": {
+				"Sam": "disabled",
+			},
+		},
+		
+		{
+			"Name": "SebFam",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "SebFam",
+			"Value": "false",
+			"When": {
+				"Sebastian": "disabled",
+			},
+		},
+		
+		{
+			"Name": "SebFam",
+			"Value": "false",
+			"When": {
+				"Robmetrius": "disabled",
+			},
+		},
+		
+		{
+			"Name": "SebMaru",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "SebMaru",
+			"Value": "false",
+			"When": {
+				"Sebastian": "disabled",
+			},
+		},
+		
+		{
+			"Name": "SebMaru",
+			"Value": "false",
+			"When": {
+				"Maru": "disabled",
+			},
+		},
+		
+		{
+			"Name": "SebAbs",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "SebAbs",
+			"Value": "false",
+			"When": {
+				"Abigail": "disabled",
+			},
+		},
+		
+		{
+			"Name": "SebAbs",
+			"Value": "false",
+			"When": {
+				"Sebastian": "disabled",
+			},
+		},
+		
+		{
+			"Name": "MaruFam",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "MaruFam",
+			"Value": "false",
+			"When": {
+				"Maru": "disabled",
+			},
+		},
+		
+		{
+			"Name": "MaruFam",
+			"Value": "false",
+			"When": {
+				"Robmetrius": "disabled",
+			},
+		},
+		
+		{
+			"Name": "SamAbs",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "SamAbs",
+			"Value": "false",
+			"When": {
+				"Abigail": "disabled",
+			},
+		},
+		
+		{
+			"Name": "SamAbs",
+			"Value": "false",
+			"When": {
+				"Sam": "disabled",
+			},
+		},
+		
+		//Breakfast Date Tokens
+		
+		//Spouse Token mixed with Roommate Token so that PPAF Dates work - sorry, PPAF people looking at the code, I'm not wholesale rewriting the underpinnings so it works, but I promise that the dates will be properly platonic.
+		
+		//Elliott Book Tokens
+		{
+			"Name": "BookComment",
+			"Value": "{{i18n:BreakfastDate.Elliott.NoBook}}", //By default, assume the player hasn't seen the event... somehow... you only get this when he's *MOVED IN*! Dialogue sasses appropriately.
+		},
+		
+		{
+			"Name": "BookComment",
+			"Value": "{{i18n:BreakfastDate.Elliott.NoRead}}", //You've seen his two heart, and since you have enough friendship to have him move in, you've seen the book reading intro. Go watch the cutscene! And then save!
+			"When": {
+				"HasSeenEvent": "39",
+				"HasSeenEvent |contains=1848481": "false",
+			},
+		},
+		
+		{
+			"Name": "BookComment",
+			"Value": "{{i18n:BreakfastDate.Elliott.Scifi}}", //Sci-Fi book is the default - if the other mailflags from Realistic Writer aren't present, this will default here
+			"When": {
+				"HasSeenEvent": "1848481",
+			},
+		},
+		
+		{
+			"Name": "BookComment",
+			"Value": "{{i18n:BreakfastDate.Elliott.Mystery}}", //Mystery Book, if chosen
+			"When": {
+				"HasSeenEvent": "1848481",
+				"HasDialogueAnswer": "958699",
+			},
+		},
+		
+		{
+			"Name": "BookComment",
+			"Value": "{{i18n:BreakfastDate.Elliott.Romance}}", //Romance book, if chosen
+			"When": {
+				"HasSeenEvent": "1848481",
+				"HasDialogueAnswer": "958700",
+			},
+		},
+		
+		// Realistic Writer Elliott Compatibility for BookComment
+		
+		{
+			"Name": "BookComment",
+			"Value": "{{i18n:BreakfastDate.Elliott.Mystery}}", //Mystery Book, if chosen
+			"When": {
+				"HasSeenEvent": "1848481",
+				"HasFlag": "ElliottWritesMystery",
+			},
+		},
+		
+		{
+			"Name": "BookComment",
+			"Value": "{{i18n:BreakfastDate.Elliott.Romance}}", //Romance book, if chosen
+			"When": {
+				"HasSeenEvent": "1848481",
+				"HasFlag": "ElliottWritesRomance",
+			},
+		},
+		
+		{
+			"Name": "BookComment",
+			"Value": "{{i18n:BreakfastDate.Elliott.Horror}}", //Horror book, if chosen
+			"When": {
+				"HasSeenEvent": "1848481",
+				"HasFlag": "ElliottWritesHorror",
+			},
+		},
+		
+		//Emily Outfit Token
+		{
+			"Name": "EmilyOutfit",
+			"Value": "{{Random:{{i18n:BreakfastDate.Emily.Outfit1}}, {{i18n:BreakfastDate.Emily.Outfit2}}, {{i18n:BreakfastDate.Emily.Outfit3}} }}",
+		},
+		
+		//The following token is the MAIN Breakfast Date token. Please don't break this!
+		{
+			"Name": "CurrentSpouse", //By default, this has no value, so there are no event conditions.
+			"Value": null,
+		},
+		
+		{
+			"Name": "CurrentSpouse",
+			"Value": "{{Spouse}}",
+			"When": {
+				"HasValue:{{spouse}}": "true", //If there is a spouse, they are the value. If not vanilla, it'll activate the second version, which only works if breakfast dates is set to all.
+			},
+		},
+		
+		{
+			"Name": "CurrentSpouse",
+			"Value": "{{Roommate}}",
+			"When": {
+				"HasValue:{{spouse}}": "false",
+				"HasValue:{{roommate}}": "true", //If the spouse value is empty, this checks for the Roommate value, for PPAF stuff.
+			},
+		},
+		
+		{
+			"Name": "CurrentSpouse",
+			"Value": "{{Spouse}}",
+			"When": {
+				"HasValue:{{spouse}}": "true",
+				"HasValue:{{roommate}}": "true",
+				"Spouse |contains=Abigail, Leah, Penny, Maru, Haley, Emily, Harvey, Elliott, Alex, Sebastian, Sam, Shane": "false", //If somehow the player has a Spouse AND Roommate value, and the spouse is NOT vanilla, default to spouse. This may be superfluous but I'm keeping it anyway.
+			},
+		},
+		
+		//Does the Player Have Kids?
+		{
+			"Name": "Kids",
+			"Value": "NoKids",
+		},
+		
+		
+		{
+			"Name": "Kids",
+			"Value": "TwoKids",
+			"When": {
+				"HasValue: {{ChildGenders}}": true,
+			},
+		},
+		
+		{
+			"Name": "Kids",
+			"Value": "OneKid",
+			"When": {
+				"HasValue: {{ChildGenders}}": true,
+				"HasValue: {{ChildGenders|valueAt=1}}": false, //No value at 1, so the player can only have one kid. (This token will balloon if checking more than two.)
+			},
+		},
+		
+		//Generic or Vanilla Spouse?
+		
+		//By default, assume no. Don't screw with it.
+		{
+			"Name": "VanillaSpouse",
+			"Value": "false",
+		},
+		{
+			"Name": "VanillaSpouse",
+			"Value": "true",
+			"When": {
+				"CurrentSpouse |contains=Abigail, Leah, Penny, Maru, Haley, Emily, Harvey, Elliott, Alex, Sebastian, Sam, Shane": "true", //Any vanilla marriagable makes this true.
+			},
+		},
+
+		//Cornucopia Tokens (copied from Cornucopia for compat with its configs)
+		{
+			"Name": "HomeCook_Extended",
+			"Value": "false"
+		},
+		{
+			"Name": "HomeCook_Extended",
+			"Value": "true",
+			"When": {
+				"HasMod|contains=Cornucopia.MoreCrops": true,
+				"HasReadLetter: hostPlayer |contains=Cornucopia.MoreCrops_ExtendedCropsPackEnabled": true,
+				"HasReadLetter: hostPlayer |contains=Cornucopia.MoreCrops_ExtendedTreesPackEnabled": true,
+				"HasReadLetter: hostPlayer |contains=Cornucopia.MoreCrops_HerbsPackEnabled": true,
+				"HasMod|contains=Cornucopia.MoreFlowers": true,
+				"HasMod|contains=Cornucopia.ArtisanMachines": true
+			}
+		},
+		
+		//Drink Choices (incl. RSV & WAG)
+		{
+		  "Name": "DrinkOptionQuestionAdditions",
+		  "Value": ""
+		},
+			//Add Apricot Juice and Wild Apple Juice as options if RSV is installed
+		{
+		  "Name": "DrinkOptionQuestionAdditions",
+		  "Value": "#{{i18n:BreakfastDate.Drinks.6}}#{{i18n:BreakfastDate.Drinks.7}}",
+		  "When": {
+			"HasMod |contains=Rafseazz.RSVCP": "true"
+		  },
+		},
+			//Add Early Riser Latter as option if WAG is installed and Coffee is enabled
+		{
+		  "Name": "DrinkOptionQuestionAdditions",
+		  "Value": "{{DrinkOptionQuestionAdditions}}#{{i18n:BreakfastDate.Drinks.8}}",
+		  "When": {
+			"HasMod |contains=Atelier.Cauldron": "true",
+			"HasMod |contains=Wildflour.AtelierGoods": "true",
+			"Atelier.Cauldron/ConfigValue:Coffee": "true",
+			"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+		  },
+		},
+			//Add Pelican Fog Tea as option if WAG is installed and Tea is enabled
+		{
+		  "Name": "DrinkOptionQuestionAdditions",
+		  "Value": "{{DrinkOptionQuestionAdditions}}#{{i18n:BreakfastDate.Drinks.9}}",
+		  "When": {
+			"HasMod |contains=Atelier.Cauldron": "true",
+			"HasMod |contains=Wildflour.AtelierGoods": "true",
+			"Atelier.Cauldron/ConfigValue:Tea": "true",
+			"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+		  },
+		},
+		{
+		  "Name": "DrinkOptionSwitchAdditions",
+		  "Value": ""
+		},
+			//Add Apricot Juice and Wild Apple Juice as options if RSV is installed
+		{
+		  "Name": "DrinkOptionSwitchAdditions",
+		  "Value": "(break)switchEvent 1777514_apricot(break)switchEvent 1777514_apple",
+		  "When": {
+			"HasMod |contains=Rafseazz.RSVCP": "true"
+		  },
+		},
+			//Add Early Riser Latter as option if WAG is installed and Coffee is enabled
+		{
+		  "Name": "DrinkOptionSwitchAdditions",
+		  "Value": "{{DrinkOptionSwitchAdditions}}(break)switchEvent 1777514_latte",
+		  "When": {
+			"HasMod |contains=Atelier.Cauldron": "true",
+			"HasMod |contains=Wildflour.AtelierGoods": "true",
+			"Atelier.Cauldron/ConfigValue:Coffee": "true",
+			"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+		  },
+		},
+			//Add Pelican Fog Tea as option if WAG is installed and Tea is enabled
+		{
+		  "Name": "DrinkOptionSwitchAdditions",
+		  "Value": "{{DrinkOptionSwitchAdditions}}(break)switchEvent 1777514_WAGtea",
+		  "When": {
+			"HasMod |contains=Atelier.Cauldron": "true",
+			"HasMod |contains=Wildflour.AtelierGoods": "true",
+			"Atelier.Cauldron/ConfigValue:Tea": "true",
+			"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+		  },
+		},
+			// Drink choices compiled		
+		{
+		  "Name": "DrinkOptions",
+		  "Value": "quickQuestion {{i18n:BreakfastDate.Drinks.Intro}}#{{i18n:BreakfastDate.Drinks.1}}#{{i18n:BreakfastDate.Drinks.2}}#{{i18n:BreakfastDate.Drinks.3}}#{{i18n:BreakfastDate.Drinks.4}}#{{i18n:BreakfastDate.Drinks.5}}{{DrinkOptionQuestionAdditions}}(break)switchEvent 1777514_tea(break)switchEvent 1777514_orange(break)switchEvent 1777514_milk(break)switchEvent 1777514_coffee(break)switchEvent 1777514_espresso{{DrinkOptionSwitchAdditions}}",
+		},
+		
+		//Food Choices (incl. RSV & Cornucopia)
+		{
+		  "Name": "FoodOptionQuestionAdditions",
+		  "Value": ""
+		},
+			//Add Waffles as option if Cornucopia is installed
+		{
+		  "Name": "FoodOptionQuestionAdditions",
+		  "Value": "#{{i18n:BreakfastDate.Food.6}}",
+		  "When": {
+			"HasMod |contains=Cornucopia.CookingRecipes": "true",
+			"HomeCook_Extended": "true"
+		  },
+		},
+			//Add Hundred Flavor Doughnut as option if RSV is installed
+		{
+		  "Name": "FoodOptionQuestionAdditions",
+		  "Value": "{{FoodOptionQuestionAdditions}}#{{i18n:BreakfastDate.Food.7}}",
+		  "When": {
+			"HasMod |contains=Rafseazz.RSVCP": "true"
+		  },
+		},
+			//Add Croissants and Pain Au Chocolat as options if WAG is installed
+		{
+		  "Name": "FoodOptionQuestionAdditions",
+		  "Value": "{{FoodOptionQuestionAdditions}}#{{i18n:BreakfastDate.Food.8}}#{{i18n:BreakfastDate.Food.9}}",
+		  "When": {
+			"HasMod |contains=Atelier.Cauldron": "true",
+			"HasMod |contains=Wildflour.AtelierGoods": "true",
+			"Atelier.Cauldron/ConfigValue:Breads": "true",
+			"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+		  },
+		},
+		{
+		  "Name": "FoodOptionSwitchAdditions",
+		  "Value": ""
+		},
+			//Add Waffles as option if Cornucopia is installed
+		{
+		  "Name": "FoodOptionSwitchAdditions",
+		  "Value": "(break)switchEvent 1777514_waffles",
+		  "When": {
+			"HasMod |contains=Cornucopia.CookingRecipes": "true",
+			"HomeCook_Extended": "true"
+		  },
+		},
+			//Add Hundred Flavor Doughnut as option if RSV is installed
+		{
+		  "Name": "FoodOptionSwitchAdditions",
+		  "Value": "{{FoodOptionSwitchAdditions}}(break)switchEvent 1777514_donut",
+		  "When": {
+			"HasMod |contains=Rafseazz.RSVCP": "true"
+		  },
+		},
+			//Add Croissants and Pain Au Chocolat as options if WAG is installed
+		{
+		  "Name": "FoodOptionSwitchAdditions",
+		  "Value": "{{FoodOptionSwitchAdditions}}(break)switchEvent 1777514_croissants(break)switchEvent 1777514_chocolat",
+		  "When": {
+			"HasMod |contains=Atelier.Cauldron": "true",
+			"HasMod |contains=Wildflour.AtelierGoods": "true",
+			"Atelier.Cauldron/ConfigValue:Breads": "true",
+			"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+		  },
+		},
+			// Food choices compiled			
+		{
+		  "Name": "FoodOptions",
+		  "Value": "quickQuestion {{i18n:BreakfastDate.Food.Intro}}#{{i18n:BreakfastDate.Food.1}}#{{i18n:BreakfastDate.Food.2}}#{{i18n:BreakfastDate.Food.3}}#{{i18n:BreakfastDate.Food.4}}#{{i18n:BreakfastDate.Food.5}}{{FoodOptionQuestionAdditions}}(break)switchEvent 1777514_muffin(break)switchEvent 1777514_pancakes(break)switchEvent 1777514_omelet(break)switchEvent 1777514_hash(break)switchEvent 1777514_complete{{FoodOptionSwitchAdditions}}",
+		},
+		
+		//Kissing or Hugging Spouses via animation frames
+		
+		{
+			 "Name": "KissFrame",
+			 "Value": "28",
+		},
+		{
+			 "Name": "KissFrame",
+			 "Value": "33",
+			 "When": {
+				 "CurrentSpouse": "Abigail, Emily"
+			},
+		},
+		{
+			 "Name": "KissFrame",
+			 "Value": "42",
+			 "When": {
+				 "CurrentSpouse": "Alex"
+			 },
+		},
+		{
+			 "Name": "KissFrame",
+			 "Value": "35",
+			 "When": {
+				 "CurrentSpouse": "Elliott"
+			},
+		},
+		{
+			 "Name": "KissFrame",
+			 "Value": "31",
+			 "When": {
+				 "CurrentSpouse": "Harvey"
+			 },
+		},
+		{
+			 "Name": "KissFrame",
+			 "Value": "25",
+			 "When": {
+				 "CurrentSpouse": "Leah"
+			},
+		},
+		{
+			 "Name": "KissFrame",
+			 "Value": "28",
+			 "When": {
+				 "CurrentSpouse": "Maru"
+			},
+		},
+		{
+			 "Name": "KissFrame",
+			 "Value": "35",
+			 "When": {
+				 "CurrentSpouse": "Penny"
+			},
+		},
+		{
+			 "Name": "KissFrame",
+			 "Value": "36",
+			 "When": {
+				 "CurrentSpouse": "Sam"
+			},
+		},
+		{
+			 "Name": "KissFrame",
+			 "Value": "40",
+			 "When": {
+				 "CurrentSpouse": "Sebastian"
+			 },
+		},
+		{
+			 "Name": "KissFrame",
+			 "Value": "34",
+			 "When": {
+				 "CurrentSpouse": "Shane"
+			 },
+		},
+
+		{
+			 "Name": "KissFrameFlip",
+			 "Value": "true",
+		},
+
+		{
+			 "Name": "KissFrameFlip",
+			 "Value": "false",
+			 "When": {
+				 "CurrentSpouse": "Abigail, Emily, Elliott, Harvey, Maru, Sebastian, Shane"
+			 },
+		},
+		
+		//Food and Drink
+		
+		//CurrentSpouse is either the Roommate or Spouse.
+		{
+			"Name": "SpouseDrink", //Default option
+			"Value": "bugged response",
+		},
+		
+		{
+			"Name": "SpouseDrink",
+			"Value": "{{i18n:Drinks.3}}", //Orange Juice!
+			"When": {
+				"CurrentSpouse |contains=Abigail, Harvey, Shane": "false", //If the spouse is generic or *anyone* but Harvey, Shane, or Abigail, they get orange juice. Exception is if RSV installed, see later ones.
+			},
+		},
+		
+		{
+			"Name": "SpouseDrink",
+			"Value": "{{i18n:Drinks.1}}", //Green Tea
+			"When": {
+				"CurrentSpouse": "Abigail",
+			},
+		},
+		
+		{
+			"Name": "SpouseDrink",
+			"Value": "{{i18n:Drinks.5}}", //Coffee - loved drink, not taking it from him
+			"When": {
+				"CurrentSpouse": "Harvey",
+			},
+		},
+		
+		{
+			"Name": "SpouseDrink",
+			"Value": "{{i18n:Drinks.6}}", //It's his favored drink that isn't beer. And he's not drinking this early - the player has *moved in with him*, they damn well better have had him try to get better by now!
+			"When": {
+				"CurrentSpouse": "Shane",
+			},
+		},
+		
+		{
+			"Name": "SpouseDrink",
+			"Value": "{{i18n:Drinks.2}}",
+			"When": {
+				"CurrentSpouse |contains=Abigail, Haley, Maru": "true", //These three get Wild Apple Juice with RSV installed, since they are specifically called out in the object.json as liking it. (Which is odd - people like by default, normally.)
+				"HasMod": "Rafseazz.RSVCP",
+			},
+		},
+		
+		{
+			"Name": "SpouseDrink",
+			"Value": "{{i18n:Drinks.4}}",
+			"When": {
+				"CurrentSpouse |contains=Leah, Penny, Emily": "true", //These three get Apricot Juice, same reasoning as above. (Honestly, I should also add Juice options to the bachelors too - I think I just got lazy after the bachelorettes XD)
+				"HasMod": "Rafseazz.RSVCP",
+			},
+		},
+		
+		{
+			"Name": "SpouseDrink",
+			"Value": "{{i18n:Drinks.7}}",
+			"When": {
+				"CurrentSpouse |contains=Haley": "true", //Latte for Haley
+				"HasMod |contains=Atelier.Cauldron": "true",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+				"Atelier.Cauldron/ConfigValue:Coffee": "true",
+				"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+			},
+		},
+		
+		{
+			"Name": "SpouseDrink",
+			"Value": "{{i18n:Drinks.8}}",
+			"When": {
+				"CurrentSpouse |contains=Penny, Elliott": "true", //Fancy tea for Penny and Elliott
+				"HasMod |contains=Atelier.Cauldron": "true",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+				"Atelier.Cauldron/ConfigValue:Tea": "true",
+				"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+			},
+		},
+		
+			//What does the roommate say (about the drink)?
+		{
+			"Name": "SpouseDrinkComment",
+			"Value": "bugged response", //Default. If you get this, report a bug, preferably with patch summary agentlyoko.stardropbreakfast in the log.
+		},
+		
+		{
+			"Name": "SpouseDrinkComment",
+			"Value": "{{i18n:BreakfastDate.{{CurrentSpouse}}.Drink1}}",
+			"When": {
+				"CurrentSpouse |contains=Abigail, Leah, Penny, Maru, Haley, Emily, Elliott": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseDrinkComment",
+			"Value": "{{i18n:BreakfastDate.{{CurrentSpouse}}.Drink2}}",
+			"When": {
+				"CurrentSpouse |contains=Abigail, Leah, Penny, Maru, Haley, Emily": "true",
+				"HasMod": "Rafseazz.RSVCP",
+			},
+		},
+		
+		{
+			"Name": "SpouseDrinkComment",
+			"Value": "{{i18n:BreakfastDate.{{CurrentSpouse}}.Drink3}}",
+			"When": {
+				"CurrentSpouse |contains=Penny, Elliott": "true",
+				"HasMod |contains=Atelier.Cauldron": "true",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+				"Atelier.Cauldron/ConfigValue:Tea": "true",
+				"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+			},
+		},
+		
+		{
+			"Name": "SpouseDrinkComment",
+			"Value": "{{i18n:BreakfastDate.{{CurrentSpouse}}.Drink3}}",
+			"When": {
+				"CurrentSpouse |contains=Haley": "true",
+				"HasMod |contains=Atelier.Cauldron": "true",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+				"Atelier.Cauldron/ConfigValue:Coffee": "true",
+				"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+			},
+		},
+		
+		//Nom nom food time
+		{
+			"Name": "SpouseFood",
+			"Value": "bugged reponse", //The food is bugged, help!
+		},
+		
+		{
+			"Name": "SpouseFood",
+			"Value": "{{i18n:Food.3}}",
+			"When": {
+				"VanillaSpouse": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseFood",
+			"Value": "{{i18n:Food.1}}", //I thought I heard something about delicious pancakes...
+			"When": {
+				"CurrentSpouse |contains=Abigail, Sebastian": "true", //Abigail always, Sebastian overridden if Cornucopia installed
+			},
+		},
+		
+		{
+			"Name": "SpouseFood",
+			"Value": "{{i18n:Food.11}}", //Cornucopia waffles for Sebastian, because Abigail and Sebastian would be those friends who initiate the waffles vs pancakes fight every time
+			"When": {
+				"CurrentSpouse |contains=Sebastian": "true",
+				"HasMod |contains=Cornucopia.CookingRecipes": "true",
+				"HomeCook_Extended": "true"
+			},
+		},
+		
+		{
+			"Name": "SpouseFood",
+			"Value": "{{i18n:Food.2}}", //Loved foods? In my Stardrop Breakfast? It's more likely than you may think. (Poppyseed Muffin)
+			"When": {
+				"CurrentSpouse |contains=Leah, Penny": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseFood",
+			"Value": "{{i18n:Food.4}}", //Omelet
+			"When": {
+				"CurrentSpouse": "Maru",
+			},
+		},
+		
+		{
+			"Name": "SpouseFood",
+			"Value": "{{i18n:Food.9}}", //Less pancakes for Haley - I doubt she'd dig in like Abigail and Sebastian would.
+			"When": {
+				"CurrentSpouse": "Haley",
+			},
+		},
+		
+		{
+			"Name": "SpouseFood",
+			"Value": "{{i18n:Food.10}}", //Croissants from WAG for Haley because she loves her baked goods
+			"When": {
+				"CurrentSpouse": "Haley",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseFood",
+			"Value": "{{i18n:Food.5}}", //Foods are hard. But to give variety, Emily and Elliott get the hash (browns).
+			"When": {
+				"CurrentSpouse |contains=Emily, Elliott": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseFood",
+			"Value": "{{i18n:Food.12}}", //Fancy food for a fancy man - fig toast from Cornucopia
+			"When": {
+				"CurrentSpouse |contains=Elliott": "true",
+				"HasMod |contains=Cornucopia.CookingRecipes": "true",
+				"HomeCook_Extended": "true"
+			},
+		},
+		
+		{
+			"Name": "SpouseFood",
+			"Value": "{{i18n:Food.6}}", //Emily loves Pink Frosted Sprinkled Doughnuts, who knew? Guess she gets it.
+			"When": {
+				"CurrentSpouse": "Emily",
+				"HasMod": "Rafseazz.RSVCP",
+			},
+		},
+		
+		{
+			"Name": "SpouseFood",
+			"Value": "{{i18n:Food.7}}", //The complete breakfast makers (Harvey) or lovers (Alex).
+			"When": {
+				"CurrentSpouse |contains=Harvey, Alex": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseFood",
+			"Value": "{{i18n:Food.8}}", //Breakfast Pizza! (Since it's not an item, I can fake it... in an event, anyway.)
+			"When": {
+				"CurrentSpouse |contains=Sam, Shane": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodComment",
+			"Value": "bugged response",
+		},
+		
+		{
+			"Name": "SpouseFoodComment",
+			"Value": "{{i18n:BreakfastDate.{{CurrentSpouse}}.Food1}}",
+			"When": {
+				"CurrentSpouse |contains= Emily, Elliott, Sebastian, Haley": true
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodComment",
+			"Value": "{{i18n:BreakfastDate.Emily.Food2}}",
+			"When": {
+				"CurrentSpouse": "Emily",
+				"HasMod": "Rafseazz.RSVCP",
+			},
+		},	
+		
+		{
+			"Name": "SpouseFoodComment",
+			"Value": "{{i18n:BreakfastDate.Elliott.Food2}}",
+			"When": {
+				"CurrentSpouse |contains= Elliott, Sebastian": true,
+				"HasMod |contains=Cornucopia.CookingRecipes": "true",
+				"HomeCook_Extended": "true"
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodComment",
+			"Value": "{{i18n:BreakfastDate.Haley.Food2}}",
+			"When": {
+				"CurrentSpouse": "Haley",
+				"HasMod |contains=Atelier.Cauldron": "true",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+				"Atelier.Cauldron/ConfigValue:Breads": "true",
+				"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+			},
+		},	
+		
+		{
+			"Name": "SpouseDrinkID", //Default Drink - if gotten, bugged. Ginger Ale
+			"Value": "903",
+		},
+		
+		{
+			"Name": "SpouseDrinkID", //Orange Juice
+			"Value": "AgentLyoko.SaloonBreakfast_FreshOrangeJuice",
+			"When": {
+				"VanillaSpouse": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseDrinkID", //Orange Juice
+			"Value": "AgentLyoko.SaloonBreakfast_FreshOrangeJuice",
+			"When": {
+				"CurrentSpouse |contains=Leah, Penny, Maru, Haley, Emily, Elliott, Alex, Sam, Sebastian": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseDrinkID", //Green Tea
+			"Value": "614",
+			"When": {
+				"CurrentSpouse": "Abigail",
+			},
+		},
+		
+		{
+			"Name": "SpouseDrinkID", //Coffee
+			"Value": "395",
+			"When": {
+				"CurrentSpouse": "Harvey",
+			},
+		},
+		
+		{
+			"Name": "SpouseDrinkID", //Joja Cola
+			"Value": "167",
+			"When": {
+				"CurrentSpouse": "Shane",
+			},
+		},
+		
+		{
+			"Name": "SpouseDrinkID",
+			"Value": "(O)Rafseazz.RSVCP_Wild_Apple_Juice",
+			"When": {
+				"CurrentSpouse |contains=Abigail, Maru, Haley": "true",
+				"HasMod": "Rafseazz.RSVCP"
+			},
+		},
+		
+		{
+			"Name": "SpouseDrinkID",
+			"Value": "(O)Rafseazz.RSVCP_Apricot_Juice",
+			"When": {
+				"CurrentSpouse |contains=Leah, Penny, Emily": "true",
+				"HasMod": "Rafseazz.RSVCP"
+			},
+		},
+		
+		{
+			"Name": "SpouseDrinkID", //Pelican Fog Tea
+			"Value": "(O)Wildflour.AtelierGoods_Pelican_Fog_Tea",
+			"When": {
+				"CurrentSpouse |contains= Penny, Elliott": "true",
+				"HasMod |contains=Atelier.Cauldron": "true",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+				"Atelier.Cauldron/ConfigValue:Tea": "true",
+				"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+			},
+		},
+		
+		{
+			"Name": "SpouseDrinkID", // Vanilla Latte
+			"Value": "(O)Wildflour.AtelierGoods_Warm_Vanilla_Sugar_Latte",
+			"When": {
+				"CurrentSpouse |contains=Haley": "true",
+				"HasMod |contains=Atelier.Cauldron": "true",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+				"Atelier.Cauldron/ConfigValue:Coffee": "true",
+				"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodID", //Default Food - if gotten, bugged. ("Whatcha got there?" "A Magic Rock Candy.")
+			"Value": "279",
+		},
+		
+		{
+			"Name": "SpouseFoodID", //Omelet for Generic
+			"Value": "195",
+			"When": {
+				"VanillaSpouse": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodID", //Pancakes
+			"Value": "211",
+			"When": {
+				"CurrentSpouse |contains=Abigail, Sebastian, Haley": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodID", //Waffles from Cornucopia
+			"Value": "(O)Cornucopia_Waffles",
+			"When": {
+				"CurrentSpouse |contains= Sebastian": "true",
+				"HasMod |contains=Cornucopia.CookingRecipes": "true",
+				"HomeCook_Extended": "true"
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodID", //Croissants from WAG
+			"Value": "(O)Wildflour.AtelierGoods_Croissants",
+			"When": {
+				"CurrentSpouse |contains= Haley": "true",
+				"HasMod |contains=Atelier.Cauldron": "true",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+				"Atelier.Cauldron/ConfigValue:Breads": "true",
+				"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodID", //Poppyseed Muffin
+			"Value": "651",
+			"When": {
+				"CurrentSpouse |contains=Leah, Penny": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodID", //Omelet
+			"Value": "195",
+			"When": {
+				"CurrentSpouse": "Maru",
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodID", //Hashbrowns
+			"Value": "210",
+			"When": {
+				"CurrentSpouse |contains=Emily, Elliott": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodID", //Fig toast from Cornucopia
+			"Value": "(O)Cornucopia_FigToast",
+			"When": {
+				"CurrentSpouse |contains= Elliott": "true",
+				"HasMod |contains=Cornucopia.CookingRecipes": "true",
+				"HomeCook_Extended": "true"
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodID", //Pink Frosted Sprinkled Donut
+			"Value": "(O)Rafseazz.RSVCP_Pink_Frosted_Sprinkled_Doughnut",
+			"When": {
+				"CurrentSpouse": "Emily",
+				"HasMod": "Rafseazz.RSVCP"
+			}
+		},
+		
+		{
+			"Name": "SpouseFoodID", //Complete Breakfast
+			"Value": "201",
+			"When": {
+				"CurrentSpouse |contains=Harvey, Alex": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseFoodID", //(Breakfast) Pizza
+			"Value": "206",
+			"When": {
+				"CurrentSpouse |contains=Sam, Shane": "true",
+			},
+		},
+		
+		
+		//Child Tokens, for message dialogue
+		
+		{
+			"Name": "FirstChild",
+			"Value": "Child Not Found", //Something's wrong with the Adventure Dialogue if you see this in game...
+		},
+		
+		{
+			"Name": "FirstChild",
+			"Value": "{{ChildNames |valueAt=0}}",
+			"When": {
+				"HasValue: {{ChildGenders}}": true,
+			},
+		},
+		
+		{
+			"Name": "SecondChild",
+			"Value": "Child Does Not Exist", //Ditto!
+		},
+		
+		{
+			"Name": "SecondChild",
+			"Value": "{{ChildNames |valueAt=1}}",
+			"When": {
+				"HasValue: {{ChildGenders}}": true,
+				"HasValue: {{ChildGenders|valueAt=1}}": true,
+			},
+		},
+		
+		//Adventure Dialogues
+		
+		//NPC hearts setups
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "test",
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Abigail",
+			 "When": {
+				 "CurrentSpouse |contains=Abigail": "false",
+				 "Hearts:Abigail": "5, 6, 7, 8, 9, 10",
+				 "relationship:Abigail": "friendly",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Leah",
+			 "When": {
+				 "CurrentSpouse |contains=Leah": "false",
+				 "Hearts:Leah": "5, 6, 7, 8, 9, 10",
+				 "relationship:Leah": "friendly",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Penny",
+			 "When": {
+				 "CurrentSpouse |contains=Penny": "false",
+				 "Hearts:Penny": "5, 6, 7, 8, 9, 10",
+				 "relationship:Penny": "friendly",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Maru",
+			 "When": {
+				 "CurrentSpouse |contains=Maru": "false",
+				 "Hearts:Maru": "5, 6, 7, 8, 9, 10",
+				 "relationship:Maru": "friendly",
+			 },
+		},
+		
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Haley",
+			 "When": {
+				 "CurrentSpouse |contains=Haley": "false",
+				 "Hearts:Haley": "5, 6, 7, 8, 9, 10",
+				 "relationship:Haley": "friendly",
+			 },
+		},
+		
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Emily",
+			 "When": {
+				 "CurrentSpouse |contains=Emily": "false",
+				 "Hearts:Emily": "5, 6, 7, 8, 9, 10",
+				 "relationship:Emily": "friendly",
+			 },
+		},
+		
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Harvey",
+			 "When": {
+				 "CurrentSpouse |contains=Harvey": "false",
+				 "Hearts:Harvey": "5, 6, 7, 8, 9, 10",
+				 "relationship:Harvey": "friendly",
+			 },
+		},
+		
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Elliott",
+			 "When": {
+				 "CurrentSpouse |contains=Elliott": "false",
+				 "Hearts:Elliott": "5, 6, 7, 8, 9, 10",
+				 "relationship:Elliott": "friendly",
+			 },
+		},
+		
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Alex",
+			 "When": {
+				 "CurrentSpouse |contains=Alex": "false",
+				 "Hearts:Alex": "5, 6, 7, 8, 9, 10",
+				 "relationship:Alex": "friendly",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Sebastian",
+			 "When": {
+				 "CurrentSpouse |contains=Sebastian": "false",
+				 "Hearts:Sebastian": "5, 6, 7, 8, 9, 10",
+				 "relationship:Sebastian": "friendly",
+			 },
+		},
+		
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Sam",
+			 "When": {
+				 "CurrentSpouse |contains=Sam": "false",
+				 "Hearts:Sam": "5, 6, 7, 8, 9, 10",
+				 "relationship:Sam": "friendly",
+			 },
+		},
+		
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Shane",
+			 "When": {
+				 "CurrentSpouse |contains=Shane": "false",
+				 "Hearts:Shane": "5, 6, 7, 8, 9, 10",
+				 "relationship:Shane": "friendly",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Kent",
+			 "When": {
+				 "Hearts:Kent": "5, 6, 7, 8, 9, 10",
+				 "Year |contains=1": "false",
+				 "CurrentSpouse |contains=Sam": "false",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Jodi",
+			 "When": {
+				 "Hearts:Jodi": "5, 6, 7, 8, 9, 10",
+				 "CurrentSpouse |contains=Sam": "false",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Marnie",
+			 "When": {
+				 "Hearts:Marnie": "5, 6, 7, 8, 9, 10",
+				 "CurrentSpouse |contains=Shane": "false",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Jas",
+			 "When": {
+				 "Hearts:Jas": "5, 6, 7, 8, 9, 10",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Vincent",
+			 "When": {
+				 "Hearts:Vincent": "5, 6, 7, 8, 9, 10",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Caroline",
+			 "When": {
+				 "Hearts:Caroline": "5, 6, 7, 8, 9, 10",
+				 "CurrentSpouse |contains=Abigail": "false",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Clint",
+			 "When": {
+				 "Hearts:Clint": "5, 6, 7, 8, 9, 10",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Demetrius",
+			 "When": {
+				 "Hearts:Demetrius": "5, 6, 7, 8, 9, 10",
+				 "CurrentSpouse |contains=Sebastian": "false",
+				 "CurrentSpouse |contains=Maru": "false",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Evelyn",
+			 "When": {
+				 "Hearts:Evelyn": "5, 6, 7, 8, 9, 10",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, George",
+			 "When": {
+				 "Hearts:George": "5, 6, 7, 8, 9, 10",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Gus",
+			 "When": {
+				 "Hearts:Gus": "5, 6, 7, 8, 9, 10",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Krobus",
+			 "When": {
+				 "Hearts:Krobus": "5, 6, 7, 8, 9, 10",
+				 "CurrentSpouse |contains=Krobus": "false",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Leo",
+			 "When": {
+				 "Hearts:Leo": "5, 6, 7, 8, 9, 10",
+				 "HasFlag": "addedParrotBoy",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Lewis",
+			 "When": {
+				 "Hearts:Lewis": "5, 6, 7, 8, 9, 10",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Linus",
+			 "When": {
+				 "Hearts:Linus": "5, 6, 7, 8, 9, 10",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Pam",
+			 "When": {
+				 "Hearts:Pam": "5, 6, 7, 8, 9, 10",
+				 "CurrentSpouse |contains=Penny": "false",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Pierre",
+			 "When": {
+				 "Hearts:Pierre": "5, 6, 7, 8, 9, 10",
+				 "CurrentSpouse |contains=Abigail": "false",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Robin",
+			 "When": {
+				 "Hearts:Robin": "5, 6, 7, 8, 9, 10",
+				 "CurrentSpouse |contains=Sebastian": "false",
+				 "CurrentSpouse |contains=Maru": "false",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Sandy",
+			 "When": {
+				 "Hearts:Sandy": "5, 6, 7, 8, 9, 10",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, Willy",
+			 "When": {
+				 "Hearts:Willy": "5, 6, 7, 8, 9, 10",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, the Wizard",
+			 "When": {
+				 "Hearts:Wizard": "5, 6, 7, 8, 9, 10",
+				 "Wizard": "Wizard",
+			 },
+		},
+		
+		{
+			 "Name": "VillagerList",
+			 "Value": "{{VillagerList}}, the Witch",
+			 "When": {
+				 "Hearts:Wizard": "5, 6, 7, 8, 9, 10",
+				 "Wizard": "Witch",
+			 },
+		},
+		
+		
+		//End Result
+		{
+			 "Name": "NPCFriend",
+			 "Value": "none", //By default, you have no friends. Sorry, them's the breaks.
+		},
+		
+		{
+			 "Name": "NPCFriendCheck", //Check token
+			 "Value": null,
+		},
+		
+		{
+			 "Name": "NPCFriendCheck",
+			 "Value": "{{Random:{{VillagerList}}}}",
+			 "When": {
+				 "HasValue:{{VillagerList}}": "true", //This should always be true - test should be included.
+			 },
+		},
+		
+		{
+			 "Name": "NPCFriend",
+			 "Value": "{{NPCFriendCheck}}",
+			 "When": {
+				 "NPCFriendCheck |contains=test": "false", //If test is the only option or is chosen by the randomizer, this is not used.
+			 },
+		},
+		
+		//Other token setups
+		
+		{
+			 "Name": "SpouseCheck", //Token setup - no spouse
+			 "Value": "unmarried",
+		},
+		
+		{
+			 "Name": "SpouseCheck2", //Token Setup - no Free Love
+			 "Value": "nopoly",
+		},
+		
+		{
+			 "Name": "SpouseCheck",
+			 "Value": "{{Spouse}}", //If player has a spouse, then have them as the first value.
+			 "When": {
+				 "HasValue:{{spouse}}": "true",
+			 },
+		},
+		
+		{
+			 "Name": "SpouseCheck",
+			 "Value": "{{Roommate}}", //If player has a roommate and no spouse, use them as the first value.
+			 "When": {
+				 "HasValue:{{spouse}}": "false",
+				 "HasValue:{{roommate}}": "true",
+			 },
+		},
+		
+		{
+			 "Name": "SpouseCheck2",
+			 "Value": "{{Random:{{aedenthorn.FreeLove/PlayerSpouses}}}}", //Pick another! Pick another!
+			 "When": {
+				 "HasMod": "aedenthorn.FreeLove",
+				 "HasValue:{{spouse}}": "true",
+			 },
+		},
+		
+		{
+			 "Name": "SpouseCheck2",
+			 "Value": "{{Random:{{aedenthorn.FreeLove/PlayerSpouses}}}}", //Roommates can be included - the adventure dialogue doesn't have romance implied.
+			 "When": {
+				 "HasMod": "aedenthorn.FreeLove",
+				 "HasValue:{{roommate}}": "true",
+			 },
+		},
+		
+		{
+			 "Name": "SpouseCheck2",
+			 "Value": "{{Random:{{ApryllForever.PolyamorySweetLove/PlayerSpouses}}}}", //Pick another! Pick another!
+			 "When": {
+				 "HasMod": "ApryllForever.PolyamorySweetLove",
+				 "HasValue:{{spouse}}": "true",
+			 },
+		},
+		
+		{
+			 "Name": "SpouseCheck2",
+			 "Value": "{{Random:{{ApryllForever.PolyamorySweetLove/PlayerSpouses}}}}", //Roommates can be included - the adventure dialogue doesn't have romance implied.
+			 "When": {
+				 "HasMod": "ApryllForever.PolyamorySweetLove",
+				 "HasValue:{{roommate}}": "true",
+			 },
+		},
+		
+		{
+			 "Name": "SpouseCheck2",
+			 "Value": "{{Random:{{EnderTedi.Polyamory/PlayerSpouses}}}}", //Pick another! Pick another!
+			 "When": {
+				 "HasMod": "EnderTedi.Polyamory",
+				 "HasValue:{{spouse}}": "true",
+			 },
+		},
+		
+		{
+			 "Name": "SpouseCheck2",
+			 "Value": "{{Random:{{EnderTedi.Polyamory/PlayerSpouses}}}}", //Roommates can be included - the adventure dialogue doesn't have romance implied.
+			 "When": {
+				 "HasMod": "EnderTedi.Polyamory",
+				 "HasValue:{{roommate}}": "true",
+			 },
+		},
+		
+		{
+			 "Name": "NPCSpouse", //By default, no one.
+			 "Value": "none",
+		},
+		
+		{
+			 "Name": "NPCSpouse",
+			 "Value": "{{SpouseCheck2}}",
+			 "When": {
+				 "HasMod": "aedenthorn.FreeLove",
+				 "HasValue:{{spouse}}": "true",
+				 "SpouseCheck |contains={{SpouseCheck2}}": "false", //If Free Love is installed and the player is married, compare the two. If not the same, NPCSpouse has a value. (If only one spouse, SpouseCheck2 will return the spouse.)
+			 },
+		},
+		
+		{
+			 "Name": "NPCSpouse",
+			 "Value": "{{SpouseCheck2}}",
+			 "When": {
+				 "HasMod": "aedenthorn.FreeLove",
+				 "HasValue:{{roommate}}": "true",
+				 "SpouseCheck |contains={{SpouseCheck2}}": "false", //NPC Roomies included in the Free Love token
+			 },
+		},
+		
+		{
+			 "Name": "NPCSpouse",
+			 "Value": "{{SpouseCheck2}}",
+			 "When": {
+				 "HasMod": "ApryllForever.PolyamorySweetLove",
+				 "HasValue:{{spouse}}": "true",
+				 "SpouseCheck |contains={{SpouseCheck2}}": "false", //If PolySweet is installed and the player is married, compare the two. If not the same, NPCSpouse has a value. (If only one spouse, SpouseCheck2 will return the spouse.)
+			 },
+		},
+		
+		{
+			 "Name": "NPCSpouse",
+			 "Value": "{{SpouseCheck2}}",
+			 "When": {
+				 "HasMod": "ApryllForever.PolyamorySweetLove",
+				 "HasValue:{{roommate}}": "true",
+				 "SpouseCheck |contains={{SpouseCheck2}}": "false", //NPC Roomies included in the Free Love token
+			 },
+		},
+		
+		//Adventure Dialogues! (This is a lot of work just for one line!)
+		{
+			"Name": "Adventures",
+			"Value": "{{i18n:Adventure.1}}",
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.2}}", //Skull Cavern Unlocked
+			"When": {
+				"HasFlag": "skullCave",
+			},
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.3}}", //Ginger Island unlocked.
+			"When": {
+				"HasFlag": "willyHours",
+			},
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.4 | NPCFriend={{NPCFriend}} }}",
+			"When": {
+				"NPCFriend |contains=none": "false", //You have friends! Congratulations!
+			},
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.5}}",
+			"When": {
+				"HasSeenEvent": "75160254", //You've met Daia. But are you ready to cleanse the Spirit Realm? (Ooh, a cutie to meet.)
+			},
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.6}}",
+			"When": {
+				"HasSeenEvent": "908079", //Oooh, scary, the Crimson Badlands. (Perhaps they won't die too many times, going in there.)
+			},
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.7 | NPCSpouse={{NPCSpouse}} }}",
+			"When": {
+				"NPCSpouse |contains=none": "false", //You know, you don't *have* to have multiple spouses/roommates... but if you do, here's some immersion for you. 
+			},
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.8 | FirstChild={{FirstChild}} }}",
+			"When": {
+				"HasValue: {{ChildGenders}}": true,
+				"HasValue: {{ChildGenders|valueAt=1}}": false, //Only one child. No children tosses this.
+			},
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.9 | FirstChild={{FirstChild}} | SecondChild={{SecondChild}} }}",
+			"When": {
+				"HasValue: {{ChildGenders}}": true,
+				"HasValue: {{ChildGenders|valueAt=1}}": true, //Two children. No children or one child only tosses this.
+			},
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.10}}",
+			"When": {
+				"HasSeenEvent": "75160265", //Wow, you completed the Spirit Realm! But are you ready for RSV 3.0? (I'm sure not.)
+			},
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.11}}",
+			"When": {
+				"HasFlag": "Farm_Eternal", //Wait, what, you have Perfection? And you're still playing? Impressive.
+			},
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.12}}",
+			"When": {
+				"HasMod": "CJBok.CheatsMenu", //Cheater, cheater, pumpkin eater! (Don't worry, I don't actually judge. But have fun breaking the laws of reality.)
+			},
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.13}}",
+			"When": {
+				"HasMod": "purrplingcat.npcadventure",
+				"CurrentSpouse |contains=Emily": "false", //Syntactically, this line doesn't work with Emily's and only Emily's, so she doesn't get this one. (Plus, she's spiritual anyway in NPCA, so she wouldn't really want to get this line in certain contexts.)
+			},
+		},
+		
+		{
+			"Name": "Adventures",
+			"Value": "{{Adventures}}, {{i18n:Adventure.14}}",
+			"When": {
+				"CurrentSpouse |contains=Abigail": "true", //Extra Abigail line, because I think of all the spouses/roommates, she'd take to knowing about the magical stuff in the Valley the most. The rest... not so much.
+			},
+		},
+		
+		//Choose Your (Own) Adventure
+		{
+			"Name": "AdventureDialogue",
+			"Value": "{{Random: {{Adventures}} }}",
+		},
+		
+		
+		//Stardrop Breakfast shouldn't be empty during dates, right?
+		{
+			"Name": "BreakfastVillager1",
+			"Value": "Blocker1",
+		},
+		
+		{
+			"Name": "BreakfastVillager1",
+			"Value": "Leah",
+			"When": {
+				"DayOfWeek": "Tuesday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager1",
+			"Value": "Robin",
+			"When": {
+				"DayOfWeek": "Wednesday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager1",
+			"Value": "Caroline",
+			"When": {
+				"DayOfWeek": "Thursday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager1",
+			"Value": "Evelyn",
+			"When": {
+				"DayOfWeek": "Friday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager1",
+			"Value": "Sandy",
+			"When": {
+				"DayOfWeek": "Saturday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager1",
+			"Value": "Evelyn",
+			"When": {
+				"Weather": "rain, storm",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager2",
+			"Value": "Blocker2",
+		},
+		
+		{
+			"Name": "BreakfastVillager2",
+			"Value": "Elliott",
+			"When": {
+				"DayOfWeek": "Tuesday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager2",
+			"Value": "Demetrius",
+			"When": {
+				"DayOfWeek": "Wednesday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager2",
+			"Value": "Pierre",
+			"When": {
+				"DayOfWeek": "Thursday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager2",
+			"Value": "George",
+			"When": {
+				"DayOfWeek": "Friday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager2",
+			"Value": "Emily",
+			"When": {
+				"DayOfWeek": "Saturday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager2",
+			"Value": "George",
+			"When": {
+				"Weather": "rain, storm",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager3",
+			"Value": "Blocker3",
+		},
+		
+		{
+			"Name": "BreakfastVillager3",
+			"Value": "Harvey",
+			"When": {
+				"DayOfWeek": "Wednesday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager3",
+			"Value": "Lewis",
+			"When": {
+				"DayOfWeek": "Thursday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager3",
+			"Value": "Lewis",
+			"When": {
+				"DayOfWeek": "Friday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager3",
+			"Value": "Lewis",
+			"When": {
+				"Weather": "rain, storm",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager4",
+			"Value": "Blocker4",
+		},
+		
+		{
+			"Name": "BreakfastVillager4",
+			"Value": "Clint",
+			"When": {
+				"DayOfWeek": "Tuesday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager4",
+			"Value": "Maru",
+			"When": {
+				"DayOfWeek": "Wednesday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager4",
+			"Value": "Penny",
+			"When": {
+				"DayOfWeek": "Thursday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager4",
+			"Value": "Alex",
+			"When": {
+				"DayOfWeek": "Friday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager5",
+			"Value": "Blocker5",
+		},
+		
+		{
+			"Name": "BreakfastVillager5",
+			"Value": "Sebastian",
+			"When": {
+				"DayOfWeek": "Wednesday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager5",
+			"Value": "Willy",
+			"When": {
+				"DayOfWeek": "Tuesday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastVillager5",
+			"Value": "Willy",
+			"When": {
+				"Weather": "rain, storm",
+			},
+		},
+		
+		//When shouldn't the date occur?
+		{
+			"Name": "DaysBlocked",
+			"Value": "Sun Mon", //Immersion Breaking - Gus is not running the counter at all on Mondays, and Sundays are fairly easy to cause issues. (I'd stop Thursdays, too, but that requires another mod.)
+		},
+		
+		//Which days are blocked?
+		{
+			"Name": "DaysBlocked",
+			"Value": "Sun Mon Tue",
+			"When": {
+				"CurrentSpouse |contains=Leah, Elliott, Sam": "true", //Leah and Elliott attend on Tuesdays. Sam might be doing Gus's job, so just remove him from contention.
+			},
+		},
+		
+		{
+			"Name": "DaysBlocked",
+			"Value": "Sun Mon Wed",
+			"When": {
+				"CurrentSpouse |contains=Sebastian, Maru": "true", //Seb and Maru go on Sundays (already blocked) and Wednesdays - block here.
+			},
+		},
+		
+		{
+			"Name": "DaysBlocked",
+			"Value": "Sun Mon Thu",
+			"When": {
+				"CurrentSpouse |contains=Abigail, Penny": "true", //Abigail and Penny go on Thursdays and Sundays (already blocked), block here.
+			},
+		},
+		
+		{
+			"Name": "DaysBlocked",
+			"Value": "Sun Mon Tue Thu",
+			"When": {
+				"CurrentSpouse |contains=Shane": "true", //Shane goes on Monday (blocked) and Thursday, and might be doing Gus's job on Tuesday.
+			},
+		},
+		
+		{
+			"Name": "DaysBlocked",
+			"Value": "Sun Mon Tue Wed Thu",
+			"When": {
+				"CurrentSpouse |contains=Harvey": "true", //Probably really hard to trigger Harvey's - he can't be taken on Sunday or Monday (immersion issues), Tuesday or Thursday (Doctor Appointments) or Wednesday (Breakfast), plus only 25% chance. Sorry Harveymancers.
+			},
+		},
+		
+		{
+			"Name": "DaysBlocked",
+			"Value": "Sun Mon Fri",
+			"When": {
+				"CurrentSpouse |contains=Alex": "true", //Alex attends on Fridays
+			},
+		},
+		
+		{
+			"Name": "DaysBlocked",
+			"Value": "Sun Mon Sat",
+			"When": {
+				"CurrentSpouse |contains=Emily, Haley": "true", //Haley and Emily go on Saturdays. Emily goes on Sundays after sports room, but that's already blocked off.
+			},
+		},
+		
+		//Spouse Event IDs
+		
+		{
+			"Name": "SpouseID",
+			"Value": "13", //Default - this forces generic modded.
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "1",
+			"When": {
+				"CurrentSpouse |contains=Abigail": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "2",
+			"When": {
+				"CurrentSpouse |contains=Leah": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "3",
+			"When": {
+				"CurrentSpouse |contains=Penny": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "4",
+			"When": {
+				"CurrentSpouse |contains=Maru": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "5",
+			"When": {
+				"CurrentSpouse |contains=Haley": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "6",
+			"When": {
+				"CurrentSpouse |contains=Emily": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "7",
+			"When": {
+				"CurrentSpouse |contains=Harvey": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "8",
+			"When": {
+				"CurrentSpouse |contains=Elliott": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "9",
+			"When": {
+				"CurrentSpouse |contains=Alex": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "10",
+			"When": {
+				"CurrentSpouse |contains=Sebastian": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "11",
+			"When": {
+				"CurrentSpouse |contains=Sam": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "12",
+			"When": {
+				"CurrentSpouse |contains=Shane": "true",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "-abigail",
+			"When": {
+				"CurrentSpouse |contains=Abigail": "true",
+				"EventStuff": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "-leah",
+			"When": {
+				"CurrentSpouse |contains=Leah": "true",
+				"EventStuff": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "-penny",
+			"When": {
+				"CurrentSpouse |contains=Penny": "true",
+				"EventStuff": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "-maru",
+			"When": {
+				"CurrentSpouse |contains=Maru": "true",
+				"EventStuff": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "-alex",
+			"When": {
+				"CurrentSpouse |contains=Haley": "true",
+				"EventStuff": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "-emily",
+			"When": {
+				"CurrentSpouse |contains=Emily": "true",
+				"EventStuff": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "-harvey",
+			"When": {
+				"CurrentSpouse |contains=Harvey": "true",
+				"EventStuff": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "-elliott",
+			"When": {
+				"CurrentSpouse |contains=Elliott": "true",
+				"EventStuff": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "-alex",
+			"When": {
+				"CurrentSpouse |contains=Alex": "true",
+				"EventStuff": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "-sebastian",
+			"When": {
+				"CurrentSpouse |contains=Sebastian": "true",
+				"EventStuff": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "-sam",
+			"When": {
+				"CurrentSpouse |contains=Sam": "true",
+				"EventStuff": "false",
+			},
+		},
+		
+		{
+			"Name": "SpouseID",
+			"Value": "-shane",
+			"When": {
+				"CurrentSpouse |contains=Shane": "true",
+				"EventStuff": "false",
+			},
+		},
+		
+		//Krobus is not allowed a date in the Saloon, for obvious reasons
+		{
+			"Name": "SpouseID",
+			"Value": "0",
+			"When": {
+				"CurrentSpouse |contains=Krobus": "true",
+			},
+		},
+		
+		//Oh boy, here we go. 1.6 Tokens for the Shop!
+		
+		{
+			"Name": "DrinkPrice",
+			"Value": 300,
+		},
+		
+		{
+			"Name": "DrinkPrice",
+			"Value": 200,
+			"When": {
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		{
+			"Name": "FoodPrice",
+			"Value": 500,
+		},
+		
+		{
+			"Name": "FoodPrice",
+			"Value": 300,
+			"When": {
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		{
+			"Name": "DrinkList",
+			"Value": "(O)184, (O)395, (O)253, (O)194, (O)216", //Yes, Fried Egg and Bread are not drinks, but classifying this token as drinks makes the rest easier. Fight me, code readers.
+		},
+		
+		{
+			"Name": "DrinkList",
+			"Value": "(O)184, (O)395, (O)253, (O)AgentLyoko.SaloonBreakfast_FreshOrangeJuice",
+			"When": {
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		{
+			"Name": "DrinkList",
+			"Value": "{{DrinkList}}, (O)Rafseazz.RSVCP_Wild_Apple_Juice, (O)Rafseazz.RSVCP_Apricot_Juice",
+			"When": {
+				"HasSeenEvent |contains=177755": "true",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+			},
+		},
+		
+		{
+			"Name": "DrinkList",
+			"Value": "{{DrinkList}}, (O)Wildflour.AtelierGoods_Happy_Harvest_Tea, (O)Wildflour.AtelierGoods_Pelican_Fog_Tea, (O)Wildflour.AtelierGoods_Sunny_Delight_Tea",
+			"When": {
+				"HasSeenEvent |contains=177755": "true",
+				"HasMod |contains=Atelier.Cauldron": "true",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+				"Atelier.Cauldron/ConfigValue:Tea": "true",
+				"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+			},
+		},
+		
+		{
+			"Name": "DrinkList",
+			"Value": "{{DrinkList}}, (O)Wildflour.AtelierGoods_Early_Riser_Latte, (O)Wildflour.AtelierGoods_Warm_Vanilla_Sugar_Latte, (O)Wildflour.AtelierGoods_Mucha_Mocha_Latte",
+			"When": {
+				"HasSeenEvent |contains=177755": "true",
+				"HasMod |contains=Atelier.Cauldron": "true",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+				"Atelier.Cauldron/ConfigValue:Coffee": "true",
+				"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+			},
+		},
+		
+		{
+			"Name": "FoodList",
+			"Value": "(O)195, (O)651, (O)211, (O)201, (O)210",
+		},
+		
+		{
+			"Name": "FoodList",
+			"Value": "(O)195, (O)211, (O)210, (O)194, (O)216",
+			"When": {
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		{
+			"Name": "FoodList",
+			"Value": "(O)195, (O)194, (O)216",
+			"When": {
+				"HasSeenEvent |contains=177759": "true",
+				"Day": "4, 11",
+			},
+		},
+		
+		{
+			"Name": "FoodList",
+			"Value": "{{FoodList}}, (O)Wildflour.AtelierGoods_Pretzel, (O)Wildflour.AtelierGoods_Croissants, (O)Wildflour.AtelierGoods_Brioche, (O)Wildflour.AtelierGoods_Pain_Au_Chocolat",
+			"When": {
+				"HasMod |contains=Atelier.Cauldron": "true",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+				"Atelier.Cauldron/ConfigValue:Breads": "true",
+				"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+			},
+		},
+		
+		{
+			"Name": "FoodList",
+			"Value": "{{FoodList}}, (O)Cornucopia_AvocadoToast, (O)Cornucopia_AutumnMuffin, (O)Cornucopia_BreakfastScramble",
+			"When": {
+				"HasSeenEvent |contains=177755": "true",
+				"HasMod |contains=Cornucopia.CookingRecipes": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": true
+			},
+		},
+		
+		{
+			"Name": "PremiumList",
+			"Value": "(O)651",
+		},
+		
+		{
+			"Name": "PremiumList",
+			"Value": "{{PremiumList}}, (O)201",
+			"When": {
+				"HasSeenEvent |contains=177759": "false",
+			},
+		},
+		
+		{
+			"Name": "PremiumList",
+			"Value": "{{PremiumList}}, (O)201",
+			"When": {
+				"Day |contains=4, 11": "false",
+				"HasSeenEvent |contains=177759": "true",
+			},
+		},
+		
+		{
+			"Name": "PremiumList",
+			"Value": "{{PremiumList}}, (O)Wildflour.AtelierGoods_Blueberry_Muffins, (O)Wildflour.AtelierGoods_Walnut_Muffins, (O)Wildflour.AtelierGoods_Raspberry_Scones, (O)Wildflour.AtelierGoods_Blackberry_Scones",
+			"When": {
+				"HasMod |contains=Atelier.Cauldron": "true",
+				"HasMod |contains=Wildflour.AtelierGoods": "true",
+				"Atelier.Cauldron/ConfigValue:Muffins": "true",
+				"Atelier.Cauldron/ConfigValue:DifficultyToggle": "Advanced"
+			},
+		},
+		
+		{
+			"Name": "PremiumList",
+			"Value": "{{PremiumList}}, (O)Cornucopia_Waffles, (O)Cornucopia_FigToast, (O)Cornucopia_LoxandaSchmear, (O)Cornucopia_SunriseToast",
+			"When": {
+				"HasMod |contains=Cornucopia.CookingRecipes": "true",
+				"HomeCook_Extended": "true"
+			},
+		},
+		
+		{
+			"Name": "PremiumList",
+			"Value": "{{PremiumList}}, (O)Cornucopia_FigToast, (O)Cornucopia_LoxandaSchmear",
+			"When": {
+				"Day |contains=4, 11": "false",
+				"HasSeenEvent |contains=177759": "true",
+				"HasMod |contains=Cornucopia.CookingRecipes": "true",
+				"HomeCook_Extended": "true"
+			},
+		},
+		
+		{
+			"Name": "PremiumList",
+			"Value": "{{PremiumList}}, (O)Rafseazz.RSVCP_Pink_Frosted_Sprinkled_Doughnut, (O)Rafseazz.RSVCP_Hundred_Flavor_Doughnut",
+			"When": {
+				"HasSeenEvent |contains=177759": "false",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+			},
+		},
+		
+		{
+			"Name": "PremiumList",
+			"Value": "{{PremiumList}}, (O)Rafseazz.RSVCP_Pink_Frosted_Sprinkled_Doughnut, (O)Rafseazz.RSVCP_Hundred_Flavor_Doughnut",
+			"When": {
+				"Day |contains=4, 11": "false",
+				"HasSeenEvent |contains=177759": "true",
+				"HasMod |contains=Rafseazz.RSVCP": "true",
+			},
+		},
+		
+		//Breakfast Shop Times, Redux
+		
+		{
+			"Name": "BreakfastShop",
+			"Value": "0800 1200 17 18 1 1", //Only open if someone's behind the counter
+		},
+		
+		{
+			"Name": "BreakfastShop",
+			"Value": "0800 1200",
+			"When": {
+				"ShopHours": "noperson",
+			},
+		},
+		
+		{
+			"Name": "BreakfastShop",
+			"Value": "0600 2400",
+			"When": {
+				"ShopHours": "allday",
+			},
+		},
+		
+		{
+			"Name": "BreakfastShop",
+			"Value": "0600 1550",
+			"When": {
+				"ShopHours": "allday",
+				"HasMod": "Airyn.EmilytheMixologist.CP",
+			},
+		},
+		
+		//And finally, dynamic sounds! In three parts.
+		
+		{
+			"Name": "ShopOpenSound",
+			"Value": "dwop",
+		},
+		
+		{
+			"Name": "ShopOpenSound",
+			"Value": "Duck",
+			"When": {
+				"ShopSounds": "ducks", //default, drinks, cooking, ducks
+			},
+		},
+		
+		{
+			"Name": "ShopPurchaseSound",
+			"Value": "purchaseClick",
+		},
+		
+		{
+			"Name": "ShopPurchaseSound",
+			"Value": "furnace",
+			"When": {
+				"ShopSounds": "cooking",
+			},
+		},
+		
+		{
+			"Name": "ShopPurchaseSound",
+			"Value": "Milking",
+			"When": {
+				"ShopSounds": "drinks",
+			},
+		},
+		
+		{
+			"Name": "ShopPurchaseSound",
+			"Value": "Duck",
+			"When": {
+				"ShopSounds": "ducks",
+			},
+		},
+		
+		{
+			"Name": "RepeatPurchaseSound",
+			"Value": "purchaseRepeat",
+		},
+		
+		{
+			"Name": "RepeatPurchaseSound",
+			"Value": "fireball",
+			"When": {
+				"ShopSounds": "cooking",
+			},
+		},
+		
+		{
+			"Name": "RepeatPurchaseSound",
+			"Value": "glug",
+			"When": {
+				"ShopSounds": "drinks",
+			},
+		},
+		
+		{
+			"Name": "RepeatPurchaseSound",
+			"Value": "Duck",
+			"When": {
+				"ShopSounds": "ducks",
+			},
+		},
+		
+		//Pumpkin: Is it a Juice, or a Wine?
+		
+		{
+			"Name": "Pumpkin",
+			"Value": "juice_item",
+		},
+		
+		{
+			"Name": "Pumpkin",
+			"Value": "wine_item",
+			"When": {
+				"HasMod |contains=o0MrPro.CP.BalancedValley": true,
+			},
+		},
+		
+		//Red Cabbage: What does it turn into?
+		
+		{
+			"Name": "Cabbage",
+			"Value": "true",
+		},
+		
+		{
+			"Name": "Cabbage",
+			"Value": "false",
+			"When": {
+				"HasMod |contains=Cornucopia.ArtisanMachines": true,
+			},
+		},
+		
+		//Simplify the event conditions
+		
+		{
+			"Name": "MondayToken",
+			"Value": false,
+		},
+		
+		{
+			"Name": "MondayToken",
+			"Value": true,
+			"When": {
+				"PlotSchedules": "enabled",
+			},
+		},
+		
+		{
+			"Name": "MondayToken",
+			"Value": true,
+			"When": {
+				"HasSeenEvent |contains=177756": "true",
+			},
+		},
+		
+		{
+			"Name": "WeekToken",
+			"Value": false,
+		},
+		
+		{
+			"Name": "WeekToken",
+			"Value": true,
+			"When": {
+				"PlotSchedules": "enabled",
+			},
+		},
+		
+		{
+			"Name": "WeekToken",
+			"Value": true,
+			"When": {
+				"HasSeenEvent |contains=177755": "true",
+			},
+		},
+		
+		{
+			"Name": "WeekendToken",
+			"Value": false,
+		},
+		
+		{
+			"Name": "WeekendToken",
+			"Value": true,
+			"When": {
+				"PlotSchedules": "enabled",
+			},
+		},
+		
+		{
+			"Name": "WeekendToken",
+			"Value": true,
+			"When": {
+				"HasSeenEvent |contains=177752": "true",
+			},
+		},
+		
+		// Small Caroline token
+		
+		{
+			"Name": "Caroline",
+			"Value": "Vanilla",
+		},
+		
+		{
+			"Name": "Caroline",
+			"Value": "CarolineDivorced",
+			"When": {
+				"HasFlag": "9062990_CarolineDivorceNotice",
+			},
+		},
+		
+		// Diverse Stardew Valley compatibility
+		
+		{
+			"Name": "DSVMuslimGusCompat",
+			"Value": "",
+		},
+		
+		{
+			"Name": "DSVMuslimGusCompat",
+			"Value": ".DSV",
+			"When": {
+				"HasMod": "DSV.Core",
+				"DSV.Core/ConfigValue:GusVariant |contains= Modded, AddOnMalaysianIndian": true
+			},
+		},
+
+		{
+			"Name": "DSVJewishElliottCompat",
+			"Value": "",
+		},
+		
+		{
+			"Name": "DSVJewishElliottCompat",
+			"Value": ".DSV",
+			"When": {
+				"HasMod": "DSV.Core",
+				"DSV.Core/ConfigValue:JewishElliott": true
+			},
+		},
+		
+	],
+	
+    "Changes": [
+	//Sure, we've had breakfast, but what about Stardrop Breakfast?
+	
+	//Elliott: "Has he been possessed by the spirit of breakfast??" *shocked face*
+	//Sam TextAboveHead: "Is that a thing?"
+	//Abigail TextAboveHead: "That's not a thing"
+    
+	//Main Mod Data
+		{
+            "LogName": "Include Special Orders",
+            "Action": "Include",
+            "FromFile": "assets/SpecialOrders/SpecialOrders.json",
+        },
+		{
+            "LogName": "Include Schedule String Edits",
+            "Action": "Include",
+            "FromFile": "assets/Dialogues/schedulestrings.json",
+        },
+		{
+            "LogName": "Include funLeave/funReturn Edits",
+            "Action": "Include",
+            "FromFile": "assets/Dialogues/marriagelines.json",
+        },
+		{
+            "LogName": "Include Conversation Topic Dialogues",
+            "Action": "Include",
+            "FromFile": "assets/Dialogues/ConversationTopics.json",
+        },
+		{
+			"LogName": "Include Mail Data",
+			"Action": "Include",
+			"FromFile": "assets/Mails/mail.json",
+		},
+		{
+			"LogName": "Include Trigger Action Data",
+			"Action": "Include",
+			"FromFile": "assets/Mails/Triggers.json",
+		},
+		{
+			"LogName": "Include Events",
+			"Action": "Include",
+			"FromFile": "assets/Events/Events.json",
+		},
+		{
+			"LogName": "Include Map Patches",
+			"Action": "Include",
+			"FromFile": "assets/MapPatches/MapPatches.json",
+		},
+		{
+            "LogName": "Include Orange Juice",
+            "Action": "Include",
+            "FromFile": "assets/Misc/OrangeJuice.json",
+        },
+		{
+            "LogName": "Include Shop and Shop Edits",
+            "Action": "Include",
+            "FromFile": "assets/Misc/Shops.json",
+        },
+	
+	//Breakfast Date Stuff
+		{
+			"LogName": "Include Breakfast Dates",
+			"Action": "Include",
+			"FromFile": "assets/Events/BreakfastDates.json",
+			"When": {
+				"BreakfastDate": "vanilla, all",
+			},
+		},
+		
+	//Schedules
+		{
+            "LogName": "Include Schedule Edits",
+            "Action": "Include",
+            "FromFile": "assets/Schedules/schedules.json",
+			"When": {
+				"PlotSchedules": "enabled",
+			},
+        },
+		{
+            "LogName": "Include Schedule Edits via Plot",
+            "Action": "Include",
+            "FromFile": "assets/Schedules/plotschedules.json",
+			"When": {
+				"PlotSchedules": "plot",
+			},
+        },
+		{
+            "LogName": "Include Schedule Compatibility with other mods",
+            "Action": "Include",
+            "FromFile": "assets/ModCompat/schedulecompat.json",
+			"When": {
+				"PlotSchedules": "enabled",
+			},
+        },
+		{
+            "LogName": "Include Schedule Compatibility with other mods, Plot Dependent",
+            "Action": "Include",
+            "FromFile": "assets/ModCompat/plotschedulecompat.json",
+			"When": {
+				"PlotSchedules": "plot",
+			},
+        },
+		
+		{
+            "LogName": "Include Multiplayer Compatibility Edits",
+            "Action": "Include",
+            "FromFile": "assets/Dialogues/multiplayercompat.json",
+        },
+		
+		{
+            "LogName": "Night Market Schedules",
+            "Action": "Include",
+            "FromFile": "assets/Schedules/SpouseNightMarket.json",
+			"When": {
+				"SpouseImmersion": "enabled",
+			},
+        },
+		
+		{
+            "LogName": "Doctor Visits - Always On Version",
+            "Action": "Include",
+            "FromFile": "assets/Schedules/SpouseImmersion.json",
+			"When": {
+				"SpouseImmersion": "enabled",
+				"PlotSchedules": "enabled",
+			},
+        },
+		
+		{
+            "LogName": "Doctor Visits - Plot Version",
+            "Action": "Include",
+            "FromFile": "assets/Schedules/PlotSpouseImmersion.json",
+			"When": {
+				"SpouseImmersion": "enabled",
+				"PlotSchedules": "plot",
+			},
+        },
+	
+	//PPAF Edits
+		{
+            "LogName": "PPAF Schedule String and CT Edits",
+            "Action": "Include",
+            "FromFile": "assets/ModCompat/PPAFBreakfast.json",
+			"When": {
+				"HasMod": "PPAF.Core",
+			},
+        },
+		
+		{
+            "LogName": "PPAF funLeave/funReturn edits - Always On Version",
+            "Action": "Include",
+            "FromFile": "assets/ModCompat/PPAFFun.json",
+			"When": {
+				"HasMod": "PPAF.Core",
+				"PlotSchedules": "enabled",
+			},
+        },
+		
+		{
+            "LogName": "PPAF funLeave/funReturn edits - Plot Version",
+            "Action": "Include",
+            "FromFile": "assets/ModCompat/PPAFPlotFun.json",
+			"When": {
+				"HasMod": "PPAF.Core",
+				"PlotSchedules": "plot",
+			},
+        },
+	
+	//Island overrides
+		
+		{
+            "LogName": "Island Overrides - Converted to 1.6",
+            "Action": "Include",
+            "FromFile": "assets/Misc/IslandExclusions.json",
+			"When": {
+				"IslandOverride": "true",
+			},
+        },
+		
+		//Please, Remember My Birthday Dialogue Compatibiity
+	
+		{
+            "LogName": "Please, Remember My Birthday Dialogue Compatibility",
+            "Action": "Include",
+            "FromFile": "assets/ModCompat/Birthday.json",
+			"When": {
+				"HasMod |contains=nraittanna.RememberMyBirthday": "true",
+			},
+        },
+		
+		// disable Harvey's rain schedule on checkup days. Thank you Atravita for the code!
+		{
+			"LogName": "Harvey Actually Doctors",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Harvey",
+			"Entries": {
+				"rain": null,
+				"rain2": null
+			},
+			"When": {
+				"HarveyRain": "true",
+				"DayOfWeek": "Tuesday, Thursday",
+			},
+		},
+    ]
+}

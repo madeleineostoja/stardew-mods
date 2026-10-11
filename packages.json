@@ -1,0 +1,53 @@
+{
+  "better-forest-farm": {
+    "path": "mods/better-forest-farm",
+    "folder": "BetterForestFarm",
+    "files": [
+      "content.json",
+      "assets",
+      "i18n",
+      "README.md"
+    ]
+  },
+  "immersive-dialogue-ui": {
+    "path": "mods/immersive-dialogue-ui",
+    "folder": "ImmersiveDialogueUI",
+    "files": [
+      "content.json",
+      "i18n",
+      "README.md"
+    ]
+  },
+  "impactful": {
+    "path": "mods/impactful",
+    "folder": "Impactful",
+    "project": "Impactful.csproj",
+    "tests": "Impactful.Tests/Impactful.Tests.csproj",
+    "files": [
+      "i18n",
+      "README.md",
+      "LICENSE"
+    ]
+  },
+  "overcast": {
+    "path": "mods/overcast",
+    "folder": "Overcast",
+    "project": "Overcast.csproj",
+    "tests": "Overcast.Tests/Overcast.Tests.csproj",
+    "files": [
+      "assets",
+      "i18n",
+      "README.md"
+    ]
+  },
+  "part-of-a-saloon-breakfast-patched": {
+    "path": "patches/part-of-a-saloon-breakfast-patched",
+    "folder": "PartOfASaloonBreakfast",
+    "files": [
+      "content.json",
+      "assets",
+      "i18n",
+      "README.md"
+    ]
+  }
+}

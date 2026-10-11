@@ -1,0 +1,10 @@
+{
+  "config.Lake.name": "Farm lake",
+  "config.Lake.description": "Replaces the scattered farm ponds with a large lake tucked into the bottom corner",
+  "config.WoodsShortcut.name": "Secret Woods shortcut",
+  "config.WoodsShortcut.description": "Adds a shortcut to the Secret Woods, blocked by a hardwood log like the main entrance",
+  "config.ForestFish.name": "Forest Fish",
+  "config.ForestFish.description": "Changes fishing spawns to match Cindersnap Foreset, rather than the standard Forest Farm (ie: less trash)",
+  "config.RemoveShippingBinPath.name": "Remove shipping bin path",
+  "config.RemoveShippingBinPath.description": "Removes the raised dirt path from the shipping bin to the farm entrance, preserving the grass/dirt outline and leaving the bin in place"
+}
