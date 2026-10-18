@@ -40,6 +40,8 @@ On macOS the Steam game path is usually `~/Library/Application Support/Steam/ste
 
 Output is `dist/<InstallFolder>-<version>.zip`. Builds do not deploy to the game folder. Packaging includes only the mod's own DLL, manifest, and explicitly listed runtime files and documentation; it excludes game assemblies, other mods, tests, local `config.json`, experiments, and repository metadata. Source `%ProjectVersion%` tokens are resolved in the packaged manifest without modifying the source file.
 
+Store Nexus screenshots, videos, and other promotional assets in each package's `media/` folder. These folders are not included in builds or release ZIPs.
+
 ## Local game testing
 
 The machine-local `build-local.sh` helper is ignored by Git:
