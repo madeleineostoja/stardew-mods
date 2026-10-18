@@ -13,6 +13,6 @@
   "config.damage.description": "Shake when the local player takes damage.",
   "config.explosions.name": "Explosions",
   "config.explosions.description": "Shake for nearby explosions.",
-  "config.trees.name": "Falling trees",
-  "config.trees.description": "Shake subtly when a wild tree felled by the local player lands."
+  "config.trees.name": "Trees and hardwood",
+  "config.trees.description": "Shake subtly when a wild tree felled by the local player lands, or their axe destroys a large hardwood stump or log."
 }
