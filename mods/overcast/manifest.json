@@ -2,9 +2,9 @@
   "Name": "Overcast",
   "Author": "heyitsmads",
   "Version": "%ProjectVersion%",
-  "Description": "Subtle, drifting cloud shadows for outdoor locations.",
+  "Description": "Extends vanilla cloud shadows to spring and fall, with optional native cloud tuning.",
   "UniqueID": "heyitsmads.Overcast",
   "EntryDll": "Overcast.dll",
   "MinimumApiVersion": "4.0.0",
-  "UpdateKeys": ["Nexus:53677"]
+  "UpdateKeys": ["Nexus:54073"]
 }

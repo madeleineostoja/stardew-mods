@@ -1,0 +1,10 @@
+{
+  "Name": "Overslept",
+  "Author": "heyitsmads",
+  "Version": "%ProjectVersion%",
+  "Description": "Sleep in after a 2am collapse instead of losing energy and money.",
+  "UniqueID": "heyitsmads.Overslept",
+  "EntryDll": "Overslept.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": ["Nexus:54074"]
+}

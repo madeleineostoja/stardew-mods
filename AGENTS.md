@@ -10,4 +10,12 @@
 
 Run the repository tooling tests and package validation, then build the affected package. Inspect ZIP contents when changing packaging to verify that each archive contains one complete mod folder and no unrelated files.
 
+For in-game testing, run `./build-local.sh` to refresh the stable `dist/testing/` folders linked into the game and preserve local configs. `scripts/mods.py build` only creates release packages; it does not deploy them. Local ZIPs use unversioned names; release ZIPs remain versioned.
+
 See [README.md](README.md) for build commands, prerequisites, packaging configuration, and release behaviour.
+
+## Headless game probes
+
+- On Apple Silicon, probes loading the installed x64 game assembly need an x64 host/runtime; `PlatformTarget=x64` alone isn’t enough.
+- Keep probe setup in a fresh temporary directory; never modify the game installation. The game’s bundled runtime can be reused with a copied, retargeted, ad-hoc-signed apphost and combined game/probe dependency metadata.
+- Copy—not symlink—the probe’s main DLL so runtime configuration resolves beside it. Other runtime files may be symlinked.
