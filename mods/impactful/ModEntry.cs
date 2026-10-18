@@ -279,6 +279,7 @@ internal static class ImpactTuning
     public const float LargeRockBreak = 8f;
     public const float PlayerDamage = 10f;
     public const float TreeFall = 6f;
+    public const float HardwoodBreak = 4f;
     public const float Parry = 14f;
     public const float CherryBomb = 12f;
     public const float Bomb = 20f;

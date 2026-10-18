@@ -8,13 +8,14 @@ Only the world view moves—your HUD, menus, cursor, and gameplay controls stay 
 
 - **Large rock breaks:** feedback when a pickaxe destroys a boulder, meteorite, or other large mineral clump. Ordinary rocks and ore nodes do not shake the camera.
 - **Tree landings:** a small kick when a mature wild tree you chop down hits the ground.
+- **Hardwood breaks:** a smaller kick when your axe destroys a large hardwood stump or log.
 - **Parries:** feedback when you successfully block a monster with a defensive sword. Hammer specials keep their vanilla shake.
 - **Player damage:** feedback when you actually take damage.
 - **Explosions:** distance-based feedback for nearby bombs, with stronger effects for larger blasts.
 
 Bombs produce one explosion cue rather than stacking it with a separate damage shake when you get hurt. If explosion feedback is disabled, bomb damage still uses the player-damage setting. Explosion kicks wait until the vanilla screen flash fades enough to reveal them.
 
-Individual tool swings, ordinary melee hits, fruit trees, stump removal, grass cutting, and hoeing do not add camera feedback. Impactful does not pause combat or add particles, flashes, or controller rumble.
+Individual tool swings, ordinary melee hits, fruit trees, ordinary tree-stump removal, grass cutting, and hoeing do not add camera feedback. Impactful does not pause combat or add particles, flashes, or controller rumble.
 
 ## Installation
 
@@ -44,7 +45,7 @@ Adjust settings through Generic Mod Config Menu, or edit `config.json` after lau
 
 - **EnableScreenShake:** turn all Impactful feedback on or off.
 - **ShakeStrength:** overall intensity, from 0% to 200%; 100% is the default and 0% disables feedback.
-- **Mining, Combat, PlayerDamage, Explosions, Trees:** toggle large rock breaks, parries, damage, explosions, and tree landings independently.
+- **Mining, Combat, PlayerDamage, Explosions, Trees:** toggle large rock breaks, parries, damage, explosions, and tree feedback independently. Trees covers both tree landings and hardwood stump/log breaks.
 
 ## Multiplayer and compatibility
 
