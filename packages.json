@@ -35,7 +35,16 @@
     "project": "Overcast.csproj",
     "tests": "Overcast.Tests/Overcast.Tests.csproj",
     "files": [
-      "assets",
+      "i18n",
+      "README.md"
+    ]
+  },
+  "overslept": {
+    "path": "mods/overslept",
+    "folder": "Overslept",
+    "project": "Overslept.csproj",
+    "tests": "Overslept.Tests/Overslept.Tests.csproj",
+    "files": [
       "i18n",
       "README.md"
     ]

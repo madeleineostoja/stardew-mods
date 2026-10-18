@@ -1,57 +1,59 @@
 # Overcast
 
-Overcast adds restrained, drifting cloud-shadow silhouettes to outdoor Stardew Valley locations. The shade is anchored in the world, moves with a gentle built-in wind, and stays below menus, the HUD, and the cursor.
+Overcast brings Stardew Valley's summer cloud shadows to spring and fall, with an option for winter too. Adjust their speed and size in every enabled season, including summer. It uses the game's own cloud art and behaviour, without adding a separate cloud layer.
 
 ## Requirements
 
 - Stardew Valley 1.6
 - SMAPI 4.0 or later
 
-[Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098) (GMCM) is supported as an optional convenience, not a requirement.
+[Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5098) (GMCM) is optional.
 
 ## Install and remove
 
 1. Install SMAPI.
-2. Download [Overcast from Nexus Mods](https://www.nexusmods.com/stardewvalley/mods/53677) and unzip it into Stardew Valley's `Mods` directory.
-3. Start the game. Configure the mod through GMCM when installed, or edit the generated `config.json`.
+2. Download [Overcast from Nexus Mods](https://www.nexusmods.com/stardewvalley/mods/54073) and unzip it into Stardew Valley's `Mods` directory.
+3. Start the game. Configure through GMCM, or edit the generated `config.json` while the game is closed.
 
-To remove Overcast, delete its folder from `Mods`. It does not write save data.
+To remove Overcast, delete its folder. It does not write save data. Delete `config.json` to reset all settings to their defaults.
+
+## Native behaviour
+
+Cloud shadows are faint, pixel-edged ground silhouettes that drift diagonally up-left. The game varies their appearance by flipping them and choosing sizes from 4 to 6.
+
+The game checks for spawning when entering ordinary mainland outdoor locations and every ten in-game minutes while there. Spawning is random and depends on map size; shadows are not guaranteed to appear immediately. Overcast preserves the native rain checks and stops new spawning one in-game hour before the location's starting-to-get-dark time. Existing clouds drift away naturally.
+
+Only the seasonal restriction in native cloud spawning is extended. Locations that override critter spawning, such as Ginger Island, do not acquire cloud shadows through a separate spawning system. Location-specific seasons are respected.
 
 ## Configuration
 
-Invalid manually edited numeric values are clamped to safe ranges when the mod loads.
+Unsafe numeric values are clamped to the supported ranges. Non-finite speed values reset to `1`. An inverted size range is repaired by raising the maximum to the minimum.
 
 | Option | Default | Description |
 | --- | --- | --- |
-| `Enabled` | `true` | Master switch. Fades out before all cloud simulation and drawing stop. |
-| `Opacity` | `0.12` | Maximum clear-day shadow opacity; time, weather, mask edges, and layer tuning reduce it further. Range: `0.00`–`0.50`. |
-| `Speed` | `1.0` | Multiplies the built-in gentle wind speed. Range: `0.00`–`2.00`. |
-| `Scale` | `1.0` | Multiplies each cloud's varied size. Range: `0.50`–`1.50`. |
-| `EnableAtNight` | `false` | Retains the weather-appropriate effect overnight instead of fading it out after evening. |
-| `EnableDuringRain` | `false` | Enables a reduced effect for rain-like and obscuring wet weather. |
-| `EnableDuringSnow` | `false` | Enables a reduced effect for snow, blizzards, and rain/snow mixtures. |
-| `EnableDuringStorms` | `false` | Enables a reduced effect for lightning and severe weather. |
-| `EnableDuringSpecialWeather` | `false` | Enables a reduced effect for heatwaves and unrecognized Weather Wonders effects. |
-| `SecondLayerEnabled` | `true` | Enables a sparse, lower-opacity secondary stratum. |
+| `Enabled` | `true` | Enable the seasonal extension and tuning. Off removes Overcast's changes; existing clouds are not forcibly removed. |
+| `EnableInSpring` | `true` | Allow native clouds in spring. |
+| `EnableInFall` | `true` | Allow native clouds in fall. |
+| `EnableInWinter` | `false` | Allow cloud shadows on clear winter days. |
+| `SpeedMultiplier` | `1.0` | Cloud speed, from `0` (still) to `2` (twice as fast). `1` is the usual speed. |
+| `MinSize` | `4` | Smallest clouds that can appear. Range: `2`–`8`; lower values make smaller clouds. |
+| `MaxSize` | `6` | Largest clouds that can appear. Range: `2`–`8`, and at least `MinSize`. Match the smallest size for equally sized clouds. |
 
-Changes from GMCM apply live and are saved through SMAPI.
+GMCM groups speed and size under **Cloud appearance** and saves through SMAPI. Speed applies to existing clouds immediately; size settings apply when new clouds spawn. Disabling a season stops Overcast's extension and tuning there, but leaves existing clouds and spawning independently enabled by other mods alone. Summer always uses your settings while Overcast is enabled.
 
-## Compatibility
+## Weather Wonders compatibility
 
-Overcast automatically detects Weather Wonders (`Kana.WeatherWonders`) without requiring it. Its known weather IDs use these policies:
+Weather Wonders (`Kana.WeatherWonders`) is optional. Its Cloudy Skies framework's optional API is used to respect explicit weather-specific cloud-spawning settings; neither mod is a required dependency. In every enabled season, including summer:
 
-- **Cloudy:** more clouds at lower contrast. This is enabled by default because Weather Wonders only adds an outdoor tint for this weather.
-- **Heatwave:** a reduced effect controlled by `EnableDuringSpecialWeather`.
-- **Drizzle, Deluge, Acid Rain, Muddy Rain, and Mist:** reduced rain behaviour, controlled by `EnableDuringRain`.
-- **Blizzard and Rain/Snow Mix:** reduced snow behaviour, controlled by `EnableDuringSnow`.
-- **Dry Lightning, Hailstorm, and Sandstorm:** reduced storm behaviour, controlled by `EnableDuringStorms`.
+- **Cloudy:** shadows are half as dark as usual.
+- **Heatwave:** its explicit Cloudy Skies cloud-spawning setting is respected; Weather Wonders disables shadows by default.
+- **Drizzle, Deluge, Acid Rain, Muddy Rain, Mist, Blizzard, Rain/Snow Mix, Dry Lightning, Hailstorm, and Sandstorm:** no new cloud shadows spawn.
+- **Unknown weather:** native weather checks remain in charge, and explicit Cloudy Skies cloud-spawning vetoes are respected.
 
-Weather Wonders effects with their own fog, precipitation, distortion, or other potentially expensive visuals are therefore disabled by default. Unknown Weather Wonders weather IDs are also disabled unless `EnableDuringSpecialWeather` is selected. Other unknown custom weather IDs fall back to Stardew's location-specific rain, snow, lightning, debris/wind, and green-rain flags; otherwise they use clear-weather behaviour. Storm takes precedence over rain, and snow takes precedence over rain for mixed weather.
+No weather-dependent speed, density, or wind simulation is added. Existing clouds are not forcibly removed when the weather changes.
 
-The mod deliberately has no external wind-vector API and no Realistic Wind Effects integration; both mods use their own visual wind behaviour. Nightshade, Immersive Lighting, recolours, and modded outdoor maps have no special compatibility code. Overcast draws on SMAPI's `RenderedWorld` layer, but SMAPI does not guarantee a fixed cross-mod callback ordering; any visual grading from another mod may therefore occur before or after this shade.
+## Compatibility and performance
 
-Overcast skips greenhouses, mines, volcano dungeons, caves, houses, shops, and other indoor locations by using the game's outdoor/location state. It does not inspect maps, tiles, entities, or terrain.
+Overcast patches native cloud spawning, movement, and drawing through SMAPI's Harmony support. The seasonal change is limited to cloud spawning; it does not change the game's season or the behaviour of other critters. Native cloud art and its drawing layer remain in use, including texture recolours supplied by other mods.
 
-## Performance and visual notes
-
-The supplied masks are loaded once and drawn with ordinary alpha blending. Overcast maintains a small capped population, culls clouds outside the world viewport, and does not use shaders, render targets, scene analysis, or per-frame allocations. Cloud movement and visual transitions update every tick; population retirement and refill run at most once every six ticks (about 10 Hz), and are skipped for unchanged, stationary populations. The secondary layer is intentionally sparse.
+There are no custom textures, update/render event loops, save data, or additional cloud populations. Other mods that patch the same native cloud methods may conflict. If the expected game hooks cannot be applied when Overcast loads, it logs an error and removes its patches, leaving normal cloud behaviour intact.

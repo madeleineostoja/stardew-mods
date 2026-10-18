@@ -28,7 +28,7 @@ public sealed class GenericModConfigMenuIntegration
         api.Register(this.manifest, this.Reset, this.Save);
         api.AddSectionTitle(this.manifest, () => this.translate("config.general.title"));
         api.AddBoolOption(this.manifest, () => this.getConfig().EnableScreenShake, value => this.getConfig().EnableScreenShake = value, () => this.translate("config.enable.name"), () => this.translate("config.enable.description"));
-        api.AddNumberOption(this.manifest, () => this.getConfig().ShakeStrength, value => this.getConfig().ShakeStrength = Math.Clamp(value, 0, 200), () => this.translate("config.strength.name"), () => this.translate("config.strength.description"), 0, 200);
+        api.AddNumberOption(this.manifest, () => this.getConfig().ShakeStrength / 100f, value => this.getConfig().ShakeStrength = (int)MathF.Round(Math.Clamp(value, 0f, 2f) * 100f), () => this.translate("config.strength.name"), () => this.translate("config.strength.description"), 0f, 2f, 0.01f, value => value.ToString("F2"));
         api.AddSectionTitle(this.manifest, () => this.translate("config.categories.title"));
         this.AddCategory(api, "mining", config => config.Mining, (config, value) => config.Mining = value);
         this.AddCategory(api, "combat", config => config.Combat, (config, value) => config.Combat = value);

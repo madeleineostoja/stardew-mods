@@ -1,4 +1,3 @@
-using Overcast.Models;
 using Xunit;
 
 namespace Overcast.Tests;
@@ -6,90 +5,92 @@ namespace Overcast.Tests;
 public sealed class PolicyTests
 {
     [Fact]
-    public void Normalize_clamps_non_finite_and_out_of_range_values()
+    public void Summer_always_uses_settings_unless_the_mod_is_disabled()
+    {
+        var config = new ModConfig { SpeedMultiplier = 0f, MinSize = 2, MaxSize = 8 };
+        const string storm = "Kana.WeatherWonders_DryLightning";
+
+        Assert.True(CloudRules.CanSpawn(config, "summer", "Sun"));
+        Assert.False(CloudRules.CanSpawn(config, "summer", storm));
+        Assert.True(CloudRules.ShouldTune(config, "summer"));
+        Assert.Equal(0.5f, CloudRules.GetOpacity(config, "summer", "Kana.WeatherWonders_Cloudy"));
+
+        config.Enabled = false;
+        Assert.True(CloudRules.CanSpawn(config, "summer", storm));
+        Assert.True(CloudRules.CanSpawn(config, "summer", "Sun", spawnClouds: false));
+        Assert.False(CloudRules.ShouldTune(config, "summer"));
+        Assert.Equal(1f, CloudRules.GetOpacity(config, "summer", "Sun"));
+    }
+
+    [Fact]
+    public void Extension_respects_season_switches_with_winter_opt_in()
+    {
+        var config = new ModConfig();
+
+        Assert.True(CloudRules.CanSpawn(config, "spring", "Sun"));
+        Assert.True(CloudRules.CanSpawn(config, "fall", "Sun"));
+        Assert.False(CloudRules.CanSpawn(config, "winter", "Sun"));
+
+        config.EnableInSpring = false;
+        Assert.False(CloudRules.CanSpawn(config, "spring", "Sun"));
+        Assert.True(CloudRules.CanSpawn(config, "fall", "Sun"));
+
+        config.EnableInWinter = true;
+        Assert.True(CloudRules.CanSpawn(config, "winter", "Sun"));
+        Assert.Equal(0.5f, CloudRules.GetOpacity(config, "winter", "Kana.WeatherWonders_Cloudy"));
+        Assert.False(CloudRules.CanSpawn(config, "winter", "OtherMod.CustomWeather", spawnClouds: false));
+
+        config.Enabled = false;
+        Assert.False(CloudRules.CanSpawn(config, "fall", "Sun"));
+        Assert.False(CloudRules.CanSpawn(config, "winter", "Sun"));
+        Assert.Equal(1f, CloudRules.GetOpacity(config, "fall", null));
+    }
+
+    [Fact]
+    public void Weather_wonders_obscuring_weather_is_excluded_without_blocking_unknown_weather()
+    {
+        var config = new ModConfig();
+
+        Assert.False(CloudRules.CanSpawn(config, "spring", "Kana.WeatherWonders_Mist"));
+        Assert.False(CloudRules.CanSpawn(config, "fall", "Kana.WeatherWonders_DryLightning"));
+        Assert.False(CloudRules.CanSpawn(config, "spring", "Kana.WeatherWonders_Heatwave", spawnClouds: false));
+        Assert.True(CloudRules.CanSpawn(config, "fall", "OtherMod.CustomWeather"));
+        Assert.True(CloudRules.CanSpawn(config, "spring", null));
+        Assert.False(CloudRules.CanSpawn(config, "fall", "OtherMod.CustomWeather", spawnClouds: false));
+        Assert.True(CloudRules.CanSpawn(config, "fall", "OtherMod.CustomWeather", spawnClouds: true));
+        Assert.False(CloudRules.CanSpawn(config, "summer", "OtherMod.CustomWeather", spawnClouds: false));
+    }
+
+    [Fact]
+    public void Cloudy_weather_softens_shadows_in_every_enabled_season()
+    {
+        var config = new ModConfig();
+
+        Assert.Equal(1f, CloudRules.GetOpacity(config, "spring", "Sun"));
+        Assert.Equal(0.5f, CloudRules.GetOpacity(config, "spring", "Kana.WeatherWonders_Cloudy"));
+        Assert.Equal(0.5f, CloudRules.GetOpacity(config, "summer", "Kana.WeatherWonders_Cloudy"));
+        Assert.Equal(1f, CloudRules.GetOpacity(config, "winter", "Kana.WeatherWonders_Cloudy"));
+        Assert.False(CloudRules.CanSpawn(config, "summer", "Kana.WeatherWonders_Sandstorm"));
+    }
+
+    [Fact]
+    public void Normalize_rejects_unsafe_values_and_repairs_an_inverted_size_range()
     {
         var config = new ModConfig
         {
-            Opacity = 9f,
-            Speed = 9f,
-            Scale = float.NaN,
+            SpeedMultiplier = float.PositiveInfinity,
+            MinSize = 99,
+            MaxSize = -4,
         };
 
         Assert.True(config.Normalize());
-        Assert.Equal(0.5f, config.Opacity);
-        Assert.Equal(2f, config.Speed);
-        Assert.Equal(0.5f, config.Scale);
-    }
+        Assert.Equal(1f, config.SpeedMultiplier);
+        Assert.Equal(8, config.MinSize);
+        Assert.Equal(8, config.MaxSize);
+        Assert.False(config.Normalize());
 
-    [Fact]
-    public void Known_weather_wonders_id_overrides_overlapping_vanilla_flags()
-    {
-        var weather = new WeatherState("Kana.WeatherWonders_RainSnowMix", true, false, true, true);
-
-        Assert.Equal(WeatherKind.Snow, WeatherPolicy.Classify(weather, true));
-    }
-
-    [Fact]
-    public void Vanilla_weather_uses_storm_then_snow_precedence()
-    {
-        Assert.Equal(WeatherKind.Storm, WeatherPolicy.Classify(new WeatherState(null, true, true, true, false), true));
-        Assert.Equal(WeatherKind.Snow, WeatherPolicy.Classify(new WeatherState("Unknown.Custom", true, true, false, false), true));
-    }
-
-    [Fact]
-    public void Rain_policy_requires_its_explicit_option()
-    {
-        var config = new ModConfig();
-
-        Assert.False(WeatherPolicy.GetModifiers(WeatherKind.Rain, config).IsAllowed);
-        config.EnableDuringRain = true;
-        Assert.True(WeatherPolicy.GetModifiers(WeatherKind.Rain, config).IsAllowed);
-    }
-
-    [Fact]
-    public void Heavy_weather_wonders_effects_are_disabled_by_default()
-    {
-        var config = new ModConfig();
-        var heatwave = new WeatherState("Kana.WeatherWonders_Heatwave", false, false, false, false);
-        var futureEffect = new WeatherState("Kana.WeatherWonders_FutureEffect", false, false, false, false);
-
-        Assert.Equal(WeatherKind.Special, WeatherPolicy.Classify(heatwave, true));
-        Assert.Equal(WeatherKind.Special, WeatherPolicy.Classify(futureEffect, true));
-        Assert.False(WeatherPolicy.GetModifiers(WeatherKind.Special, config).IsAllowed);
-
-        config.EnableDuringSpecialWeather = true;
-        Assert.True(WeatherPolicy.GetModifiers(WeatherKind.Special, config).IsAllowed);
-    }
-
-    [Fact]
-    public void Population_density_changes_targets_before_the_hard_cap()
-    {
-        var typicalField = new WorldBounds(0, 0, 6880, 6320);
-
-        var storm = PopulationRules.GetTarget(typicalField, 1f, 0.55f, false);
-        var clear = PopulationRules.GetTarget(typicalField, 1f, 1f, false);
-        var cloudy = PopulationRules.GetTarget(typicalField, 1f, 1.3f, false);
-
-        Assert.True(storm < clear);
-        Assert.True(clear < cloudy);
-        Assert.Equal(PopulationRules.PrimaryCap, cloudy);
-    }
-
-    [Fact]
-    public void Population_target_stays_within_the_stratum_hard_cap()
-    {
-        var enormousField = new WorldBounds(0, 0, 100_000, 100_000);
-
-        Assert.Equal(PopulationRules.PrimaryCap, PopulationRules.GetTarget(enormousField, 0.5f, 10f, false));
-        Assert.Equal(PopulationRules.SecondaryCap, PopulationRules.GetTarget(enormousField, 0.5f, 10f, true));
-    }
-
-    [Fact]
-    public void Bounds_intersection_excludes_edge_touching_clouds()
-    {
-        var viewport = new WorldBounds(100, 100, 200, 200);
-
-        Assert.True(viewport.Intersects(new WorldBounds(299, 100, 10, 10)));
-        Assert.False(viewport.Intersects(new WorldBounds(300, 100, 10, 10)));
+        config.SpeedMultiplier = 99f;
+        Assert.True(config.Normalize());
+        Assert.Equal(2f, config.SpeedMultiplier);
     }
 }

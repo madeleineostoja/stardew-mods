@@ -2,31 +2,26 @@ namespace Overcast;
 
 internal sealed class ModConfig
 {
+    public const int MinimumSize = 2;
+    public const int MaximumSize = 8;
+
     public bool Enabled { get; set; } = true;
-    public float Opacity { get; set; } = 0.12f;
-    public float Speed { get; set; } = 1f;
-    public float Scale { get; set; } = 1f;
-    public bool EnableAtNight { get; set; }
-    public bool EnableDuringRain { get; set; }
-    public bool EnableDuringSnow { get; set; }
-    public bool EnableDuringStorms { get; set; }
-    public bool EnableDuringSpecialWeather { get; set; }
-    public bool SecondLayerEnabled { get; set; } = true;
+    public bool EnableInSpring { get; set; } = true;
+    public bool EnableInFall { get; set; } = true;
+    public bool EnableInWinter { get; set; }
+    public float SpeedMultiplier { get; set; } = 1f;
+    public int MinSize { get; set; } = 4;
+    public int MaxSize { get; set; } = 6;
 
     public bool Normalize()
     {
-        var opacity = Clamp(Opacity, 0f, 0.5f);
-        var speed = Clamp(Speed, 0f, 2f);
-        var scale = Clamp(Scale, 0.5f, 1.5f);
-        var changed = opacity != Opacity || speed != Speed || scale != Scale;
-        Opacity = opacity;
-        Speed = speed;
-        Scale = scale;
+        var speed = float.IsFinite(SpeedMultiplier) ? Math.Clamp(SpeedMultiplier, 0f, 2f) : 1f;
+        var minimum = Math.Clamp(MinSize, MinimumSize, MaximumSize);
+        var maximum = Math.Clamp(MaxSize, minimum, MaximumSize);
+        var changed = speed != SpeedMultiplier || minimum != MinSize || maximum != MaxSize;
+        SpeedMultiplier = speed;
+        MinSize = minimum;
+        MaxSize = maximum;
         return changed;
-    }
-
-    private static float Clamp(float value, float minimum, float maximum)
-    {
-        return float.IsFinite(value) ? Math.Clamp(value, minimum, maximum) : minimum;
     }
 }

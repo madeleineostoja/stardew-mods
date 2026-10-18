@@ -1,0 +1,8 @@
+{
+  "config.wake-up-time.name": "Overslept wakeup time",
+  "config.wake-up-time.tooltip": "When to wake after a 2am collapse. Gaining a skill level keeps the 6am wakeup.",
+  "config.disable-energy-penalty.name": "Disable energy penalty",
+  "config.disable-energy-penalty.tooltip": "Remove the late-night energy penalty for a 2am collapse. Exhaustion recovery remains unchanged.",
+  "config.disable-money-loss.name": "Disable money loss",
+  "config.disable-money-loss.tooltip": "Prevent the rescue charge and its notice after a 2am collapse."
+}

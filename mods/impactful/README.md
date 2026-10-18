@@ -44,7 +44,7 @@ Adjust settings through Generic Mod Config Menu, or edit `config.json` after lau
 ```
 
 - **EnableScreenShake:** turn all Impactful feedback on or off.
-- **ShakeStrength:** overall intensity, from 0% to 200%; 100% is the default and 0% disables feedback.
+- **ShakeStrength:** the in-game slider runs from `0.00` to `2.00` in steps of `0.01`. `1.00` is normal strength, `0.50` is half strength, and `0.00` disables feedback. The config file stores percentages (`100` means `1.00` in the menu).
 - **Mining, Combat, PlayerDamage, Explosions, Trees:** toggle large rock breaks, parries, damage, explosions, and tree feedback independently. Trees covers both tree landings and hardwood stump/log breaks.
 
 ## Multiplayer and compatibility
