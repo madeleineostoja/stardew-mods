@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
+    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+    <PackageReference Include="xunit" Version="2.9.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="../ModConfig.cs" Link="ModConfig.cs" />
+    <Compile Include="../RumbleEffect.cs" Link="RumbleEffect.cs" />
+    <Compile Include="../RumbleCallRewriter.cs" Link="RumbleCallRewriter.cs" />
+  </ItemGroup>
+</Project>

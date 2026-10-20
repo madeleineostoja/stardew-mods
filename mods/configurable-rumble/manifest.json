@@ -1,0 +1,10 @@
+{
+  "Name": "Configurable Rumble",
+  "Author": "heyitsmads",
+  "Version": "%ProjectVersion%",
+  "Description": "Choose which vanilla actions vibrate your controller.",
+  "UniqueID": "heyitsmads.ConfigurableRumble",
+  "EntryDll": "ConfigurableRumble.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": ["Nexus:54193"]
+}
