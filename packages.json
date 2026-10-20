@@ -18,6 +18,16 @@
       "README.md"
     ]
   },
+  "configurable-rumble": {
+    "path": "mods/configurable-rumble",
+    "folder": "ConfigurableRumble",
+    "project": "ConfigurableRumble.csproj",
+    "tests": "ConfigurableRumble.Tests/ConfigurableRumble.Tests.csproj",
+    "files": [
+      "i18n",
+      "README.md"
+    ]
+  },
   "impactful": {
     "path": "mods/impactful",
     "folder": "Impactful",

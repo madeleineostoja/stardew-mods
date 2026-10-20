@@ -8,6 +8,7 @@ Independently versioned Stardew Valley mods and patched content packs. Each rele
 | --- | --- | --- | --- |
 | Better Forest Farm | [mods/better-forest-farm](mods/better-forest-farm) | `manifest.json` | `BetterForestFarm` |
 | Immersive Dialogue UI | [mods/immersive-dialogue-ui](mods/immersive-dialogue-ui) | `manifest.json` | `ImmersiveDialogueUI` |
+| Configurable Rumble | [mods/configurable-rumble](mods/configurable-rumble) | `ConfigurableRumble.csproj` | `ConfigurableRumble` |
 | Impactful | [mods/impactful](mods/impactful) | `Impactful.csproj` | `Impactful` |
 | Overcast | [mods/overcast](mods/overcast) | `Overcast.csproj` | `Overcast` |
 | Overslept | [mods/overslept](mods/overslept) | `Overslept.csproj` | `Overslept` |

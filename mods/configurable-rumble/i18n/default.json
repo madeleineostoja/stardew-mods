@@ -1,0 +1,18 @@
+{
+  "config.FishingBites.name": "Fishing bites",
+  "config.FishingBites.tooltip": "Vibrate when a fish bites, including automatic hooks from the Auto-Hook enchantment.",
+  "config.FishingCasts.name": "Fishing casts",
+  "config.FishingCasts.tooltip": "Vibrate when casting the fishing rod.",
+  "config.FishingReeling.name": "Fishing reeling",
+  "config.FishingReeling.tooltip": "Vibrate while the fish is inside the catching bar.",
+  "config.ToolUse.name": "Tool use",
+  "config.ToolUse.tooltip": "Vibrate when using a heavy-hitting tool other than a melee weapon.",
+  "config.Combat.name": "Combat",
+  "config.Combat.tooltip": "Vibrate when hitting monsters, taking damage, parrying, or being knocked out.",
+  "config.Explosions.name": "Explosions",
+  "config.Explosions.tooltip": "Fade out vibration from bomb blasts in the current location.",
+  "config.HorseRiding.name": "Horse riding",
+  "config.HorseRiding.tooltip": "Vibrate with your horse's hoofbeats on every surface.",
+  "config.DoorsAndTransitions.name": "Doors & transitions",
+  "config.DoorsAndTransitions.tooltip": "Vibrate when entering buildings, opening NPC room doors, or starting movie screenings."
+}
