@@ -6,6 +6,7 @@ Independently versioned Stardew Valley mods and patched content packs. Each rele
 
 | Package | Source | Version source | Install folder |
 | --- | --- | --- | --- |
+| Better Journal | [mods/better-journal](mods/better-journal) | `BetterJournal.csproj` | `BetterJournal` |
 | Better Forest Farm | [mods/better-forest-farm](mods/better-forest-farm) | `manifest.json` | `BetterForestFarm` |
 | Immersive Dialogue UI | [mods/immersive-dialogue-ui](mods/immersive-dialogue-ui) | `manifest.json` | `ImmersiveDialogueUI` |
 | Configurable Rumble | [mods/configurable-rumble](mods/configurable-rumble) | `ConfigurableRumble.csproj` | `ConfigurableRumble` |
