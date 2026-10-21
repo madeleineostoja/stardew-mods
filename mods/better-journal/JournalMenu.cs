@@ -19,6 +19,7 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
     private readonly List<ClickableComponent> tabs = new();
     private readonly JournalListPage tasks;
     private readonly JournalListPage? guild;
+    private readonly EventsPage? events;
     private readonly int nativeWidth;
     private readonly int nativeHeight;
     private int selectedTab;
@@ -33,7 +34,13 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
     private int QuestDefaultId => ShowingQuestDetails ? QuestLog.region_backButton : 0;
 
     private string JournalTitle => Game1.content.LoadString("Strings\\StringsFromCSFiles:QuestLog.cs.11373");
-    private IClickableMenu Page => selectedTab switch { 1 => tasks, 2 => guild!, _ => quests };
+    private IClickableMenu Page => tabs[selectedTab].name switch
+    {
+        "tasks" => tasks,
+        "guild" => guild!,
+        "events" => events!,
+        _ => quests
+    };
     private IClickableMenu FocusMenu
     {
         get
@@ -45,7 +52,8 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
         }
     }
 
-    public JournalMenu(QuestLog quests, TaskRepository repository, ITranslationHelper translations, bool showMonsterGoals)
+    public JournalMenu(QuestLog quests, TaskRepository repository, ITranslationHelper translations,
+        bool showMonsterGoals, Func<IReadOnlyList<EventRow>>? findEvents)
     {
         this.quests = quests;
         this.repository = repository;
@@ -55,14 +63,18 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
         upperRightCloseButton = quests.upperRightCloseButton;
 
         bool showGuild = showMonsterGoals && GuildGoal.HasVisitedGuild;
-        string[] names = showGuild ? new[] { "quests", "tasks", "guild" } : new[] { "quests", "tasks" };
-        for (int i = 0; i < names.Length; i++)
+        var names = new List<string> { "quests", "tasks" };
+        if (showGuild)
+            names.Add("guild");
+        if (findEvents is not null)
+            names.Add("events");
+        for (int i = 0; i < names.Count; i++)
         {
             tabs.Add(new ClickableComponent(Rectangle.Empty, names[i], translations.Get("tab." + names[i]))
             {
                 myID = TabId + i,
                 leftNeighborID = i > 0 ? TabId + i - 1 : -1,
-                rightNeighborID = i < names.Length - 1 ? TabId + i + 1 : upperRightCloseButton_ID,
+                rightNeighborID = i < names.Count - 1 ? TabId + i + 1 : upperRightCloseButton_ID,
                 fullyImmutable = true,
                 tryDefaultIfNoDownNeighborExists = true
             });
@@ -71,6 +83,8 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
         tasks = new JournalListPage(true, repository, translations, tabs, upperRightCloseButton, OpenEditor);
         if (showGuild)
             guild = new JournalListPage(false, repository, translations, tabs, upperRightCloseButton, OpenEditor);
+        if (findEvents is not null)
+            events = new EventsPage(findEvents, tabs, upperRightCloseButton);
 
         // QuestLog closes itself, but it isn't the active menu when hosted here.
         var nativeExit = quests.exitFunction;
@@ -120,13 +134,14 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
 
         int bannerLeft = width / 2 - SpriteText.getWidthOfString(JournalTitle) / 2 - 48;
         int tabSpace = bannerLeft - 12;
-        int tabSize = tabSpace >= tabs.Count * 64 ? 64 : 48;
+        int tabSize = tabSpace >= tabs.Count * 64 ? 64 : Math.Min(48, tabSpace / tabs.Count);
         int tabStart = Math.Max(0, Math.Min(64, tabSpace - tabs.Count * tabSize));
         for (int i = 0; i < tabs.Count; i++)
             tabs[i].bounds = new Rectangle(bounds.X + tabStart + i * tabSize,
                 bounds.Y - tabSize * 3 / 4, tabSize, tabSize);
         tasks.Layout(bounds);
         guild?.Layout(bounds);
+        events?.Layout(bounds);
         quests.questLogButtons[0].upNeighborID = TabId;
         quests.backButton.upNeighborID = TabId;
         quests.forwardButton.upNeighborID = TabId;
@@ -153,6 +168,8 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
         selectedTab = index;
         if (Page is JournalListPage list)
             list.Refresh();
+        else if (Page is EventsPage eventsPage)
+            eventsPage.Enter();
         AttachTabs();
         if (Game1.options.SnappyMenus)
         {
@@ -335,7 +352,12 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
 
     private void AttachTabDestinations()
     {
-        int destination = selectedTab == 0 ? QuestDefaultId : ((JournalListPage)Page).DefaultId;
+        int destination = Page switch
+        {
+            JournalListPage list => list.DefaultId,
+            EventsPage eventsPage => eventsPage.DefaultId,
+            _ => QuestDefaultId
+        };
         foreach (var tab in tabs)
             tab.downNeighborID = destination;
         upperRightCloseButton.downNeighborID = destination;
@@ -374,10 +396,11 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
             int visibleHeight = (int)((yPositionOnScreen + tab.bounds.Height * 3 / 16 - origin.Y) / scale);
             b.Draw(Game1.mouseCursors, origin, new Rectangle(16, 368, 16, visibleHeight), Color.White,
                 0f, Vector2.Zero, scale, SpriteEffects.None, 0.9f);
-            Rectangle icon = i switch
+            Rectangle icon = tab.name switch
             {
-                0 => new Rectangle(395, 497, 3, 8),
-                1 => new Rectangle(165, 443, 10, 10),
+                "quests" => new Rectangle(395, 497, 3, 8),
+                "tasks" => new Rectangle(165, 443, 10, 10),
+                "events" => new Rectangle(211, 428, 7, 6),
                 _ => new Rectangle(120, 428, 10, 10)
             };
             var offset = new Vector2(MathF.Round((tab.bounds.Width - icon.Width * scale) / 2),

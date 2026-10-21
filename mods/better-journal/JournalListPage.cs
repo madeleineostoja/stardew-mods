@@ -34,7 +34,7 @@ internal sealed class JournalListPage : IClickableMenu
 
     private int TaskCount => repository.Tasks?.Entries.Count ?? 0;
     private int Count => tasksPage ? TaskCount + (editingRow == TaskCount ? 1 : 0) : goals.Count;
-    private int TabId => tabs[tasksPage ? 1 : 2].myID;
+    private int TabId => tabs.First(tab => tab.name == (tasksPage ? "tasks" : "guild")).myID;
     private int RowTop => tasksPage ? 16 : SpriteText.getHeightOfString("Ag") + 48;
     private int RowHeight => tasksPage
         ? Math.Max((height - 32) / 6, SpriteText.getHeightOfString("Ag") + 24)
