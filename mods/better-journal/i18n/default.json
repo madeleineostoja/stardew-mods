@@ -2,6 +2,7 @@
   "tab.quests": "Quests",
   "tab.tasks": "Tasks",
   "tab.guild": "Monster Eradication Goals",
+  "tab.events": "Events",
   "tasks.add": "Add Task",
   "tasks.unreadable": "Tasks unavailable. See the SMAPI log.",
   "guild.heading": "Monster Goals",
@@ -28,5 +29,7 @@
   "editor.invalid": "Enter a task of 1–160 characters on a single line.",
   "editor.delete-confirm": "Delete this task?",
   "config.monster-goals.name": "Show monster goals",
-  "config.monster-goals.tooltip": "Show the monster goals tab after your character has visited the Adventurer's Guild."
+  "config.monster-goals.tooltip": "Show the monster goals tab after your character has visited the Adventurer's Guild.",
+  "config.events.name": "Show events",
+  "config.events.tooltip": "Show read-only hints for unseen events with supported conditions. Hints refresh each time you enter the Events tab."
 }
