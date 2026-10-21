@@ -17,6 +17,14 @@ Extract the `BetterJournal` folder into `Stardew Valley/Mods`. [Nexus Mods](http
 
 Tasks have no automatic completion, recurrence, scheduling, groups, colours, notes, or overlays. Each task is a single line of up to 160 characters. Long titles are shortened in the quest-style list; hover or edit a task to read its full text.
 
+## Event hint data
+
+The event-hint lookup generates spoiler-light location-entry instructions for unseen events whose supported conditions currently pass. It does not activate an Events tab. Hints use the destination's live display name, the intersection of positive time windows, and NPC names only when a positive condition requires those NPCs to be visible at that destination. Times use the game's localized formatter; negated time requirements are not worded. Other supported prerequisites still gate eligibility without appearing in the hint. Titles are generated in the current language, not plot summaries or event-ID descriptions.
+
+Vanilla events and modded events supplied through the game's standard location/event data both participate. This is intentionally not an exhaustive catalogue: every condition in a header must resolve to an allowed, unmodified vanilla handler and pass for the current player and destination. Unknown, replaced, unsafe, or unsupported conditions exclude that header, even when negated. Supported coverage is limited to audited state checks such as seen events, mail, items, progression, calendar, weather, time, and NPC visibility; friendship and script-based prerequisites are not covered. No actors or ownership are inferred from scripts.
+
+Identical full single-line hints share a row, with a count of distinct destination/event pairs; alternative matching headers do not inflate counts. Long hints retain their full text for hover disclosure rather than merging by their shortened drawing text. A passing hint does not guarantee that the destination is accessible, that travel will leave its conditions true, or that this event has launch priority over other events. The game remains responsible for deciding what actually plays.
+
 ## Controls
 
 Mouse:
