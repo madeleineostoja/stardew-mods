@@ -1,0 +1,10 @@
+{
+  "Name": "Better Journal",
+  "Author": "heyitsmads",
+  "Version": "%ProjectVersion%",
+  "Description": "A native journal with a personal checklist and Adventurer's Guild monster goals.",
+  "UniqueID": "heyitsmads.BetterJournal",
+  "EntryDll": "BetterJournal.dll",
+  "MinimumApiVersion": "4.1.10",
+  "UpdateKeys": ["Nexus:54230"]
+}

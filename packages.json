@@ -1,4 +1,14 @@
 {
+  "better-journal": {
+    "path": "mods/better-journal",
+    "folder": "BetterJournal",
+    "project": "BetterJournal.csproj",
+    "tests": "BetterJournal.Tests/BetterJournal.Tests.csproj",
+    "files": [
+      "i18n",
+      "README.md"
+    ]
+  },
   "better-forest-farm": {
     "path": "mods/better-forest-farm",
     "folder": "BetterForestFarm",
