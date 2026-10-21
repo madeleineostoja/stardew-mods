@@ -1,5 +1,6 @@
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
+using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.Menus;
 
@@ -9,6 +10,9 @@ internal sealed class ModEntry : Mod
 {
     internal const string TasksKey = "heyitsmads.BetterJournal/Tasks";
     private ModConfig config = new();
+    private readonly PerScreen<EventDefinitionCache> eventDefinitions = new(() => new EventDefinitionCache());
+
+    internal IReadOnlyList<EventCandidate> FindEventCandidates() => new EventLookup(eventDefinitions.Value, Monitor).FindCandidates();
 
     public override void Entry(IModHelper helper)
     {
@@ -17,7 +21,20 @@ internal sealed class ModEntry : Mod
         helper.Events.Display.MenuChanged += OnMenuChanged;
         helper.Events.GameLoop.DayStarted += OnDayStarted;
         helper.Events.GameLoop.UpdateTicked += OnUpdateTicked;
+        helper.Events.Content.AssetsInvalidated += OnAssetsInvalidated;
+        helper.Events.Content.LocaleChanged += OnLocaleChanged;
+        helper.Events.GameLoop.ReturnedToTitle += OnReturnedToTitle;
     }
+
+    private void OnAssetsInvalidated(object? sender, AssetsInvalidatedEventArgs e)
+    {
+        if (e.NamesWithoutLocale.Any(name => name.IsEquivalentTo("Data/Locations") || name.StartsWith("Data/Events/")))
+            eventDefinitions.ResetAllScreens();
+    }
+
+    private void OnLocaleChanged(object? sender, LocaleChangedEventArgs e) => eventDefinitions.ResetAllScreens();
+
+    private void OnReturnedToTitle(object? sender, ReturnedToTitleEventArgs e) => eventDefinitions.ResetAllScreens();
 
     private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
     {

@@ -16,5 +16,6 @@
     <Compile Include="../JournalTask.cs" Link="JournalTask.cs" />
     <Compile Include="../TaskList.cs" Link="TaskList.cs" />
     <Compile Include="../ListPosition.cs" Link="ListPosition.cs" />
+    <Compile Include="../EventConditionEvaluation.cs" Link="EventConditionEvaluation.cs" />
   </ItemGroup>
 </Project>
