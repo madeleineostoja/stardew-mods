@@ -17,5 +17,6 @@
     <Compile Include="../TaskList.cs" Link="TaskList.cs" />
     <Compile Include="../ListPosition.cs" Link="ListPosition.cs" />
     <Compile Include="../EventConditionEvaluation.cs" Link="EventConditionEvaluation.cs" />
+    <Compile Include="../EventRow.cs" Link="EventRow.cs" />
   </ItemGroup>
 </Project>

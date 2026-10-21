@@ -14,6 +14,8 @@ internal sealed class ModEntry : Mod
 
     internal IReadOnlyList<EventCandidate> FindEventCandidates() => new EventLookup(eventDefinitions.Value, Monitor).FindCandidates();
 
+    internal IReadOnlyList<EventRow> FindEventRows() => new EventTitleProjection(Helper.Translation).Project(FindEventCandidates());
+
     public override void Entry(IModHelper helper)
     {
         config = helper.ReadConfig<ModConfig>();
