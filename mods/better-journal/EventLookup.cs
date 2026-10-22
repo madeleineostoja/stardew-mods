@@ -5,15 +5,12 @@ using StardewValley.Delegates;
 
 namespace BetterJournal;
 
-internal sealed record EventTimeWindow(int Start, int End);
-
 internal sealed record EventCandidate(
     string DestinationName,
     GameLocation Destination,
     string EventId,
     string Header,
-    EventTimeWindow? TimeWindow,
-    IReadOnlyList<string> PresentNpcNames);
+    IReadOnlyList<EventVisitRequirement> VisitRequirements);
 
 internal sealed class EventLookup
 {
@@ -30,7 +27,7 @@ internal sealed class EventLookup
         Preconditions.CommunityCenterOrWarehouseDone, Preconditions.NotCommunityCenterOrWarehouseDone,
         Preconditions.JojaBundlesDone, Preconditions.Shipped, Preconditions.GoldenWalnuts,
         Preconditions.ReachedMineBottom, Preconditions.HasItem, Preconditions.Skill,
-        Preconditions.MissingPet, Preconditions.Dating, Preconditions.Spouse, Preconditions.NotSpouse,
+        Preconditions.MissingPet, Preconditions.Friendship, Preconditions.Dating, Preconditions.Spouse, Preconditions.NotSpouse,
         Preconditions.Roommate, Preconditions.NotRoommate, Preconditions.InUpgradedHouse, Preconditions.SpouseBed,
         Preconditions.Gender, Preconditions.DaysPlayed, Preconditions.FestivalDay, Preconditions.NotFestivalDay,
         Preconditions.Time, Preconditions.Weather, Preconditions.DayOfWeek, Preconditions.NotDayOfWeek,
@@ -41,8 +38,6 @@ internal sealed class EventLookup
 #pragma warning restore CS0618
 
     private static readonly MethodInfo HostMethod = ((EventPreconditionDelegate)Preconditions.IsHost).Method;
-    private static readonly MethodInfo TimeMethod = ((EventPreconditionDelegate)Preconditions.Time).Method;
-    private static readonly MethodInfo PresenceMethod = ((EventPreconditionDelegate)Preconditions.NpcVisibleHere).Method;
     private readonly EventDefinitionCache definitions;
     private readonly IMonitor monitor;
 
@@ -77,10 +72,9 @@ internal sealed class EventLookup
 
     private void FindAtDestination(GameLocation destination, List<EventCandidate> results)
     {
-        if (!destination.TryGetLocationEvents(out _, out var events))
+        if (!EventDestinations.IsAccessible(destination) || !destination.TryGetLocationEvents(out _, out var events))
             return;
 
-        var matches = new Dictionary<string, EventCandidate>(StringComparer.Ordinal);
         foreach (var pair in events)
         {
             try
@@ -92,7 +86,7 @@ internal sealed class EventLookup
                     || !GameLocation.IsValidLocationEvent(pair.Key, pair.Value))
                     continue;
 
-                var conditions = EventConditionEvaluation.Evaluate(definition.Conditions, AllowedMethods,
+                var conditions = EventConditionEvaluation.Evaluate(definition.Conditions, AllowedMethods, EventVisitRequirements.DeferredMethods,
                     name => Event.TryGetPreconditionHandler(name, out var handler) ? handler : null,
                     (handler, args) => handler.Method == HostMethod
                         ? Game1.IsMasterGame
@@ -100,43 +94,13 @@ internal sealed class EventLookup
                 if (conditions is null)
                     continue;
 
-                if (!matches.TryGetValue(definition.EventId, out var previous)
-                    || StringComparer.Ordinal.Compare(pair.Key, previous.Header) < 0)
-                {
-                    matches[definition.EventId] = new EventCandidate(destination.NameOrUniqueName, destination,
-                        definition.EventId, pair.Key, GetTimeWindow(conditions), GetPresentNpcs(conditions));
-                }
+                results.Add(new EventCandidate(destination.NameOrUniqueName, destination,
+                    definition.EventId, pair.Key, EventVisitRequirements.Parse(conditions)));
             }
             catch (Exception exception)
             {
                 monitor.Log($"Better Journal could not evaluate event header '{pair.Key}' at '{destination.NameOrUniqueName}': {exception}", LogLevel.Warn);
             }
         }
-        results.AddRange(matches.Values);
-    }
-
-    private static EventTimeWindow? GetTimeWindow(IReadOnlyList<ResolvedEventCondition> conditions)
-    {
-        EventTimeWindow? window = null;
-        foreach (var condition in conditions.Where(condition => condition.Handler.Method == TimeMethod))
-        {
-            // A negated range may be disjoint and can't be represented by a single window.
-            if (condition.Negated
-                || !ArgUtility.TryGetInt(condition.Arguments, 1, out int start, out _)
-                || !ArgUtility.TryGetInt(condition.Arguments, 2, out int end, out _))
-                return null;
-
-            window = window is null ? new(start, end) : new(Math.Max(window.Start, start), Math.Min(window.End, end));
-        }
-        return window;
-    }
-
-    private static IReadOnlyList<string> GetPresentNpcs(IReadOnlyList<ResolvedEventCondition> conditions)
-    {
-        return conditions
-            .Where(condition => !condition.Negated && condition.Handler.Method == PresenceMethod)
-            .Select(condition => condition.Arguments[1])
-            .Distinct(StringComparer.Ordinal)
-            .ToArray();
     }
 }

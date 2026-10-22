@@ -10,6 +10,7 @@ internal static class EventConditionEvaluation
     public static IReadOnlyList<ResolvedEventCondition>? Evaluate(
         string[][] conditions,
         IReadOnlySet<MethodInfo> allowedMethods,
+        IReadOnlySet<MethodInfo> visitMethods,
         Func<string, Delegate?> resolve,
         Func<Delegate, string[], bool> invoke)
     {
@@ -29,8 +30,9 @@ internal static class EventConditionEvaluation
             resolved.Add(new ResolvedEventCondition(handler, args, negated));
         }
 
-        foreach (var condition in resolved)
+        foreach (var condition in resolved.Where(condition => !visitMethods.Contains(condition.Handler.Method)))
         {
+            // Visit requirements are retained for instructions, never evaluated against the current visit.
             // An exception escapes to the per-candidate boundary, never through negation.
             if (invoke(condition.Handler, condition.Arguments) == condition.Negated)
                 return null;

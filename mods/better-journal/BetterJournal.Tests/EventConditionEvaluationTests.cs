@@ -8,6 +8,7 @@ public sealed class EventConditionEvaluationTests
     private static readonly Func<int, string[], bool> Check = HasRequiredValue;
     private static readonly Func<int, string[], bool> Throw = ThrowingCondition;
     private static readonly HashSet<MethodInfo> Allowed = new() { Check.Method, Throw.Method };
+    private static readonly HashSet<MethodInfo> NoVisits = new();
 
     [Fact]
     public void RejectedTailPreflightsTheWholeHeaderWithoutInvokingAnything()
@@ -27,7 +28,7 @@ public sealed class EventConditionEvaluationTests
         foreach (string tail in new[] { "unknown", "!unknown", "replaced", "!replaced", "wrapped", "multicast", "instance", "!!supported" })
         {
             var result = EventConditionEvaluation.Evaluate(new[] { new[] { "supported", "1" }, new[] { tail } },
-                Allowed, name => handlers.GetValueOrDefault(name), (handler, args) =>
+                Allowed, NoVisits, name => handlers.GetValueOrDefault(name), (handler, args) =>
                 {
                     calls++;
                     return ((Func<int, string[], bool>)handler)(1, args);
@@ -44,7 +45,7 @@ public sealed class EventConditionEvaluationTests
         Delegate? current = Check;
         int value = 2;
         IReadOnlyList<ResolvedEventCondition>? Evaluate(string[][] conditions) =>
-            EventConditionEvaluation.Evaluate(conditions, Allowed, _ => current,
+            EventConditionEvaluation.Evaluate(conditions, Allowed, NoVisits, _ => current,
                 (handler, args) => ((Func<int, string[], bool>)handler)(value, args));
 
         Assert.NotNull(Evaluate(arguments));
@@ -67,6 +68,38 @@ public sealed class EventConditionEvaluationTests
         Assert.Throws<InvalidOperationException>(() => Evaluate(negated));
     }
 
+    [Fact]
+    public void VisitRequirementsAreRetainedWithoutCheckingThemAndUnlocksStillGate()
+    {
+        Func<int, string[], bool> time = VisitTime;
+        Func<int, string[], bool> rain = Replacement;
+        var visits = new HashSet<MethodInfo> { time.Method, rain.Method };
+        var allowed = new HashSet<MethodInfo>(Allowed.Concat(visits));
+        var handlers = new Dictionary<string, Delegate> { ["unlock"] = Check, ["time"] = time, ["rain"] = rain };
+        var conditions = new[] { new[] { "unlock", "2" }, new[] { "time", "1000" }, new[] { "!rain" } };
+        int value = 2;
+        int calls = 0;
+        IReadOnlyList<ResolvedEventCondition>? Evaluate(string[][] header) =>
+            EventConditionEvaluation.Evaluate(header, allowed, visits, name => handlers.GetValueOrDefault(name),
+                (handler, args) =>
+                {
+                    Assert.Equal(Check.Method, handler.Method);
+                    calls++;
+                    return ((Func<int, string[], bool>)handler)(value, args);
+                });
+
+        var unlocked = Evaluate(conditions);
+        Assert.Equal(3, unlocked!.Count);
+        Assert.True(unlocked[2].Negated);
+        Assert.Equal(1, calls);
+        value = 1;
+        Assert.Null(Evaluate(conditions));
+        calls = 0;
+        Assert.Null(Evaluate(conditions.Append(new[] { "unknown" }).ToArray()));
+        Assert.Equal(0, calls);
+    }
+
+    private static bool VisitTime(int value, string[] args) => value >= int.Parse(args[1]);
     private static bool HasRequiredValue(int value, string[] args) => value >= int.Parse(args[1]);
     private static bool Replacement(int value, string[] args) => true;
     private static bool ThrowingCondition(int value, string[] args) => throw new InvalidOperationException();

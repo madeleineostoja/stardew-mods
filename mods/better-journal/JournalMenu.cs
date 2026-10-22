@@ -12,6 +12,8 @@ namespace BetterJournal;
 internal sealed class JournalMenu : IClickableMenu, IDisposable
 {
     private const int TabId = 5000;
+    private const int HeaderHeight = 128;
+    private static readonly RasterizerState HeaderClip = new() { ScissorTestEnable = true };
     private static readonly FieldInfo QuestPage = typeof(QuestLog).GetField("questPage", BindingFlags.Instance | BindingFlags.NonPublic)!;
     private readonly QuestLog quests;
     private readonly TaskRepository repository;
@@ -64,10 +66,10 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
 
         bool showGuild = showMonsterGoals && GuildGoal.HasVisitedGuild;
         var names = new List<string> { "quests", "tasks" };
-        if (showGuild)
-            names.Add("guild");
         if (findEvents is not null)
             names.Add("events");
+        if (showGuild)
+            names.Add("guild");
         for (int i = 0; i < names.Count; i++)
         {
             tabs.Add(new ClickableComponent(Rectangle.Empty, names[i], translations.Get("tab." + names[i]))
@@ -84,7 +86,14 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
         if (showGuild)
             guild = new JournalListPage(false, repository, translations, tabs, upperRightCloseButton, OpenEditor);
         if (findEvents is not null)
+        {
             events = new EventsPage(findEvents, tabs, upperRightCloseButton);
+            events.exitFunction = () =>
+            {
+                if (!closing && ReferenceEquals(Game1.activeClickableMenu, this))
+                    exitThisMenu(false);
+            };
+        }
 
         // QuestLog closes itself, but it isn't the active menu when hosted here.
         var nativeExit = quests.exitFunction;
@@ -107,41 +116,39 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
         width = Math.Min(nativeWidth, Math.Max(576, viewport.X - 128));
         height = Math.Min(nativeHeight, Math.Max(320, viewport.Y - 160));
         xPositionOnScreen = (viewport.X - width) / 2;
-        yPositionOnScreen = (viewport.Y - height) / 2 + 16;
+        yPositionOnScreen = HeaderHeight + (viewport.Y - HeaderHeight - height) / 2;
         var bounds = new Rectangle(xPositionOnScreen, yPositionOnScreen, width, height);
 
-        // Resize the existing controls without rebuilding quests or losing an open detail page.
-        quests.xPositionOnScreen = bounds.X;
-        quests.yPositionOnScreen = bounds.Y;
-        quests.width = width;
-        quests.height = height;
-        for (int i = 0; i < quests.questLogButtons.Count; i++)
-            quests.questLogButtons[i].bounds = new Rectangle(bounds.X + 16,
-                bounds.Y + 16 + i * ((height - 32) / 6), width - 32, (height - 32) / 6 + 4);
-        quests.backButton.bounds = new Rectangle(bounds.X - 64, bounds.Y + 8, 48, 44);
-        quests.forwardButton.bounds = new Rectangle(bounds.Right + 16, bounds.Bottom - 48, 48, 44);
-        quests.rewardBox.bounds = new Rectangle(bounds.Center.X - 80, bounds.Bottom - 128, 96, 96);
-        quests.cancelQuestButton.bounds = new Rectangle(bounds.X + 4, bounds.Bottom + 4, 48, 48);
-        quests.upArrow.bounds = new Rectangle(bounds.Right + 16, bounds.Y + 96, 44, 48);
-        quests.downArrow.bounds = new Rectangle(bounds.Right + 16, bounds.Bottom - 64, 44, 48);
-        quests.scrollBarBounds = new Rectangle(quests.upArrow.bounds.X + 12, quests.upArrow.bounds.Bottom + 4,
-            24, Math.Max(40, quests.downArrow.bounds.Top - quests.upArrow.bounds.Bottom - 8));
-        quests.scrollBar.bounds = new Rectangle(quests.scrollBarBounds.X, quests.scrollBarBounds.Y, 24, 40);
-        upperRightCloseButton.bounds = new Rectangle(bounds.Right - 20, bounds.Y - 88, 48, 48);
+        // Both vanilla quests and event hints use the game's list/detail layout.
+        foreach (var page in new QuestLog?[] { quests, events }.OfType<QuestLog>())
+        {
+            page.xPositionOnScreen = bounds.X;
+            page.yPositionOnScreen = bounds.Y;
+            page.width = width;
+            page.height = height;
+            for (int i = 0; i < page.questLogButtons.Count; i++)
+                page.questLogButtons[i].bounds = new Rectangle(bounds.X + 16,
+                    bounds.Y + 16 + i * ((height - 32) / 6), width - 32, (height - 32) / 6 + 4);
+            page.backButton.bounds = new Rectangle(bounds.X - 64, bounds.Y + 8, 48, 44);
+            page.forwardButton.bounds = new Rectangle(bounds.Right + 16, bounds.Bottom - 48, 48, 44);
+            page.rewardBox.bounds = new Rectangle(bounds.Center.X - 80, bounds.Bottom - 128, 96, 96);
+            page.cancelQuestButton.bounds = new Rectangle(bounds.X + 4, bounds.Bottom + 4, 48, 48);
+            page.upArrow.bounds = new Rectangle(bounds.Right + 16, bounds.Y + 96, 44, 48);
+            page.downArrow.bounds = new Rectangle(bounds.Right + 16, bounds.Bottom - 64, 44, 48);
+            page.scrollBarBounds = new Rectangle(page.upArrow.bounds.X + 12, page.upArrow.bounds.Bottom + 4,
+                24, Math.Max(40, page.downArrow.bounds.Top - page.upArrow.bounds.Bottom - 8));
+            page.scrollBar.bounds = new Rectangle(page.scrollBarBounds.X, page.scrollBarBounds.Y, 24, 40);
+        }
+        upperRightCloseButton.bounds = new Rectangle(bounds.Right - 20, bounds.Y - 48, 48, 48);
         upperRightCloseButton.myID = upperRightCloseButton_ID;
         upperRightCloseButton.leftNeighborID = tabs[^1].myID;
         upperRightCloseButton.downNeighborID = 0;
 
-        int bannerLeft = width / 2 - SpriteText.getWidthOfString(JournalTitle) / 2 - 48;
-        int tabSpace = bannerLeft - 12;
-        int tabSize = tabSpace >= tabs.Count * 64 ? 64 : Math.Min(48, tabSpace / tabs.Count);
-        int tabStart = Math.Max(0, Math.Min(64, tabSpace - tabs.Count * tabSize));
         for (int i = 0; i < tabs.Count; i++)
-            tabs[i].bounds = new Rectangle(bounds.X + tabStart + i * tabSize,
-                bounds.Y - tabSize * 3 / 4, tabSize, tabSize);
+            tabs[i].bounds = new Rectangle(bounds.X + 64 + i * 64, bounds.Y - 48, 64, 64);
         tasks.Layout(bounds);
         guild?.Layout(bounds);
-        events?.Layout(bounds);
+        events?.Layout();
         quests.questLogButtons[0].upNeighborID = TabId;
         quests.backButton.upNeighborID = TabId;
         quests.forwardButton.upNeighborID = TabId;
@@ -293,7 +300,10 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
         if (selectedTab != 0 && (Game1.options.doesInputListContain(Game1.options.menuButton, key)
             || Game1.options.doesInputListContain(Game1.options.journalButton, key)))
         {
-            exitThisMenu();
+            if (Page is EventsPage { ShowingDetails: true } eventsPage)
+                eventsPage.Back();
+            else
+                exitThisMenu();
             return;
         }
         Page.receiveKeyPress(key);
@@ -380,13 +390,39 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
         hoverText = tabs.Find(tab => tab.bounds.Contains(x, y))?.label ?? "";
     }
 
+    private void DrawPage(SpriteBatch b)
+    {
+        bool nativePage = Page is QuestLog;
+        if (!Game1.options.showClearBackgrounds)
+        {
+            // Native pages dim the area below the clip themselves; dim the remaining header band once.
+            b.Draw(Game1.fadeToBlackRect,
+                new Rectangle(0, 0, Game1.uiViewport.Width, nativePage ? yPositionOnScreen : Game1.uiViewport.Height),
+                Color.Black * 0.75f);
+        }
+        if (!nativePage)
+        {
+            Page.draw(b);
+            return;
+        }
+
+        // QuestLog draws a fixed-position banner. Clip that out so every page shares our separate header row.
+        Rectangle scissor = b.GraphicsDevice.ScissorRectangle;
+        b.End();
+        b.GraphicsDevice.ScissorRectangle = Utility.ConstrainScissorRectToScreen(
+            new Rectangle(0, yPositionOnScreen, Game1.uiViewport.Width, Game1.uiViewport.Height - yPositionOnScreen));
+        b.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, null, HeaderClip);
+        Page.draw(b);
+        b.End();
+        b.GraphicsDevice.ScissorRectangle = scissor;
+        b.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
+    }
+
     public override void draw(SpriteBatch b)
     {
         foreach (var button in quests.allClickableComponents.OfType<ClickableTextureComponent>())
             button.texture = Game1.mouseCursors;
-        if (selectedTab != 0 && !Game1.options.showClearBackgrounds)
-            b.Draw(Game1.fadeToBlackRect, new Rectangle(0, 0, Game1.uiViewport.Width, Game1.uiViewport.Height), Color.Black * 0.75f);
-        Page.draw(b);
+        DrawPage(b);
         for (int i = 0; i < tabs.Count; i++)
         {
             var tab = tabs[i];
@@ -408,11 +444,9 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
             b.Draw(Game1.mouseCursors, origin + offset, icon, Color.White,
                 0f, Vector2.Zero, scale, SpriteEffects.None, 0.91f);
         }
-        if (selectedTab != 0)
-        {
-            SpriteText.drawStringWithScrollCenteredAt(b, JournalTitle, xPositionOnScreen + width / 2, yPositionOnScreen - 64);
-            upperRightCloseButton.draw(b);
-        }
+        SpriteText.drawStringWithScrollCenteredAt(b, JournalTitle,
+            xPositionOnScreen + width / 2, yPositionOnScreen - HeaderHeight);
+        upperRightCloseButton.draw(b);
         if (GetChildMenu() is null && hoverText.Length > 0)
             drawHoverText(b, hoverText, Game1.smallFont);
         if (GetChildMenu() is null)
