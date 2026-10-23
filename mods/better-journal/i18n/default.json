@@ -126,6 +126,8 @@
   "editor.discard": "Discard Draft",
   "editor.invalid": "Enter a task of 1–160 characters on a single line.",
   "editor.delete-confirm": "Delete this task?",
+  "config.tasks.name": "Show tasks",
+  "config.tasks.tooltip": "Show the personal tasks tab. Hiding it keeps your saved tasks.",
   "config.monster-goals.name": "Show monster goals",
   "config.monster-goals.tooltip": "Show the monster goals tab after your character has visited the Adventurer's Guild.",
   "config.events.name": "Show events",

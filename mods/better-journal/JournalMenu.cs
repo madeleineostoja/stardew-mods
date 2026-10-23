@@ -19,7 +19,7 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
     private readonly TaskRepository repository;
     private readonly ITranslationHelper translations;
     private readonly List<ClickableComponent> tabs = new();
-    private readonly JournalListPage tasks;
+    private readonly JournalListPage? tasks;
     private readonly JournalListPage? guild;
     private readonly EventsPage? events;
     private readonly int nativeWidth;
@@ -38,7 +38,7 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
     private string JournalTitle => Game1.content.LoadString("Strings\\StringsFromCSFiles:QuestLog.cs.11373");
     private IClickableMenu Page => tabs[selectedTab].name switch
     {
-        "tasks" => tasks,
+        "tasks" => tasks!,
         "guild" => guild!,
         "events" => events!,
         _ => quests
@@ -55,7 +55,7 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
     }
 
     public JournalMenu(QuestLog quests, TaskRepository repository, ITranslationHelper translations,
-        bool showMonsterGoals, Func<IReadOnlyList<EventRow>>? findEvents)
+        bool showTasks, bool showMonsterGoals, Func<IReadOnlyList<EventRow>>? findEvents)
     {
         this.quests = quests;
         this.repository = repository;
@@ -65,7 +65,9 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
         upperRightCloseButton = quests.upperRightCloseButton;
 
         bool showGuild = showMonsterGoals && GuildGoal.HasVisitedGuild;
-        var names = new List<string> { "quests", "tasks" };
+        var names = new List<string> { "quests" };
+        if (showTasks)
+            names.Add("tasks");
         if (findEvents is not null)
             names.Add("events");
         if (showGuild)
@@ -82,7 +84,8 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
             });
         }
 
-        tasks = new JournalListPage(true, repository, translations, tabs, upperRightCloseButton, OpenEditor);
+        if (showTasks)
+            tasks = new JournalListPage(true, repository, translations, tabs, upperRightCloseButton, OpenEditor);
         if (showGuild)
             guild = new JournalListPage(false, repository, translations, tabs, upperRightCloseButton, OpenEditor);
         if (findEvents is not null)
@@ -146,7 +149,7 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
 
         for (int i = 0; i < tabs.Count; i++)
             tabs[i].bounds = new Rectangle(bounds.X + 64 + i * 64, bounds.Y - 48, 64, 64);
-        tasks.Layout(bounds);
+        tasks?.Layout(bounds);
         guild?.Layout(bounds);
         events?.Layout();
         quests.questLogButtons[0].upNeighborID = TabId;
@@ -201,7 +204,7 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
 
     private void OpenEditor(string? taskId)
     {
-        if (repository.Tasks is null || GetChildMenu() is not null)
+        if (tasks is null || repository.Tasks is null || GetChildMenu() is not null)
             return;
         string? previous = tasks.SelectedTaskId;
         tasks.BeginEdit(taskId);
@@ -225,7 +228,7 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
         if (!ReferenceEquals(GetChildMenu(), editor))
             return;
         // Ending a draft can reflow the list; capture the task identity before removing its row.
-        var action = tasks.CaptureClick(x, y);
+        var action = tasks?.CaptureClick(x, y);
         int tab = tabs.FindIndex(tab => tab.bounds.Contains(x, y));
         bool close = upperRightCloseButton.bounds.Contains(x, y);
         editor.exitThisMenu(false);
@@ -335,7 +338,7 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
 
     internal void AdvanceCompletions(TimeSpan elapsed)
     {
-        if (closing)
+        if (closing || tasks is null)
             return;
         string? selected = tasks.SelectedTaskId;
         if (repository.Tasks?.AdvanceCompletions(elapsed) != true)
@@ -345,7 +348,7 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
         AttachTabDestinations();
         if (GetChildMenu() is InlineTaskEditor editor)
             editor.Reflow();
-        else if (selectedTab == 1 && Game1.options.SnappyMenus && !Game1.lastCursorMotionWasMouse)
+        else if (ReferenceEquals(Page, tasks) && Game1.options.SnappyMenus && !Game1.lastCursorMotionWasMouse)
             tasks.snapCursorToCurrentSnappedComponent();
     }
 
@@ -393,11 +396,13 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
     private void DrawPage(SpriteBatch b)
     {
         bool nativePage = Page is QuestLog;
+        Rectangle screen = b.GraphicsDevice.Viewport.Bounds;
         if (!Game1.options.showClearBackgrounds)
         {
             // Native pages dim the area below the clip themselves; dim the remaining header band once.
             b.Draw(Game1.fadeToBlackRect,
-                new Rectangle(0, 0, Game1.uiViewport.Width, nativePage ? yPositionOnScreen : Game1.uiViewport.Height),
+                new Rectangle(screen.X, screen.Y, screen.Width,
+                    nativePage ? Math.Clamp(yPositionOnScreen - screen.Y, 0, screen.Height) : screen.Height),
                 Color.Black * 0.75f);
         }
         if (!nativePage)
@@ -409,8 +414,9 @@ internal sealed class JournalMenu : IClickableMenu, IDisposable
         // QuestLog draws a fixed-position banner. Clip that out so every page shares our separate header row.
         Rectangle scissor = b.GraphicsDevice.ScissorRectangle;
         b.End();
-        b.GraphicsDevice.ScissorRectangle = Utility.ConstrainScissorRectToScreen(
-            new Rectangle(0, yPositionOnScreen, Game1.uiViewport.Width, Game1.uiViewport.Height - yPositionOnScreen));
+        // The world viewport can be smaller than the UI target when UI scale and zoom differ.
+        b.GraphicsDevice.ScissorRectangle = Rectangle.Intersect(screen,
+            new Rectangle(screen.X, yPositionOnScreen, screen.Width, Math.Max(0, screen.Bottom - yPositionOnScreen)));
         b.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, null, HeaderClip);
         Page.draw(b);
         b.End();
