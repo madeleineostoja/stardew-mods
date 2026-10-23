@@ -14,6 +14,22 @@ For in-game testing, run `./build-local.sh` to refresh the stable `dist/testing/
 
 See [README.md](README.md) for build commands, prerequisites, packaging configuration, and release behaviour.
 
+## Sandboxed worktree builds
+
+If `mise exec` fails because the sandbox blocks writes to mise trust metadata, omit that prefix when the pinned .NET SDK is already on `PATH` (`dotnet --version` should match `global.json`). Do not change permissions outside the worktree.
+
+For compiler-state permission errors in a sandboxed worktree, isolate .NET CLI state and disable shared compilation while preserving the existing NuGet cache. From the repository root, for example:
+
+```sh
+DOTNET_CLI_HOME="$PWD/tmp/dotnet-home" \
+DOTNET_CLI_TELEMETRY_OPTOUT=1 \
+NUGET_PACKAGES="$HOME/.nuget/packages" \
+UseSharedCompilation=false \
+python3 scripts/mods.py build better-journal
+```
+
+Replace the package ID as needed and add `--game-path` if auto-detection is unavailable. If the package cache is configured elsewhere, use that path instead. Setting `DOTNET_CLI_HOME` without preserving `NUGET_PACKAGES` changes the default cache location and can force a restore that fails without network access. These environment settings apply to both the build and C# tests invoked by the packaging command.
+
 ## Headless game probes
 
 - On Apple Silicon, probes loading the installed x64 game assembly need an x64 host/runtime; `PlatformTarget=x64` alone isn’t enough.
