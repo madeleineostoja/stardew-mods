@@ -45,6 +45,9 @@ internal sealed class ModEntry : Mod
             return;
 
         api.Register(ModManifest, () => config = new ModConfig(), () => Helper.WriteConfig(config));
+        api.AddBoolOption(ModManifest, () => config.ShowTasks, value => config.ShowTasks = value,
+            () => Helper.Translation.Get("config.tasks.name"),
+            () => Helper.Translation.Get("config.tasks.tooltip"));
         api.AddBoolOption(ModManifest, () => config.ShowMonsterGoals, value => config.ShowMonsterGoals = value,
             () => Helper.Translation.Get("config.monster-goals.name"),
             () => Helper.Translation.Get("config.monster-goals.tooltip"));
@@ -64,7 +67,7 @@ internal sealed class ModEntry : Mod
         var tasks = new TaskRepository(Game1.player, Monitor);
         tasks.FinishCompleted();
         Game1.activeClickableMenu = new JournalMenu((QuestLog)e.NewMenu, tasks, Helper.Translation,
-            config.ShowMonsterGoals, config.ShowEvents ? FindEventRows : null);
+            config.ShowTasks, config.ShowMonsterGoals, config.ShowEvents ? FindEventRows : null);
     }
 
     private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)

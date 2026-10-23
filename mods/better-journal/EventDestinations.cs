@@ -1,7 +1,10 @@
 using System.Text.RegularExpressions;
+using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Locations;
+using StardewValley.TokenizableStrings;
+using StardewValley.WorldMaps;
 
 namespace BetterJournal;
 
@@ -45,13 +48,24 @@ internal static class EventDestinations
     {
         if (destination.Name == "Town")
             return translations.Get("events.location.Town");
-        string name = destination.DisplayName;
-        if (!string.IsNullOrWhiteSpace(name) && name != destination.Name && name != destination.NameOrUniqueName)
-            return name;
+
+        // Inherited area labels can name a whole region instead of the destination (e.g. the Sunroom).
+        var position = WorldMapManager.GetPositionDataWithoutFallback(destination, Point.Zero);
+        if (!string.IsNullOrWhiteSpace(position?.Data.ScrollText))
+        {
+            // Parse afresh for this snapshot instead of reusing the map's cached localized text.
+            string mapName = TokenParser.ParseText(Utility.TrimLines(position.Data.ScrollText));
+            if (!string.IsNullOrWhiteSpace(mapName))
+                return mapName;
+        }
 
         string key = "events.location." + destination.Name;
         if (translations.ContainsKey(key))
             return translations.Get(key);
+
+        string name = destination.DisplayName;
+        if (!string.IsNullOrWhiteSpace(name) && name != destination.Name && name != destination.NameOrUniqueName)
+            return name;
 
         // Unknown mod locations can still expose a readable fallback without an ID mapping.
         return Regex.Replace(destination.Name.Replace('_', ' '), @"(?<=[a-z0-9])(?=[A-Z])", " ");
