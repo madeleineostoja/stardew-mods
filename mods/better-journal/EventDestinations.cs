@@ -46,8 +46,13 @@ internal static class EventDestinations
 
     public static string GetDisplayName(GameLocation destination, ITranslationHelper translations)
     {
-        if (destination.Name == "Town")
-            return translations.Get("events.location.Town");
+        // Prefer translated hint wording, but don't replace a localized game label with fallback English.
+        string key = "events.location." + destination.Name;
+        string locale = translations.Locale;
+        if (translations.ContainsKey(key) && (translations.LocaleEnum == LocalizedContentManager.LanguageCode.en
+            || translations.GetInAllLocales(key).Keys.Any(language => language.Equals(locale, StringComparison.OrdinalIgnoreCase)
+                || language.Equals(locale.Split('-')[0], StringComparison.OrdinalIgnoreCase))))
+            return translations.Get(key);
 
         // Inherited area labels can name a whole region instead of the destination (e.g. the Sunroom).
         var position = WorldMapManager.GetPositionDataWithoutFallback(destination, Point.Zero);
@@ -59,7 +64,6 @@ internal static class EventDestinations
                 return mapName;
         }
 
-        string key = "events.location." + destination.Name;
         if (translations.ContainsKey(key))
             return translations.Get(key);
 
