@@ -10,7 +10,6 @@
   "guild.progress": "{{count}} / {{target}}",
   "guild.complete": "{{count}}",
   "events.hint.visit": "Visit {{location}}",
-  "events.hint.return-farm": "Return to your farm",
   "events.description.visit": "{{title}} {{schedule}}",
   "events.description.visit.aside": "{{title}} {{schedule}},",
   "events.description.first.single": "{{visit}} to see an event.",

@@ -72,7 +72,8 @@ internal sealed class EventLookup
 
     private void FindAtDestination(GameLocation destination, List<EventCandidate> results)
     {
-        if (!EventDestinations.IsAccessible(destination) || !destination.TryGetLocationEvents(out _, out var events))
+        if (destination.IsFarm || destination.IsGreenhouse || destination.GetRootLocation().IsFarm
+            || !EventDestinations.IsAccessible(destination) || !destination.TryGetLocationEvents(out _, out var events))
             return;
 
         foreach (var pair in events)

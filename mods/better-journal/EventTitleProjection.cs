@@ -18,8 +18,7 @@ internal sealed class EventTitleProjection
         return EventRow.Group(candidates.Select(candidate =>
         {
             string location = EventDestinations.GetDisplayName(candidate.Destination, translations);
-            string title = candidate.Destination.Name == "Farm" ? T("events.hint.return-farm")
-                : T("events.hint.visit", new { location });
+            string title = T("events.hint.visit", new { location });
             return new EventTitle(candidate.DestinationName, candidate.EventId, title, GetInstructions(candidate.VisitRequirements));
         }), Describe, GetDisplayComparer());
     }
