@@ -8,10 +8,10 @@ The layout uses Stardew's own portrait, dialogue-box, name-scroll, font, and adv
 
 ## Features
 
-- Large portrait above the left edge of the box
+- Large portrait above either edge of the box
 - Wide, shallow, bottom-anchored dialogue box
 - Text width independent of portrait width
-- Compact name scroll tucked beneath the portrait
+- Compact name scroll with independent left/right alignment
 - Compact or normal box size, independent from portrait size
 - Unchanged dialogue content, expressions, paging, input, and game logic
 
@@ -38,8 +38,10 @@ Only use one Dialogue Display Framework layout pack at a time unless the packs e
 | --- | --- | --- |
 | `BoxSize` | Compact (1088×320), Normal (1200×384) | Compact |
 | `PortraitSize` | Small (4× vanilla), Medium (5×), Large (6×) | Medium |
+| `PortraitAlignment` | Left, Right | Left |
+| `NameplateAlignment` | Left, Right | Left |
 
-Box and portrait sizes are independent, so either can be changed without affecting the other. Normal matches vanilla's full 1200×384 dialogue area. The portrait sits slightly behind the top border, with the nameplate layered just beneath it and slightly inset. Changing portrait size keeps that alignment and never changes the dialogue text width or forces the box to grow.
+Box and portrait sizes are independent, so either can be changed without affecting the other. Normal matches vanilla's full 1200×384 dialogue area. The portrait sits slightly behind the top border, with the nameplate layered just beneath it. Portrait and nameplate alignment are independent: each keeps its horizontal inset from the chosen edge (24 pixels for the portrait, 48 for the nameplate). Choosing the same side tucks the nameplate beneath the portrait. Changing portrait size keeps that alignment and never changes the dialogue text width or forces the box to grow.
 
 Dialogue Display Framework Continued itself provides framework-level settings. This pack supplies the actual layout data, so its visual values are deliberately kept here rather than duplicated as low-level configuration fields.
 

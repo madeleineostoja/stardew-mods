@@ -2,7 +2,7 @@
   "$schema": "https://smapi.io/schemas/manifest.json",
   "Name": "Immersive Dialogue UI",
   "Author": "heyitsmads",
-  "Version": "1.0.0",
+  "Version": "1.1.0",
   "Description": "Immersive dialogue UI with large frameless portraits and compact dialogue boxes",
   "UniqueID": "heyitsmads.ImmersiveDialogueUI",
   "MinimumApiVersion": "4.0.0",

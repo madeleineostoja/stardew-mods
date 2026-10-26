@@ -7,5 +7,13 @@
   "config.PortraitSize.description": "Choose how large NPC portraits appear.",
   "config.PortraitSize.values.Small": "Small",
   "config.PortraitSize.values.Medium": "Medium",
-  "config.PortraitSize.values.Large": "Large"
+  "config.PortraitSize.values.Large": "Large",
+  "config.PortraitAlignment.name": "Portrait alignment",
+  "config.PortraitAlignment.description": "Align the portrait to the left or right edge of the dialogue box.",
+  "config.PortraitAlignment.values.Left": "Left",
+  "config.PortraitAlignment.values.Right": "Right",
+  "config.NameplateAlignment.name": "Nameplate alignment",
+  "config.NameplateAlignment.description": "Align the nameplate independently to the left or right edge of the dialogue box.",
+  "config.NameplateAlignment.values.Left": "Left",
+  "config.NameplateAlignment.values.Right": "Right"
 }

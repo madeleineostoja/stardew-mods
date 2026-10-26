@@ -9,9 +9,39 @@
     "PortraitSize": {
       "AllowValues": "Small, Medium, Large",
       "Default": "Medium"
+    },
+    "PortraitAlignment": {
+      "AllowValues": "Left, Right",
+      "Default": "Left"
+    },
+    "NameplateAlignment": {
+      "AllowValues": "Left, Right",
+      "Default": "Left"
     }
   },
   "DynamicTokens": [
+    {
+      "Name": "NameplateXOffset",
+      "Value": "48"
+    },
+    {
+      "Name": "NameplateXOffset",
+      "Value": "-48",
+      "When": {
+        "NameplateAlignment": "Right"
+      }
+    },
+    {
+      "Name": "NameplateTextAlignment",
+      "Value": "0"
+    },
+    {
+      "Name": "NameplateTextAlignment",
+      "Value": "2",
+      "When": {
+        "NameplateAlignment": "Right"
+      }
+    },
     {
       "Name": "BoxWidth",
       "Value": "1088"
@@ -51,6 +81,17 @@
       "When": {
         "PortraitSize": "Large"
       }
+    },
+    {
+      "Name": "PortraitXOffset",
+      "Value": "24"
+    },
+    {
+      "Name": "PortraitXOffset",
+      "Value": "{{Round: {{Query: 0 - 24 - (64 * {{ResolvedPortraitScale}}) }} }}",
+      "When": {
+        "PortraitAlignment": "Right"
+      }
     }
   ],
   "Changes": [
@@ -72,20 +113,20 @@
             "layerDepth": 0.88
           },
           "portrait": {
-            "xOffset": 24,
+            "xOffset": "{{PortraitXOffset}}",
             "yOffset": "{{Round: {{Query: 0 - 16 - (64 * {{ResolvedPortraitScale}}) }} }}",
-            "right": false,
+            "right": "{{PortraitAlignment |contains=Right}}",
             "w": 64,
             "h": 64,
             "scale": "{{ResolvedPortraitScale}}",
             "layerDepth": 0.89
           },
           "name": {
-            "xOffset": 48,
+            "xOffset": "{{NameplateXOffset}}",
             "yOffset": -48,
-            "right": false,
+            "right": "{{NameplateAlignment |contains=Right}}",
             "scrollType": 0,
-            "alignment": 0,
+            "alignment": "{{NameplateTextAlignment}}",
             "layerDepth": 0.9
           },
           "button": {
