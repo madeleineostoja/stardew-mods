@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using HarmonyLib;
 using StardewModdingAPI;
 using StardewValley.Buildings;
@@ -21,8 +22,35 @@ internal sealed class ModEntry : Mod
     }
 }
 
-[HarmonyPatch(typeof(ShippingBin), "openShippingBinLid")]
+[HarmonyPatch(typeof(ShippingBin))]
 internal static class ShippingBinLidPatch
 {
-    private static bool Prefix() => false;
+    private static readonly ConditionalWeakTable<ShippingBin, object> InteractedBins = new();
+
+    [HarmonyPrefix]
+    [HarmonyPatch("openShippingBinLid")]
+    private static bool OpenLid(ShippingBin __instance) => InteractedBins.TryGetValue(__instance, out _);
+
+    [HarmonyPrefix]
+    [HarmonyPatch("closeShippingBinLid")]
+    private static void CloseLid(ShippingBin __instance)
+    {
+        // Vanilla requests closing only when no farmers remain in the bin's proximity.
+        InteractedBins.Remove(__instance);
+    }
+
+    [HarmonyPostfix]
+    [HarmonyPatch(nameof(ShippingBin.doAction))]
+    private static void Interact(ShippingBin __instance, bool __result)
+    {
+        if (__result)
+            InteractedBins.GetOrCreateValue(__instance);
+    }
+
+    [HarmonyPostfix]
+    [HarmonyPatch(nameof(ShippingBin.showShipment))]
+    private static void ShipItem(ShippingBin __instance)
+    {
+        InteractedBins.GetOrCreateValue(__instance);
+    }
 }
