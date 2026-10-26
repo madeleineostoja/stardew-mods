@@ -57,7 +57,7 @@ internal static class MorningCatchUp
         if (controller is not { NPCSchedule: true, pathToEndPoint: not null } || npc.temporaryController is not null)
             return;
 
-        npc.warpToPathControllerDestination();
+        // Warps can consume the remaining path, so check it again before taking another point.
         while (controller.pathToEndPoint.Count > 0)
         {
             var point = controller.pathToEndPoint.Pop();
