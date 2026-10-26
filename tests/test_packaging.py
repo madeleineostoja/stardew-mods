@@ -77,6 +77,19 @@ class PackagingTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "does not match mod directories"):
             mods.load_packages()
 
+    def test_compiled_build_runs_tests_only_when_registered(self):
+        for tests in (None, "Tests.csproj"):
+            with self.subTest(tests=tests):
+                package = {"path": "mods/example", "project": "Example.csproj"}
+                if tests:
+                    package["tests"] = tests
+                with patch.object(mods, "validate"), patch.object(mods.subprocess, "run") as run, \
+                        patch.object(mods, "package_mod", return_value=self.root / "dist/Example.zip") as package_mod:
+                    mods.build("example", package, None)
+                self.assertEqual([call.args[0][1] for call in run.call_args_list],
+                                 ["build", "test"] if tests else ["build"])
+                package_mod.assert_called_once_with("example", package)
+
     def test_failed_build_does_not_create_a_package(self):
         package = {"path": "mods/example", "project": "Example.csproj", "tests": "Tests.csproj"}
         with patch.object(mods, "validate"), patch.object(mods.subprocess, "run") as run:

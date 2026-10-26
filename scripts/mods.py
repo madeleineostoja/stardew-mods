@@ -116,11 +116,12 @@ def build(package_id, package, game_path):
             cwd=ROOT,
             check=True,
         )
-        subprocess.run(
-            ["dotnet", "test", str(source / package["tests"]), "-c", "Release", *properties],
-            cwd=ROOT,
-            check=True,
-        )
+        if "tests" in package:
+            subprocess.run(
+                ["dotnet", "test", str(source / package["tests"]), "-c", "Release", *properties],
+                cwd=ROOT,
+                check=True,
+            )
     archive = package_mod(package_id, package)
     print(archive.relative_to(ROOT))
 

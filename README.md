@@ -9,6 +9,7 @@ Independently versioned Stardew Valley mods and patched content packs. Each rele
 | Better Journal | [mods/better-journal](mods/better-journal) | `BetterJournal.csproj` | `BetterJournal` |
 | Better Forest Farm | [mods/better-forest-farm](mods/better-forest-farm) | `manifest.json` | `BetterForestFarm` |
 | Immersive Dialogue UI | [mods/immersive-dialogue-ui](mods/immersive-dialogue-ui) | `manifest.json` | `ImmersiveDialogueUI` |
+| Closed Shipping Bin | [mods/closed-shipping-bin](mods/closed-shipping-bin) | `ClosedShippingBin.csproj` | `ClosedShippingBin` |
 | Configurable Rumble | [mods/configurable-rumble](mods/configurable-rumble) | `ConfigurableRumble.csproj` | `ConfigurableRumble` |
 | Impactful | [mods/impactful](mods/impactful) | `Impactful.csproj` | `Impactful` |
 | Overcast | [mods/overcast](mods/overcast) | `Overcast.csproj` | `Overcast` |
@@ -73,7 +74,7 @@ The first push to `main` publishes all current package versions under their name
 ## Adding a mod or patch
 
 1. Place the complete source under `mods/<id>/` or `patches/<id>/`, with no nested `.git` directory.
-2. Add its entry to [packages.json](packages.json): source path, install folder name, and the runtime files/directories to package. The manifest is always included. C# mods also specify their project and test project.
+2. Add its entry to [packages.json](packages.json): source path, install folder name, and the runtime files/directories to package. The manifest is always included. C# mods also specify their project and, when present, their test project.
 3. Keep its version in its own manifest or C# project. Do not introduce a repository-wide version.
 4. Run validation, tooling tests, and that package's build. CI rejects mod directories with manifests that are missing from the registry.
 

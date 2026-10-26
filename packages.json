@@ -28,6 +28,14 @@
       "README.md"
     ]
   },
+  "closed-shipping-bin": {
+    "path": "mods/closed-shipping-bin",
+    "folder": "ClosedShippingBin",
+    "project": "ClosedShippingBin.csproj",
+    "files": [
+      "README.md"
+    ]
+  },
   "configurable-rumble": {
     "path": "mods/configurable-rumble",
     "folder": "ConfigurableRumble",
