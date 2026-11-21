@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="2" height="7" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="2">
+ <tileset firstgid="1" name="untitled tile sheet" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
+  <tile id="380">
+   <properties>
+    <property name="Type" value="Grass"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer id="1" name="Back" width="2" height="7">
+  <data encoding="csv">
+381,381,
+381,381,
+381,381,
+381,381,
+381,381,
+381,381,
+381,381
+</data>
+ </layer>
+ <layer id="2" name="Buildings" width="2" height="7">
+  <data encoding="csv">
+0,0,
+0,0,
+0,0,
+0,0,
+0,0,
+0,0,
+0,0
+</data>
+ </layer>
+ <layer id="3" name="AlwaysFront" width="2" height="7">
+  <data encoding="csv">
+947,947,
+947,947,
+947,947,
+947,947,
+947,947,
+0,0,
+0,0
+</data>
+ </layer>
+ <objectgroup id="4" name="Back">
+  <object id="1" name="TileData" x="0" y="0" width="32" height="112">
+   <properties>
+    <property name="NoFurniture" value="Total"/>
+    <property name="NoSpawn" value="All"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

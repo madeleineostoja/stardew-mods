@@ -50,7 +50,8 @@
       "Target": "Maps/Farm_Foraging",
       "AddWarps": ["6 59 Woods 46 4"],
       "When": {
-        "WoodsShortcut": "true"
+        "WoodsShortcut": "true",
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
       }
     },
     {
@@ -59,7 +60,29 @@
       "AddWarps": ["46 3 Farm 6 58"],
       "When": {
         "WoodsShortcut": "true",
-        "FarmType": "Forest"
+        "FarmType": "Forest",
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_Foraging",
+      "AddWarps": ["6 59 Woods 67 7"],
+      "When": {
+        "WoodsShortcut": "true",
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Woods",
+      "FromFile": "assets/maps/SVE_Woods_Shortcut.tmx",
+      "ToArea": { "X": 67, "Y": 0, "Width": 2, "Height": 7 },
+      "AddWarps": ["67 0 Farm 6 58", "68 0 Farm 6 58"],
+      "When": {
+        "WoodsShortcut": "true",
+        "FarmType": "Forest",
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
       }
     },
     {

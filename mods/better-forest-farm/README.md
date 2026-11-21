@@ -40,4 +40,5 @@ Options can be changed in `config.json` or via Generic Mod Config Menu:
 ## Compatibility
 
 - Works with all seasonal recolour mods — the map references vanilla tilesheet paths so any replacements apply automatically
+- Automatically detects Stardew Valley Expanded and connects the Secret Woods shortcut to its expanded map, including a return passage; no extra configuration needed
 - Forest farm type only; has no effect on other farm layouts
