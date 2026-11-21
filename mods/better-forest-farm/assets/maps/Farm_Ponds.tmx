@@ -2692,7 +2692,7 @@
     <property name="NPCBarrier" value="T"/>
    </properties>
   </object>
-  <object id="47" name="TileData" x="1248" y="288" width="16" height="16">
+  <object id="47" name="TileData" x="1248" y="288" width="16" height="32">
    <properties>
     <property name="NPCBarrier" value="T"/>
    </properties>
